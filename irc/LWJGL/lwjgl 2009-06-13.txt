@@ -1,0 +1,1282 @@
+[00:00:00] *** indeterminatus has quit IRC
+[00:01:43] <kappaOne> hmm nothing with mech's :(
+[00:01:44] <aho> (:
+[00:01:49] <aho> :f
+[00:01:57] <aho> but lots with boobies
+[00:01:57] <aho> .)
+[00:02:06] <doohan> ARGH cyclops smiley again!
+[00:02:11] <kappaOne> hehe yeh :)
+[00:07:27] *** kevglass has joined #lwjgl
+[00:11:04] <kevglass> head freeze
+[00:13:14] <doohan> hey kev
+[00:13:19] <doohan> Too much icecream
+[00:13:20] <doohan> ??
+[00:14:06] <kappaOne> too much code?
+[00:14:10] <doohan> oh kevglass what dist did you use?
+[00:14:18] <doohan> Ahhh
+[00:14:25] <doohan> I tried that but didn't have much luck
+[00:14:31] <kevglass> xmlvm is now producing valid objc
+[00:14:33] <doohan> Kalyway worked for me
+[00:14:36] <doohan> sweet :)
+[00:14:37] <kevglass> it builds in xcode
+[00:14:40] <doohan> Woo!
+[00:14:44] <kevglass> doesn't run the emulator though
+[00:14:48] <kevglass> crashes on startup
+[00:14:54] <kevglass> but I think I may be out of brain tonight
+[00:14:55] <kappaOne> oh great stuff kev
+[00:15:02] <doohan> Any useful crash errors?
+[00:15:15] <kevglass> something about UIApplication.setDelegate having an invalid selector
+[00:15:22] <doohan> hmmm
+[00:15:38] <kevglass> however the iFireworks app that comes with xmlvm also doens't work
+[00:15:38] <doohan> Wish I could give some useful insight
+[00:15:46] <kevglass> it starts, but just shows a grey screen
+[00:15:50] <kevglass> gonna read the doc :)
+[00:15:57] <doohan> I pretty sure he said he got it working on a jailbroken phone.
+[00:16:08] <kevglass> xmlvm?
+[00:16:11] <doohan> Yeah
+[00:16:14] <kevglass> why would you use a jailbroken phone for it?
+[00:16:21] <doohan> NO idea
+[00:16:27] <kevglass> ah, fair enough
+[00:16:43] <doohan> I might be wrong though
+[00:16:45] <kappaOne> hmm also remember seeing that on some presentation about jailbreak being needed for it
+[00:16:55] <doohan> http://www.xmlvm.org/iphone/
+[00:16:56] <doohan> Ahh
+[00:16:57] <kappaOne> but not sure either
+[00:17:00] <doohan> Go to the bottom of that page
+[00:17:15] <doohan> "Further details on the Java for the iPhone project can be found at a Google Tech Talk (Slides). The slides also contain detailed instructions on how to compile and run the demo on a jailbroken iPhone."
+[00:17:20] <doohan> last two words
+[00:17:50] <kevglass> yeah, thats if you don't want to sell it through the app store
+[00:17:59] <doohan> It is?
+[00:18:02] <kevglass> theres no reason the objc should fail on the emulator
+[00:18:03] <doohan> Cool :)
+[00:18:21] <doohan> FUckin hell
+[00:18:33] <doohan> What is it with insects down here being the size of small mamals?
+[00:18:39] <kevglass> :)
+[00:18:43] <kevglass> good breeding
+[00:18:58] <david_koontz> higher oxygen content in the atmosphere?
+[00:19:01] <doohan> There's a fucking moth in here almost as big as my hamster.
+[00:19:05] <kappaOne> lots of uneaten food thrown away?
+[00:19:05] <MatthiasM> doohan: that just means you need larger weapons :P
+[00:19:25] <doohan> Normally you can only just hear a moth ina  room.
+[00:19:38] <doohan> But when it's that big you hear the sound it makes when it bounces off the walls.
+[00:19:42] <doohan> THUD!
+[00:19:44] <doohan> THUD!
+[00:19:47] <kappaOne> radioactivity in the air?
+[00:19:49] <doohan> CRASH!
+[00:20:00] <doohan> Well the AWE isn't that far from here really.
+[00:20:02] <doohan> About 20 miles.
+[00:20:33] <doohan> hahah
+[00:20:53] <doohan> Are they the sort of thing you fire at a tank?
+[00:21:12] <doohan> The moth is about th size of the head on one of those things.
+[00:21:22] <MatthiasM> http://de.wikipedia.org/wiki/Phalanx_CIWS :)
+[00:21:49] <MatthiasM> anti air gatling
+[00:22:03] <doohan> Nice :)
+[00:22:26] <MatthiasM> so - could work for your insect issue :)
+[00:22:58] <doohan> You know, that just might work.
+[00:23:11] <doohan> But seriously, moths as big as bats?
+[00:23:12] <doohan> Wtf?
+[00:23:25] <doohan> OK almost as big as bats.
+[00:23:32] <doohan> More importantly....
+[00:23:36] <doohan> where did that fucker go?
+[00:23:41] <kappaOne> moths eat cloth right?
+[00:23:44] <kevglass> he's behind you!
+[00:23:51] <kappaOne> or chewing on your back
+[00:23:57] <MatthiasM> it's always behind you ...
+[00:23:59] <david_koontz> eating the shirt right off your back
+[00:24:04] <doohan> AHHH!
+[00:24:08] <doohan> It's making a cocoon!
+[00:24:09] <doohan> :D
+[00:24:14] <doohan> D:
+[00:24:15] <MatthiasM> ...
+[00:24:19] <doohan> The horror!
+[00:24:25] <MatthiasM> remember species ?
+[00:24:36] <doohan> Some bits of it :)
+[00:24:51] <doohan> Wait...
+[00:24:52] <david_koontz> the naked hot chick parts of it?
+[00:24:55] <doohan> Yeah
+[00:24:56] <MatthiasM> or alien :)
+[00:25:00] <doohan> Ohhh alien is good
+[00:25:12] * MatthiasM wants to watch alien 2 ...
+[00:25:21] <doohan> Aliens is the business
+[00:25:35] * MatthiasM puts on the DVD wish list :)
+[00:25:35] <doohan> Have you seen the trailers for the new avp game?
+[00:25:42] <kappaOne> The Fly?
+[00:26:00] <doohan> I always loved the marine campaign in those games
+[00:26:06] <doohan> Had good atmosphere
+[00:26:09] <MatthiasM> heh
+[00:26:26] <doohan> Saying that though, when I was younger I found hexen pretty scary.
+[00:26:41] <NoobFukaire> yeah
+[00:26:45] <MatthiasM> never played that
+[00:26:49] <doohan> It was good
+[00:26:54] <doohan> Hard though.
+[00:26:56] <aho> didnt like it much
+[00:26:56] <NoobFukaire> I loved being the alien or marine in the first avp
+[00:27:05] <doohan> Yeah marine was the where it was at
+[00:27:08] <NoobFukaire> predator wasn't as good
+[00:27:29] <NoobFukaire> the second one used monolith's engine tech
+[00:27:30] <MatthiasM> doohan: what new avp game ?
+[00:27:43] <doohan> Yeah I think sega are putting it out
+[00:27:45] <doohan> one sec
+[00:27:45] <NoobFukaire> I don't remember what the first one used, maybe something home brewed
+[00:28:21] <doohan> Ahh rebellion are making it
+[00:28:26] <MatthiasM> http://en.wikipedia.org/wiki/Aliens_vs._Predator_(video_game) ?
+[00:28:37] <doohan> http://www.joystiq.com/2009/05/20/aliens-vs-predator-details-and-teaser-trailer-unleashed/
+[00:29:16] <kappaOne> http://kotaku.com/5283705/new-aliens-vs-predator-screens-feature-aliens-predators
+[00:29:40] <NoobFukaire> cool the new one is by the same developer
+[00:29:41] <doohan> That motions sensor sound is fairly iconic isn't it?
+[00:30:01] <doohan> bebeep bebeep bebeep
+[00:30:03] <kevglass> time to reboot
+[00:30:05] <kevglass> later
+[00:30:05] <doohan> click click
+[00:30:08] *** kevglass has quit IRC
+[00:30:49] <MatthiasM> doohan: ?
+[00:31:10] <doohan> You know in aliens
+[00:31:23] <doohan> When they have the thing that detects movements in the air?
+[00:31:41] <doohan> And it goes click clikc click and then start beeping when it finds somethiong?
+[00:31:47] <doohan> something*
+[00:31:47] <MatthiasM> yep
+[00:31:49] <doohan> click*
+[00:32:12] <doohan> If I hear that sound it puts me right there at the start of aliens
+[00:32:22] <MatthiasM> :)
+[00:32:25] <doohan> And then they're coming out of the god damned walls.
+[00:32:34] <MatthiasM> best film - alien 2 - lot's of beeping :)
+[00:32:38] <doohan> Oh yeah!
+[00:32:40] <doohan> Love it
+[00:33:31] <NoobFukaire> game over man
+[00:34:07] <doohan> hahaha
+[00:35:02] <doohan> Wow
+[00:35:05] <doohan> Aliens was 1986
+[00:35:20] <doohan> It does not seem that old
+[00:35:53] <aho> ye
+[00:35:57] <aho> it's very well made
+[00:38:33] <doohan> The original was 79
+[01:03:04] <doohan> I have defeated it!
+[01:03:20] <doohan> It was just over an inch long
+[01:03:32] <doohan> That's pretty big for a month by my reckoning
+[01:14:14] <jotham> 1979 was a suckers game
+[01:24:18] <doohan> Argh jotham
+[01:24:21] <doohan> Here you are
+[01:27:27] *** pstickne has joined #lwjgl
+[01:35:02] <NoobFukaire> most of ridley scotts stuff still looks awesome
+[01:35:10] <NoobFukaire> I watched blade runner the other day and it's still great
+[01:35:22] <NoobFukaire> even with the all the crazy stuff like PanAm ads and such
+[01:41:38] <doohan> hahah yeah I watched that recently too
+[01:41:45] <doohan> Awesome film :)
+[01:43:10] <doohan> Anyhooo bed time
+[01:43:14] <doohan> Night all!
+[01:43:19] *** doohan has quit IRC
+[01:44:45] *** pstickne has quit IRC
+[01:50:41] *** OrangyTang2 has left #lwjgl
+[02:57:14] *** kappaOne has quit IRC
+[03:09:41] <aho> hum... that gamejolt contest
+[03:09:52] <aho> "shocking" as theme... and that's it? :>
+[03:17:10] <appel> hm
+[03:17:13] <appel> hrmf
+[03:17:16] <appel> :)
+[03:18:43] <appel> shocking
+[03:19:27] * aho watches some slow motion lightning videos on youtube
+[03:19:29] <aho> hm hm
+[03:19:30] <aho> :>
+[03:20:14] *** betel has quit IRC
+[03:26:58] *** david_koontz has quit IRC
+[04:00:35] *** Archon has joined #lwjgl
+[04:09:30] *** locks has joined #lwjgl
+[04:21:44] *** locks has quit IRC
+[04:27:43] *** Gwinnell has joined #lwjgl
+[04:33:41] <aho> oh... just found the bestest(!!!) filter rule for thunderbird. "body" "contains" ".cn/" :)
+[04:34:44] *** Rosetta has quit IRC
+[04:35:26] <NoobFukaire> blocking spam from china?
+[04:35:39] <aho> ye
+[04:35:53] <aho> about 90% of the spam i get points at .cn domains
+[04:36:13] <aho> 9% .ru and the remaining 1% at .com
+[04:36:19] <aho> (approx)
+[04:36:36] *** woogley has joined #lwjgl
+[04:37:35] <appel> hm
+[04:37:37] <NoobFukaire> it's funny, at work I get a lot of german spam
+[04:37:55] <NoobFukaire> the only folks I've dealt with from germany are Mental Images
+[04:37:58] <NoobFukaire> !
+[04:38:06] <aho> ye, i also get some german spam. however, it doesnt point at .de domains
+[04:40:01] <appel> i never get spam
+[04:40:55] *** MatthiasM has quit IRC
+[04:41:00] *** MatthiasM has joined #lwjgl
+[04:41:03] <aho> :>
+[04:41:22] <NoobFukaire> haha, spam baiting
+[04:42:07] <Archon> Mutually Assured Spamestruction.
+[04:44:14] <appel> :]
+[04:44:31] *** Dragonene has joined #lwjgl
+[04:45:14] *** woogley_ has joined #lwjgl
+[04:52:52] <aho> http://blog.bitquabit.com/2009/06/12/zombie-operating-systems-and-aspnet-mvc/
+[04:52:54] <aho> lol
+[04:58:26] *** Excal_ has joined #lwjgl
+[05:01:14] *** Excal_ has quit IRC
+[05:02:30] *** woogley has quit IRC
+[05:03:28] *** InaVegt has joined #lwjgl
+[05:05:09] <aho> gog.com is pretty interesting imo
+[05:05:16] <aho> unfortunately there isnt even one good game :f
+[05:06:28] <aho> except maybe... beyond good and evil... but i already finished that one on the gc
+[05:06:39] <aho> (didnt even know there was a pc version)
+[05:11:36] <Dragonene> indeed
+[05:11:38] <Dragonene> oh well
+[05:11:40] <Dragonene> I'm off.
+[05:11:43] <aho> nn
+[05:11:51] <NoobFukaire> night guys
+[05:16:15] *** Gwinnell has quit IRC
+[05:20:39] *** Ina has quit IRC
+[05:26:56] *** logan_barnett_ has quit IRC
+[05:38:06] *** woogley_ has quit IRC
+[06:02:16] *** Dragonene has left #lwjgl
+[07:17:23] *** Dragonene has joined #lwjgl
+[07:19:14] *** pstickne has joined #lwjgl
+[07:24:47] *** delt0r___ has joined #lwjgl
+[07:26:57] *** delt0r_ has quit IRC
+[08:31:44] *** InaV has joined #lwjgl
+[08:31:44] *** InaVegt has quit IRC
+[08:45:19] *** pstickne has quit IRC
+[08:55:53] *** InaV has quit IRC
+[08:57:54] *** Ina has joined #lwjgl
+[10:22:08] *** indeterminatus has joined #lwjgl
+[10:57:28] *** Archon has quit IRC
+[11:10:08] *** indeterminatus is now known as indeterminaway
+[11:12:49] *** InaVegt has joined #lwjgl
+[11:14:35] *** Dragonene has quit IRC
+[11:17:14] *** keisangi has quit IRC
+[11:17:51] *** keisangi has joined #lwjgl
+[11:19:40] *** Ina has quit IRC
+[11:25:20] *** doohan has joined #lwjgl
+[11:25:26] <doohan> Morning all
+[11:35:54] <InaVegt> Ya know, I can't stand people who claim someone should use library x because it's ever so clearly superior when said person has already been shown to be incapable of using said library due to said library not being supported on his platform.
+[11:36:37] <aho> ok
+[11:37:07] <aho> i *love* hazelnut ice cream with ice coffee on top :>
+[11:41:54] <doohan> aho, that sounds tasty.
+[11:42:07] <aho> it is
+[11:42:14] <aho> gives me a taste orgasm :>
+[11:42:25] <doohan> Hmmm I'm not sure about this "Shocking" theme
+[11:42:26] <aho> it looks pretty awful tho
+[11:42:52] <aho> ye, me neither
+[11:51:39] *** Dragonene has joined #lwjgl
+[11:52:58] <doohan> hey Dragonene
+[11:53:06] <doohan> What do you think of the shocking theme?
+[11:53:23] <Dragonene> I like it
+[11:53:30] <aho> shocking! :v
+[11:53:42] <aho> (sry) :>
+[11:53:55] <doohan> haha
+[11:59:52] *** kappaOne has joined #lwjgl
+[12:02:50] <InaVegt> Hey kappaOne
+[12:03:02] <kappaOne> lo ppl
+[12:03:34] <aho> <doohan> Hmmm I'm not sure about this "Shocking" theme
+[12:03:38] <aho> <aho> ye, me neither
+[12:03:41] <aho> kappa, you? :>
+[12:03:55] <kappaOne> i think its ok, its pretty open ended
+[12:04:10] <kappaOne> and doesn't tie you down or limit you too much
+[12:04:26] <Dragonene> I rather like it
+[12:04:32] <Dragonene> Shame I can't join
+[12:04:33] <aho> http://www.thefreedictionary.com/shocking
+[12:04:34] <Dragonene> :<
+[12:04:35] <aho> hm :>
+[12:05:08] <aho> 2.  Highly offensive; indecent or distasteful.
+[12:05:10] <aho> :>
+[12:06:23] <InaVegt> Link?
+[12:06:55] <aho> http://www.javagaming.org/index.php/topic,20640.0.html
+[12:15:18] <InaVegt> WTF, my e-mail adress is real >:
+[12:15:48] <InaVegt> Owait, stupid font making a , look like a .
+[12:30:57] <indeterminaway> Damn, I should've waited with uploading Atomic Butcher to GameJolt :P
+[12:45:16] <aho> heh
+[12:45:19] <aho> played that one
+[12:45:30] <aho> liked the artwork :)
+[12:46:24] <kappaOne> aho gonna enter?
+[12:46:28] <aho> i think i got it from tigsource back then
+[12:46:36] <aho> no idea
+[12:46:41] <aho> x2
+[12:46:42] <aho> ;)
+[12:47:10] <kappaOne> just slap a coat of paint on fuzetsu and you'll win :)
+[12:50:47] <kappaOne> doh
+[12:51:09] <Dragonene> I've won against Markus once
+[12:51:11] <Dragonene> I'm still shocked
+[12:51:34] <Dragonene> It'll be my lifetime achievement
+[12:51:40] <Dragonene> When I'm 90 years old
+[12:51:43] <Dragonene> sitting in a rocking chair
+[12:51:48] <Dragonene> speaking to my grandchildren
+[12:51:50] <Dragonene> I'll go
+[12:51:55] <Dragonene> "I'll tell you a story."
+[12:52:08] <Dragonene> "I once scored higher than Notch in a competition."
+[12:52:22] <aho> :>
+[12:52:50] <Dragonene> kappa: I wouldn't be surprised if increpare enters, he's ridiculously productive
+[12:52:53] <aho> well, got no idea for that theme
+[12:52:56] <Dragonene> and enters like every comptetition
+[12:52:59] <Dragonene> competition*
+[12:53:17] <aho> just some... vague things which dont even work in my head :>
+[12:53:31] *** Rosetta has joined #lwjgl
+[12:54:42] <aho> *scratches head*
+[12:54:54] <Dragonene> if this compo was in august
+[12:54:56] <Dragonene> I'd be all over it
+[12:55:00] <Dragonene> :<
+[12:56:32] *** betel has joined #lwjgl
+[13:06:55] <aho> mh k
+[13:07:04] <aho> got some idea... scribbled on my whiteboard
+[13:07:12] <aho> no idea if it makes any sense tho
+[13:07:19] <aho> (~fun) :>
+[13:11:43] *** OrangyTang2 has joined #lwjgl
+[13:32:06] <doohan> OH I get the theme now
+[13:32:17] <doohan> GameJOLT - shocking
+[13:32:22] <doohan> See the connection?
+[13:32:31] <InaVegt> doohan: duh
+[13:35:36] <aho> ... :>
+[13:38:29] <Dragonene> To be fair
+[13:38:32] <Dragonene> I didn't catch that either
+[13:38:35] <Dragonene> until doohan said it just now
+[13:43:53] *** kbotnen has joined #lwjgl
+[13:48:22] <kappaOne> ah, nice, didn't notice that either
+[14:04:33] <doohan> Ok I have my electricity
+[14:04:34] <doohan> Sort of
+[14:08:01] <aho> oh boy... was it really *that* subtle? :)
+[14:08:30] * aho points at the favicon
+[14:08:32] <aho> <:
+[14:13:41] <doohan> SILENCE!
+[14:20:29] *** kevglass has joined #lwjgl
+[14:20:38] <kevglass> lo
+[14:21:02] <aho> yo kev
+[14:21:14] <Dragonene> Hi.
+[14:21:21] <aho> that "shocking" thing. you're in? :>
+[14:22:00] <kevglass> not yet
+[14:22:03] <kevglass> no ideas jumpd to mind
+[14:22:05] <kevglass> you?
+[14:22:31] <kevglass> trying to find out how you can get output from the iphonesimulator atm
+[14:22:44] <aho> one idea on the whiteboard, but that's about it :>
+[14:23:32] <doohan> kevglass have you had luck getting something running?
+[14:23:40] <kevglass> it runs but crashes
+[14:23:46] <kevglass> found I can build from the command line too
+[14:23:52] <doohan> Excellent
+[14:23:59] <doohan> That'lll let you skip xcode :)
+[14:24:08] <kevglass> which is awesome
+[14:24:08] <kevglass> however to get output you need to run the simualtor + app from command line
+[14:24:08] <kevglass> can't find out how you do that?
+[14:24:57] *** betel has quit IRC
+[14:25:06] <doohan> I'm not really sure either.
+[14:25:20] <doohan> I've found the whole mac community a bad lacking on the sharing of knowledge.
+[14:25:47] <kevglass> aye
+[14:25:55] <kevglass> still progress, just not very much
+[14:26:00] <kevglass> booting in osx each time is getting annoying
+[14:26:04] <kevglass> could do with another machine really
+[14:26:07] <doohan> I bet it is.
+[14:27:12] *** Notch_ has joined #lwjgl
+[14:28:00] <kevglass> having trouble getting debug info out also
+[14:28:02] <kevglass> pain
+[14:28:25] <Notch_> helloes. =)
+[14:28:35] <kevglass> yo Notch
+[14:29:07] <Notch_> how goes?
+[14:29:14] <kevglass> not bad at all
+[14:29:16] <kevglass> u?
+[14:29:38] <Notch_> tired, but happy. Pre-orders were a bit of a success
+[14:29:51] <kevglass> oooh, how many!
+[14:30:21] <Notch_> 48 in like 11 hours
+[14:30:28] <Dragonene> ooh
+[14:30:39] <kevglass> still going now?
+[14:31:06] <Notch_> it was 37 like 2.5 hours ago
+[14:31:10] <Notch_> so it seems to be still going
+[14:31:17] <doohan> Notch_, one of those was me :)
+[14:31:20] <doohan> http://graveindustries.com/~doohan/shocking/launch.html
+[14:31:22] <Notch_> sweeet =D
+[14:31:24] <doohan> Click on the screen somewhere
+[14:31:32] <doohan> Does that look electric to you?
+[14:31:43] <Notch_> exception: null
+[14:31:48] <doohan> NULL?!
+[14:31:52] <Notch_> file not fount: jnlp not available: launch.jnlp
+[14:31:55] <Notch_> *found
+[14:31:57] <doohan> hmm
+[14:31:58] <doohan> oh!
+[14:32:02] <kevglass> doesn't work here also
+[14:32:06] <doohan> I know why
+[14:32:41] <doohan> How about now?
+[14:32:50] <doohan> I forgot to set the right path in the jnlp
+[14:32:54] <aho> works tho
+[14:33:03] <doohan> Should be working now
+[14:33:08] <doohan> I fixed it :D
+[14:33:24] <doohan> So does it look zappy enough?
+[14:33:56] <kevglass> I just get unsigned resource
+[14:34:00] <kevglass> probably a cache issue now
+[14:34:11] <doohan> It shouldn't need signed.
+[14:34:13] <doohan> It's just j2d
+[14:34:56] * kevglass waves hand about randomly
+[14:35:05] <Notch_> looks zappy. Perhaps make the center line even whiter?
+[14:35:06] <Dragonene> shocking, doohan
+[14:35:18] <doohan> Notch_, I shall try
+[14:35:23] <Dragonene> I think the amplitude is too big compared to frequency myself
+[14:35:27] <Dragonene> well
+[14:35:30] <Dragonene> or something such
+[14:35:35] <doohan> Yeah
+[14:35:44] <Dragonene> looks neat tho
+[14:36:01] <doohan> Still need to thnk up some sort of game mechanic other than just zapping things though :)
+[14:36:54] <doohan> Ahh yes making the middle more white is much better
+[14:38:05] <doohan> Try now Dragonene
+[14:38:35] <Notch_> looks nice. =)
+[14:38:37] <aho> http://engineering.electrical-equipment.org/wp-content/uploads/2009/03/foudre11.jpg
+[14:38:41] <aho> overbright stuff
+[14:38:50] <aho> bloom :>
+[14:39:07] <doohan> Yeah that'd be cool
+[14:39:14] <Notch_> kabloom?
+[14:39:18] <doohan> haha
+[14:40:03] <aho> (it's actually more like scattering, but that isn't an option for real time stuff)
+[14:40:50] <doohan> Yeah I need to make my thing less straight now.
+[14:41:22] <aho> there was some quake3 mod with rather goog lightning effects... can't remember its name tho
+[14:41:47] <Dragonene> looks the same to me
+[14:41:50] <Dragonene> probably cached
+[14:41:54] <Dragonene> stupid jws
+[14:41:58] <doohan> Silly cache
+[14:42:09] <Dragonene> it looks brighter in the middle now
+[14:42:11] <Dragonene> like notch said
+[14:42:16] <Dragonene> but still shaped weirdly
+[14:42:29] <doohan> Yeah it does have an odd shape
+[14:42:30] <Dragonene> I think you should have it go more / instead of, uh... _
+[14:42:33] <doohan> I'm thinking about that.
+[14:42:36] <Dragonene> as in, stretch it vertically
+[14:43:56] *** kbotnen has quit IRC
+[14:45:56] *** kevglass has quit IRC
+[14:47:01] <kappaOne> oh nice doohan
+[14:50:02] <aho> http://forums.indiegamer.com/showthread.php?t=1117&highlight=lightning
+[14:50:39] <doohan> Oh wow
+[14:50:42] <doohan> That's some cool lightning
+[14:51:15] <doohan> Thanks kappaOne
+[14:51:32] <kappaOne> this is a nice tutorial too http://drilian.com/2009/02/25/lightning-bolts/
+[14:51:46] <MatthiasM> nVidia published also a lightning article
+[14:51:57] <doohan> Ok what about now?
+[14:52:03] <doohan> Dragonene, is that better for you?
+[14:52:27] <aho> ah... also that subdivide approach
+[14:52:27] <doohan> kappaOne, that's another nice bit of lightning
+[14:52:35] <aho> ye also liked that one most :)
+[14:53:24] <kappaOne> not sure how fast that'll be in j2d
+[14:53:37] <kappaOne> but worked pretty good last i tried in slick
+[14:53:57] <doohan> I reckon it could work in j2d
+[14:54:03] <aho> oooooh... those vids from that tutorial look f-ing awesome :)
+[14:54:09] * doohan agrees
+[14:54:11] <doohan> Sexy arcs
+[14:54:44] <MatthiasM> http://developer.download.nvidia.com/SDK/10/direct3d/Source/Lightning/doc/lightning_doc.pdf
+[14:55:23] <doohan> That second video is just too cool
+[14:55:33] <Dragonene> hey matt
+[14:55:58] <Dragonene> I recall you saying something about (int)(Math.random()*x) potentially giving the result x
+[14:56:04] <Dragonene> Could you repeat that please?
+[14:56:23] <MatthiasM> well - just use nextInt(x)
+[14:56:30] <MatthiasM> ~api Random
+[14:56:30] <Suzy> http://java.sun.com/javase/6/docs/api/java/lang/Math.html#random%28%29 | http://java.sun.com/javase/6/docs/api/java/util/Random.html | http://java.sun.com/javase/6/docs/api/java/lang/StrictMath.html#random%28%29
+[14:56:40] <Dragonene> I like it better now doohan
+[14:56:52] <Dragonene> MatthiasM: okay, sure, but that's not what I asked
+[14:56:53] <Dragonene> :)
+[14:57:04] <Dragonene> I'm just curious as to why the int thing doesn't work
+[14:57:39] <aho> (int)(Math.random()*x) <- if x is 5 it gives you 0 to 4 (incl)
+[14:58:15] <kappaOne> yup but never 5
+[14:58:22] <MatthiasM> why do you want to use Math.random at all ?
+[14:58:44] <kappaOne> its quick and static?
+[14:58:54] <aho> ye use xorshiftrng instead :>
+[14:58:56] <MatthiasM> it's slow, always generates a double - which takes a lot more time and entries from the random pool then nextInt
+[14:59:10] <aho> https://uncommons-maths.dev.java.net/
+[14:59:31] <MatthiasM> kappaOne: it's not quick
+[14:59:51] <MatthiasM> kappaOne: just do "static final Random r = new Random();" and then "r.nextInt(x);"
+[14:59:51] <Dragonene> MatthiasM: It's quick to write
+[14:59:58] <MatthiasM> no
+[15:00:00] <Dragonene> yes
+[15:00:16] <Dragonene> I don't have to scroll up and make a static Random member
+[15:00:19] <Dragonene> :>
+[15:00:21] <kappaOne> yeh thats what i ment :)
+[15:00:25] <MatthiasM> just declare your static random generator once, then it's a lot easier to write
+[15:00:39] <Dragonene> aho: yes, that's what I would thing as well, that it doesn't give you 5
+[15:00:47] <Dragonene> but I think matt explained that it can be five anyway
+[15:00:50] <Dragonene> for some reason
+[15:01:02] <Dragonene> think*
+[15:01:28] <kappaOne> hmm not sure how it'll be 5, if Math.random() is never 1
+[15:01:52] <kappaOne> highest it goes is 0.9*
+[15:02:33] <Dragonene> Yeah, I know
+[15:02:39] <Dragonene> This is why it's strange
+[15:02:57] <Dragonene> MatthiasM: Care to explain? :>
+[15:03:10] <MatthiasM> well - search the logs :)
+[15:03:25] <MatthiasM> anyway - I would not use float/double math if all you want is an integer
+[15:03:28] <MatthiasM> that's stupid
+[15:03:56] <MatthiasM> float point math is subject to rounding
+[15:04:28] <Dragonene> Heh
+[15:04:34] <Dragonene> searching the logs is painful
+[15:04:35] <Dragonene> :P
+[15:04:35] <OrangyTang2> hmm, that gamejolt compo, applet only?
+[15:05:03] <MatthiasM> as painful as writing ugly code just because you don't want to scroill up :)
+[15:05:17] <Dragonene> :<
+[15:05:21] <Dragonene> I don't think it's ugly
+[15:05:25] <Dragonene> In fact, I think it's rather neat
+[15:05:35] <Dragonene> Maybe not fast
+[15:05:40] <kappaOne> OrangyTang2 you can have downloadable games too
+[15:05:42] <MatthiasM> there is a random function to create a int - it's there - just use it
+[15:05:42] <Dragonene> But it looks okay to me
+[15:06:00] <MatthiasM> there is no good reason to use Math.random() at all
+[15:06:00] <Dragonene> okay sure
+[15:06:09] <MatthiasM> they should have never put that function in there
+[15:06:11] <Dragonene> except if you *do* think it looks good
+[15:06:15] <MatthiasM> at best deprecate it
+[15:06:21] <Dragonene> also
+[15:06:27] <Dragonene> I use Math.random for doubles mostly
+[15:06:32] <Dragonene> I rarely use it for ints
+[15:06:38] <Dragonene> because I rarely randomize ints
+[15:06:42] <MatthiasM> why do you need double at all?
+[15:07:13] <Dragonene> what, as opposed to float?
+[15:07:20] <MatthiasM> yep
+[15:07:24] <Dragonene> I never need double
+[15:07:28] <Dragonene> It's just easier if you're lazy
+[15:07:35] <Dragonene> since 1.0 will get turned into double
+[15:07:38] <MatthiasM> in graphics you rarely need doubles
+[15:07:47] <aho> 1f=float :>
+[15:07:49] <Dragonene> 1.0f is a bit more tedious to write
+[15:07:50] <Dragonene> not much
+[15:07:53] <Dragonene> but a little bit
+[15:08:01] <aho> you dont need that .0
+[15:08:01] <jezek2> I just got used to it :)
+[15:08:03] <Dragonene> well sure, you could do 1f
+[15:08:09] <Dragonene> but you could do 1d by the same idea
+[15:08:09] <MatthiasM> Dragonene: stop coding if typing a f is too much work
+[15:08:13] * kappaOne hides code from matt, got (int)(Math.random()*int) all over the place :)
+[15:08:14] <jezek2> so I always use 1f etc. :)
+[15:08:29] <Dragonene> MatthiasM: don't attack me
+[15:08:47] <Dragonene> so, okay
+[15:08:49] <aho> xorshift
+[15:08:50] <aho> :>
+[15:08:52] <Dragonene> here's another motivation:
+[15:09:06] <Dragonene> code with lots of float casting is less readable
+[15:09:13] <Dragonene> and doubles usually work fine for me
+[15:09:19] <MatthiasM> float casting ?
+[15:09:22] <Dragonene> If I don't need the optimization, why should I use floats?
+[15:09:34] *** delt0r___ has quit IRC
+[15:09:38] <Dragonene> converting, whatever
+[15:09:40] <Dragonene> to floats
+[15:09:52] <Dragonene> like... 23f or (float)(myExpression)
+[15:09:57] <MatthiasM> OpenGL works with floats
+[15:10:00] <Dragonene> Yes
+[15:10:06] <MatthiasM> not doubles
+[15:10:08] <Dragonene> And I use floats when I use opengl
+[15:10:13] <Dragonene> but I mostly don't code opengl stuff
+[15:11:10] <aho> https://uncommons-maths.dev.java.net/source/browse/uncommons-maths/tags/Release-1.2/core/src/java/main/org/uncommons/maths/random/XORShiftRNG.java?rev=89&view=markup
+[15:11:12] <aho> there
+[15:11:13] <aho> :>
+[15:11:31] <Dragonene> why do you keep repeating XORShift? :>
+[15:11:40] <aho> fast+awesome
+[15:11:44] <Dragonene> Well see
+[15:11:48] <Dragonene> I don't need a better random generator
+[15:11:54] <doohan> I HAVE AN IDEA!!
+[15:12:00] <Dragonene> I don't generate all that many random numbers
+[15:12:03] <doohan> You need a bigger boat. That's what you need.
+[15:12:06] <doohan> :D
+[15:12:11] <Dragonene> I mean
+[15:12:35] <Dragonene> All I wanted to know was why (int)(Math.random*int) could possibly go wron
+[15:12:37] <Dragonene> wrong*
+[15:12:56] <Dragonene> And got told to use other random generators and not to use doubles :'(
+[15:13:41] <MatthiasM> Dragonene: ok - for (int)(bla * x) to be < x you depend on 2 facts: bla is always < 1.0 - and all involved operations do round down
+[15:13:58] <MatthiasM> if a single one does a round up - you are out of luck
+[15:14:05] <Dragonene> I agree
+[15:14:13] <MatthiasM> so you must use strict math for this
+[15:14:19] <Dragonene> ah
+[15:14:26] <MatthiasM> and I'm not sure that Random.nextDouble() uses strict math too
+[15:14:27] <Dragonene> if I don't use strict math, it can round up?
+[15:14:42] <MatthiasM> there can be optimisations or different behavior
+[15:15:04] <MatthiasM> as each float point operation is only exact to atmost +- 1 ulp
+[15:15:18] <Dragonene> I don't know what an ulp is
+[15:15:19] <Dragonene> :P
+[15:15:32] <Dragonene> http://en.wikipedia.org/wiki/Unit_in_the_Last_Place
+[15:15:33] <Dragonene> that?
+[15:15:38] <MatthiasM> so - assuming that a result of x causes catastropic behavior (eg IOOB) then don't use that approch
+[15:15:42] <MatthiasM> yes
+[15:16:00] <MatthiasM> it's as simple as this - use nextInt()
+[15:16:14] <MatthiasM> just look how nextDouble() works
+[15:16:22] <Dragonene> right
+[15:16:27] <Dragonene> and why shouldn't I use floats?
+[15:16:31] <Dragonene> (this is unrelated)
+[15:17:04] <Dragonene> uh
+[15:17:05] <Dragonene> sorry
+[15:17:09] <Dragonene> why *should* I use floats
+[15:17:09] <Dragonene> I meant.
+[15:17:26] <MatthiasM> Dragonene: compare yourself: http://pastebin.com/d2b747ffa
+[15:18:04] <Dragonene> sure
+[15:18:21] <MatthiasM> floats are generaly much faster and consume less memory - and in the few cases where float precision is not enough then double is mostly only a temprary fix
+[15:18:31] <Dragonene> I agree with that
+[15:18:51] <Dragonene> But since double is the standard and I very rarely have any speed or memory problems that would get fixed by changing them to floats
+[15:18:57] <Dragonene> you could apply the same argument the other way around
+[15:19:02] <Dragonene> using floats is mostly a temporary fix
+[15:19:13] <Dragonene> it might increase your speed some but the real optimizations are probably elsewhere
+[15:19:18] <Dragonene> Wouldn't you agree?
+[15:19:23] <MatthiasM> no
+[15:19:50] <aho> i think i've used double only a few times
+[15:20:00] <Dragonene> Heh
+[15:20:03] <Dragonene> That's a strong no
+[15:20:09] <Dragonene> But I still don't see the reasoning behind it
+[15:20:22] <MatthiasM> one place I use double is if I do math with nanoseconds for debug output
+[15:20:29] <Dragonene> the reason I use doubles is because it leads to cleaner code (unless, again, you're working against opengl where you'll need to use floats anyway)
+[15:20:34] <aho> ah yea... same here :>
+[15:21:00] <kappaOne> also all java maths functions use double
+[15:21:06] <Dragonene> I still doubt changing my maths to float would yield substantial speed improvements
+[15:21:10] <Dragonene> I'd like to see some proof of this
+[15:21:38] <MatthiasM> well - if you call it with a float argument and cast the return value back to float - then hotspot will use a float version of that math call (like sqrt)
+[15:21:56] <Dragonene> ...really?
+[15:22:02] <Dragonene> I had absolutely no idea of that
+[15:22:12] <MatthiasM> yep :)
+[15:22:46] <Dragonene> if this is true
+[15:22:53] <Dragonene> why is there no Math.sqrt(float)?
+[15:23:00] <MatthiasM> don't know
+[15:23:01] <Dragonene> They could've just had a method for it in there
+[15:23:04] <Dragonene> which would lead to much cleaner code
+[15:23:29] <Dragonene> I mean, you have to admit that (float)Math.sqrt((double)myFloat) is messier than Math.sqrt(myFloat)
+[15:23:43] <MatthiasM> Dragonene: http://bugs.sun.com/bugdatabase/view_bug.do?bug_id=4942704
+[15:23:45] <Dragonene> readability goes *way* down
+[15:23:56] <MatthiasM> http://bugs.sun.com/bugdatabase/view_bug.do?bug_id=6452568
+[15:24:07] <aho> why the double there?
+[15:25:02] <aho> you only need explicit casting if you're going down
+[15:25:02] <Dragonene> aho: Good question I guess
+[15:25:18] *** delt0r___ has joined #lwjgl
+[15:25:18] <aho> like long->int or double->float :>
+[15:26:12] <Dragonene> yeah
+[15:26:31] <Dragonene> I guess I'm just not used to using floats
+[15:26:37] <aho> well, i for one dont care if you continue using double all over the place .)
+[15:26:41] <Dragonene> I'd still like to see some proof that floats will yield a significant speedup
+[15:26:52] <Dragonene> I mean, I might switch if there's a clear benefit
+[15:27:01] <Dragonene> but unless there is one, I prefer code readability
+[15:27:04] <aho> more of em fit into the cache
+[15:27:04] <Dragonene> less casting
+[15:27:06] <MatthiasM> the speedup depends mostly when passing data to GL - as double requires additional conversions
+[15:27:25] <MatthiasM> and when working on arrays it's important to make them as small as possible
+[15:27:32] <Dragonene> I've never made a GL program that doesn't run hundreds of times faster than I need it to :P
+[15:27:53] <MatthiasM> Dragonene: then make a larger 3d world :)
+[15:27:56] <aho> and they offer enough precision for games anyways... it will rarely be more than half a pixel off
+[15:28:19] <Dragonene> Certainly
+[15:28:26] <Dragonene> I've never seen any precision issues with float
+[15:28:35] <MatthiasM> float-vs-double is like 24-vs-32 bit depth buffer ;)
+[15:29:12] <Dragonene> MatthiasM: the largest 3d world I've made is a sphere with a couple of hundred triangles...
+[15:29:13] <Dragonene> :>
+[15:29:18] * aho watches the lightning vids again
+[15:29:19] <aho> :>
+[15:29:55] <Dragonene> I have absolutely no experience to speak of working in 3d
+[15:30:08] <Dragonene> I've made one simple game and one or two simple animations
+[15:31:26] <InaVegt> Anyone familiar with jME?
+[15:31:39] * MatthiasM points at kevglass_
+[15:32:35] <Dragonene> "That one, over there."
+[15:32:54] <Dragonene> InaVegt: Ask if anybody is familiar with Worldscape
+[15:33:04] <MatthiasM> lol
+[15:50:52] *** doohan has quit IRC
+[16:07:27] *** OrangyTang2 has left #lwjgl
+[16:08:48] *** OrangyTang2 has joined #lwjgl
+[16:19:23] *** Schnitter has joined #lwjgl
+[16:34:05] <kappaOne> gamejolt contest on tigsource now
+[16:43:00] <Dragonene> aye
+[16:50:23] *** doohan has joined #lwjgl
+[16:53:17] <NoobFukaire> Dragonene: we grabbbed jme's math lib
+[16:53:43] <Dragonene> ...why are you saying this to me?
+[16:54:00] <NoobFukaire> why is there no Math.sqrt(float)?
+[16:54:02] <Dragonene> oh
+[16:54:06] <Dragonene> Okay
+[16:54:14] <Dragonene> Since you were talking about JME
+[16:54:18] <Dragonene> I thought maybe you were answering InaVegt
+[16:54:27] <Dragonene> anyway, I don't really need a better maths lib
+[16:54:34] <Dragonene> stuff runs good enough :D
+[16:57:47] <Dragonene> thanks tho.
+[17:09:58] <aho> :>
+[17:19:22] *** logan_barnett has joined #lwjgl
+[17:36:13] <doohan> Woo
+[17:36:19] <doohan> Now I have shocking boxes!
+[17:44:22] <aho> mh. ff3 doesnt support writing-mode:tb-rl
+[17:44:24] <aho> lame
+[17:44:25] <aho> :f
+[17:55:05] <doohan> ok what about this? http://graveindustries.com/~doohan/shocking/launch.html
+[17:55:42] <kappaOne> ohh, very nice
+[17:57:43] <doohan> :)
+[17:57:52] <doohan> Still haven't really got a game idea yet.
+[17:57:53] <kappaOne> runs pretty solidly at 50fps
+[18:00:43] <aho> 31-32 fps here
+[18:01:45] <doohan> Well 30 is ok
+[18:01:51] <doohan> Isn't it?
+[18:02:06] <aho> depends
+[18:02:31] *** jonkri has joined #lwjgl
+[18:11:34] *** ako has joined #lwjgl
+[18:25:24] <doohan> depends?
+[18:30:07] *** aho has quit IRC
+[18:32:51] *** ako has quit IRC
+[18:38:02] <doohan> sure
+[18:38:34] <doohan> Nice :D
+[18:39:37] <doohan> ARGH my trackpad has gone all wierd
+[18:40:05] <kappaOne> ah sry bout that
+[18:40:06] <Dragonene> okay, time for bed
+[18:40:07] <Dragonene> night folks
+[18:40:18] <kappaOne> nn drag
+[18:40:23] <doohan> I think that becuase my laptop got a bit hot
+[18:40:26] <doohan> NIght Dragonene
+[18:40:36] <doohan> But that's really nice kappaOne
+[18:40:42] <doohan> brb
+[18:40:44] <doohan> reboot
+[18:41:06] <OrangyTang2> kappaOne: there;s some flickering when something fades out
+[18:41:48] <OrangyTang2> almost like the row that's going to slide in is drawn at the end of the slide for a frame before it starts it's slide
+[18:41:51] <Dragonene> kappaOne: I love it: Except for two things
+[18:42:07] <kappaOne> OT2: i'll get that hopefully, just testing the idea atm
+[18:42:07] <Dragonene> a) random things sometimes disappear, and b) magic the gathering icons?!
+[18:42:26] <Dragonene> it's also not obvious where you need to hold your mouse
+[18:42:28] <kappaOne> Drag yes :) place holder art atm
+[18:42:34] <Dragonene> I think you should have the triangles visible
+[18:42:58] <Dragonene> Very nice though.
+[18:43:00] <kappaOne> ah ok thx, will add that
+[18:43:02] <Dragonene> okay, 'night
+[18:43:08] <kappaOne> was thinking right click rotates in other directions
+[18:43:11] <kappaOne> *-s
+[18:43:16] <Dragonene> sounds good
+[18:43:28] 
+[18:43:31] <OrangyTang2> slickly done though
+[18:43:41] <kappaOne> yeh probably
+[18:44:36] <kappaOne> just something i wanted to finish before attempting the gamejolt contest
+[18:44:44] <Dragonene> oh
+[18:44:51] <Dragonene> I thought this *was* for the gamejolt contest
+[18:44:56] <Dragonene> nice lighting effect and you're set
+[18:45:12] <kappaOne> hehe, yeh suppose could do
+[18:45:21] <kappaOne> have two entries :)
+[18:45:44] <Dragonene> i wonder if they allow that
+[18:45:53] <Dragonene> cros said he would clarify that I think
+[18:45:53] <kappaOne> but still waiting for the grand idea to arrive :)
+[18:47:48] <kappaOne> but don't see why they'd want to prevent multiple entries
+[18:50:18] *** do0han has joined #lwjgl
+[18:50:20] <do0han> back
+[18:53:19] <lwjglbot> lwjglforum: Re: What Exactly is Dreaded Error 7? <http://lwjgl.org/forum/index.php/topic,2925.msg16226.html#msg16226>
+[18:55:34] <do0han> kappaOne, those are nice icons
+[18:56:06] <kappaOne> Magic the Gathering as Drag rightly guessed :)
+[18:56:15] <do0han> ahh so it is!
+[18:56:24] <do0han> Is this for the gamejolt thing?
+[18:56:39] <Dragonene> I didn't guess!
+[18:56:41] <Dragonene> I knew it.
+[18:56:44] <Dragonene> I've played lots of magic
+[18:56:45] <Dragonene> :D
+[18:56:46] <Dragonene> anyway
+[18:56:50] <kappaOne> :)
+[18:56:51] <Dragonene> I said I was going to bed
+[18:56:54] <Dragonene> and so I am!
+[18:56:55] <Dragonene> I think!
+[18:57:10] <do0han> kappaOne, on my box it flickers alot
+[18:57:25] <do0han> While spinning
+[18:57:36] <kappaOne> no wasn't intended for gamejolt, now that drag mentioned it, could well be, just need to throw in a lightning effect
+[18:58:20] <kappaOne> will add vsync for next version
+[18:58:36] <Dragonene> *gone*!
+[18:58:39] <kappaOne> nn :)
+[18:59:26] *** doohan has quit IRC
+[19:00:36] <do0han> Oh no doohan has quit!
+[19:02:34] *** Dragonene has left #lwjgl
+[19:03:43] <kappaOne> probably a good idea to switch to pulpcore for it instead of slick
+[19:03:57] <kappaOne> since its not really that graphical heavy
+[19:04:18] <do0han> Yeah
+[19:04:31] <do0han> Things like slick cause my laptop to go into metldown
+[19:04:39] <do0han> Stupid toasty gpu.
+[19:04:47] <kappaOne> hehe :)
+[19:10:05] <do0han> And it doesn't help that it's so warm today
+[19:40:08] *** logan_barnett has quit IRC
+[19:53:12] *** kevglass has joined #lwjgl
+[19:53:15] <kevglass> evening
+[19:53:26] <NoobFukaire> afternoon
+[19:55:52] * Notch_ yawns
+[19:56:14] <appel> interesting
+[19:56:25] <appel> anyone used Spring?
+[19:56:35] <appel> (in games)
+[19:56:41] <kevglass> not in games
+[19:56:56] <kevglass> use it for work alot
+[19:57:01] <appel> I'm using it now in my newest game
+[19:57:03] <kevglass> along with a bunch of other injection containers
+[19:57:11] <kevglass> would make sense for a reasonably complicated game
+[19:57:12] <appel> I like this prototype scope thingy
+[19:57:22] <kevglass> same as that entity component system
+[19:57:33] <appel> I can essentially define some entity in xml and then request a new instance of it from the spring
+[19:58:51] <appel> too bad spring is rather large
+[19:59:15] <kevglass> could write a simple IoC container without much pain
+[19:59:19] <kevglass> or try that picocontainer thing
+[19:59:50] <appel> checking
+[20:00:06] <appel> the minimum spring libs are 1.3mb
+[20:01:19] <appel> ooo...pico container only 280k
+[20:01:54] <OrangyTang2> appel: you thinking of using Spring... client side?
+[20:02:02] <appel> sure
+[20:02:08] <OrangyTang2> interesting
+[20:02:13] <appel> already doing some experiments with it
+[20:02:25] <appel> it's promising so far
+[20:02:46] *** keisangi has quit IRC
+[20:02:49] <OrangyTang2> I know there are several big games using it server side, but never heard of it used client side
+[20:02:54] <appel> but of course, there's that voice in my head that says "overkill", but i ignore it
+[20:03:28] <appel> OrangyTang2: i'm primarily focusing on using it for my game objects
+[20:03:31] *** keisangi has joined #lwjgl
+[20:03:38] <appel> OrangyTang2: but i'm realizing it can be used for much more now
+[20:03:42] *** OrangyTang2 is now known as OrangyTang
+[20:03:48] <OrangyTang> i see
+[20:03:57] <OrangyTang> thinking of using it for unit testing?
+[20:04:54] <appel> http://lwjgl.pastebin.com/m226c691b
+[20:05:00] <appel> not particulary
+[20:05:14] <appel> here's an example of what i'm doing with one of my starship
+[20:05:34] <appel> i'm going to refactor it somewhat though
+[20:06:02] <appel> that's just a test though
+[20:06:24] *** NoobFukaire has quit IRC
+[20:06:35] <appel> i'm going to rid myself of those Templates and using prototype scope spring offers
+[20:06:47] <appel> will simplify a lot
+[20:07:25] <OrangyTang> it's a bit verbose
+[20:08:43] <OrangyTang> although being able to use non-absolute class names would help alot
+[20:09:06] <appel> just class="SimpleMovement" ?
+[20:09:13] <appel> I think that is possible
+[20:09:24] <OrangyTang> aye, or movement.SimpleMovement
+[20:10:33] <appel> http://static.springsource.org/spring/docs/3.0.x/spring-framework-reference/html/ch04s04.html#beans-factory-scopes-prototype
+[20:11:37] <appel> this way I can simply define a new gameobject and all it's components as a prototype, and then create new instances of those gameobjects in the spring xml when defining some map file, e.g. starting game objects
+[20:13:35] <appel> no need to implement some cloning methods :)
+[20:18:54] <kevglass> new demo yet?
+[20:19:18] <appel> <- ?
+[20:20:27] <appel> i've not deployed anything since last time
+[20:22:46] <kevglass> fair enough
+[20:26:53] <appel> http://private.is/arni/gcom/menu.png
+[20:27:28] <kappaOne> kev got a new demo
+[20:27:33] <kevglass> ?
+[20:27:52] <kevglass> nice screen appel !
+[20:28:11] <kevglass> clicking kappa
+[20:28:20] <kappaOne> yup appel very nice and clean
+[20:28:36] <appel> thanx
+[20:28:39] <appel> what is this game kappa?
+[20:28:49] <appel> ahh
+[20:28:53] <kevglass> ooooh, interesting kappa
+[20:28:54] <kappaOne> just some random thing
+[20:29:25] <kevglass> got potentially
+[20:29:40] <kappaOne> aiming for something really small and casual
+[20:29:49] <kevglass> make a great oiphone app :)
+[20:29:53] <do0han> appel, that looks really good
+[20:30:43] <appel> good :)
+[20:31:38] <kevglass> kappa - faster rotate, get rid of the glitch when it starts replacing blocks
+[20:31:43] <kevglass> more effects on disappear
+[20:31:47] <kevglass> something in the background
+[20:31:55] <kevglass> looks cool so far tho
+[20:32:01] <kevglass> like the icons, where they come from?
+[20:32:05] <appel> right-click = rotate counter-clockwise, left-click = rotate clockwise
+[20:32:05] <kappaOne> dev art
+[20:32:15] <kappaOne> but told they are from magic the gathering
+[20:32:18] <kevglass> tap once - rotate :)
+[20:32:30] <kappaOne> so will probably have to find some more free icons :)
+[20:33:06] <kappaOne> yeh was thinking about the counterclock wise thing
+[20:33:13] <kappaOne> but not sure it'll work for touch screen
+[20:33:19] <appel> ok
+[20:33:20] <kappaOne> unless theres a switch
+[20:33:31] <kappaOne> which you could tap to set direction
+[20:33:34] <kevglass> just make the touch screen only have clockwise
+[20:33:36] <do0han> kappaOne, gesture
+[20:33:37] <appel> is the double click on touch screens?
+[20:33:39] <do0han> drag and spin?
+[20:33:40] <kevglass> there is
+[20:33:43] <kevglass> drags are good
+[20:33:55] <kevglass> but at that resolution going to be inconsitent
+[20:34:03] <do0han> The icons are pretty big though
+[20:34:07] <appel> drag to left = counter-clockwise, drag to right = clockwise, click = clockwise
+[20:34:11] <do0han> So should be easy enough to drag
+[20:34:39] <kevglass> need to be about 40x40 to get consistent touch
+[20:34:52] <appel> you should also check if more than 3 identical icons "match"
+[20:34:54] <kevglass> drag is worse due to latentcy of drag input
+[20:37:54] <kappaOne> how bit should the screen be?
+[20:38:38] <kappaOne> its 400*320 atm
+[20:39:40] <kevglass> 480x320
+[20:39:47] <kevglass> if you're thinking iphone/android eventually
+[20:40:07] <kappaOne> ah so got 80 pixels for score and gui :)
+[20:40:12] <kevglass> :)
+[20:40:36] <kappaOne> but for now think it'll make a good pulpcore applet
+[20:41:00] <kevglass> aye, it'll rock
+[20:41:07] <kevglass> have you used pulpcore before?
+[20:41:15] <kappaOne> nope
+[20:41:26] *** InaVegt has quit IRC
+[20:41:48] <kappaOne> had a brief look, it looks pretty different from java2d
+[20:42:04] <kevglass> yeah, allows it to be smarter int he background
+[20:43:17] <kevglass> asset management had me confused for a bit
+[20:43:25] <kevglass> but s'ok after a bit
+[20:45:13] <OrangyTang> how do you guys manage internal library code?
+[20:46:28] <kevglass> ?
+[20:46:49] <kappaOne> use slick :)
+[20:46:55] <kevglass> use the new one
+[20:47:28] <OrangyTang> i've got so many old projects using the same shared lib that it's getting to be a right pain
+[20:47:33] *** Ina has joined #lwjgl
+[20:47:41] <kevglass> you keep all the old projects up to date??
+[20:47:47] <kevglass> I just bin them
+[20:48:33] <OrangyTang> yeah, i've got like 14 game projects atm
+[20:49:22] *** void256 has joined #lwjgl
+[20:55:07] *** do0han has quit IRC
+[20:55:11] <OrangyTang> you just ditch them and let them rot then?
+[20:55:21] <OrangyTang> it's a tempting idea
+[20:58:13] <void256> evening, is the kev dude available? I have a question =)
+[21:01:16] <kevglass> ello
+[21:01:20] <kevglass> yeah, I dump the project
+[21:01:27] <kevglass> I figure if I ever want it again I'll updated it then
+[21:01:30] <kevglass> doesn't really happen tho :)
+[21:01:36] <kevglass> objc is da evil
+[21:01:38] <void256> what project? =)
+[21:01:40] <void256> ah
+[21:01:50] <void256> yes it is
+[21:01:52] <void256> :)
+[21:01:54] <void256> kinda
+[21:02:00] <void256> some things are nice tho
+[21:02:20] <kevglass> doc is so shit
+[21:03:05] <void256> the doc sucks, aye
+[21:03:11] <void256> the [] sucks too
+[21:03:24] <void256> [self do];
+[21:03:26] <void256> odd
+[21:03:41] <void256> =)
+[21:03:56] <kevglass> damn my typing
+[21:04:11] <kevglass> hopefully I'll be pushing out some iphone stuff soon
+[21:04:21] <void256> got any yet?
+[21:04:32] <kevglass> no, only just got images displaying unfortuntely
+[21:04:45] <kevglass> and even then they don't work how i want
+[21:04:45] <void256> I played that new terminator lite game today, that's kinda awesome :D
+[21:04:53] <kevglass> damn I hate objc
+[21:04:58] <void256> heh
+[21:05:06] <void256> what exactly do you hate? =)
+[21:05:17] <kevglass> but this write once, build as applet/android/iphone is soo appealing
+[21:05:22] <kevglass> i hate the syntax
+[21:05:28] <kevglass> i hate the wierd init code
+[21:05:32] <kevglass> I hate the SDK
+[21:05:35] <void256> I hate that property definition
+[21:05:36] <kevglass> it's all just evil
+[21:05:49] <void256> you need to write basically the same thing 3 times or so
+[21:05:53] <void256> @property
+[21:05:57] <void256> @sytheesize
+[21:06:02] <void256> the actual property
+[21:06:04] <void256> what the fuck?
+[21:06:06] <void256> =)
+[21:06:54] <kevglass> yeah
+[21:06:59] <kevglass> I want to avoid all of that shit if possible
+[21:07:18] <kevglass> also I honestly think android will be more lucrative for a while
+[21:07:57] <void256> what I like is the "send message to object" instead of "call method on object" paradigm with the named parameters ... it's still an odd syntax but I like the named parameters a lot :)
+[21:08:46] <void256> [self makeColor: red:1.0f blue: 1.0f green: 1.0f];
+[21:08:51] <void256> that's kinda nice :)
+[21:08:57] <kevglass> really?
+[21:09:02] <kevglass> I think its kinda verbose
+[21:12:10] <kevglass> damn just commited target to svn :(
+[21:12:52] <void256> btw: are you affected by this one: http://www.twitpocalypse.com/ yet ?
+[21:13:19] <void256> my tweet app on the iphone (twitterific) stopped working yesterday because of this >_<
+[21:13:32] <void256> 32 bit sign id I suppose ^^
+[21:15:02] <kappaOne> minecraft zombies http://5.media.tumblr.com/aBITUF1m8oo8ak5c1AzJ2Wwco1_500.jpg :)
+[21:15:29] <void256> o_O
+[21:17:07] <kevglass> scary
+[21:17:55] <void256> you can't have different normals or texture coords for the same vertex when using glDrawElements without duplicating the vertex, don't you?
+[21:25:49] <kevglass> anyone know where I can find a OSX shell account ? :)
+[21:27:30] <void256> uhm, on your mac book or mac mini? *hides*
+[21:28:29] <kevglass> my mac mini isn't intel
+[21:29:16] <void256> uhm, that's a pitty then :(
+[21:35:11] <kevglass> right, in that case
+[21:35:33] *** kevglass has quit IRC
+[21:42:52] *** kevglass has joined #lwjgl
+[21:43:36] <kevglass> yay for netbooks
+[21:47:04] *** indeterminaway is now known as indeterminatus
+[21:58:49] <appel> :]
+[21:58:57] <appel> kev, you a spring expert then?
+[22:01:18] <void256> he is, but only spring the season =)
+[22:01:36] <appel> :>
+[22:01:51] <kevglass> nope
+[22:01:57] <void256> spring fever, love and stuff like that ...
+[22:02:06] <void256> he's full of that stuff
+[22:02:07] <kevglass> have to use lots of different continers
+[22:02:08] <void256> :)
+[22:02:19] * kevglass slaps void256
+[22:02:48] <appel> time to take your pills void
+[22:02:59] <void256> uhm
+[22:03:06] <void256> had enough already for today
+[22:03:07] <void256> :/
+[22:03:20] <kevglass> u ok?
+[22:03:39] <void256> kinda, yes :)
+[22:09:56] <appel> :)
+[22:18:23] <kevglass> whee
+[22:38:25] <Schnitter> http://tickets.rammsteinshop.de/tickets/
+[22:38:39] <Schnitter> It's down since yesterday midnight :D
+[22:41:16] *** betel has joined #lwjgl
+[22:49:09] *** drfreema has joined #lwjgl
+[22:49:36] <drfreema> can anyone help me with lwjgl install for AVSynthesis work?
+[22:50:24] <drfreema> how do i install the lwjgl library?
+[22:50:30] <kevglass> carefully
+[22:50:48] <drfreema> i'm following the install guide here: http://www.linuxjournal.com/article/10036
+[22:51:38] <kappaOne> thats using a pretty old version of lwjgl
+[22:51:51] <kappaOne> pre lwjgl 2.0
+[22:51:55] *** indeterminatus is now known as indeterminaway
+[22:52:54] <drfreema> are the .so's called out available in the current version?
+[22:52:57] <kappaOne> so you'll need to use lwjgl 1.1.4 unless they've moved to lwjgl version 2.0 in latest version
+[22:52:58] <drfreema> i can't find them
+[22:53:26] <drfreema> where can i find 1.1.4?
+[22:55:21] <kappaOne> not sure its still available on sourceforge
+[22:55:37] <kappaOne> you'll have to find out which version of lwjgl AVSynthesis is using
+[22:55:45] <drfreema> the link to 1.1.4 goes to 2.1 download
+[22:55:51] <kappaOne> then you'll need to find a download for that version of lwjgl
+[22:55:56] <kappaOne> for linux
+[22:56:15] <drfreema> thanks
+[22:56:16] <kappaOne> so it may or maybe not be 1.1.4
+[22:56:21] <kappaOne> could be an even older version
+[22:56:34] <drfreema> ok, i'll keep trying, thx
+[22:58:34] <kappaOne> do notice the comment at bottom of that linuxjournal article you linked too
+[22:58:57] <kappaOne> it mentions that AVSynthesis no longer uses lwjgl but uses JOGL
+[23:05:24] *** _Riven has joined #lwjgl
+[23:08:12] <_Riven> any folks wishing to point and laugh at the bugs in my newly released NIO wrapper?
+[23:08:35] <kevglass> sure
+[23:08:36] <kevglass> ha ha
+[23:08:40] <_Riven> if anyone is interested: http://www.javagaming.org/index.php/topic,20647.0.html
+[23:08:43] <kevglass> anthing else you need\/
+[23:08:46] <kevglass> ?
+[23:09:03] <_Riven> yeah, a handshake and a faint smile
+[23:09:09] <kevglass> ooer
+[23:09:20] <_Riven> now that's a new word!
+[23:09:23] <kevglass> I don't do smiling I'm afraid
+[23:09:39] <_Riven> it's not your fault
+[23:09:43] <_Riven> i hate smiling too
+[23:09:54] <drfreema> kappaOne:  Thx for the help.  I got it working.  I had to get jogl and copy libraries over.  Thanks again.
+[23:09:59] <_Riven> it reveals the weakness within
+[23:10:20] <_Riven> kev, gimme latest screens!
+[23:10:24] <kevglass> oh
+[23:10:28] *** drfreema has quit IRC
+[23:10:29] <kevglass> I don't have any teeth
+[23:10:31] <kevglass> hence not smiling
+[23:10:34] <_Riven> been way too long withou IRC, you gotta have some major progress
+[23:10:34] <kevglass> screens
+[23:10:39] <kevglass> where did I put them
+[23:10:55] <kevglass> http://www.cokeandcode.com/applets/soccer/soccer4.png
+[23:11:10] <_Riven> what happened to that RPG?
+[23:11:21] <kevglass> it's still on
+[23:11:29] <kevglass> this is a small game to test the abstraction code
+[23:11:30] <_Riven> or did you transition that to a soccer game!
+[23:11:34] <_Riven> zombies!
+[23:11:52] <_Riven> porting Slick over to mobiles?
+[23:11:57] <kevglass> nope
+[23:12:03] <kevglass> none of it has been slick
+[23:12:12] <kevglass> simple graphics API
+[23:12:39] <_Riven> will that soccer game be realtime?
+[23:12:54] <kevglass> nope
+[23:12:56] <kevglass> turn based
+[23:13:02] <kevglass> it already playable btw
+[23:13:07] <kevglass> just AI is buggered atm
+[23:13:17] <OrangyTang> btw kev any plans for animation? even just sliding the sprites from tile to tile?
+[23:13:28] <kevglass> same url, remove the image
+[23:13:29] <OrangyTang> 'cos i find it hard to follow what moves the ai is actually doing
+[23:13:31] <kevglass> the ball already slides
+[23:13:39] <kevglass> thats the most important one
+[23:13:43] <kevglass> hard to track the ball otherwise
+[23:13:52] <kevglass> movement is single tile now, so not so harsh on the eyes
+[23:13:54] <OrangyTang> ah, think i played a version before that was added
+[23:13:58] <kevglass> aye
+[23:14:02] <kevglass> kappa suggested a while ago
+[23:14:04] <kevglass> the applet is up now
+[23:14:07] *** indeterminaway has quit IRC
+[23:14:09] <kevglass> working on the iphone port atnm
+[23:14:14] <kevglass> android works#
+[23:14:36] <_Riven> let me take a look
+[23:15:15] <kevglass> no rush
+[23:15:31] <kevglass> more of a test piece for the abstraction really
+[23:15:38] <kevglass> it's sorta fun ish
+[23:16:35] <kevglass> AI spases ouyt quite a bit tho
+[23:16:41] <OrangyTang> kevglass: is it possible to tackle atm?
+[23:16:42] <_Riven> you should really also release a J2ME version... my phone with touch screen has no android, grmbl
+[23:16:46] <kevglass> yep
+[23:17:09] <Ina> http://www.swampwitchgames.com/stuff/mage.png <- comments on this spritesheet?
+[23:17:13] <kevglass> little green X over a player when you stand next to them if they've got the ball
+[23:17:17] <kevglass> success is random tho
+[23:17:18] <OrangyTang> I always seem to get FAIL
+[23:17:26] <kevglass> loser :)
+[23:17:46] <OrangyTang> heh
+[23:18:03] <OrangyTang> just found this in my old projects while tediously upgrading lwjgl http://www.triangularpixels.com/Shooty/Webstart/Shooty.jnlp
+[23:18:08] <_Riven> my opponent FAILed 2 times, then he got it, then i failed 3 times
+[23:18:25] <kevglass> sprite is nice but will be hard to find a background where you don't lose the character
+[23:19:36] <kappaOne> OT no linux natives?
+[23:19:42] <_Riven> how do you score? i mean, i'm near the goal, with 3 turns left, and i don't want to screw up now!
+[23:19:47] <OrangyTang> kappaOne: possibly not :S
+[23:20:14] <kevglass> shoot the ball into a space behind the goaly?
+[23:20:19] <kevglass> it's the normal way
+[23:20:22] <kevglass> :)
+[23:20:33] <kevglass> you have to be close enough
+[23:20:52] <_Riven> ah, i wasn't *that* close..
+[23:21:05] <_Riven> GOAL !
+[23:21:09] <kevglass> woo hoo
+[23:21:12] <_Riven> celebrate with me
+[23:21:15] <kevglass> kick their asses Riven!
+[23:21:38] <OrangyTang> kappaOne: actually there should be linux natives, what error are you getting?
+[23:21:41] <_Riven> best strategy seems to just go there with 1 guy, and just struggle your way through...
+[23:21:58] <kevglass> sometimes it works
+[23:22:02] <_Riven> eventually you get the ball, after both sides fail fail fail
+[23:22:08] <kevglass> but the computer sometimes has a fit of playing the field
+[23:22:16] <kevglass> there are a few additional rules to go in yet also
+[23:22:20] <kevglass> goaly saving etc
+[23:22:29] <kevglass> just trying to get the java code to run on the iphone atm tho
+[23:22:38] *** do0han has joined #lwjgl
+[23:22:42] <kappaOne> OT javaws just starts really quick and closes
+[23:22:51] <kevglass> fails here also
+[23:22:54] <kappaOne> will see if i can get any meaningful error from it
+[23:23:11] <do0han> lo al
+[23:23:13] <do0han> all
+[23:23:46] <_Riven> i think the amount of moves should be limited for 1 guy... like 3 moves for that turn, 1 or 2 for 1 guy
+[23:24:30] <kevglass> too complicated for the user to grasp I think
+[23:24:32] <_Riven> it gets you more 'realtime' gameplay, even more realistic, and the amount that 1 guy can move is limited, just like IRL
+[23:24:37] <_Riven> hm
+[23:24:48] *** delt0r___ has quit IRC
+[23:24:54] <kappaOne> hmm bloody jws closes console immediately on crash
+[23:25:01] <kappaOne> how are we suppose to know what on it
+[23:25:06] <kappaOne> *whats
+[23:25:08] <_Riven> just grey-out the guy you moved
+[23:25:10] *** delt0r___ has joined #lwjgl
+[23:25:22] <_Riven> that will be a pretty obvious indication
+[23:25:35] <kevglass> to a football fan, prolly nbot :)
+[23:25:57] <kappaOne> do need yellow and red cards
+[23:26:02] <_Riven> now i can run around the keeper (2 moves), and score (1move)
+[23:26:07] <_Riven> it's way too easy
+[23:26:07] <kappaOne> otherwise will lack the football drama
+[23:26:15] <kevglass> the goaly will havea  chance to save
+[23:26:17] <kevglass> soon
+[23:26:41] <kevglass> red/yellow cards will feature as a limitation on tackle
+[23:26:48] <kevglass> keep tackling with the same player get a yellow card
+[23:26:53] <kappaOne> oh nice
+[23:26:55] <kevglass> tackle more, get a red card and lose the player
+[23:27:19] <kevglass> at least I think thats good for stopping you always playing the same guy all the time
+[23:27:31] <_Riven> that's nerfing :(
+[23:27:48] <kevglass> ?
+[23:28:21] <_Riven> well, it would be better to simulate the real game (less moves per turn, of less moves per guy per turn) instead of other fixes -- me thinks.
+[23:29:02] <kevglass> not at the cost of natural play imo
+[23:29:11] <kevglass> if it doesn't play how they expect, they stop
+[23:29:18] <_Riven> you can, in 3 moves, just around the opponent, without tackling, and be pretty sure (50% chance) that you can score in the next turn
+[23:29:33] <OrangyTang> anyone got an example jnlp with config for 64bit platforms?
+[23:29:36] <_Riven> i'm not sure it is at the cost of natural play...?
+[23:29:44] <kevglass> I think it is
+[23:30:05] <kevglass> if something happens the player doesn't understand (i.e. thery have moves left but can#t move a player)
+[23:30:30] <kevglass> still I'll add it to the list and try it
+[23:30:45] <kevglass> want to get back to the rpg really tho :)
+[23:31:43] <_Riven> just make it visually obvious... and they'll grasp, i think
+[23:32:01] <_Riven> yeah... that soccer game *is* basically a RPG...
+[23:32:13] <kevglass> it is?
+[23:32:15] <kevglass> cool
+[23:32:24] <kevglass> it's not like my rpg at all
+[23:32:25] <delt0r___> Hi everyone...
+[23:32:35] <kevglass> so maybe my rpg is more like a sports game :)
+[23:32:36] <_Riven> it's just that nobody dies (unless red card == die), and you fight monsters, and lose stuff (in this case 1 ball)
+[23:32:42] <kevglass> lol
+[23:33:10] <_Riven> you could have used the same codebase, with different sprites ;)
+[23:33:33] <_Riven> really, how different is is from a limited RPG..
+[23:33:34] <kevglass> na, the rpg isn't tile based even
+[23:33:40] <_Riven> oooh
+[23:33:44] <_Riven> really!
+[23:33:50] <_Riven> room-based?
+[23:33:54] <kevglass> yep
+[23:34:02] <_Riven> i think i didn't catch that on your youtube movie
+[23:34:07] <delt0r___> Has anyone done much componet orientated programing for there games.
+[23:34:08] <kevglass> and monsters don't wander the rooms
+[23:34:15] <kevglass> vimeo
+[23:34:18] <kevglass> no youtube for me
+[23:34:22] <_Riven> ah, yeah
+[23:34:55] <kevglass> what do you use to take screenshots on OSX ?
+[23:35:12] <_Riven> a camera..
+[23:35:21] <kevglass> hiwarious
+[23:35:26] <kevglass> serioiusly, any ideas?
+[23:35:28] <_Riven> sorry
+[23:35:44] <_Riven> no... MacOS X is not my cup of tea
+[23:35:53] <kevglass> nor I
+[23:35:58] <kevglass> required for this iphone malarky tho
+[23:36:41] <_Riven> COMMAND-SHIFT-3
+[23:36:46] <_Riven> according to google
+[23:37:06] <_Riven> http://graphicssoft.about.com/od/screencapturemac/ht/macscreenshot.htm
+[23:37:07] <kevglass> still haven't worked out what the command button turned into here
+[23:37:14] <void256> what a crap!
+[23:37:35] <_Riven> just that almost-infinity-like-icon-key
+[23:37:52] <void256> blender texture 0,0 is lower left corner instead of upper right
+[23:37:54] <void256> WTF?
+[23:37:56] <void256> XD
+[23:38:36] <_Riven> void256, it should be either upper left of lower left, never upper RIGHT
+[23:38:38] <void256> *upper left
+[23:38:41] <void256> sorry
+[23:38:43] <void256> :D
+[23:38:47] <_Riven> :p
+[23:38:53] <void256> upper right would be crap too
+[23:38:54] <void256> :)
+[23:38:56] <_Riven> kev, buy another keyboard, then
+[23:39:01] <kevglass> :)
+[23:39:05] <_Riven> maybe some ALT-combo
+[23:39:06] <void256> but now I know why my textures all suck :)
+[23:39:14] <void256> kev?
+[23:39:16] <void256> mac problems?
+[23:39:41] <kevglass> aye
+[23:39:47] <_Riven> WikiPedia: On a keyboard designed for MS Windows, the Windows key is mapped to act as the Command key.
+[23:39:56] <kevglass> cheers
+[23:40:46] <void256> command+shift+3 or +4?
+[23:41:04] <void256> oh
+[23:41:23] <void256> nice! command+shift+4 + space
+[23:41:32] <_Riven> +4 == draggable area, or so it seems, +4+SPACE == current app
+[23:41:33] <void256> makes screenshot of window you can select :)
+[23:41:39] <_Riven> blah
+[23:41:44] <void256> mac rocks
+[23:41:47] <void256> :)
+[23:42:27] <_Riven> +SPACE is identical to Windows => ALT+PRINT, right?
+[23:42:40] <_Riven> or can you really click a window..?
+[23:42:43] <void256> on the iphone you can make screenshots by pressing home and the on/off switch at the same time <-- just for the record :)
+[23:42:53] <void256> ms windows sucks
+[23:42:55] <void256> don't use it
+[23:42:58] <void256> :)
+[23:43:04] <void256> it's hell, really
+[23:43:08] <void256> (once you know heaven ^^)
+[23:43:32] <Ina> Remind me, do applets support access to the filesystem?
+[23:43:32] <_Riven> yeah yeah, i'm still frustrating by the Vista file transfer... with a fancy buffering algorithm, i can backup my files 3-4 times faster in Java
+[23:43:42] <kevglass> on the emulator too void?
+[23:44:09] <void256> >_<
+[23:44:13] <void256> you can't
+[23:44:19] <_Riven> well, i work a lot with Linux (CentOS and Debian) on a bunch of servers, and the amount of control you have from the CLI is amazing. haven't had the guts to install Linux as my desktop, though
+[23:44:21] <void256> press both buttons on the same time :)
+[23:44:26] <void256> with the emuator
+[23:44:28] <void256> and one mouse
+[23:44:30] <void256> :D
+[23:44:51] <Ina> void256: neither can you with two :)
+[23:44:57] <void256> heh
+[23:45:05] <void256> but command+shift+4+space works
+[23:45:47] <void256> you've not payed the $99 to apple kev? o_O
+[23:45:48] <Ina> Anyway, do applets support access to the filesystem?
+[23:46:03] <_Riven> signed applets do
+[23:46:15] <_Riven> major security hole, here we come!
+[23:46:44] <Ina> I just want to write/read some xml files.
+[23:47:14] <Ina> So users can safe/load levels made in a level editor.
+[23:48:06] <_Riven> why not send it to the server
+[23:48:11] <_Riven> much more fun
+[23:48:24] <kevglass> definitely
+[23:48:38] <_Riven> no need to sign anything, and it's not like that XML files are going to get massive
+[23:48:50] <_Riven> and you get to see what your users do, which is also priceless
+[23:49:08] <_Riven> bigBrother++
+[23:49:41] <Ina> Well, thing is, slick already requires signing, right?
+[23:49:46] <kevglass> yep
+[23:50:33] <_Riven> but that doesn't mean the rest of your code is also signed
+[23:50:47] <_Riven> so it won't be a free-for-all once Slick is accepted
+[23:50:47] <Ina> And I'm not sure how GameJolt works with that sort of stuff.
+[23:51:07] <void256> Ina is a girls name in germany btw :)
+[23:51:23] <Ina> void256: so it is in my country.
+[23:51:30] <Ina> I am a girl, you see.
+[23:51:39] <void256> no way
+[23:51:43] <Ina> yes way.
+[23:51:48] <void256> ><
+[23:51:58] <void256> whats the country? austria? =)
+[23:52:19] <Ina> The Netherlands
+[23:52:27] <_Riven> da's fijn
+[23:52:28] <void256> well, I was close then =)
+[23:52:36] <void256> a girl that codes?
+[23:52:45] <void256> I know few of those =)
+[23:52:48] <void256> *a
+[23:52:55] <_Riven> i know one
+[23:53:11] <void256> I know three with Ina =)
+[23:53:19] <_Riven> two, with ina
+[23:53:23] <_Riven> anyway...
+[23:53:24] <void256> ;)
+[23:53:51] <_Riven> anyway, i'd go for sending xml files to the server, regardless of whether you can store them on the user's disk
+[23:53:52] <Ina> void256: my father's a CompSci/Math teacher, and my grandfather built mainframes back in the sixties.
+[23:54:05] <Ina> Just picking up the family trade now my brother's won't.
+[23:54:06] <void256> O_O
+[23:54:12] <void256> hmm
+[23:54:14] <Ina> brothers*
+[23:54:15] <void256> let me guess
+[23:54:35] <void256> your brothers are like into fashion kinda thingss?
+[23:54:37] <void256> XD
+[23:55:18] <Ina> No, maths.
+[23:55:24] <void256> >_<
+[23:56:06] <Ina> My older brother is an econometry (money maths) major, and my younger brother is a pure maths major.
+[23:56:24] <void256> uhm
+[23:56:32] <void256> the math force is strong with that family ...
+[23:57:15] <_Riven> and what about mom - analytic too?
+[23:57:28] <void256> mom is a teacher too
+[23:57:30] <void256> I bet
+[23:57:31] <void256> :)
+[23:57:33] <Ina> Maths/Physics teacher at secondary.
+[23:57:37] <void256> see
+[23:57:39] <kevglass> whee have graphics
+[23:57:40] <void256> :D :D :D
+[23:57:53] <void256> what does that mean kev?
+[23:57:55] <void256> =)
+[23:58:12] <void256> btw: http://ninblogs.files.wordpress.com/2009/06/photo-737848-737881.jpg
+[23:58:26] <kevglass> I have my java code (football game) compiling to iphone and displaying images
+[23:58:35] <_Riven> no way it would have resulted in 'fashion centric brothers' ...
+[23:58:58] <kevglass> input works
+[23:58:59] <void256> congratz kevmeister *bows*
+[23:59:02] <kevglass> AI crashes it atm
+[23:59:03] <_Riven> last time i check Ohio wasn't the birthplace of aviation...
+[23:59:09] <Ina> Woohoo, kevglass
+[23:59:10] <kevglass> some glitches with overlays
+[23:59:34] <kevglass> fonts not rendering :(
+[23:59:40] <kevglass> still,progress

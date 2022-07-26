@@ -1,0 +1,1177 @@
+[00:00:28] *** jweyrich has quit IRC
+[00:03:58] *** jojoh_ has quit IRC
+[00:06:51] *** aho has quit IRC
+[00:11:22] <jonkri> anyone seen this exception before? http://pastebin.com/m57267685 .. i have no idea what's causing it
+[00:12:03] <MatthiasM> jonkri: the VM is shuting down
+[00:12:17] <MatthiasM> in this phase you are not allowed to add or remove shutdown hooks
+[00:12:48] <jonkri> MatthiasM: i didn't know that i was dealing with shutdown hooks at all, i don't even know what it is :)
+[00:13:14] <MatthiasM> LWJGL should probably catch this exception ...
+[00:14:08] <jonkri> ah, it's when i destory the display... how come my methods are not a part of this exception's stack trace?
+[00:14:09] <MatthiasM> http://java.sun.com/javase/6/docs/api/java/lang/Runtime.html#removeShutdownHook(java.lang.Thread)
+[00:14:34] <MatthiasM> truncated ?
+[00:16:19] *** doohan has quit IRC
+[00:16:41] <jonkri> no
+[00:16:56] <jonkri> there are lines before and after in the console
+[00:17:26] <jonkri> haha, allthough i guess the fact that there are lines before is quite irrelevant :P
+[00:17:51] <MatthiasM> exceptions are normaly printed through System.err
+[00:18:01] <MatthiasM> while normal output uses System.out
+[00:18:10] <MatthiasM> these 2 streams are not ordered
+[00:18:57] <MatthiasM> where do you destroy the display?
+[00:19:56] <jonkri> MatthiasM: in my "opengl" thread, it's the last thing i do in it
+[00:20:23] <MatthiasM> can you paste code ? how do you stop the thread ?
+[00:21:03] <MatthiasM> make sure to stop the GL thread before issuing a System.exit()
+[00:22:32] <jonkri> MatthiasM: loop code: http://pastebin.com/m603ff21f
+[00:23:04] <MatthiasM> O_O
+[00:23:07] <jonkri> ah
+[00:23:19] <MatthiasM> you parse properties every iteration ?!?
+[00:23:27] <jonkri> i do not currently wait for the loop to finish
+[00:23:42] <MatthiasM> use join() to wait for the thread
+[00:23:48] <jonkri> lol i guess i do :)
+[00:24:24] <MatthiasM> well - you know how to create garbage :DD
+[00:24:37] <MatthiasM> a collection and possible a string each frame
+[00:27:25] <Mazon> endolf: build.xml was updated too to add the link symbol for __TrackMouseEvent
+[00:28:41] <jonkri> MatthiasM: that explains some of the visualvm stuff i've been dealing with :D
+[00:28:50] <jonkri> will take care of that, thanks :)
+[00:29:31] <jonkri> these join() methods are quite handy :D any idea how to make this nicer: while(!executorService.isShutdown()) { Thread.yield(); }?
+[00:32:24] <MatthiasM> awaitTermination() ?
+[00:32:28] <jonkri> in my exit method i do this: view.stop() (which sets isRunning to false), if(openGLThread.isAlive()) { openGLThread.join(); } but i still get the error. is there something that looks wrong there?
+[00:32:44] <MatthiasM> btw - how did you declare isRunning ?
+[00:32:51] <jonkri> haha, it's even on the top :) i have no idea how i missed that
+[00:33:03] <jonkri> private boolean isRunning = true
+[00:33:23] <jonkri> public void stop() { isRunning = false; }
+[00:33:30] <MatthiasM> urgs - if this flag is set from a different thread then it must be volatile
+[00:33:33] <jonkri> you saw the loop earlier
+[00:33:41] <jonkri> oh
+[00:34:19] <jonkri> changed it but still got the error though
+[00:34:23] <MatthiasM> otherwise it might happen that the change might not be visible - or delayed - to the other thread
+[00:34:38] <jonkri> thanks, good to know :)
+[00:34:41] <MatthiasM> set breakpoints
+[00:34:55] <jonkri> that's something else i've been meaning to learn :P
+[00:34:55] <MatthiasM> eg Display.destroy() and where you terminate the VM
+[00:35:03] <MatthiasM> very easy with NB
+[00:35:11] <jonkri> that's something else i've been meaning to learn :P
+[00:35:13] <jonkri> oops
+[00:35:16] <jonkri> eclipse user here :P
+[00:35:17] <MatthiasM> just click on the line number
+[00:35:22] <MatthiasM> heh
+[00:35:27] <MatthiasM> good luck then :P
+[00:35:45] <jonkri> lol
+[00:35:49] <jonkri> i needed to doubleclick on the line number :P
+[00:36:35] <MatthiasM> heh
+[00:37:22] <MatthiasM> Java makes multi threading easy - but it's still an advanced topic with many hidden traps
+[00:37:49] <jonkri> i'm beginning to learn that ;)
+[00:43:34] *** kappaOne has quit IRC
+[00:52:56] <jonkri> thanks, i'm off to bed
+[00:52:59] <jonkri> see you all
+[01:10:51] *** Rosetta has joined #lwjgl
+[01:28:00] *** Rock_D has quit IRC
+[01:30:42] *** Rosetta has quit IRC
+[01:53:17] *** kgrad5_ has joined #lwjgl
+[02:20:06] *** kgrad5_ has quit IRC
+[02:22:30] *** locks has joined #lwjgl
+[02:29:15] *** NoobFukaire has joined #lwjgl
+[02:31:25] <lwjglbot> lwjglforum: GL20.glGetShaderInfoLog returns an empty bytebuffer? <http://lwjgl.org/forum/index.php/topic,2917.msg16097.html#msg16097>
+[02:44:38] <NoobFukaire> http://www.youtube.com/watch?v=hkDD03yeLnU
+[02:44:40] <NoobFukaire> haha
+[03:16:11] *** MercedesBenz has joined #lwjgl
+[03:16:48] *** MercedesBenz is now known as mercc
+[03:23:23] *** kgrad5_ has joined #lwjgl
+[03:24:50] <locks> http://www.youtube.com/watch?v=vTHxkIfnxTA
+[03:32:02] *** delt0r_ has joined #lwjgl
+[03:32:32] *** delt0r has quit IRC
+[03:57:11] *** david_koontz has quit IRC
+[04:40:37] *** MatthiasM has quit IRC
+[04:40:41] *** MatthiasM has joined #lwjgl
+[04:45:11] *** PainBank has joined #lwjgl
+[04:50:58] *** betel has quit IRC
+[05:00:11] *** Dragonene has joined #lwjgl
+[05:02:28] *** punKrockeR has joined #lwjgl
+[05:03:53] <punKrockeR> anyone around?
+[05:11:38] *** punKrockeR has quit IRC
+[05:12:24] *** honk^away has joined #lwjgl
+[05:14:02] *** PainBank has quit IRC
+[05:14:02] *** locks has quit IRC
+[05:14:02] *** honk has quit IRC
+[05:14:24] *** kgrad5__ has joined #lwjgl
+[05:14:39] *** PainBank has joined #lwjgl
+[05:14:39] *** locks has joined #lwjgl
+[05:30:56] *** kgrad5_ has quit IRC
+[05:59:54] *** mercc has quit IRC
+[06:14:17] *** kbotnen_ has joined #lwjgl
+[06:15:41] *** PainBank has left #lwjgl
+[07:16:45] *** Delamor has joined #lwjgl
+[07:34:01] *** Delamore has quit IRC
+[08:06:39] <Endolf> Mazon it's only win32 not 64 thats failing, a clean build with all the latest source including build xml, is that symbol an external one?, I don't have the platform SDK installed on win32 as it's not needed (till now?), I also have an older DX SDK.
+[08:42:22] <Mazon> OMG: http://gizmodo.com/5270778/ferris-buellers-ferrari-house-now-for-sale
+[08:42:25] <Mazon> must have
+[08:48:02] <Mazon> endolf, checked out 2.1.0 from tags and build using visual studio command prompt - I'll check later builds ...
+[08:54:53] *** Scient|wrk has joined #lwjgl
+[08:59:24] <Mazon> actually, I think lwjgl builds fine - must be my home environment that is screwed ... - so only issue is the new unresolved external I introduced
+[09:03:19] <Mazon> I already added Comctl32.lib which http://msdn.microsoft.com/en-us/library/ms646266(VS.85).aspx says I must - so not sure whats going on
+[09:04:55] *** natte has joined #lwjgl
+[09:13:39] <Dragonene> that does look pretty awesome mazon
+[09:13:40] <Dragonene> the house.
+[09:15:11] <elias_naur> Endolf: dx sdk shouldn't be needed
+[09:15:19] *** natte_ has joined #lwjgl
+[09:32:34] *** natte has quit IRC
+[09:41:05] *** kevglass has joined #lwjgl
+[09:41:24] <kevglass> morning
+[09:41:56] <Dragonene> hey
+[09:41:59] <Dragonene> I should be off.
+[09:42:03] <Dragonene> Frisbee in a bit
+[09:50:17] *** natte has joined #lwjgl
+[09:51:52] <Mazon> ffs, keep getting: [apply] org_lwjgl_opengl_Display.obj : error LNK2019: unresolved external symbol __TrackMouseEvent referenced in function _Java_org_lwjgl_opengl_WindowsDisplay_nTrackMouse@16
+[09:52:05] <Mazon> even tho comctl32.lib IS included
+[09:54:20] <Mazon> hhmm
+[09:56:03] <kevglass> it's in User32.lib
+[09:56:06] <kevglass> apparantly
+[09:56:23] <Mazon> already there - think I have a fix, missing include causes linking to fail - confirming
+[10:01:58] <CIA-15> matzon * r3216 /trunk/LWJGL/src/native/windows/org_lwjgl_opengl_Display.c: add missing include to get __TrackMouseEvent exported
+[10:02:02] <lwjglbot> lwjglforum: Re: GL20.glGetShaderInfoLog returns an empty bytebuffer? <http://lwjgl.org/forum/index.php/topic,2917.msg16098.html#msg16098>
+[10:02:21] <Mazon> nightly will tell if everything is ok
+[10:02:45] *** doohan has joined #lwjgl
+[10:05:42] *** Dragonene has left #lwjgl
+[10:17:50] *** kappaOne has joined #lwjgl
+[10:35:18] <kappaOne> mazon you don't happen to have a win32 lwjgl.dll locally of the new version?
+[10:36:40] <kappaOne> the nightly looks pretty much complete just the win32 lwjgl.dll is not there
+[11:13:07] <Mazon> once sec
+[11:13:41] <Mazon> http://matzon.dk/brian/lwjgl/lwjgl.dll
+[11:13:58] <kappaOne> k, thx
+[11:15:01] <kevglass> who do you reakon would win in a fight, a squirrel or a magpie?
+[11:15:41] <kappaOne> squirrel :)
+[11:16:00] <kappaOne> but magpie is probably more intelligent
+[11:18:12] <kevglass> our decision was squirrel too
+[11:18:17] <kevglass> but for different reason
+[11:18:28] <kevglass> "the squirrel could win, cause they can hold a flick knife"
+[11:18:47] <Mazon> I take it your not busy atm ?
+[11:19:23] <kappaOne> tis the claws and big tail, but acrobatic skills of a squirrel that'd make it win
+[11:19:29] <kappaOne> squirrel kungfu?
+[11:19:37] <Mazon> kappa: you need both an updated lwjgl.jar and lwjgl.dll since its both native and java code thats been updated
+[11:19:54] *** delt0r_ has quit IRC
+[11:19:57] <kappaOne> yup
+[11:20:30] <Mazon> interresting ... : http://www.emaggame.com/
+[11:25:00] <kevglass> yeah, it's neat
+[11:32:03] *** delt0r_ has joined #lwjgl
+[11:32:12] <lwjglbot> lwjglforum: Re: Mouse.isbuttondown not updating correctly <http://lwjgl.org/forum/index.php/topic,2911.msg16099.html#msg16099>
+[11:59:59] <kappaOne> mazon just tested the new updates they seem to have slightly different behaviour than expected
+[12:00:01] <kappaOne> http://kappa.javaunlimited.net/test/mousetest.html
+[12:00:34] <doohan> http://support.microsoft.com/?scid=kb%3Ben-us%3B261186&x=16&y=15
+[12:00:37] <doohan> That's just cool
+[12:01:24] <doohan> That mouse grabbing doesn't work
+[12:01:40] <kappaOne> yeh that too
+[12:01:51] <doohan> And that breaks the focus thing
+[12:01:53] <Mazon> mouse grab is strange :)
+[12:02:09] <doohan> Errr maybe not
+[12:02:14] <lwjglbot> lwjglforum: Re: Mouse.isbuttondown not updating correctly <http://lwjgl.org/forum/index.php/topic,2911.msg16100.html#msg16100>
+[12:03:19] <Mazon> kappa: try the org.lwjgl.test.input.MouseTest
+[12:04:01] <kappaOne> k
+[12:08:49] <Mazon> you can check the doHandleMessage stuff in WindowsDisplay - all I am doing is asking for WM_MOUSELEAVE events and tracking via that
+[12:09:17] <kappaOne> also notice the focus behaviour, if there is no focus and mouse leaves display, it gets focus
+[12:09:49] <Mazon> lol, wtf ?
+[12:10:32] <kappaOne> :)
+[12:11:04] <kappaOne> guess notch was right about the mouse grab not working on windows
+[12:11:32] <kappaOne> it works fine for non applet though
+[12:14:52] *** Scientz|wrk has joined #lwjgl
+[12:14:52] *** natte__ has joined #lwjgl
+[12:15:16] *** kevglass has quit IRC
+[12:16:09] <kappaOne> mouse grab does hide the mouse and does grab it if its outside the display, but just that its able to escape
+[12:28:21] *** natte___ has joined #lwjgl
+[12:28:26] *** Scientz|_ has joined #lwjgl
+[12:33:35] *** natte has quit IRC
+[12:33:35] *** Scient|wrk has quit IRC
+[12:50:01] *** Scientz|wrk has quit IRC
+[12:50:01] *** natte__ has quit IRC
+[13:02:42] *** natte has joined #lwjgl
+[13:02:44] *** Scient|wrk has joined #lwjgl
+[13:14:06] <kappaOne> mazon application version of the same MouseTest (uses same jars) http://kappa.javaunlimited.net/test/mousetest.jnlp
+[13:15:26] <kappaOne> mouse grab works and that mouse focus issue doesn't happen, again the mouse returns false as soon as mouse leaves Display instead of on button release
+[13:16:19] <kappaOne> ah wait
+[13:16:56] <kappaOne> mouse release only goes to false if mouse hits the border of the window Display
+[13:17:04] <kappaOne> if you move it out fast it works as expected
+[13:18:26] <kappaOne> also goes false if it hits the window title
+[13:20:47] <Mazon> I am not sure I can do anything about it ... I mean, thats what win32 has to offer ...
+[13:21:20] <Mazon> TrackMouseEvent
+[13:21:31] <Mazon> public function
+[13:22:47] <Mazon> http://msdn.microsoft.com/en-us/library/ms645604(VS.85).aspx
+[13:23:26] <kappaOne> wonder what jogl uses https://jogl-demos.dev.java.net/applettest.html
+[13:23:37] <kappaOne> notice you can drag outside the applet window
+[13:24:19] <kappaOne> which is the behaviour of lwjgl on linux
+[13:24:32] <kappaOne> so you can do that currently with lwjgl on linux but not windows
+[13:25:42] *** Scientz|_ has quit IRC
+[13:25:52] <Mazon> well, the false on window border - may be solved by using TME_NONCLIENT
+[13:25:58] *** Notch_ has joined #lwjgl
+[13:26:13] *** natte___ has quit IRC
+[13:26:21] <Mazon> however, once a mouse leaves I do not get events - so I cant tell when you let go of the mouse
+[13:26:31] <kappaOne> also would it be possible to also update x,y of mouse once its left window?
+[13:26:33] <Mazon> which is why that it sets it to false immediately when you leave
+[13:26:41] <Mazon> no
+[13:26:45] <kappaOne> linux mouse behaviour also does that
+[13:26:53] <Mazon> that is - we can but it require a substantial amount of work
+[13:27:03] <Mazon> we would need to install a mouse hook
+[13:27:22] <kappaOne> doesn't the linux version use AWT?
+[13:27:40] <Notch_> Mazon: Both java and flash receives mouse location updates when dragging the cursor
+[13:28:02] <Mazon> hint: lwjgl uses a native display
+[13:28:11] <Notch_> hint: it's still not expected behavior
+[13:28:20] <Mazon> java and flash has a substantial amout of windowing code beneath probably
+[13:28:21] <kappaOne> Notch_ see log, we've got some tests that reproduce your mouse grab behaviour
+[13:28:41] <Notch_> oh, yay. Was it my fault?
+[13:28:47] <Notch_> I hope it was, 'cause then I can fix it. :D
+[13:28:49] <Mazon> I am not totally sure what the expected behaviour IS ?
+[13:29:14] <Notch_> to receive mouse drags events if you click and hold the mouse cursor over something then drag it outside
+[13:29:48] <Mazon> but since we dont get that - that would mean that a lot of applications must be rolling their own - which is wack
+[13:30:25] <Notch_> that does sound wack..
+[13:31:18] <Notch_> it's only a problem for windowed games where you want the player to click and drag to move things around, like a certain puppy games applet test I got to play, or any game where you want to drag the viewport around
+[13:31:33] <Mazon> aye, I see the problem
+[13:31:41] <Mazon> I just fear that the fix is a lot of native code
+[13:31:49] <Notch_> ouch, ok
+[13:32:04] <Mazon> bbl
+[13:32:23] <Notch_> sorry for butting in on this conversation, heh. I discussed it with cas briefly yesterday, that's why it was still on my mind
+[13:32:24] <lwjglbot> lwjglforum: Re: Mouse.isbuttondown not updating correctly <http://lwjgl.org/forum/index.php/topic,2911.msg16101.html#msg16101>
+[13:33:28] <kappaOne> Notch_ http://kappa.javaunlimited.net/test/mousetest.html
+[13:33:36] <kappaOne> does reproduce your mouse grab problem
+[13:33:51] <kappaOne> seems like a windows only issue again
+[13:34:02] <Notch_> ah yes, that's what I got
+[13:35:48] <kappaOne> and application version using same jars
+[13:35:48] <kappaOne> http://kappa.javaunlimited.net/test/mousetest.jnlp
+[13:36:02] *** honk^away is now known as honk
+[13:36:10] <kappaOne> it is trying to grab the mouse but is getting released somehow
+[13:36:59] <Notch_>  my webstart said it couldn't "kontrollera signaturen", which translates into "verify the signature"
+[13:37:26] *** Scientz|wrk has joined #lwjgl
+[13:37:37] <kappaOne> hmm odd your on win32?
+[13:38:01] <kappaOne> works here on win32
+[13:38:52] <Notch_> yeah, win32.  java 1.6.0._11
+[13:39:14] * Notch_ updates
+[13:39:15] <kappaOne> maybe a bad download or something
+[13:39:31] <kappaOne> jws still pretty dodgy
+[13:39:42] <Notch_> yeah, I've never really trusted it, heh
+[13:40:00] <Notch_> the lwjgl applet loader stuff is pure gold, you know.
+[13:40:18] <kappaOne> :)
+[13:40:23] <Notch_> like rock solid, very professional, and very easy to use
+[13:40:45] <Notch_> I just miss the ability to have version numbers on individual jars
+[13:40:50] <Notch_> but it really really works
+[13:40:58] <kappaOne> yeh was thinking about that
+[13:41:14] <Notch_> i haven't gotten a single complaint about the game not loading, other than the occasional pixel format error
+[13:41:36] <Notch_> minecraft is like 60kb, so when I update it they have to redownload lwjgl as well. But it's a very minor problem.
+[13:41:46] <kappaOne> was thinking of doing away with the versioning altogether and that the applet should just check if the file on server is different and redownload if it is, or something
+[13:42:04] <Notch_> check how? modified since?
+[13:42:10] <kappaOne> yeh something like that
+[13:42:21] <Notch_> sounds like a good idea. =)
+[13:42:53] <kappaOne> but might need some sort of hash test
+[13:43:02] <kappaOne> or something incase of corrupt download
+[13:43:09] <Notch_> oh yeah
+[13:43:33] <Notch_> lwjgl applet stuff works good enough for me to feel hope for the future of java gaming
+[13:47:24] <kappaOne> yeh it does look good, especially with some nice portal (that migh actually make it big) now supporting applets
+[13:49:01] <Notch_> yeah, I signed up there. Very developer friendly, and fair terms
+[13:49:15] <Notch_> dunno how well lwjgl would work on there, but hopefully it won't be a problem.
+[13:57:03] *** Scient|wrk has quit IRC
+[13:58:45] <kappaOne> they just need to provide the signed library, which developers can just link too
+[13:59:21] <kappaOne> should pretty much solve the security issue and hopefully only ever show just one dialog ever for all lwjgl applet games
+[14:02:58] <Notch_> that'd be very nice
+[14:03:15] <Notch_> oh, there's keyboard focus bug!
+[14:04:11] <Notch_> isKeyDown, or whatever it's called, has the bug. If you're hold, say, R and click outside the applet, the applet loses focus. If you then release R, lwjgl never receives the key up event, and it thinks r is still pressed, even if you give the applet focus again
+[14:04:27] *** kevglass has joined #lwjgl
+[14:04:32] <Notch_> I solved this my instead checking for key state changes and keepin track of isdown manually, and setting all keys to false then the applet loses focus
+[14:04:33] <kappaOne> yeh pretty much the same as the mouse button down issue
+[14:04:33] <kevglass> ho
+[14:04:45] <Notch_> hey kev
+[14:05:41] <kevglass> yep thats all good
+[14:05:56] <kevglass> don't sure why I'm talking in non logs
+[14:05:58] <kevglass> apart from the link
+[14:06:05] <kevglass> you'll only be moving one row at a time
+[14:06:09] <kevglass> so should be fine
+[14:06:10] <Notch_> because you don't want people to see those pictures of me?
+[14:06:14] <kevglass> heh
+[14:06:26] <Notch_> puzzle game?
+[14:06:28] <kevglass> k, lunch time hack
+[14:06:30] *** Scient|wrk has joined #lwjgl
+[14:06:30] *** natte__ has joined #lwjgl
+[14:06:34] <kevglass> yeah, I wrote it ages ago in lwjgl
+[14:06:37] <kevglass> tower puzzle.
+[14:06:43] <kevglass> thought I could do it in j2d these days
+[14:06:46] <Notch_> i get a certain nebulous vibe from it
+[14:06:52] <kevglass> heh
+[14:06:56] <kevglass> well it's just a match 3
+[14:06:58] <kevglass> but on a tower
+[14:07:08] <kevglass> targeted goals (get 3 of every colour etc)
+[14:07:43] <Notch_> oh. Have you played space invaders extreme?
+[14:07:58] <kevglass> don't think so
+[14:08:10] <Notch_> I love the scoring system in there where there are targeted goals, but they're not mandatory. You could just play the game as a normal space invaders, but you get crap score
+[14:08:36] <kevglass> shoot 3 mother ships?
+[14:08:39] <kevglass> only take out the first line?
+[14:08:43] <Notch_> if you instead focus on filling the board of goals (get all of same color, get all of same type, clear a row, clear a column), you get way better score
+[14:08:57] <kevglass> ah right
+[14:09:30] <Notch_> so at the surface, it was just a simple nobrainer shooter thing, but those things made you go much more strategic once you realized what it was for
+[14:09:43] <Notch_> i don't know why I'm talking about that now, though..
+[14:09:48] <Notch_> nevermind me, haha
+[14:10:03] <kevglass> :)
+[14:10:06] <kevglass> s'all good
+[14:12:19] <kevglass> lunch time hacks are the best
+[14:12:22] <kevglass> started at 12.30
+[14:12:31] <kevglass> 45 minutes later, something interesting
+[14:13:21] *** Scientz|wrk has quit IRC
+[14:14:59] *** betel has joined #lwjgl
+[14:17:58] *** kappaTwo has joined #lwjgl
+[14:21:33] *** Dragonene has joined #lwjgl
+[14:22:46] *** MercedesBenz has joined #lwjgl
+[14:23:40] *** MercedesBenz is now known as mercc
+[14:25:41] *** natte has quit IRC
+[14:29:16] *** Scientz|wrk has joined #lwjgl
+[14:29:16] *** natte has joined #lwjgl
+[14:32:57] *** natte___ has joined #lwjgl
+[14:32:57] *** Scientz|_ has joined #lwjgl
+[14:33:52] *** Scient|wrk has quit IRC
+[14:33:52] *** natte__ has quit IRC
+[14:35:41] *** kappaOne has quit IRC
+[14:50:14] *** natte has quit IRC
+[14:50:57] *** Scientz|wrk has quit IRC
+[14:54:22] *** Scient|wrk has joined #lwjgl
+[14:54:22] *** natte has joined #lwjgl
+[15:03:58] *** natte__ has joined #lwjgl
+[15:03:59] *** Scientz|wrk has joined #lwjgl
+[15:05:11] *** kgrad5 has joined #lwjgl
+[15:06:03] *** natte____ has joined #lwjgl
+[15:06:04] *** Scientz__ has joined #lwjgl
+[15:06:51] <doohan> <3 space invaders extreme
+[15:07:03] <Notch_> yeah. =D
+[15:07:47] <doohan> That game was awesome
+[15:08:36] *** PainBank has joined #lwjgl
+[15:09:26] <Notch_> I got a very good routine down on level 1
+[15:09:33] <Notch_> but the rest was pretty chaotic
+[15:09:55] <Notch_> it got really hard if you chose the hard paths
+[15:10:28] *** kappaOne has joined #lwjgl
+[15:12:40] *** woogley has joined #lwjgl
+[15:12:44] *** Scientz|_ has quit IRC
+[15:12:55] *** natte___ has quit IRC
+[15:13:05] *** natte___ has joined #lwjgl
+[15:13:05] *** Scientz|_ has joined #lwjgl
+[15:16:12] *** natt_____ has joined #lwjgl
+[15:16:12] *** Scient___ has joined #lwjgl
+[15:16:17] *** kgrad5 has quit IRC
+[15:17:06] *** kappaOne has quit IRC
+[15:19:32] <doohan> You play on hte ds or the psp?
+[15:20:08] <Notch_> ds
+[15:21:14] <doohan> Same here
+[15:21:38] <doohan> That might actually be one of the best games on the ds
+[15:23:31] *** Scient|wrk has quit IRC
+[15:23:41] *** Scientz|wrk has quit IRC
+[15:23:52] *** natte has quit IRC
+[15:23:52] *** natte__ has quit IRC
+[15:24:37] <Notch_> yeah, I think so too. GTA:CTW blew me away at first with the graphics, but the gameplay was very meh
+[15:25:06] *** kappaOne has joined #lwjgl
+[15:26:17] <doohan> I've not played that yet.
+[15:26:30] <doohan> I've never really been that big a fan of gta though
+[15:31:48] *** natte____ has quit IRC
+[15:31:55] *** Scientz__ has quit IRC
+[15:32:50] <lwjglbot> lwjglforum: Re: Mouse.isbuttondown not updating correctly <http://lwjgl.org/forum/index.php/topic,2911.msg16103.html#msg16103> || Re: Mouse.isbuttondown not updating correctly <http://lwjgl.org/forum/index.php/topic,2911.msg16102.html#msg16102>
+[15:32:52] *** kgrad has joined #lwjgl
+[15:33:05] *** natte___ has quit IRC
+[15:33:07] *** Scientz|_ has quit IRC
+[15:33:57] *** kgrad has quit IRC
+[15:34:08] *** kgrad5 has joined #lwjgl
+[15:36:03] *** kevglass has quit IRC
+[15:37:47] *** monty_hall has quit IRC
+[15:40:58] *** natte has joined #lwjgl
+[15:41:11] *** Scient|wrk has joined #lwjgl
+[15:44:57] *** Scientz|wrk has joined #lwjgl
+[15:44:59] *** natte__ has joined #lwjgl
+[15:46:59] <kappaOne> oh gamejolt's got a nice number of applet games now
+[15:47:14] <doohan> Swish
+[15:47:17] <kappaOne> just a few more and there'll be more java games than flash ones :)
+[15:52:00] <Notch_> i should upload the rest of mine as well tonight. =)
+[15:58:36] *** natt_____ has quit IRC
+[15:58:39] *** Scient___ has quit IRC
+[15:59:20] *** Scientz|_ has joined #lwjgl
+[15:59:20] *** natte___ has joined #lwjgl
+[16:00:47] <doohan> I don't have a game to upload yet
+[16:00:48] <doohan> :(
+[16:01:19] <kappaOne> what about your ld48 entry?
+[16:02:55] <lwjglbot> lwjglforum: Alpha textures <http://lwjgl.org/forum/index.php/topic,2918.msg16104.html#msg16104>
+[16:05:05] <doohan> Hmm
+[16:05:09] <doohan> I'd need to resize it a bit
+[16:05:17] <doohan> And it only has 6 levels
+[16:05:18] *** Scient|wrk has quit IRC
+[16:05:21] <doohan> Though they do repeat
+[16:05:30] <kappaOne> well just polish it up a bit then
+[16:05:33] <doohan> And I'd have to add soemthing to turn off the sounds
+[16:05:34] <doohan> Maybe I will
+[16:05:42] *** natte has quit IRC
+[16:09:19] *** kgrad5 has quit IRC
+[16:11:56] <Notch_> Woo, left 4k dead is the most played game on gamejolt.com =D
+[16:13:20] <kappaOne> hehe nice
+[16:14:38] <kappaOne> question for you on gamejolt chat :)
+[16:16:13] *** FireSlash has joined #lwjgl
+[16:17:59] *** Scient|wrk has joined #lwjgl
+[16:17:59] *** natte has joined #lwjgl
+[16:18:15] <Notch_> thanks kappa =)
+[16:19:11] *** Scientz|wrk has quit IRC
+[16:20:01] *** natte__ has quit IRC
+[16:24:20] *** monty_hall has joined #lwjgl
+[16:24:29] *** kgrad5 has joined #lwjgl
+[16:27:19] *** Scientz|wrk has joined #lwjgl
+[16:27:20] *** natte__ has joined #lwjgl
+[16:31:53] *** Scientz__ has joined #lwjgl
+[16:32:13] *** natte____ has joined #lwjgl
+[16:34:47] *** natt_____ has joined #lwjgl
+[16:34:47] *** Scient___ has joined #lwjgl
+[16:38:35] *** NoobFukaure has joined #lwjgl
+[16:39:37] *** Scientz|_ has quit IRC
+[16:39:41] *** natte___ has quit IRC
+[16:41:11] <Dragonene> huh
+[16:41:16] <Dragonene> maybe I should upload bridge
+[16:41:25] <kappaOne> go for it drag :)
+[16:42:29] <Dragonene> is it "puzzle" or "sim"?
+[16:42:46] <Dragonene> also, it has a bug where there's no level 9
+[16:42:47] <kappaOne> puzzle i'd say
+[16:42:58] <Dragonene> do I put it as finished/stable or unfinished/unstable?
+[16:44:30] <kappaOne> well why not finish it and fix the bugs?
+[16:44:58] *** Scient|wrk has quit IRC
+[16:45:00] *** natte has quit IRC
+[16:45:13] <Dragonene> Uh, I guess....
+[16:45:23] <Dragonene> Should I upload as work in progress now then?
+[16:45:28] <Dragonene> And then update later?
+[16:45:32] <kappaOne> yeh could do
+[16:46:54] <Dragonene> guess I should also upload to games4j
+[16:47:00] <Dragonene> promised jojoh I would :)
+[16:47:17] *** Greenleon has joined #lwjgl
+[16:47:23] <Greenleon> hello
+[16:51:45] *** Scientz|wrk has quit IRC
+[16:51:48] *** natte__ has quit IRC
+[16:54:44] *** natte____ has quit IRC
+[16:55:09] <Greenleon> drawString of TrueTypeFont does not work. It just draws a rectangle
+[16:55:22] <Greenleon> and i have no idea why
+[16:55:33] *** Scientz__ has quit IRC
+[16:55:39] <Dragonene> should I set a maturity rating for bridge or not kappaOne?
+[16:55:53] *** PainBank has left #lwjgl
+[16:56:40] <Greenleon> Does anyone have an idea?
+[16:57:04] *** natte has joined #lwjgl
+[16:57:04] *** Scient|wrk has joined #lwjgl
+[16:57:27] *** Notch_ has quit IRC
+[16:57:54] <Dragonene> :S
+[16:57:57] *** PainBank has joined #lwjgl
+[16:57:58] <Dragonene> games4j doesn't work for me.
+[16:59:24] *** PainBank has quit IRC
+[17:01:22] *** kappaOne has quit IRC
+[17:02:06] *** kappaOne has joined #lwjgl
+[17:03:01] <Greenleon> Who of you is using slick?
+[17:03:02] <lwjglbot> lwjglforum: Re: Alpha textures <http://lwjgl.org/forum/index.php/topic,2918.msg16105.html#msg16105>
+[17:03:45] <Dragonene> yes.
+[17:03:47] <Dragonene> They work for me
+[17:03:56] <Dragonene> I don't have time to do troubleshooting right now tho
+[17:03:57] <Dragonene> need to sleep
+[17:03:58] <Dragonene> sorry
+[17:04:06] <Greenleon> k
+[17:05:22] *** mercc has quit IRC
+[17:08:53] <FireSlash> Greenleon, I do
+[17:09:15] <Greenleon> did u ever try TrueTypeFont.drawString() ??
+[17:10:52] <Greenleon> because it behaves pretty strange
+[17:11:10] <FireSlash> Hmm, nope.
+[17:11:28] <FireSlash> I used Graphics.drawString()
+[17:13:06] <Greenleon> How does that work?
+[17:14:45] <FireSlash> g.drawString(string, x, y);
+[17:15:23] *** jonkri has quit IRC
+[17:15:42] *** jonkri has joined #lwjgl
+[17:16:37] <Greenleon> unfortunately, i do not have that. I am only using slick-util..
+[17:16:38] *** Scient___ has quit IRC
+[17:16:47] *** natt_____ has quit IRC
+[17:17:28] <FireSlash> Hmm. Well, if you grab the full slick source and look up the drawString function from Graphics; you can see how that one functions
+[17:18:06] <FireSlash> Or just look at https://bob.newdawnsoftware.com/repos/slick/trunk/Slick/src/org/newdawn/slick/Graphics.java
+[17:21:12] *** kappaTwo has quit IRC
+[17:32:15] *** woogley has quit IRC
+[17:32:40] <keisangi> was comparing string with == and !=  a bad thing ?
+[17:32:48] <keisangi> what should i use instead ?
+[17:32:55] <keisangi>  .equals ?
+[17:33:34] <keisangi> .contains?
+[17:33:53] <Greenleon> equals
+[17:34:05] <Greenleon> or String.compare
+[17:34:13] <keisangi> i have that line:
+[17:34:15] <keisangi> if (rightWall.get(0).type=="doorRD")
+[17:34:28] <keisangi> how should i change it ?
+[17:35:13] <keisangi> if (rightWall.get(0).type.equals("doorRD"))
+[17:35:18] <keisangi> this would be better ?
+[17:37:12] <Mazon> you should only use string == string if you *really* know what you're doing
+[17:37:59] <Greenleon> if rightWall.get(0).type returns a string then
+[17:38:24] <Greenleon> if (rightWall.get(0).type.compareTo("doorRD) == 0 )
+[17:38:28] <Greenleon> thats how I would do it
+[17:38:30] <keisangi> yes rightWall.get(0).type return a string
+[17:38:36] <Mazon> use equals
+[17:38:52] <Mazon> however you use constants instead
+[17:39:00] <keisangi> Mazon, like how i did ?   if (rightWall.get(0).type.equals("doorRD"))
+[17:39:00] <Mazon> should
+[17:39:10] <keisangi> like how ?
+[17:39:19] <keisangi> i'm not sure what constants are
+[17:39:27] <keisangi> or how to use them
+[17:39:33] <keisangi> can you show me?
+[17:39:37] <Mazon> if (rightWall.get(0).type == Map.DOOR)
+[17:39:54] <keisangi> mazon, btw was that you told me netbeans what good ?
+[17:40:05] <Mazon> where Map.DOOR is some constant
+[17:40:09] <Mazon> not sure - but it is
+[17:40:14] <keisangi> *was it you thattold me ...
+[17:40:23] <keisangi> yes, i'm using it now i like it :)
+[17:40:46] <keisangi> i see about constants
+[17:40:48] <keisangi> tnx
+[17:40:57] <Mazon> cleaner and a lot faster
+[17:41:02] <keisangi> yes :9
+[17:41:04] <keisangi> ;)
+[17:44:12] *** Dragonene has left #lwjgl
+[17:59:18] <Greenleon> This is really frustrating... why is drawString not working??
+[17:59:46] <Greenleon> I copied the code from here http://slick.cokeandcode.com/wiki/doku.php?id=truetype_font_support
+[18:10:35] <keisangi> how can i count how much instance of a class i created ?
+[18:11:05] <keisangi> sorry i already asked this 2 days ago, but i need to ask again..
+[18:11:48] <keisangi> seems jvisualvm doesn't play nice on fedora11 jdk1.6 and netbeans .. something prevent it from working fully ..
+[18:12:59] *** Notch_ has joined #lwjgl
+[18:13:03] <keisangi> i need to confirm that when i load a new map in my game the previous one gets deleted, so i don't end up having 10maps loaded in memory when i only need 1
+[18:13:30] <keisangi> how can i count the number of instance of a class ?
+[18:14:01] <Notch_> you can increase a static variable in the constructor or decrease it in the finalizer. Or, and this is much better, you can use a memory profiler
+[18:14:17] <Notch_> s/or/and
+[18:14:21] <keisangi> like what ?
+[18:14:46] <keisangi> jvisualvm ?
+[18:14:58] <keisangi> kind of doesn't work here atm
+[18:14:59] <Notch_> i don't remember the names of any. I've got one in my eclipse
+[18:15:13] <keisangi> i use netbeans
+[18:15:43] <Notch_> google netbeans memory profiler or something. =)
+[18:16:10] <keisangi> Notch_, the static variable would gets increased each time i load a new map
+[18:16:35] <keisangi> what i want to do is ensure i don't have more than 1 loaded map at a time
+[18:16:41] <Notch_> yes, and decreased when the finalizer gets run
+[18:16:48] <Notch_> (ie before it gets garbage collected)
+[18:16:55] <keisangi> never heard of finalizer :)
+[18:17:33] <Notch_> http://java.sun.com/javase/6/docs/api/java/lang/Object.html#finalize()
+[18:17:39] <keisangi> cool
+[18:17:45] <keisangi> tnx for the link
+[18:17:55] <Notch_> np. =)
+[18:18:21] <keisangi> protected void finalize()
+[18:18:24] <keisangi> hum..
+[18:18:43] <Notch_> just override it
+[18:19:00] <keisangi> and this method is processed only at garbage collection time ?
+[18:19:07] <Notch_> well, no
+[18:19:21] <Notch_> the definition is "before garbage collection, after there are no more references to an object"
+[18:19:21] <keisangi> i need to read up it seems :)
+[18:19:46] <Notch_> the finalizer could, in theory, reattach the object again, so it's not safe to garbage collect it immediately
+[18:20:19] <keisangi> k, seems nice i'll try the static variable and the finalizer
+[18:27:11] <keisangi> Notch_, i did that:
+[18:27:12] <keisangi> http://pastebin.com/d1e0ef557
+[18:27:36] <keisangi> and from my main update loop i put:  System.out.printf("counter=[%d]\n", BlockMap.counter);
+[18:28:13] <keisangi> when i start the game the initial map gets loaded, the output is counter=[1]
+[18:28:27] <keisangi> when i enter a new map, the output is counter=[2]
+[18:28:51] <Notch_> you're probably keeping a reference somewhere then. :-\
+[18:28:55] <keisangi> so it's as i feared, the previous map isn't garbage collected ?
+[18:29:00] <keisangi> hum
+[18:29:04] <Notch_> yeah, seems so, if it never goes down
+[18:29:06] <keisangi> how can i find that ?
+[18:29:15] <Notch_> i don't know
+[18:29:36] <keisangi> there's no other way than run through the code manually ?
+[18:29:43] <keisangi> k then
+[18:30:33] <keisangi> anyway thank for that variable+finalizer trick, so i could confirm there was a problem
+[18:33:25] <lwjglbot> lwjglforum: Slick's TrueTypeFont.drawString("") behaves strange <http://lwjgl.org/forum/index.php/topic,2919.msg16106.html#msg16106>
+[18:33:48] <Notch_> well, yes, most ide's have very nice debug support with breakpoints and stepping
+[18:34:33] <keisangi> how does that help to find out where i have that reference that keep my previous map instance alive ?
+[18:35:21] <keisangi> hum.. i feel like i'm searching the needle in the haystack
+[18:37:06] <keisangi> hehe
+[18:37:30] <keisangi> i wentwith the shotgun approach: before loading my new map like this:
+[18:37:38] <keisangi> GameState.bmap=new BlockMap("data/level/level0002.tmx");
+[18:37:49] <keisangi> i've put a GameState.bmap=null;
+[18:38:03] <keisangi> and now the counter is1when entering the newmap :)
+[18:38:58] <keisangi> kill kill kill ! O_O
+[18:39:04] <keisangi> errr .. ;)
+[18:41:04] *** mercc has joined #lwjgl
+[18:41:24] *** mercc is now known as MercedesBenz
+[18:41:37] *** MercedesBenz is now known as mercc
+[18:43:48] *** kappaTwo has joined #lwjgl
+[18:50:18] <keisangi> hum weird it seems it doesn't work all the time
+[18:50:38] <keisangi> sometime previous map gets deleted sometime it doesn't
+[19:09:51] <Endolf> Mazon and kappaOne, I just kicked a build off, got things to do, but i'll be back later probably, check http://www.newdawnsoftware.com/hudson/view/LWJGL/ for builds, they will show up with a last success time of a number of ms for the next hour
+[19:10:20] <keisangi> Notch_, the fact that the counter goes down sometimes means it's ok ? it's just java that takes its time to garbage collect stuffs ?
+[19:10:57] <Notch_> possibly, maybe, it all depends on how your code is written
+[19:10:58] <keisangi> entering new map, going mapp to initial map doing that non stop, i could get the counter to almost 30
+[19:11:34] <keisangi> and all of sudden i do that once more and it goes down by 1, or straight from 30 to 5 ...
+[19:11:48] *** kappaOne has quit IRC
+[19:12:02] <keisangi> hum ..
+[19:12:50] <keisangi> at least the fps doesn't change even with a counter of 30
+[19:13:14] <keisangi> it's alway roughly the same around 600
+[19:15:13] <indeterminatus> keisangi: Note that your code is not thread-safe, and counter may be polluted with concurrency
+[19:18:09] <keisangi> indeterminatus, .. i don't know about making thread-safe code and i'm not sure what polluted with concurrency means ..
+[19:18:16] <keisangi> can you explain abit ?
+[19:18:47] <indeterminatus> Well, you have one static variable named counter, which is written to by both the constructor and the method finalize()
+[19:19:06] <keisangi> i understand i'm skillless with way too much noodquestions but .. :)
+[19:19:25] <keisangi> yes, i read you
+[19:19:27] <indeterminatus> now, if one thread creates an object, and on another thread another object is finalized
+[19:19:47] <indeterminatus> You're writing to the same variable concurrently, thus its state may be polluted
+[19:19:59] <keisangi> i see
+[19:20:38] <indeterminatus> Just because an object is not finalized, does not mean you have dangling references or a memory-leak
+[19:20:47] <keisangi> would there be a way to kill all instances of a class regardless of threads and everything? just clear the instances off ?
+[19:21:34] <Greenleon> Any ideas, why drawString haves that way?? <http://lwjgl.org/forum/index.php/topic,2919.msg16106.html#msg16106>
+[19:21:38] <indeterminatus> No, you can only remove all references and let the garbage collector work it out
+[19:21:43] <keisangi> indeterminatus, i understand that .. i'm just trying to make sure that when i load a new map the old one is deleted
+[19:22:06] *** Rosetta has joined #lwjgl
+[19:22:16] <indeterminatus> keisangi: If you *need* that behaviour in a defined manner, you have to create a method and call it yourself.
+[19:22:48] <indeterminatus> like, in your class Map, have a method freeResources() or whatever, that you'll call before loading the new map
+[19:23:24] <indeterminatus> Relying on finalize() for that effect is no good idea, because it's too vague -- you never know when and if it's called
+[19:23:25] <keisangi> ok, but then what should i put in freeResource() method to ensure all resources are freed?
+[19:23:32] <Notch_> can unsigned applets use crossdomain.xml at all?
+[19:23:48] <keisangi> indeterminatus, i see
+[19:24:08] <indeterminatus> keisangi: That was just an example ... whatever you want to do with your map; apparently, you need to clean stuff up
+[19:24:16] <indeterminatus> s/need/want/
+[19:24:26] <keisangi> yes
+[19:25:02] <indeterminatus> finalize() is *no* substitute for a destructor in C++, if that's your background ;)
+[19:25:27] <keisangi> indeterminatus, all my map stuff is inside a class named blockmap, i tought when loading a new map calling null would have been enough ?
+[19:26:24] <keisangi> like i create a new instance of blockmap once, for loading the initial map, like this:
+[19:26:25] <keisangi> bmap = new BlockMap("data/level/level0001.tmx");
+[19:26:30] <indeterminatus> What is it that you want to do ... ? If it's about avoiding memory leaks, then all you need to do is make sure there are no references retained -- the garbage collector will do the rest.
+[19:26:40] <keisangi> and i thought when i wanted to load a new amp
+[19:27:03] <keisangi> first calling it null like this: GameState.bmap = null;
+[19:27:20] <keisangi> and then finaly load the new map: GameState.bmap = new BlockMap("data/level/level0002.tmx");
+[19:27:40] <keisangi> i thought this would have been all that is necessary ?
+[19:27:56] <indeterminatus> Ok, you wouldn't need to set it to null first, because with the new assignment, the old object is no longer accessible via GameState.bmap anyway ... and that's what counts
+[19:27:56] <keisangi> to ensure complete deletion of previous instances
+[19:28:19] <keisangi> indeterminatus, how would you do ?
+[19:28:34] <keisangi> i can paste the code if you want
+[19:28:37] <indeterminatus> If you have no other reference pointing to that object then that's perfectly fine and absolutely enough.
+[19:29:10] <keisangi> indeterminatus, yes but that's my problem actualy, i'm not sure if i have or not any ref left
+[19:29:30] <keisangi> cause i'm a noob and i'm trying my best but well ;)
+[19:29:51] <indeterminatus> Do you store the value of GameState.bmap anywhere (else)?
+[19:31:25] <keisangi> i don't think so but ..
+[19:31:38] <keisangi> in case you want to look, the code is here:
+[19:31:40] <keisangi> http://code.google.com/p/spaceweasel/source/browse/#svn/trunk/spaceweasel/src/org
+[19:32:11] <keisangi> in 3 classes: org.GameState, org.BlockMap and org.entities.Player
+[19:32:24] <keisangi> gamestate is the main loop
+[19:32:24] *** kappaTwo is now known as kappaOne
+[19:32:37] <keisangi> blockmap is the level loading class
+[19:32:53] *** delt0r___ has joined #lwjgl
+[19:33:10] <keisangi> and player is the character .. where i handle movementsand new level loading upon hitting a door ..
+[19:33:37] <indeterminatus> keisangi: Well, it's often difficult to see that from the sources alone (especially after they reach a certain level of complexity) ... are you familiar with JMX and/or VisualVM, probably a debugger?
+[19:34:20] <keisangi> never heard about jmx, and jvisualvm doesn't seem to work well here atm
+[19:34:33] *** delt0r_ has quit IRC
+[19:35:38] <keisangi> and i don't know well how to use debugger in general i'm affraid ..
+[19:36:07] <keisangi> usualy i just run eclipse ornetbeans debug to see if a variable is null or not
+[19:36:26] <keisangi> that's about all i do in debug mode ;)
+[19:37:02] <keisangi> i'll try to look for jmx
+[19:37:24] <indeterminatus> OK ... you can also have all references to a specific instance listed (at least in Eclipse, but since the NetBeans visual debugger seemed to be a tad better, I'd be surprised if that was missing there)
+[19:37:57] <indeterminatus> So you could add a breakpoint shortly before loading the new map, and check if there are any other references pointing to GameState.bmap
+[19:38:29] <indeterminatus> If there are not, you can rest assured that whatever memory is currently taken, the garbage collector will free as soon as it sees fit
+[19:38:58] <indeterminatus> When that actually happens is out of your control
+[19:38:59] <keisangi> where should i look  for references ?
+[19:39:28] <keisangi> i can add that breakpoint but then, i'm not sure what to look for .. or where ?
+[19:40:31] <keisangi> i should search for "GameState.bmap" then ?
+[19:40:35] <indeterminatus> When you right-click on a variable (or object) in the debugger view in Eclipse, there's a menu entry "All References"
+[19:40:49] <keisangi> oh ?
+[19:40:53] <keisangi> i try
+[19:41:09] <indeterminatus> Same is possible the other way round with "All Instances"
+[19:43:15] <indeterminatus> In any case, keisangi, learn to use the tools :). That's one of Java's strong points, after all.
+[19:43:40] <keisangi> i can't seem tofind any menu or area called "all references
+[19:44:10] <keisangi> this must be called differently in netbeans or the option in hidden in some sub-menu
+[19:44:14] <keisangi> elsewhere
+[19:44:31] <indeterminatus> I don't know where/how to find that in NetBeans IDE
+[19:44:45] <keisangi> indeterminatus, would you have any advice where to start ? learning about the tools
+[19:45:13] <keisangi> i'll test with eclipse too in a while, if i can't find nothing similar in netbeans
+[19:45:47] <indeterminatus> Both IDEs come with a manual ;)
+[19:46:02] <keisangi> ah good idea :)
+[19:46:09] <keisangi> i'll just do that then
+[19:46:44] <keisangi> thanks a lot for taking the time explaining and all
+[19:46:53] <indeterminatus> Depending on how deep you wanna go, you can also see how Java handles debugging (on a very low level), how the garbage collector works internally etc., but this goes quite deep
+[19:47:14] <keisangi> i  guess i have things to read up
+[19:47:23] <indeterminatus> Might be overwhelming when you're starting (I'd have been, so much is sure)
+[19:47:40] <keisangi> probably yes
+[19:48:07] <keisangi> i think i'll start learning how to use the debug mode ..
+[19:48:11] <indeterminatus> Don't feel ashamed if something's too steep for now ;)
+[19:48:11] <keisangi> ..better
+[19:48:37] <indeterminatus> Whatever helps you ... I find the debugger a very valuable tool, and it saved me a lot of time in the past
+[19:49:54] <keisangi> usualy i just used printf() to debug things .. or like i said earlier, just to confirm a variable value
+[19:50:22] <keisangi> k, i'm off reading up then
+[19:50:29] <keisangi> tnx again :)
+[19:50:30] <indeterminatus> Have fun!
+[19:50:34] <indeterminatus> You're welcome
+[19:54:57] <keisangi> indeterminatus, i think i've found the "show reference option
+[19:55:12] <keisangi> can you look at this screenshot ?
+[19:55:14] <keisangi> http://img29.imageshack.us/img29/2739/screenshot1zye.png
+[19:55:54] <keisangi> i see bmap [110] i hope it doesn't mean 110 ref ? :)
+[19:56:48] <keisangi> hum ..
+[19:59:44] <keisangi> ah great :)
+[19:59:53] <keisangi> just what i needed
+[20:00:03] <keisangi> this show reference option
+[20:06:52] <indeterminatus> keisangi: I don't know how NetBeans IDE displays that, but it looks fine ... maybe the GameState.bmap is also stored in an Object[] at index 110?
+[20:07:15] <indeterminatus> But better look into the manual to find out what [110] actually means in that view
+[20:07:43] <keisangi> the Instance list on the left, shows how many instances
+[20:07:51] <keisangi> on the screenshot there's only one
+[20:08:10] <indeterminatus> Indeed.
+[20:08:38] <keisangi> http://img216.imageshack.us/img216/7226/screenshot2p.png
+[20:08:56] <keisangi> on this one i got 3 instance of blockmap it seems
+[20:09:03] <indeterminatus> Yes
+[20:09:34] <keisangi> perfect, with that tool i'll be able to test and verify
+[20:10:28] <indeterminatus> That doesn't necessarily mean you're leaking memory, ne.
+[20:11:16] <indeterminatus> You should be able to invoke the garbage collector manually, say, via JConsole (maybe Netbeans IDE provides an integrated alternative?)
+[20:11:52] <indeterminatus> if after a few invocations the instances are still there, you can take a look where they are referenced, because then you may be leaking memory
+[20:12:04] <keisangi> maybe not, but i wanted to have only one map loaded at a time, i thought if i have few instance it means i have as much map loaded in memory as i have instance loaded
+[20:12:20] <keisangi> or is it wrong ?
+[20:12:41] <indeterminatus> You actually do, but if an instance is no longer accessible, it will be removed by the garbage collector
+[20:12:54] <keisangi> i see
+[20:12:58] <indeterminatus> conceptionally, the memory is already "free" for you
+[20:13:10] <keisangi> how can icheck if an instance is accessible or not ?
+[20:13:21] <indeterminatus> If there are still references pointing to it
+[20:13:27] <keisangi> how can test if1 instance isaccessible and another isn't ?
+[20:14:07] <keisangi> i see i need to look after references
+[20:14:12] <indeterminatus> Only by listing all references ... if all you see is the garbage collector (who'll have its hold on every instance there is), then all is fine, it's "free"
+[20:14:30] <keisangi> great
+[20:15:00] <indeterminatus> If there's no reference to a thing, you can't access it, right? ;)
+[20:15:47] <keisangi> i have much fun in perspective for tomorrow it seems .. the joy of searching through garbages .. collector ;)
+[20:15:58] <indeterminatus> If you can't access it, the garbage collector will reclaim its memory eventually; it's a very elaborate algorithm designed to keep collecting times as low as possible (so there are no noticable slow-downs)
+[20:16:13] <keisangi> yes, but howwould you try to access an instance or another ?
+[20:16:30] <indeterminatus> What do you mean?
+[20:16:56] <keisangi> since this all basicaly the sameclass with same variables andall ?
+[20:17:20] <indeterminatus> Sorry, I'm still not following ...
+[20:17:30] <keisangi> you said:
+[20:17:51] <keisangi> If you can't access it  ...
+[20:18:00] <keisangi> the garbage collector will reclaim its memory eventually;
+[20:18:05] <indeterminatus> Yes
+[20:18:18] <keisangi> how do you test if you can or cannot acces it ?
+[20:18:23] <keisangi> *access
+[20:18:46] <Mazon> kappa: fyi, I am not going to look into the mouse issue tonight - tired, champions league, runes of magic etc :)
+[20:18:54] <indeterminatus> You can only see that by inspecting all the references pointing to an object - if there are none, the object's lost.
+[20:19:14] <keisangi> say on the last screenshot i have 3 instances of the same class, how can i test which one is accessible and which one isn't ?
+[20:19:18] <indeterminatus> Sorry if I worded that so complicated
+[20:19:37] <indeterminatus> I suspect that when you click on an instance, you'll get all the references listed in the "References" view
+[20:19:44] *** kgrad5_ has joined #lwjgl
+[20:19:56] <indeterminatus> say, select #1051
+[20:20:01] <indeterminatus> (which seems to be the oldest)
+[20:20:33] <keisangi> nono it's ok, it's just it's 3:30am here, and i lighted up that doobie before hitting the pillow i guess a it all adds up ;)
+[20:21:28] <kappaOne> mazon take your time :)
+[20:21:42] <kappaOne> no hurry here
+[20:22:02] <keisangi> weed and devel.. i wonder how much compatible is it ..
+[20:22:06] <keisangi> ;)
+[20:22:31] <keisangi> indeterminatus, so you were saying, i select #1051 ?
+[20:22:37] <keisangi> and then?
+[20:23:29] <keisangi> on the first screenshot: http://img29.imageshack.us/img29/2739/screenshot1zye.png
+[20:23:35] <indeterminatus> I'm just guessing here, I'm not proficient with Netbeans IDE
+[20:23:42] <keisangi> i see in reference list at the bottom,
+[20:23:51] <keisangi> referent is finalizer ?
+[20:23:54] *** kevglass has joined #lwjgl
+[20:24:03] <kevglass> lo
+[20:24:14] <keisangi> hi kev
+[20:24:17] <indeterminatus> Yes, the finalizer is part of the garbage collector, so that's fine
+[20:24:27] <kappaOne> hah escapist review duke nukem 4ever :) http://www.escapistmagazine.com/videos/view/zero-punctuation/748-Duke-Nukem-Forever
+[20:24:29] <kevglass> not guaranteed to be run tho :)
+[20:24:33] <keisangi> indeterminatus, ok
+[20:24:44] <indeterminatus> if there's nothing else, the object's "lost", so you won't leak the memory
+[20:26:06] <indeterminatus> And if there is, you'd have to inspect if the thing that keeps the reference is itself accessible at all (or if it'll also be reclaimed by the gc at some point)
+[20:26:27] *** Greenleon1 has joined #lwjgl
+[20:26:32] <indeterminatus> kevglass \o/
+[20:26:58] <keisangi> indeterminatus, on thoses 2 screenshots:
+[20:27:00] <keisangi> http://img21.imageshack.us/img21/9799/screenshot3oug.png
+[20:27:07] <keisangi> http://img43.imageshack.us/img43/5831/screenshot4n.png
+[20:27:14] <keisangi> i have 3 instances,
+[20:28:00] <indeterminatus> You can already forget about #1051, because you can't access it - everything's fine.
+[20:28:13] <keisangi> and in thoses 3 only one have a reference "bmap" type "gamestate"
+[20:28:23] <indeterminatus> #1413 seems to be actively in use (judging from the reference held by GameState.bmap)
+[20:29:10] <keisangi> (i relaunched the game since that screenshot with instance #1051)
+[20:29:18] <keisangi> yes
+[20:29:41] <keisangi> and the two other one are like in the screenshot http://img43.imageshack.us/img43/5831/screenshot4n.png
+[20:29:44] *** aho has joined #lwjgl
+[20:29:49] <Mazon> name of famous movie: face with nails in head, cube, 3 people, pain (trying to remember it -cant!)
+[20:30:02] <keisangi> referent type finalizer
+[20:30:03] <aho> hellraiser
+[20:30:03] <Mazon> blueish tint on front cover afaik
+[20:30:06] <kappaOne> hellrasier
+[20:30:12] <aho> me wins
+[20:30:13] <aho> <:
+[20:30:13] <Mazon> yes, thx
+[20:30:15] <keisangi> so they are dead ?
+[20:30:18] <kappaOne> :)
+[20:30:19] <kevglass> hellraiser
+[20:30:24] * kevglass grins.
+[20:30:30] * kappaOne woot beats kev at least :)
+[20:30:34] <indeterminatus> keisangi: They're not physically dead yet, but you can see them as dead.
+[20:30:41] *** mercc has quit IRC
+[20:31:08] <Mazon> was it any good ?
+[20:31:20] <keisangi> indeterminatus, i see .. thanks for telling me about this tool :)
+[20:31:42] <indeterminatus> You've given up all references (which you wanted to check), so the gc will claim it. If and when is out of your control (and need not bug you further)
+[20:31:46] <keisangi> Mazon, hellraiser ?
+[20:31:54] <Mazon> aye
+[20:31:58] <keisangi> Mazon, depends there's a few of them
+[20:32:06] <keisangi> some are passable ..
+[20:32:09] <Mazon> the first
+[20:32:14] <indeterminatus> I liked them all, they have a certain atmosphere.
+[20:32:15] <keisangi> it's clive barker stuff
+[20:32:53] <keisangi> some are a bit dull .. like the one in space
+[20:32:55] <aho> Mazon, it isn't actually "good" if you go with the dictionary definition
+[20:32:58] <aho> it's a classic, however
+[20:33:13] <keisangi> i'd agree with aho here :)
+[20:33:19] <Mazon> its 7.0 so
+[20:33:26] <indeterminatus> I found the way the "monsters"/victims of pinhead were depicted interesting compared to other horror movies
+[20:33:42] <keisangi> classic horror movie, must see them at least once .. just to get to know it :)
+[20:34:17] <Mazon> I think I have seen it - but cant remember much from it... can remmeber more from poltergeist
+[20:35:00] <keisangi> i like zombie movies
+[20:35:23] <keisangi> romero's dawn of the dead ..
+[20:35:56] <keisangi> when there'll be no more room in hell, the dead will comeback and walk the earth
+[20:36:19] *** kgrad5__ has quit IRC
+[20:36:23] <indeterminatus> heh, yeah
+[20:38:29] <keisangi> ah great now i can confirm i only have one referenced instanceof my map class.. all other instance are referenced only by the finalizer, only one is referenced by gamestate
+[20:38:53] * keisangi controls everythings! O_o
+[20:39:08] <keisangi> i have the Powah
+[20:39:16] <keisangi> ;)
+[20:39:26] <indeterminatus> \o/
+[20:39:50] <keisangi> (homer simpson mode) woohoo!
+[20:42:18] <aho> http://hardware.slashdot.org/article.pl?sid=09/05/27/1612244 - Zune HD Unveiled, Set For Fall Release
+[20:42:27] <aho> die ham echt "fail" falsch geschrieben... tze tze
+[20:42:29] <aho> :>
+[20:42:49] <indeterminatus> hehe geil
+[20:43:37] *** Greenleon has quit IRC
+[20:43:49] <keisangi> yuck another m$ product :(
+[20:44:03] <aho> whops... wrong channel .)
+[20:44:46] <indeterminatus> Where are you from, aho? :o
+[20:45:04] <aho> germany
+[20:45:07] <aho> apparently :>
+[20:45:10] <keisangi> kev can i ask you about the state of slick on android ? is it usable or not just yet ?
+[20:45:13] <indeterminatus> Yeah, so much I figured ... Bavaria?
+[20:45:14] <keisangi> kevglass,
+[20:45:33] <aho> kassel
+[20:45:37] <aho> living in fulda currently tho
+[20:46:33] <indeterminatus> Oh, ok ... because of the "ham", I'd have placed you more to the south
+[20:48:18] *** Greenleon has joined #lwjgl
+[20:51:22] *** kevglass has quit IRC
+[20:52:40] *** Greenleon1 has quit IRC
+[20:58:40] *** Orphis has quit IRC
+[20:59:16] *** Orphis has joined #lwjgl
+[20:59:49] *** logan_barnett has joined #lwjgl
+[21:03:22] <Notch_> Quoting a user having problems running lwjgl applets:
+[21:03:49] <Notch_> I noticed in 'C:\Users\hisnamehere\AppData\Local\Temp\\www.minecraft.net\Minecraft\natives\lwjgl.dll' there is a \\ which is where the error is (I think), so the problem is really a bad path.
+[21:04:30] <kappaOne> what error message does he get?
+[21:04:53] <Notch_> Exception in thread "Thread-12" java.lang.UnsatisfiedLinkError: Can't load library: C:\Users\stillhisnamehere\AppData\Local\Temp\\www.minecraft.net\Minecraft\natives\lwjgl.dll
+[21:06:40] <aho> windows ignores multiple backslashes though
+[21:06:50] <Mazon> C:\>cd c:\\temp
+[21:06:50] <Mazon> C:\Temp>
+[21:06:58] <aho> eg x:\\\\\\\\\\\\\\\\\\\\\\\\\\\someapp.exe works fine
+[21:07:15] <Notch_> ok, so it's not that, then
+[21:07:20] <kappaOne> which browser is he using?
+[21:07:46] <kappaOne> and java version?
+[21:07:57] <Notch_> checking
+[21:10:48] *** MatthiasM has quit IRC
+[21:11:05] <Notch_> oh, he was using chrome
+[21:11:28] <kappaOne> ah so most likely using a java version highter than 1.6.0_10+
+[21:12:14] <kappaOne> since thats the minimum chrome requires to run java applets
+[21:13:10] <Notch_> i tried signing the applet loader stuff with my own certificate since I want full permissions in my stuff and don't want two certs
+[21:13:41] <Notch_> but it's giving me all sorts of headaches, heh. Right now, I get a "Fatal error occured (5): null"
+[21:13:46] <Notch_> I think I'm going about this the wrong way
+[21:14:18] <Notch_> any advice?
+[21:14:31] <kappaOne> error 5 is at the extracting packages stage
+[21:14:49] <Notch_> ok, so I probably messed up either the pack200 or the lzma compression then
+[21:14:53] <kappaOne> usually i find using the lwjgl applet example
+[21:15:03] <kappaOne> is easiest place to start
+[21:15:07] <Notch_> since I had to redo them to get rid of the original certificates
+[21:15:09] <kappaOne> just modify it
+[21:15:29] <Notch_> but that one comes with presigned jars by some oddlabs certificate
+[21:15:56] <kappaOne> yeh just open it with a zip program
+[21:16:04] <kappaOne> and delete teh meta-inf folder
+[21:16:08] <kappaOne> and resign
+[21:16:12] <Notch_> my zip program doesn't like to open pack files
+[21:16:21] <kappaOne> ah wait pack files
+[21:16:33] <kappaOne> you could just use jars
+[21:16:46] <kappaOne> from the lwjgl zip download
+[21:16:51] <Notch_> yeah, but there's massive savings in pack200, it seems :D
+[21:17:08] <Notch_> i bet the step that goes wrong is when i compress with 7z to make the lzmas
+[21:17:22] <kappaOne> what are you using to create lzma files?
+[21:17:28] <Notch_> 7zip
+[21:17:45] <Notch_> 7z foo.jar.pack.lzma foo.jar.pack
+[21:17:47] <aho> lzma.exe
+[21:18:07] <aho> (part of the 7zip sdk)
+[21:18:31] <aho> well.. i think...
+[21:18:41] <aho> you can download it over at the 7zip page
+[21:18:48] <kappaOne> try http://sourceforge.net/project/showfiles.php?group_id=111810 java_lzma package
+[21:19:30] <kappaOne> it has a JLzma.jar which is pretty good
+[21:20:07] <NoobFukaure> does anyone use any caching functionality with their scenegraph traversals?
+[21:20:44] <kappaOne> oh to use signed jars with pack200 you have to repack them first to create a compatible jar then sign them, then pack them
+[21:20:47] <kappaOne> using pack200
+[21:22:43] <Notch_> i only sign lwgl_util_applet.jar and the native lzmas (and minecraft.jar).. That's what the original files seemed to do
+[21:22:56] <Notch_> wait, perhaps not
+[21:23:08] <Notch_> since I could never open the pack200 files and just started rebuilding them
+[21:23:13] <Notch_> so I don't know what they contained
+[21:24:11] <kappaOne> remember only use pack200 on jars that contain classes
+[21:24:23] <Notch_> ok
+[21:24:25] <kappaOne> native jars do not need to be pack'd
+[21:24:46] <kappaOne> so .jar.lzma will do
+[21:24:57] <kappaOne> also don't use any compression on the jars since lzma will not work then
+[21:25:38] <aho> <kappaOne> oh to use signed jars with pack200 you have to repack them first to create a compatible jar then sign them, then pack them
+[21:25:43] <aho> there is some special switch for that
+[21:25:46] *** Greenleon has quit IRC
+[21:25:53] <kappaOne> yeh the pack200.exe does it for you
+[21:26:01] <Notch_> ah
+[21:26:09] <kappaOne> it repack's jars
+[21:26:17] <kappaOne> to create a new jar
+[21:26:49] <kappaOne> yes
+[21:27:03] <aho> it's -r or --repack
+[21:27:22] <aho> you should use -g anyways... no need for that crap gzip :>
+[21:27:37] <kappaOne> once you have a nice build script (ant) setup its not really a long process but its rather tedious if you do it manually
+[21:28:01] <Notch_> ack, didn't work, still (5): null
+[21:28:13] *** Greenleon has joined #lwjgl
+[21:28:13] <Notch_> yeah, I've got a script going. ;)
+[21:29:08] <kappaOne> http://pastebin.com/m323eb5da should tell you where the appletloader is crashing
+[21:29:14] *** MatthiasM has joined #lwjgl
+[21:29:33] <kappaOne> 5 is  EXTRACTING PACKAGES
+[21:30:01] <kappaOne> also use the debug tag
+[21:30:07] <kappaOne> with applet loader for more info in the console
+[21:30:30] <kappaOne> al_debug  true;
+[21:31:03] <Notch_> yeah, i turned it on. The console says "Fatal error occured (5): null" and nothing more
+[21:31:22] <kappaOne> pressing the 5 key on console give you anything extra?
+[21:31:51] <Notch_> yes, much more. let's see here
+[21:31:55] <Notch_> no, haha
+[21:32:06] <Notch_> it printed a bunch about downloading the lzmas
+[21:32:10] <Notch_> but then just null
+[21:32:47] <kappaOne> hmm got an upload somewhere i can have a look at?
+[21:33:35] <Notch_> will it load just plain .jar.pack if I skip the lzma step?
+[21:33:56] <kappaOne> yes
+[21:34:14] <kappaOne> it'll also load .jar.lzma
+[21:34:19] <kappaOne> if you skip the pack step
+[21:34:31] *** stroem has joined #lwjgl
+[21:34:58] <Notch_> ok, nice. That should let me narrow stuff down a bit
+[21:35:33] <Notch_> Oh there we go. Fatal error occured (5): Corrupted pack file: magic/ver = 5D000080/88.0 should be CAFED00D/150.7 OR CAFED00D/160.1
+[21:35:47] <kappaOne> ah you have to use 1.5 pack200 files
+[21:35:58] <kappaOne> 1.6 pack200 files are different
+[21:36:02] <Notch_> aha
+[21:36:15] <kappaOne> oh wait
+[21:36:24] <kappaOne> thats error means its neither
+[21:36:36] <aho> cafed00d... :>
+[21:37:28] <stroem> I have some problems with 'import org.lwjgl.devil.IL;'. does lwjgl have DevIL implanted? i get package does not exists, my other packages works perfect. what wrong?
+[21:37:39] <kappaOne> devil is no long part of lwjgl 2.0
+[21:37:49] <stroem> i thought so :)
+[21:37:55] <kappaOne> nor is fmod
+[21:38:06] <stroem> so how do i load textures for my apps?
+[21:38:19] <kappaOne> you can use slick-util library
+[21:38:42] <stroem> never heard of it, ill google it :) thx
+[21:39:10] <kappaOne> I'd recommend you use the standalone library slick-util (note different from slick, its actually a sub part of it) as that is probably the most well tested and reliable library for playing sounds and ogg files with OpenAL. You can find it at http://slick.cokeandcode.com/downloads/util/ with javadoc at http://slick.cokeandcode.com/javadoc-util/ see its source for a the simple test example on how to use it.
+[21:39:17] <kappaOne> sorry thats a copy paste from somewhere :)
+[21:39:32] <kappaOne> it also loads textures
+[21:39:43] <stroem> :) nice
+[21:39:47] <kappaOne> just see the test example inside on how to load textures
+[21:40:12] <stroem> thx alot
+[21:40:45] *** kgrad5__ has joined #lwjgl
+[21:47:05] <Notch_> what the hell. Just using jars gives "error opening zip file", haha
+[21:47:44] <Notch_> "Fatal error occured (5): error in opening zip file"
+[21:47:45] <aho> ?_?
+[21:48:56] <stroem> kappaOne: is there any good tutorial or sample i can look at in slick-util, hard to read the docs :P
+[21:49:12] *** Scientz has joined #lwjgl
+[21:49:26] *** pstickne has quit IRC
+[21:51:35] <kappaOne> stroem look in side the source code
+[21:51:42] <kappaOne> theres and example class
+[21:51:44] <kappaOne> test
+[21:51:48] <kappaOne> on how to use slick-util
+[21:51:52] <stroem> :) i see
+[21:51:57] <stroem> great
+[21:52:27] <kappaOne> Notch_ corrupt jars or something?
+[21:53:07] <Notch_> seems so
+[21:54:48] <Notch_> i always think these things will go smoothly, and they never do, haha
+[21:54:58] <Notch_> just creating the self signed certificate for TESTING took ages
+[21:56:52] <kappaOne> ant does it pretty quickly
+[21:57:11] <kappaOne> <genkey alias="myname" keystore="nameOfCertificatefile" storepass="mypassword"	dname="CN=J Group, OU=Test, O=some.org, C=UM"/>
+[21:57:16] *** kgrad5_ has quit IRC
+[21:57:31] *** kgrad5_ has joined #lwjgl
+[21:57:52] <Notch_> yeah, I'm keeping a script up to date on everything I do here, so once it's working I can rebuild it all from scratch
+[21:58:25] <kappaOne> pack200 is quiet a pain to get running but does have pretty good savings
+[21:59:33] <Notch_> yeah, i saw on lwjgl.jar
+[22:01:54] *** kgrad5__ has quit IRC
+[22:02:30] <kappaOne> you get even more massive savings if you use proguard before pack200
+[22:02:49] <Notch_> oh god, hahaha, lzma has <input> <output> as parameters instead of the opposite
+[22:02:51] <kappaOne> but then thats another pain to get working
+[22:02:53] <Notch_> that's what corrupted the jars
+[22:05:25] <kappaOne> that helicopter lwjgl applet i did was a total download of 200kb which included the game + slick + lwjgl + natives, thats after proguard + pack200 + lzma
+[22:05:42] <Notch_> wow
+[22:06:03] <Notch_> my windows_natives.jar.lzma alone is 369
+[22:06:10] *** Scient has quit IRC
+[22:06:13] <kappaOne> yeh i didn't use openal.dll
+[22:06:19] <Notch_> ah
+[22:06:24] <kappaOne> javasound instead
+[22:06:38] <kappaOne> or jinput
+[22:07:53] <Notch_> Caused by: java.security.AccessControlException: access denied (java.util.PropertyPermission org.lwjgl.util.Debug read)
+[22:08:15] <kappaOne> jar not signed?
+[22:08:26] <kappaOne> thats lwjgl.jar
+[22:08:26] <Notch_> must've missed one
+[22:08:45] <Notch_> oh, ah, yes. Not signed.
+[22:08:50] <kappaOne> certifcate also fails if you don't repack the jars before signing
+[22:09:10] <Notch_> ok
+[22:09:25] <MatthiasM> Notch_: http://www.matthiasmann.de/content/view/20/26/
+[22:10:46] <Notch_> thank you =)
+[22:11:58] <Mazon> fwiw, lwjgl build scripts in platform_build has all the magic for packing and signing
+[22:13:04] <Notch_> i suck so very bad at this, now it starts, but can't find GLU.class, haha
+[22:13:47] <kappaOne> thats part of the lwjgl_util.jar right?
+[22:14:02] <Notch_> yes
+[22:14:43] <MatthiasM> Notch_: be careful with proguard - if native code accesses fields in a Java class ...
+[22:14:55] <Notch_> i'm not proguarding the lwjgl stuff at all yet
+[22:15:00] <MatthiasM> ok
+[22:15:29] <kappaOne> i've got a proguard settings file that should work on lwjgl.jar, give me a shout if you need it
+[22:17:00] <Notch_> I'd love it
+[22:17:55] *** mattdesl has joined #lwjgl
+[22:22:20] *** OrangyTang has joined #lwjgl
+[22:22:35] *** Greenleon has left #lwjgl
+[22:22:44] <kappaOne> ah notch just had a look at the proguard file not sure it'll be much use for general usuage, i just excluded files until it the game worked, when it stopped i reversed the change
+[22:22:52] <kappaOne> it looks like this http://img219.imageshack.us/img219/8726/drag1.png
+[22:23:19] <Notch_> hehe ok
+[22:24:00] <kappaOne> was just pushing it to see how far it goes on that, but if you just need it work just exclude obfusication on the org.lwjgl.* and org.lwjgl.opengl.* packages
+[22:26:05] <kappaOne> and exclude shrinking on org.lwjgl.opengl.* and org.lwjgl.input.*
+[22:26:55] <kappaOne> the rest should work
+[22:27:17] <Notch_> ok, got it to work now! I was signing lwjgl_util.jar before repacking it
+[22:27:48] <kappaOne> nice :)
+[22:28:37] <Notch_> thank you for the help
+[22:28:49] <kappaOne> also if you sign it youself you can add your own logo and progess bar inside the lwjgl_util_applet.jar :)
+[22:29:01] <Notch_> i saw =D
+[22:29:02] <kappaOne> black loading screen does look nice :)
+[22:29:18] <Notch_> although I could replace the logo via the applet params
+[22:29:26] <Notch_> the progress bar seemed to not really like getting replaced, though
+[22:30:08] <kappaOne> lwjgl does also come with signed lwjgl_util_applet.jar with no logo's inside
+[22:30:27] <kappaOne> so could also use that if not signing yourself
+[22:31:48] <kappaOne> also you can use the following tag inside the applet tag if you totally want to get rid of the java logo
+[22:31:50] <kappaOne> <param name="boxmessage" value="LWJGL Applet Started">
+[22:31:51] <kappaOne>     <param name="boxbgcolor" value="#000000">
+[22:31:53] <kappaOne>     <param name="image" value="">
+[22:32:18] <kappaOne> boxbgcolor being the background of you appletloader
+[22:32:42] <kappaOne> that way applet won't load the teacup logo that you see for a split second with appletloader :)
+[22:33:00] <Notch_> nice, thanks
+[22:33:09] <kappaOne> boxmessage being the java started by default
+[22:33:17] <kappaOne> message in status bar
+[22:34:36] *** kevglass has joined #lwjgl
+[22:34:44] <kevglass> evening
+[22:34:57] <Notch_> hey kev
+[22:35:28] <doohan> hey kev,notch kappaOne
+[22:36:45] <kevglass> in java2d/applets - how do you handle timing without having 100% CPU?
+[22:37:03] <kevglass> I know yield shouldn't really hurt, giving away CPU when needed
+[22:37:08] <kevglass> but it seems daft to go at 100%
+[22:43:23] <Mazon> sleep (16) ?
+[22:44:53] <doohan> I use a swingtimer
+[22:45:01] <MatthiasM> urgs
+[22:45:21] <doohan> Yeah not great but it works for quick stuff
+[22:45:32] <doohan> But cpu usage is never high
+[22:45:33] <MatthiasM> Display.sync
+[22:45:42] <MatthiasM> and vsync
+[22:48:36] <NoobFukaure> I use yield at the end of the render loop when vsync is disabled, otherwise nothing
+[22:49:12] <NoobFukaure> I prefer vsync off mostly though, just because of the noticably smoother feel to interpolation
+[22:49:19] <NoobFukaure> although the tearing kind of sucks :(
+[22:49:30] <MatthiasM> heh
+[22:53:19] <doohan> kevglass, I just do: http://pastebin.com/mefa8329
+[22:53:30] <doohan> and Main is a jpanel.
+[22:53:38] <doohan> Probably not the best way, but sort of works
+[23:00:33] *** Scientz has quit IRC
+[23:00:48] *** Scient has joined #lwjgl
+[23:04:55] *** kevglass_ has joined #lwjgl
+[23:05:02] *** kevglass is now known as Guest58034
+[23:05:06] *** kevglass_ is now known as evglass
+[23:05:09] *** evglass is now known as kevglass
+[23:05:18] <kevglass> fun
+[23:05:26] <kevglass> interweb went coput.
+[23:07:02] <kevglass> http://www.cokeandcode.com/applets/tower/tower.html
+[23:07:05] <kevglass> little more fiddling
+[23:07:09] <kevglass> trying sleep(16)
+[23:07:38] <kevglass> left drag - move a row, right drag spin the whole tower
+[23:08:08] <kevglass> found a bug, woo
+[23:09:04] <doohan> kevglass, how do you play?
+[23:09:05] *** Guest58034 has quit IRC
+[23:09:15] <doohan> I've made a whole column of yellow and nothing!
+[23:09:37] <kappaOne> great lwjgl's paste is dead http://rafb.net/paste/
+[23:10:08] <kevglass> there isn't a game yet :)
+[23:10:13] <kevglass> just random test
+[23:10:21] <doohan> ahh!
+[23:10:22] <doohan> :)
+[23:10:27] <kevglass> but you got the idea :)
+[23:10:34] <doohan> kappaOne, that sucks
+[23:10:41] <doohan> I bet he didn't want to have to do that
+[23:15:09] *** Woflborg has quit IRC
+[23:28:53] *** ChanServ changes topic to "http://lwjgl.org || http://cia.lwjgl.org || IRC Logs: http://echelog.matzon.dk/?lwjgl || http://lwjgl.pastebin.com/"
+[23:42:24] <doohan> kappaOne, kevglass you guys about?
+[23:42:27] <kappaOne> :)
+[23:42:37] <kevglass> ?
+[23:42:38] <kappaOne> new pastebin
+[23:42:39] <doohan> I'll take that as a yes :)
+[23:42:44] <kappaOne> huh?
+[23:42:46] <doohan> http://graveindustries.com/doohan/ramcon/launch.jnlp
+[23:42:54] <doohan> If you drag a tank you can draw a path
+[23:43:04] <doohan> and you can place tetrominos (like rampart)
+[23:43:07] <doohan> What do you tihnk so far?
+[23:43:17] <doohan> Doing to be a touchscreen game
+[23:43:21] <kevglass> *click*
+[23:43:37] <kevglass> ah, android?
+[23:43:38] <doohan> android + iphone
+[23:43:41] <kevglass> :)
+[23:43:42] <kappaOne> ohh nice
+[23:43:50] <doohan> No realt game yet
+[23:43:58] * kevglass hopes you're not using floats :)
+[23:44:01] <doohan> Nope :)
+[23:44:13] <doohan> Even avoiding using point2d
+[23:44:23] <doohan> Everything to keep it portable
+[23:44:27] <kevglass> aye
+[23:44:30] *** FireSlash has quit IRC
+[23:44:31] <kevglass> abstracted the graphics already?
+[23:44:37] <doohan> What do you think of moving the tanks like that
+[23:44:44] <kevglass> fine for short distance
+[23:44:46] * kappaOne drives on water
+[23:44:50] <kevglass> long distance would be pretty annoying
+[23:45:01] <doohan> Erm not yet but I have a rough idea of what it'll take to get it working with the other things
+[23:45:04] <doohan> hmmm
+[23:45:14] <doohan> Well thinking of keeping it to just the screen
+[23:45:15] <kappaOne> could smooth out the line a bit
+[23:45:21] <doohan> Yeah I do want to do that :)
+[23:45:39] <kappaOne> so the tanks don't have too much jumpy left right motion
+[23:45:48] * kevglass wonders at the draggable tetis pieces?
+[23:45:51] <doohan> Yes
+[23:45:54] <doohan> Build walls
+[23:45:59] <kevglass> ah
+[23:46:06] <kevglass> ack, the sub is moving!
+[23:46:10] <kevglass> I must kill
+[23:46:16] <doohan> But tanks in water!
+[23:46:25] <kappaOne> run over the sub
+[23:46:31] <doohan> Like rampart you have to have an enclosed sapce at the end of the round
+[23:46:38] <doohan> Otherwise the radiation gets in.
+[23:47:10] <doohan> Radiation!
+[23:47:11] <kevglass> twiiter appears fcked
+[23:47:18] <doohan> Isn't that quite common?
+[23:47:21] <kevglass> not sure how the game will play
+[23:47:27] <kevglass> but looks interesting already
+[23:47:35] <doohan> Thanks kev
+[23:47:42] <kappaOne> yup looks like something original
+[23:47:45] <doohan> I'm thinking lots of short rounds
+[23:47:46] <kevglass> I'm finding working with smaller screen res and limited input already makes fun things
+[23:47:57] <doohan> Yeah it does :)
+[23:48:00] <kevglass> probably keep developing at this res even for applet only games
+[23:48:04] <kevglass> tis nice
+[23:48:07] <doohan> Short rounds mean you sort of rush plan the tanks moves
+[23:48:11] <doohan> Like flanking
+[23:48:13] <doohan> or pincers
+[23:48:21] <doohan> ANd then they'll move in the next phase
+[23:48:42] <doohan> Thanks kappaOne
+[23:48:57] <doohan> Yeah 480x320 is pretty cool
+[23:49:08] <doohan> Applets + iphone + android all seem to have it in common
+[23:49:19] <doohan> Well applets will work with it :)
+[23:49:31] <kappaOne> needs scale*2(*8?) for large screens :)
+[23:49:31] <kevglass> wonder how good that android -> iphone stuff is
+[23:49:32] <doohan> j2d is awesome for prototyping
+[23:49:41] <doohan> kevglass, what's that?
+[23:50:01] <kevglass> xmlvm
+[23:50:02] <doohan> not the xmlvm stuff?
+[23:50:04] <doohan> Ahh yeah
+[23:50:13] <doohan> Needs jail break though doesn't it?
+[23:50:26] <kevglass> they seemed to be saying they could tae an android activity and create an xcode project
+[23:50:38] <doohan> I'd be interested in seeing that
+[23:50:46] <kevglass> me also
+[23:50:59] <doohan> I'd be intersted in anything other than objc :D
+[23:51:03] <kevglass> :)
+[23:51:05] <kevglass> is painful
+[23:51:06] <doohan> [me shoot]
+[23:51:23] <kappaOne> new release of Ardor3d http://www.ardor3d.com
+[23:51:34] <doohan> And all this YES NO and NIL nonsense
+[23:53:01] <doohan> I still haven't gotten into android dev yet
+[23:53:31] <doohan> I was about to start something the other day but eclipse wouldn't make a new project so I gave up.
+[23:53:38] <kappaOne> kev did you write a slick java2d container?
+[23:53:48] <doohan> Seems like you have to copy an existing thing and start from there.
+[23:54:02] <doohan> kappaOne, you mean so it works with the applet loader?
+[23:54:19] <kappaOne> no so that it works without it :)
+[23:54:26] <kappaOne> and lwjgl
+[23:55:45] <kevglass> I have some limited java2D stuff
+[23:55:49] <kevglass> that I did for putty puzzle
+[23:55:58] <kevglass> but I never wrote a full impl, it'd just be too slow
+[23:56:16] <kappaOne> ah ok
+[23:56:58] <kevglass> fixed some depth sorting issues woo
+[23:57:06] <kevglass> fear the power the the match 3 game
+[23:57:53] <kevglass> some brilliant artwork by now
+[23:58:00] *** Rosetta has quit IRC
+[23:58:33] <kappaOne> oh more nice applet games on jolt :)
+[23:58:38] <kevglass> yep
+[23:58:53] <kevglass> they just keep coming!
+[23:59:06] <kappaOne> yup seems like all of jgo :)
+[23:59:37] <kevglass> right bed time
+[23:59:42] <doohan> Night kev
+[23:59:47] <kappaOne> nn kev
+[23:59:58] <kevglass> could you thin of interesting game with a round tower of blocks for tommrow pls :)
+[23:59:59] <kappaOne> that game Beyond Negoation is pretty cool

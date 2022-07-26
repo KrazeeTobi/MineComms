@@ -1,0 +1,1750 @@
+[00:02:02] <kevglass> ninja is GPL?
+[00:02:09] <kappaOne> yes looks like it
+[00:02:14] <tsku> What is everyone's favorite network lib?
+[00:02:16] <kevglass> ask NateS when he comes on
+[00:02:28] <kevglass> there's no way he'll stick to that
+[00:02:32] <kevglass> it's too shit.
+[00:02:36] <kappaOne> k, got that info from http://sourceforge.net/projects/ninjanetworking/
+[00:02:55] <kappaOne> was hoping Noodles would get some love
+[00:02:56] <OrangyTang> what kind of network lib?
+[00:03:00] <kappaOne> but seems dead
+[00:03:03] <kappaOne> :)
+[00:03:13] <kappaOne> game networking
+[00:03:21] <OrangyTang> in-game realtime?
+[00:03:24] <kappaOne> say for Soldat style games
+[00:03:39] <OrangyTang> meh, code it yourself, don't really need a lib surely?
+[00:03:58] <tsku> actually  general like mina, netty, xsocket
+[00:03:59] <kappaOne> too noob :)
+[00:04:12] <tsku> grizzly etc
+[00:04:27] <kappaOne> don't wanna spend too much time learning the in's and outs of java networking
+[00:04:42] <OrangyTang> make socket, connect, send.
+[00:04:44] <OrangyTang> job done ;)
+[00:04:45] <kappaOne> from what i've heard it gets pretty hairy
+[00:04:57] <tsku> hehe u know :)
+[00:05:01] <kevglass> Noodles is dea
+[00:05:02] <kevglass> dead
+[00:05:07] <kevglass> I just don't have time for any more
+[00:05:20] <kevglass> phys2d keeps getting asked about even now
+[00:05:28] <kevglass> I keep saying, use JBox2D.
+[00:05:49] <kappaOne> Noodles didn't really take off though
+[00:05:58] <kevglass> never got the basic impl working
+[00:06:06] <kevglass> I had to go and be ill for a bit
+[00:06:23] <kappaOne> so looks like ninja's the best network gaming lib then
+[00:06:57] <kappaOne> from the looks of it
+[00:06:59] <OrangyTang> link?
+[00:07:07] <kappaOne> http://ninjanetworking.sourceforge.net/
+[00:07:22] <kappaOne> Riven's one looks promising http://www.javagaming.org/index.php/topic,20647.0.html
+[00:07:38] <kappaOne> but having not does networking before can't really tell why it'd be better
+[00:07:56] <OrangyTang> automatic serliaisation for sending objects? ew ew ew
+[00:07:58] <kappaOne> theres JGN and HeadQuarter but like Noodles they both are dead
+[00:08:14] <kappaOne> hear alot about Mina too
+[00:08:24] <kappaOne> but doesn't look like its for games
+[00:08:46] <NoobFukaire> our network lib is mina-based
+[00:08:49] <NoobFukaire> works pretty well
+[00:08:51] <MatthiasM> what features do you need from a networking lib ?
+[00:08:58] <tsku> trustin lee was the main developer of mina, he left to make the Netty network lib
+[00:09:05] <MatthiasM> object serialisation is best handled by the game engine
+[00:09:06] <kappaOne> easy to use? be the best in the world? :)
+[00:09:28] <OrangyTang> actually other than automatic serialisation (which you can override) Ninja looks pretty good
+[00:09:30] <MatthiasM> handling server connection on the server: NIO+Selector - not much code needed
+[00:09:31] <NoobFukaire> our serialization is all done manually
+[00:09:53] <NoobFukaire> so we can take advantage of various network/application conditions
+[00:09:55] <MatthiasM> when using UDP you don't need to do packet framing - but could be problematic over inet
+[00:09:55] <kappaOne> OT whats your opinion on Rivens stuff?
+[00:10:03] <OrangyTang> kappaOne: which is that?
+[00:10:08] <kappaOne> http://www.javagaming.org/index.php/topic,20647.0.html
+[00:10:22] <MatthiasM> using TCP you need to do packet framing - this could be done by a small lib together with the NIO+Selector stuff
+[00:10:22] <kappaOne> or is there not enough there
+[00:10:30] <NoobFukaire> we serialize everything to a bit stream
+[00:10:45] <NoobFukaire> all over pure UDP, no TCP at all
+[00:11:06] <MatthiasM> any test done over inet ?
+[00:11:08] <NoobFukaire> TCP can hurt UDP performance when used at the same time to the same hosts
+[00:11:22] <MatthiasM> i know :(
+[00:11:22] <OrangyTang> kappaOne: I'd probably go for Riven's stuff myself, because it looks like the minimum possible to handle the NIO API yuck
+[00:11:28] <NoobFukaire> yeah, although we haven't done a ton of testing is really bad conditions
+[00:11:30] *** holmak has joined #lwjgl
+[00:11:32] <OrangyTang> however you might prefer the more structured approach of Ninja
+[00:11:33] <NoobFukaire> *in really bad conditions
+[00:12:00] <MatthiasM> but main issue is with switches when they receive traffic from different sources to one destination
+[00:13:26] *** logan_barnett has quit IRC
+[00:13:39] <tsku> developer of Mina says Netty is faster :)
+[00:13:43] <kappaOne> yeh i think i prefer ninja's api and easy of use
+[00:13:51] <kappaOne> from the quick look i've seen of it
+[00:13:57] <tsku> but i prollly sound like a netty developer hehe
+[00:14:00] <kevglass> let us know how it does go if you decide kappa :)
+[00:14:33] <kappaOne> :)
+[00:15:03] <OrangyTang> i always have the problem on the server end rather than the client ;S
+[00:15:38] <kappaOne> had a go at HeadQuarter last time, couldn't get it to punch through firewall :(
+[00:16:28] <kappaOne> or was it the router
+[00:16:57] <kevglass> I used sbbi for UPNP last time
+[00:16:59] <kevglass> that worked pretty well
+[00:17:36] <appel> A little bit more fun now: http://gamadu.com/games/gcom/gcom.jnlp
+[00:18:19] <kappaOne> really nice explosions appel
+[00:18:33] <kappaOne> lack of native mouse though
+[00:19:18] <appel> ill fix that
+[00:19:43] <kappaOne> really nice graphically though
+[00:20:46] <tsku> very slow for about 5 sec, loading i guess
+[00:20:54] <appel> yes, loading
+[00:21:25] <tsku> maybe load all before and show a cool progress bar :)
+[00:21:41] <appel> that will come
+[00:21:49] <appel> only now working on the world
+[00:21:50] <tsku> but really nice
+[00:22:08] <appel> u can build on planets
+[00:22:13] <appel> select em and press 1,2,3,4
+[00:22:19] <appel> something magical will happen
+[00:22:25] <tsku> heh :)
+[00:22:40] <kevglass> loading images is the slow bit?
+[00:22:42] <appel> but, this game plays best on fullscreen... really, immersive
+[00:22:47] <kevglass> if so, progress bar is a tiny change
+[00:22:58] <appel> kev, probably loading of xml too
+[00:23:13] <kevglass> you can that as a deferred resource also later if ya like :)
+[00:23:21] <appel> yea, xml is the slow part.. that can be easily fixed
+[00:23:32] <kevglass> awesome
+[00:23:48] <appel> try pressing ESC
+[00:23:54] <appel> see the stars in the menu backdrop
+[00:26:32] <kevglass> twinkle twinkle
+[00:26:39] <kevglass> exit doesn't work tho ? :)
+[00:26:47] <appel> nah
+[00:26:49] <appel> that's just for show
+[00:27:16] <kevglass> is nice looking
+[00:27:25] <kevglass> I found out why I only got 30FPS btw
+[00:27:30] <kevglass> turned off hardware acceleration here
+[00:27:35] <appel> oh
+[00:27:37] <kevglass> computer has been running too hot
+[00:27:38] <appel> not the gl_points?
+[00:27:53] <tsku> know what would be really cool?...
+[00:27:54] <kevglass> don't think so, you'll get issue on intel, but I was surprised my NV has problems
+[00:27:59] <Gwinnell> those particle systems really kill my framerate. :p
+[00:28:35] <appel> Gwinnell: I'll probably need to revisit those particle effects and tune them down
+[00:28:49] <tsku> im sure many of u have heard of played Mame emulator on kaillera
+[00:28:54] <appel> what are everyones fps?
+[00:29:13] <kevglass> nope tsku
+[00:30:49] <Gwinnell> ~80
+[00:33:35] *** Woflborg has quit IRC
+[00:33:41] <tsku> its a arcade emulator plays all the classic/modern decode games with multiplayer support.....
+[00:33:53] <kappaOne> yeh use to play street fighter with that
+[00:34:07] <kappaOne> against online opponents
+[00:34:08] <tsku> u can have many roms (games) in the same mame installation...
+[00:34:10] <kappaOne> bit laggy though
+[00:34:56] <tsku> the mame32k is the multiplayer variant using the kaillera.dll network client
+[00:35:09] <tsku> i was thinking...
+[00:37:22] <tsku> if we created a application say, SlickBox that can "host" many games written by slick etc and provide a client network lib/protocol that all slick games it contains will use we could make all our multiplayer
+[00:37:31] *** Woflborg has joined #lwjgl
+[00:37:57] <tsku> and even provide a mechanism to search and download games from within SlickBox and go directly to the developer site etc...
+[00:38:08] * kevglass grins
+[00:38:13] <kevglass> ftl: http://www.cokeandcode.com/aboid/doc/
+[00:38:20] <kappaOne> yeh and we could call it Playground :)
+[00:38:27] <aho> :>
+[00:38:28] <kevglass> or JGF
+[00:38:33] <tsku> i think the XBox can download demos from within the game console too right?
+[00:38:44] <tsku> or SBox
+[00:38:47] <kevglass> or <insert past project name here>
+[00:39:44] *** Woflborg has quit IRC
+[00:40:09] *** locks has joined #lwjgl
+[00:40:10] <tsku> and u can also host a game from within mame and orther can use the server search to search for games and connect directly to the host
+[00:40:50] <tsku> who could be a developer waiting for 10k freebie hunters to test the multiplayer functionality
+[00:41:21] <tsku> steam work similarly
+[00:41:23] <kappaOne> there is the java app store
+[00:41:27] <kevglass> it's a good idea
+[00:41:32] <kevglass> but it's been tried lots of times
+[00:41:35] <kevglass> and failed.
+[00:41:40] <kevglass> who knows, you might be the one.
+[00:42:03] <tsku> ive been fantasizing bout this in my head for a while now :)
+[00:42:07] <kappaOne> needs a lot of time and effort to get it going
+[00:42:08] <NoobFukaire> the java app store has fail written all over it
+[00:42:14] <kevglass> certainly does
+[00:42:22] <kevglass> damn hackers.
+[00:42:25] <NoobFukaire> Sun is going to botch it somehow
+[00:42:58] <OrangyTang> it's going to be a slow, painful death though
+[00:43:00] <kappaOne> well lets hope they just find a way to install it on users computers without annoying the hell out of users
+[00:43:01] <tsku> if we could emulate that emulator that would be sweet
+[00:43:09] <kappaOne> and causing them to uninstall java
+[00:43:25] * kevglass suggested they should prevent uninstallation.
+[00:43:30] <kevglass> apparantly thats not a good idea.
+[00:43:31] <OrangyTang> Sun will hype it for a few months, then it'll fail to gain momentum and Sun marketing will forget about it
+[00:43:37] <kappaOne> since they do plan to distribute it with jre
+[00:43:52] <OrangyTang> meanwhile it'll remain, like a rotting zombie with little or no updates
+[00:44:08] <kevglass> nice imagery
+[00:44:20] <OrangyTang> i try :)
+[00:44:21] <kappaOne> not sure why they have to stick the work 'Java' to everything new they come out with
+[00:44:24] <tsku> if "SBox" is a success, then that would be the only java app install as far as users are concerned...
+[00:44:33] <kappaOne> they should really fire their marketing department
+[00:44:54] <kappaOne> especially after the cock up that was java versioning names
+[00:45:06] <tsku> cuz the games would run inside the SBox container, u know, like a web app runs inside a web server :)
+[00:45:31] <OrangyTang> ye gods the name versioning was epically bad
+[00:45:50] <tsku> boy do i have a wild imagination sometimes
+[00:45:52] <OrangyTang> some engineer somewhere really should have stood up to marketing and told them to stick it
+[00:46:23] <kappaOne> but their doing the same thing with javafx
+[00:46:29] <NoobFukaire> maybe they were competing with intel for the worst branding attempt
+[00:46:33] <kappaOne> they jsut released javafx 1.2
+[00:46:45] <kevglass> javafxnuthing.
+[00:46:55] <kappaOne> unlike the competition flex 3, silverlight 3
+[00:47:36] <kappaOne> 1.2 should be called 2
+[00:47:42] <kappaOne> its a massive improvement
+[00:47:50] <kappaOne> but still not their yet
+[00:48:07] <NoobFukaire> javafx 6
+[00:48:14] <NoobFukaire> to match the jre it runs on top of
+[00:48:43] <NoobFukaire> I can't imagine what they're thinking though, Sun has to be soooo crippled by politics internally
+[00:48:45] <kappaOne> jogl backend will be good though
+[00:48:56] <NoobFukaire> I mean swing barely handles simple desktop gui work
+[00:48:56] <kappaOne> not sure how reliable opengl is for this sort of thing though
+[00:49:19] <NoobFukaire> and they want to build a fancy effects and animations system on top of something THAT SUCKS for rendering buttons?
+[00:49:36] <aho> i for one still dont know what javafx is supposed to be good for :>
+[00:49:55] <kappaOne> its got it uses
+[00:50:01] <kappaOne> you can do really nice gui with it
+[00:50:04] <aho> well, if it's about making people use the (){}[] keys more... mission accomplished :v
+[00:50:13] <kappaOne> but i think i'm allergic to javafx script
+[00:50:14] <kevglass> it's missing tooling
+[00:50:16] <kappaOne> tis horrible
+[00:50:23] <kevglass> thats what it really needs for the market
+[00:50:35] <kevglass> you shouldn't be writing the script by hand
+[00:50:37] <NoobFukaire> the swing base is bad but yeah the tools just prove Sun really didn't think things through
+[00:50:46] <OrangyTang> aye, Flash is popular because of the tools, not because of it's language
+[00:51:12] <kappaOne> the really should have gone bracket less
+[00:51:24] <NoobFukaire> well they only have a short window to have the tech catch on
+[00:51:30] <OrangyTang> in fact Flash is a pretty strong indication that the language can be terrible if the tools are good
+[00:51:36] <NoobFukaire> lack of tools is going drastically reduce the chance of javafx catching on
+[00:51:45] <NoobFukaire> I doubt they'll make that window
+[00:52:01] <NoobFukaire> Although I guess it depends on how long Oracle will be okay with burning cash
+[00:52:04] <kappaOne> i think the netbeans integration of javafx is pretty good
+[00:52:06] <kappaOne> could be better
+[00:52:21] <kappaOne> but you can do quiet a few things with just the gui
+[00:52:32] <kappaOne> still need to do lots of code though
+[00:52:40] <kappaOne> and no where near as good as flash tools
+[00:52:50] <NoobFukaire> or silverlight's
+[00:52:58] <NoobFukaire> which look really, really awesome
+[00:53:06] <kevglass> silverlight is the biggest pile eer. t
+[00:53:13] *** Gwinnell has quit IRC
+[00:53:27] <NoobFukaire> silverlight would be great if it wasn't a Microsoft thing that only runs on Windows
+[00:53:41] <kappaOne> silverlight has xna integration
+[00:53:45] <kappaOne> but again its directx
+[00:55:27] *** kevglass has quit IRC
+[01:01:13] <tsku> http://creators.xna.com/   V.S  http://creators.slick.com/  :)
+[01:03:59] <tsku> kappa u think a game container like mame for java games would be a good idea?
+[01:04:43] <kappaOne> it could be
+[01:04:49] <kappaOne> its been done before though
+[01:04:57] <kappaOne> have a look on JGO for Playground
+[01:05:09] <tsku> oh gonna check
+[01:05:11] <kappaOne> it was a gui with a Wii like interface
+[01:05:18] <kappaOne> containing slick games
+[01:05:22] <tsku> sweet
+[01:06:00] <kappaOne> nice channel thing, you browse games, read descriptions, etc
+[01:06:31] <kappaOne> when you find a game you like, you clicked it and the game launched
+[01:06:31] <tsku> just like steam
+[01:06:54] <kappaOne> but it was all one app
+[01:06:54] <tsku> wow i was thinking that before a heard of it
+[01:07:14] <tsku> i like steam and its all one app
+[01:07:47] <kappaOne> again it needs a lot of time and dedication to get working
+[01:07:52] <kappaOne> and going
+[01:08:01] <tsku> u can even buy games in the same interface, click "buy this game"
+[01:08:38] <kappaOne> you'll need a server too
+[01:08:43] <tsku> eclipse/plugin == JGO/game
+[01:08:44] <kappaOne> to handle lots of things
+[01:08:56] <kappaOne> like highscores, game saves, etc
+[01:09:05] <appel> if you're interested in seeing how all the game objects are defined in gcom: http://gamadu.com/games/gcom/xml/
+[01:09:08] <tsku> u can have the game server right in the game container
+[01:09:38] <kappaOne> also are you thinking stand alone app or applet?
+[01:09:51] <tsku> if a user wants to play a net game they can host it and other users will fiind it in th server browser
+[01:09:58] <tsku> both
+[01:10:08] <kappaOne> also why stop at a game client
+[01:10:12] <kappaOne> which not just have a website
+[01:10:22] <kappaOne> where the games launch from
+[01:10:45] <kappaOne> after all html is a pretty good interface nowadays
+[01:10:56] <kappaOne> better than a heavy weight slick/java gui
+[01:11:22] <kappaOne> Playgrounds final evolution was a website
+[01:11:34] <kappaOne> but didn't take off
+[01:11:35] <tsku> the interfare for searching /launching ?
+[01:11:42] <kappaOne> yes
+[01:12:08] <tsku> i think the interface for that should be the application interface
+[01:12:14] <tsku> just like mame
+[01:12:28] <kappaOne> currently theres is one website out there that is doing a similar thing
+[01:12:35] <kappaOne> and allows java games
+[01:12:46] <kappaOne> its gamejolt
+[01:12:57] <tsku> i saw that one, it nice
+[01:13:05] <kappaOne> but again if you see though ppl that run it,
+[01:13:12] <kappaOne> they are putting tons of time into it
+[01:13:27] <kappaOne> building links and contacts with many different developers
+[01:13:44] <tsku> and u can buy the game right there too :)
+[01:13:44] <kappaOne> they practically spend the full day in the chat :)
+[01:14:02] <kappaOne> it takes time and effort to build up a community
+[01:14:07] <kappaOne> around your site/service
+[01:14:24] <kappaOne> without which it'll never be successful
+[01:14:50] <tsku> but nice think bout the web interface i didnt think of is that ppl at work behind a firewall can play during lunch
+[01:15:14] <kappaOne> yes
+[01:15:25] <kappaOne> as mentioned its a great idea, but its a massive project
+[01:15:48] <tsku> so far i like gamejolt it nice
+[01:15:53] <tsku> hope they do well
+[01:16:06] <kappaOne> yup at the rate they are moving, i think they will
+[01:16:29] <kappaOne> also note they don't limit technology
+[01:16:38] <kappaOne> they allow all of them
+[01:16:45] <tsku> its like steam which i bought 4 games from
+[01:16:52] <kappaOne> silverlight, flash, java, unity, etc
+[01:17:21] <tsku> yea so they wont attract just java devs :)
+[01:17:41] <kappaOne> so although slick/java is a great library/language, at the end of the day its the games that matter not the tech
+[01:19:18] <tsku> java games will benefit from the consumer base of other tech when they find a game they like
+[01:19:20] <kappaOne> and you'd be competing with the big portals/sites, like steam and app store
+[01:19:34] <kappaOne> *apple
+[01:20:10] <tsku> hell if somebody likes ur game they move bolders to get it
+[01:20:17] <Diablo-D3> heh
+[01:20:21] <Diablo-D3> I like the java app store idea
+[01:20:23] <tsku> torrent or what ever
+[01:20:32] <Diablo-D3> but its not perfect for everything
+[01:20:57] <Diablo-D3> but more targeted stores will win
+[01:21:01] <Diablo-D3> such as the android store, or steam
+[01:22:26] <tsku> yeah if im looking for a great picture viewer app im not gonna search "java, picture viewer"
+[01:22:44] <tsku> as a regular user
+[01:23:14] <tsku> seems more targeted to developers
+[01:24:36] <tsku> for java games to be sucessfull they have to be marketed the same way other games are
+[01:24:49] <Diablo-D3> exactly... through steam ;)
+[01:24:58] <NoobFukaire> the app store isn't for java software
+[01:25:01] <NoobFukaire> it's for everything
+[01:25:13] <Diablo-D3> NoobFukaire: the java app store.
+[01:25:15] <NoobFukaire> it's just crapwared on your computer via java updates
+[01:25:32] <NoobFukaire> run once, get crapware everywhere
+[01:25:51] <NoobFukaire> no longer will windows users be the only ones learning the joys of banzai buddy and cool web search
+[01:25:51] <tsku> yea im sure a java game can be pushed throw steam (if the jre is bundled with it)
+[01:26:01] <Diablo-D3> tsku: it can
+[01:26:02] <tsku> dont wana depend on the user to download java please
+[01:26:03] <Diablo-D3> theres java apps on steam
+[01:26:14] <Diablo-D3> Im just not sure what they use for the jre
+[01:26:20] <Diablo-D3> they may be statically compiled gcj
+[01:26:24] <NoobFukaire> the user shouldn't have to manage their java software
+[01:26:26] <kappaOne> do you really need one of those store to be successful?
+[01:26:30] <kappaOne> *stores
+[01:26:31] <NoobFukaire> just is just a fancy library and should be treated as such
+[01:26:34] <Diablo-D3> kappaOne: technically yes
+[01:26:40] <NoobFukaire> *java is just a fancy library
+[01:26:41] <kappaOne> see the recent success of minecraft
+[01:26:49] <kappaOne> no store there
+[01:26:49] <NoobFukaire> whatcraft?
+[01:26:51] <Diablo-D3> kappaOne: no one makes an easy to use download system
+[01:26:58] <Diablo-D3> just for one app, I mean
+[01:27:10] <Diablo-D3> the reason steam is available for everyone because its stupid just to have one company's shit on it
+[01:27:15] <Diablo-D3> ie, halflife 2 and friends
+[01:27:25] <tsku> java apps need to be on cnet like all others, java games on steam like others
+[01:27:39] <Diablo-D3> java apps need to be apt-gettable, you mean
+[01:27:42] <NoobFukaire> java apps are just "apps"
+[01:27:51] <Diablo-D3> yeah what NoobFukaire said
+[01:28:01] <Diablo-D3> now, heres where sun could, oh I dunno, stop being fags
+[01:28:04] <NoobFukaire> making this artificial separation between apps written with java and others is stupid
+[01:28:09] <Diablo-D3> FIX THE WINDOWS JRE INSTALLATION SHIT TO NO SUCK DICK
+[01:28:24] <Diablo-D3> god I hate that shit
+[01:28:58] <tsku> for now better to bundle the jre for commercial games
+[01:29:00] <kappaOne> as someone said if the users find out your game is java, you fail :)
+[01:29:01] <Diablo-D3> just make a fucking installer that asks no questions and doesnt pop a window up and Ill install it my motherfucking self with my installer
+[01:29:06] <appel> :]
+[01:29:28] <Diablo-D3> I can secretly put in a "is java installed?" thing just to not double install it
+[01:29:31] <Diablo-D3> since its fucking huge
+[01:29:43] <kappaOne> well use a stipped jre
+[01:29:45] <tsku> bundle it , bundle it :)
+[01:29:48] <kappaOne> *stripped
+[01:29:54] <Diablo-D3> kappaOne: no
+[01:29:55] <kappaOne> its only about 1.5mb
+[01:29:56] <Diablo-D3> thats dumb
+[01:30:05] <kappaOne> why is that dumb?
+[01:30:16] <Diablo-D3> define "stripped"
+[01:30:21] <Diablo-D3> because most of the jre is kinda needed
+[01:30:21] <kappaOne> you get your versioned of the jre
+[01:30:25] <kappaOne> just enough to run your game
+[01:30:30] <Diablo-D3> ......
+[01:30:33] <NoobFukaire> most of the jre is definately not needed
+[01:30:37] <Diablo-D3> then I can just say fuck it and compile it with gcj.
+[01:30:45] <NoobFukaire> there's all kind of stupid junk in the distribution
+[01:30:45] <kappaOne> no
+[01:30:50] <kappaOne> gcj is crap
+[01:30:55] <kappaOne> especially the gc
+[01:30:58] <tsku> excelcior
+[01:31:03] <kappaOne> yeh or that
+[01:31:03] <NoobFukaire> gcj is an awesome idea, I just wish the implementation was better
+[01:31:05] <kappaOne> but expensive
+[01:31:09] <NoobFukaire> java is great on PC
+[01:31:19] <NoobFukaire> but it'd be cool to be able to compile to iphone, etc
+[01:31:20] <Diablo-D3> and I dont _want_ to maintain java
+[01:31:25] <NoobFukaire> without having to jump through hoops
+[01:31:29] <Diablo-D3> I just want sun to quit thinking java is a destination
+[01:31:56] <Diablo-D3> actually, java doesnt seem to be so bad
+[01:32:12] <Diablo-D3> it seems to be 16 megs
+[01:32:14] <Diablo-D3> or something
+[01:32:17] <Diablo-D3> when did it get so small?
+[01:32:23] <kappaOne> thats the installer
+[01:32:25] <tsku> hell i remember installing an app on linux with aptitude and it said mono dependency
+[01:32:33] <NoobFukaire> remember the jdk is way bigger than the jre
+[01:32:36] <tsku> had to install it
+[01:32:42] <Diablo-D3> NoobFukaire: this is the jre
+[01:32:59] <kappaOne> bundling java is really that much of problem nowadays
+[01:33:00] <tsku> right now the jre is smaller than .net
+[01:33:02] <Diablo-D3> tsku: yes! some things use mono!
+[01:33:07] <Diablo-D3> tsku: *gasp!*
+[01:33:07] <kappaOne> 16mb is nothing for broadband
+[01:33:12] <NoobFukaire> what isn't smaller than .NET
+[01:33:22] <Diablo-D3> I swear it used to be huge
+[01:33:31] <kappaOne> its huge when its installed
+[01:33:33] <appel> if you're downloading an application bundle, then 16 mb is not a lot
+[01:33:43] <appel> different if it's an applet
+[01:33:48] <kappaOne> tribal trouble, puppygames they all bundle
+[01:34:01] <Diablo-D3> hmm
+[01:34:04] <NoobFukaire> 16 MB is a couple of textures
+[01:34:05] <kappaOne> yeh but applets don't really sell
+[01:34:12] <Diablo-D3> well
+[01:34:16] <tsku> even for xna u have to distribute the xna framework etc...
+[01:34:16] <appel> good games sell
+[01:34:19] <tsku> not just .net
+[01:34:21] <kappaOne> yes
+[01:34:25] <kappaOne> minecraft sells :)
+[01:34:33] <Diablo-D3> apt-get is fubar
+[01:34:39] <appel> sucky applet games dont sell, i agree
+[01:35:00] <tsku> fortunately we have to tools to prevent users from knowing that is a java app all for free
+[01:35:04] <NoobFukaire> wha? apt-get rocks
+[01:35:21] <Diablo-D3> okay here we go
+[01:35:30] <Diablo-D3> it was telling me the jre is 2xx k big
+[01:35:40] <Diablo-D3> because it really depends on a different package >_>
+[01:35:47] <appel> I just place a notice on every applet page, before the user starts loading it: "Click here to load game, close your eyes for 30 seconds, and then open them to see your game ready to play"
+[01:35:55] <tsku> package ur jar as an exe for free with launch4j, and use nsis to make the installer(free)
+[01:35:55] <kappaOne> just use the java kernel if your worried about size
+[01:36:00] <Diablo-D3> [diablo@infinity ~]$ apt-cache show openjdk-6-jre-headless | grep Size | grep -v Installed
+[01:36:00] <Diablo-D3> Size: 24465480
+[01:36:08] <Diablo-D3> tsku: Ive used nsis before
+[01:36:24] <Diablo-D3> so I guess the jre really is that small
+[01:36:34] <kappaOne> jre is tiny for what it does
+[01:37:02] <tsku> Nsis is a native insatller for any app not just java app...
+[01:37:13] <Diablo-D3> [07:39:28] <Diablo-D3> tsku: Ive used nsis before
+[01:37:28] <Diablo-D3> nsis = nullsoft installer system
+[01:37:42] <Diablo-D3> it originally existed to install winamp
+[01:37:42] <tsku> oh read wrong lol though u said havent
+[01:38:11] <tsku> its nice
+[01:38:12] <Diablo-D3> whats impressive is it uses lzma
+[01:38:16] <Diablo-D3> ie, its 7-zip compressing shit
+[01:38:28] <kappaOne> lzma + pack200 totally kills jar size
+[01:38:37] <Diablo-D3> pack200 is largely a hack though
+[01:38:46] <kappaOne> it has massive benefits
+[01:38:50] <tsku> there's also launch4j and JSmooth for jar to exe
+[01:38:53] <Diablo-D3> yes, but only for jars
+[01:38:59] <kappaOne> yup
+[01:39:01] <Diablo-D3> or rather, only for class files
+[01:39:07] <kappaOne> and most of java's size if jars
+[01:39:09] <Diablo-D3> its designed to compress compiled java.
+[01:39:17] <Diablo-D3> for that, its amazing
+[01:39:19] <kappaOne> *is
+[01:39:22] <Diablo-D3> for anything else... not so much
+[01:39:26] <tsku> yea we have no excuse now, we have all the tools :)
+[01:39:38] <Diablo-D3> why do you think Im writing a 3D engine in java, hrm?
+[01:39:46] <Diablo-D3> sun managed to get this about 3/4rs right
+[01:39:56] <Diablo-D3> thats about a 1/4 ahead everyone else
+[01:39:59] <NoobFukaire> yep, the core is great
+[01:40:18] <NoobFukaire> it's all roses right until you get into guis and user interface stuff
+[01:40:23] <NoobFukaire> that's where they botched it
+[01:40:27] <Diablo-D3> well
+[01:40:30] <Diablo-D3> no one gets it right
+[01:40:36] <NoobFukaire> well
+[01:40:44] <tsku> swt? :)
+[01:40:48] <Diablo-D3> the closest GUI api would be gtk
+[01:40:50] <kappaOne> if you use lwjgl you skip most of the gui + awt stuff anyway
+[01:40:51] <NoobFukaire> I can't think of anyone off hand that fucked up as spectacularly as Sun did
+[01:41:05] <Diablo-D3> NoobFukaire: microsoft
+[01:41:07] <Diablo-D3> ever use mfc?
+[01:41:10] <Diablo-D3> or winforms?
+[01:41:13] <NoobFukaire> I'm not saying API wise
+[01:41:22] <NoobFukaire> I'm saying as far as the user experience goes
+[01:41:29] <NoobFukaire> Swing apps are fucking terrible
+[01:41:33] <Diablo-D3> fuck user experience
+[01:41:33] <OrangyTang> Lotus Notes
+[01:41:36] <NoobFukaire> no matter how great the design, they just feel icky
+[01:41:38] <tsku> remember when i was trying to learn mfc, god the horror
+[01:41:38] <Diablo-D3> if I cant code it, there isnt a user experience
+[01:41:44] <tsku> i was young tho
+[01:41:58] <NoobFukaire> Lotus Notes, ahahahaha
+[01:42:05] <Diablo-D3> I took one look at mfc and didnt boot windows for a year
+[01:42:07] <kappaOne> Opera Java :)
+[01:42:11] <NoobFukaire> okay, that's worse (or it was before they rewrote it using SWT)
+[01:42:11] <NoobFukaire> :)
+[01:42:16] <tsku> Azureus anyone :)
+[01:42:22] <Diablo-D3> az isnt so bad
+[01:42:23] <Diablo-D3> it uses gtk
+[01:42:25] <kappaOne> yes Vuze is messed up :)
+[01:42:28] <tsku> awesome awesome
+[01:42:30] <Diablo-D3> well, the original az
+[01:42:31] <tsku> huh?
+[01:42:33] <OrangyTang> iirc MFC isn't too bad if you understand the win32 types it's wrapping
+[01:42:33] <Diablo-D3> I havent seen the new one
+[01:42:47] <Diablo-D3> az 3.0 = vuze
+[01:42:49] <kappaOne> Vuze totally destroyed azureus
+[01:43:05] <kappaOne> although you can still change back to the old gui
+[01:43:07] <Diablo-D3> az kinda sucked though
+[01:43:11] <OrangyTang> Netscape
+[01:43:12] <Diablo-D3> very inferior to utorrent
+[01:43:19] <Diablo-D3> utorrent is officially supported under wine :D
+[01:43:24] <kappaOne> still faster than utorrent though
+[01:43:27] <kappaOne> in download speed
+[01:43:28] <tsku> sweet interface imo
+[01:43:29] <kappaOne> and features
+[01:43:34] <Diablo-D3> kappaOne: not really
+[01:44:12] <tsku> if i didnt know vuze was java i would prefer it
+[01:44:15] <tsku> still
+[01:44:31] <tsku> build it torrent site search
+[01:44:38] <tsku> for all ur fav torrent sites
+[01:44:42] <tsku> sweet
+[01:45:15] <NoobFukaire> I like vuze
+[01:45:37] <tsku> my fav
+[01:45:55] <kappaOne> i use vuze too, but not the new gui
+[01:46:11] <tsku> if they use it to dist java games that'd would be alot of press
+[01:46:21] <tsku> but gamejolt will do well
+[01:46:26] <NoobFukaire> argh
+[01:46:28] <NoobFukaire> "java games"
+[01:46:35] <tsku> lol ok game :0
+[01:46:37] <tsku> s
+[01:46:50] *** OrangyTang has left #lwjgl
+[01:46:54] <locks> vuze is god awful
+[01:46:59] <locks> =}
+[01:47:11] <tsku> what version u using
+[01:47:12] <kappaOne> <kappaOne> as someone said if the users find out your game is java, you fail :)
+[01:47:31] <tsku> true
+[01:47:40] <kappaOne> its already got a rather bad name
+[01:47:44] <kappaOne> for being slow and bloated
+[01:48:13] <locks> are you talking about that distribution platform
+[01:48:14] <Diablo-D3> its actually really fast
+[01:48:15] <locks> for java games?
+[01:48:22] <tsku> that's why swt helps cuz it doesnt look like the tipical java aps
+[01:48:23] <kappaOne> yes i know
+[01:48:29] <kappaOne> but i'm talking about image
+[01:48:30] <kappaOne> not fact
+[01:48:38] <Diablo-D3> then this must change
+[01:48:52] <kappaOne> well as soon as you say its written in java
+[01:48:57] <kappaOne> and somehow your game crashes or fails
+[01:49:05] <kappaOne> they'll point at java :)
+[01:49:13] <Diablo-D3> good
+[01:49:16] <Diablo-D3> when their computer crashes
+[01:49:19] <Diablo-D3> I can point at windows
+[01:49:27] <tsku> how would they know if it has a bundled jre? :)
+[01:49:39] <kappaOne> they won't in most cases
+[01:49:48] <kappaOne> unless you flash a massive logo in their face :)
+[01:49:58] <Diablo-D3> lol I would
+[01:50:01] <kappaOne> like applets do :)
+[01:50:16] <NoobFukaire> applets are/were the worst offender too
+[01:50:21] <Diablo-D3> I'd need some opening movie
+[01:50:21] <tsku> use a dif logo for applets
+[01:50:21] <Diablo-D3> where
+[01:50:24] <NoobFukaire> they had a success rate of like 1 out of every 50 launches
+[01:50:29] <Diablo-D3> it parodies the opening scene from A New Hope
+[01:50:32] <NoobFukaire> until Sun worked on redoing the plugin
+[01:50:35] <tsku> like the lwjgl logo for applets is nice
+[01:50:53] <kappaOne> yeh it was mostly added to hide the java one :)
+[01:51:10] <Diablo-D3> where Darth Ellison's Star Destroyer is catching up to Sun's rebel cruiser
+[01:51:11] <tsku> as long as they dont see java loading they wont hold there breth
+[01:51:32] <kappaOne> new applets are really nice
+[01:51:37] <kappaOne> and fast like flash
+[01:51:51] <kappaOne> just hope every one upgrades quickly
+[01:51:55] <Diablo-D3> "Where is the source code?" "This... this company is on a diplomatic mission!" *crush* "Find them!"
+[01:51:59] <tsku> its possible to run a game like quake 3/4 in an applet
+[01:52:32] <kappaOne> Oracle just paid 6 billion for java
+[01:52:34] <Diablo-D3> shit, now I'm imagining this star wars parody with java in it
+[01:52:37] <tsku> there are full width flash websites why not full width applets with opengl interface :)
+[01:52:42] <kappaOne> they aren't gonna let it go that easily :)
+[01:52:50] <appel> kappaOne: for java only?
+[01:52:51] <appel> :)
+[01:52:53] <Diablo-D3> what have I done
+[01:52:55] <kappaOne> well mostly
+[01:52:55] * Diablo-D3 headbangs
+[01:52:58] <Diablo-D3> make it stop
+[01:53:07] <kappaOne> they aren't interested in the hardware business
+[01:53:17] <kappaOne> mostly just the skills and software
+[01:53:27] <kappaOne> of which java is the biggest
+[01:53:33] <NoobFukaire> It was a smart move for oracle
+[01:53:42] <NoobFukaire> it prevented IBM from doing something like that
+[01:53:48] <kappaOne> they get to dictate the future of java
+[01:53:48] <NoobFukaire> and actually gives them some power over IBM
+[01:53:56] <NoobFukaire> since IBM's business has a very large java component
+[01:53:58] <Diablo-D3> ibm can just buy oracle now
+[01:54:09] <kappaOne> IBM can't afford Oracle
+[01:54:14] <Diablo-D3> since ibm's business has a very large database component
+[01:54:18] <Diablo-D3> :D :D :D
+[01:54:34] <tsku> think i would prefer ibm as the owner
+[01:54:40] <NoobFukaire> yeah, me too
+[01:54:51] <NoobFukaire> Oracle isn't a very interesting company
+[01:54:55] <NoobFukaire> IBM has a lot of cool tech
+[01:54:55] <tsku> for what they did to bring java back on the desktop
+[01:54:59] <tsku> with swt lol
+[01:55:08] <appel> what is oracle going to do with sun?
+[01:55:17] <kappaOne> assimilate it :)
+[01:55:32] <kappaOne> and throw the bloat they don't need away
+[01:55:33] <appel> like the borgs?
+[01:55:35] <kappaOne> yup
+[01:55:39] <kappaOne> exactly like the borg
+[01:55:41] <NoobFukaire> at least it was open sourced before oracle got it
+[01:55:41] <appel> maybe java is one of those bloats?
+[01:55:47] <kappaOne> no
+[01:55:48] <appel> maybe they want the hardware business?
+[01:55:48] <NoobFukaire> so they can't really do anything too stupid
+[01:55:52] <NoobFukaire> I doubt it
+[01:55:54] <kappaOne> they wouldn't throw java away
+[01:55:59] <NoobFukaire> Although it helps them compete with IBM
+[01:56:03] <kappaOne> but they might try to unopen source it
+[01:56:10] <NoobFukaire> now that they have their own fancy hardware
+[01:56:16] <NoobFukaire> well the cat's out of the bag
+[01:56:22] <NoobFukaire> Java could be forked by a consortium
+[01:56:32] <NoobFukaire> say, the Eclipse foundation could just make their own java variant
+[01:56:39] <kappaOne> lots of important bits arn't out of the bag yet
+[01:56:43] <NoobFukaire> hell they already have more develop market share than sun's tech
+[01:56:48] <kappaOne> all the java patents are still held by Oracle
+[01:56:57] <tsku> think the o.s licence for openJdk "discourages forking"
+[01:56:59] <NoobFukaire> Hotspot is, the class libraries are
+[01:57:15] <NoobFukaire> but they already signed a perpetual convenant
+[01:57:18] <kappaOne> all OpenJDK is controlled by sun/oracle employees
+[01:57:22] <kappaOne> *also
+[01:57:29] <NoobFukaire> tsku: it's GPL
+[01:57:32] <Diablo-D3> its gpl
+[01:57:32] <Diablo-D3> yeah
+[01:57:41] <Diablo-D3> so oracle cant control it
+[01:57:41] <tsku> GPL v2
+[01:57:46] <Diablo-D3> we'd just fork it
+[01:57:56] <kappaOne> fork it then what?
+[01:57:57] <Diablo-D3> the problem is, we cant submit shit upstream easily
+[01:58:03] <Diablo-D3> which is why java is so behind
+[01:58:07] <kappaOne> if they develop the crap out of their version
+[01:58:18] <kappaOne> the fork will find it hard to catch
+[01:58:28] <appel> http://www.oracle.com/sun/index.html
+[01:58:33] 
+[01:58:36] <NoobFukaire> true, although if they didn't something really dumb like that, someone like IBM, Intel, etc. would step in
+[01:58:40] <kappaOne> also jws/java plugin is still not released under OS
+[01:59:12] <NoobFukaire> I wouldn't consider those deal breakers
+[01:59:21] <kappaOne> IBM have their own java
+[01:59:22] <NoobFukaire> and there are open source replacements
+[01:59:30] <NoobFukaire> yep
+[01:59:58] <NoobFukaire> they could open source parts of their VM as the IBM VM or something
+[02:00:05] <NoobFukaire> Intel did something similar with Harmony
+[02:00:25] <kappaOne> but the danger remains
+[02:00:28] <NoobFukaire> honestly, I like the idea of harmony better then OpenJDK
+[02:00:34] <kappaOne> if Oracle wanted to pull the OpenJDK they can
+[02:00:37] <NoobFukaire> and it has a lot of business behind it
+[02:01:40] <kappaOne> good thing though, Java 7 and OpenJDK are almost fully in sync
+[02:01:51] <kappaOne> they just need to release the remaining parts
+[02:02:06] <kappaOne> mainly jws/applet plugin
+[02:02:09] <locks> i wonder
+[02:02:15] <locks> WHEN WILL APPLE UPDATE THE JDK
+[02:02:29] <locks> I can't play most of your (channel) games
+[02:02:32] <locks> because of that
+[02:02:38] <kappaOne> oh it'll be in with snow leapord
+[02:02:46] <Diablo-D3> apple sucks anyhow
+[02:02:48] <kappaOne> for the 64bit version
+[02:02:51] <Diablo-D3> no one cares about that tiny platform
+[02:03:03] <Diablo-D3> [08:02:41] <kappaOne> IBM have their own java
+[02:03:05] <Diablo-D3> not really
+[02:03:07] <Diablo-D3> its stuck at 1.4
+[02:03:13] <locks> Diablo-D3: I care
+[02:03:15] <Diablo-D3> no one wants that cient shit
+[02:03:19] <Diablo-D3> *ancient
+[02:03:52] <kappaOne> IBM are pushing harmony though
+[02:04:02] <NoobFukaire> http://www.ibm.com/developerworks/java/jdk/linux/download.html
+[02:04:11] <NoobFukaire> Java SE Version 6
+[02:04:20] <Diablo-D3> where do you see this?
+[02:04:23] <NoobFukaire> IBM's jvm has been known to best Sun's occasionally
+[02:04:31] <Diablo-D3> ahh, hrm
+[02:04:33] <NoobFukaire> uh, the top of the page
+[02:04:35] <Diablo-D3> I just looked on ibm's site
+[02:04:39] <Diablo-D3> and didnt see this
+[02:04:45] <Diablo-D3> so wtf ibm, keep your shit in order
+[02:05:15] <NoobFukaire> Even though the GPL isn't really a deal breaker or a VM
+[02:05:16] <appel> I'm using IBM WebSphere at work. I hate it.
+[02:05:18] <NoobFukaire> *for a VM
+[02:05:25] <Diablo-D3> NoobFukaire: imo it is
+[02:05:30] <NoobFukaire> I still like a less restrictive license
+[02:05:31] <appel> It's something like Java 1.3
+[02:05:45] <NoobFukaire> well enterprise moves slowly
+[02:05:47] <Diablo-D3> I don't trust software that can't be security audited
+[02:06:09] <Diablo-D3> and the only way to efficiently and correctly audit software is to crowdsource it
+[02:06:23] <Diablo-D3> and the only way to crowdsource software is to open source it
+[02:06:26] <kappaOne> Oracle did by BEA, they had a super fast java
+[02:06:39] <kappaOne> guess they can now move those changes into the offical java
+[02:06:45] <kappaOne> *buy
+[02:06:49] <ffffham> any idea why eclipse gives me this when i try launch the visualvm? An internal error occurred during: "Launching Application". java.lang.NullPointerException
+[02:07:00] <ffffham> with run..whatever
+[02:07:12] <NoobFukaire> kappaOne: ooh, good point!
+[02:07:19] <Diablo-D3> oracle better not fuck shit up though
+[02:07:31] <kappaOne> Oracle are strictly business
+[02:07:33] <Diablo-D3> as God as my witness, I will kill those motherfuckers
+[02:07:45] <kappaOne> they know how to make money, unlike Sun
+[02:07:58] <Diablo-D3> YEAH THATS THE PROBLEM
+[02:07:59] <NoobFukaire> I really hope Oracle adds SIMD support to hotspot for x86
+[02:08:05] <NoobFukaire> man how fucking awesome that would be
+[02:08:06] <kappaOne> guess they'll take all the hard decisions
+[02:08:10] <kappaOne> like killing javafx :)
+[02:08:10] <Diablo-D3> "Oracle JDK license: OVER NINE THOUSAND DOLLARS PER SEAT"
+[02:08:13] <NoobFukaire> it would be a boon for javafx too
+[02:08:17] <appel> lol
+[02:08:26] <Diablo-D3> theres your money making right there!
+[02:08:38] <appel> clients must pay $1,200 in license fee to run an applet
+[02:08:42] <kappaOne> SIMD will get their eventually
+[02:08:42] <Diablo-D3> also, why the fuck doesnt java support simd yet
+[02:08:43] <NoobFukaire> ffffham: not sure, but you can also connect to a process that's already running
+[02:08:52] <Diablo-D3> mono has it via mono.simd
+[02:08:54] <kappaOne> bit sad about Tier Compilation though
+[02:09:01] <NoobFukaire> yeah, it's the only thing I don't like about java
+[02:09:02] <ffffham> NoobFukaire: yeah, that's how i use it, i just wanted to do it through eclipse for once, but i am pretty eclipse-noob
+[02:09:14] <NoobFukaire> I've tried to add it twice myself and Hotspot bested me both times
+[02:09:20] <Diablo-D3> I mean, they can bitch about it not being arch generic, but simd really is
+[02:09:25] <Diablo-D3> sse2 and altivec are almost identical
+[02:09:38] <Diablo-D3> and a lot of this shit can be optimized various ways on arm
+[02:09:42] <NoobFukaire> it doesn't even matter, the different parts of vm that do arch specific JIT is well defined
+[02:10:05] <Diablo-D3> btw, you know who I fucking hate?
+[02:10:07] <Diablo-D3> ARM
+[02:10:25] <NoobFukaire> ARM is awesome
+[02:10:28] <Diablo-D3> their JVM is extremely fucking fast on ARM because of Jazelle
+[02:10:28] <NoobFukaire> they don't even make anything
+[02:10:30] <Diablo-D3> BUT
+[02:10:31] <Diablo-D3> BUT
+[02:10:32] <Diablo-D3> BUUUUUUUUUUUUT
+[02:10:35] <NoobFukaire> they just sit back and collect paychecks
+[02:10:36] <Diablo-D3> you cant simply use it
+[02:10:44] <Diablo-D3> you have to use specifically their jvm, and it costs money
+[02:11:09] <NoobFukaire> I wonder if that functionality has even been license for commercial use
+[02:12:39] <ffffham> oh fixed it
+[02:19:51] <Diablo-D3> well
+[02:19:54] <Diablo-D3> android doesnt use it
+[02:20:07] <Diablo-D3> and I wanna say all the android phones use arms that have jazelle
+[02:21:34] <NoobFukaire> android can't use it
+[02:21:35] <NoobFukaire> it's not java
+[02:21:52] <NoobFukaire> it's a java alike
+[02:22:15] <Diablo-D3> no, it _is_ java
+[02:22:24] <Diablo-D3> it just doesnt use 100% the same base classes
+[02:23:37] <tsku> it more java than jme ? :)
+[02:23:41] <Diablo-D3> well
+[02:23:48] <Diablo-D3> they developed their own bytecode format
+[02:24:09] <Diablo-D3> and theres no jit
+[02:24:37] <NoobFukaire> no it's not java the platform at all
+[02:24:38] <Diablo-D3> and they have a tool that can convert classes to dalvik's bytecode format
+[02:24:40] <NoobFukaire> the vm is totally different
+[02:24:47] <Diablo-D3> NoobFukaire: no, its java _the language_
+[02:24:50] <Diablo-D3> its not sun's java platform.
+[02:25:00] <Diablo-D3> its not a "java alike", android really is java
+[02:25:01] <NoobFukaire> well in that case
+[02:25:05] <NoobFukaire> .NET _is_ java
+[02:25:09] <Diablo-D3> that'd be like saying gcj is not java
+[02:25:10] <NoobFukaire> because you can code in J#
+[02:25:17] <Diablo-D3> yup, j# is java.
+[02:25:19] <NoobFukaire> gcj isn't java
+[02:25:40] <tsku> i only care what language i write in lol
+[02:25:51] <Diablo-D3> tsku: well
+[02:25:54] <Diablo-D3> noob almost has a point
+[02:26:06] <Diablo-D3> the question is, what is android missing
+[02:26:21] <Diablo-D3> they dont have awt or swing, and the ME classes arent done either
+[02:26:41] <Diablo-D3> so you're going to have to learn a couple new APIs
+[02:26:47] <tsku> they use xml for gui right?
+[02:27:07] <Diablo-D3> not sure
+[02:27:09] <tsku> or layout
+[02:27:12] <Diablo-D3> I havent delved that far into it
+[02:27:20] <tsku> neither me
+[02:27:21] <Diablo-D3> but they do have their own shit for UI
+[02:27:46] <tsku> i like the swt api hope they port it lol
+[02:28:19] <Diablo-D3> heh. =|
+[02:28:23] <Diablo-D3> its not suited for phones
+[02:28:52] <tsku> think i heard of eSWT for that
+[02:29:02] <Diablo-D3> btw, android uses a fork of harmony's classes
+[02:29:06] <Diablo-D3> dropping shit they dont need
+[02:30:35] <tsku> that's what java need to drop shit like the dat/time classes
+[02:31:11] *** woogley has joined #lwjgl
+[02:31:35] <Diablo-D3> btw, for the record, j# sucks
+[02:31:40] <Diablo-D3> you really want ikvm instead
+[03:17:16] *** mattdesl has joined #lwjgl
+[03:20:14] *** betel has quit IRC
+[03:50:39] *** kappaOne has quit IRC
+[04:33:07] *** aho has quit IRC
+[04:42:24] *** MatthiasM has quit IRC
+[04:42:29] *** MatthiasM has joined #lwjgl
+[04:59:58] *** delt0r___ has quit IRC
+[05:10:59] *** holmak has quit IRC
+[05:15:10] *** delt0r___ has joined #lwjgl
+[05:35:13] *** mattdesl has quit IRC
+[06:03:24] *** Dragonene has joined #lwjgl
+[06:13:45] *** locks has quit IRC
+[06:18:58] *** pstickne has quit IRC
+[07:17:12] *** mattdesl has joined #lwjgl
+[07:27:22] *** pstickne has joined #lwjgl
+[08:02:45] *** InaVegt has quit IRC
+[08:09:31] *** InaVegt has joined #lwjgl
+[08:13:11] *** InaV has joined #lwjgl
+[08:15:07] *** mattdesl has quit IRC
+[08:16:32] *** _cg_ has joined #LWJGL
+[08:19:25] *** InaVegt has quit IRC
+[08:21:55] *** InaV has quit IRC
+[08:23:57] *** tsku has quit IRC
+[09:47:10] *** pstickne has quit IRC
+[09:49:57] *** Scient|wrk has joined #lwjgl
+[09:50:20] *** doohan has joined #lwjgl
+[09:56:38] *** CIA-47 has quit IRC
+[10:02:48] *** CIA-46 has joined #LWJGL
+[10:18:01] <doohan> Good morning all
+[10:18:17] <_cg_> good morning :)
+[10:18:27] * doohan waves
+[10:22:51] *** Diablo-D3 has quit IRC
+[10:35:42] * Dragonene waves
+[11:19:50] *** kevglass has joined #lwjgl
+[11:25:10] <doohan> hey kevglass
+[11:29:24] <kevglass> morning
+[11:29:34] <kevglass> http://www.cokeandcode.com/aboid/doc/
+[11:29:37] <kevglass> javadoced
+[11:32:03] <doohan> Swish :)
+[11:32:31] <doohan> I'm setting up wordpress on my brothers vps so I can write up what I've been doing
+[11:33:25] <Dragonene> hm, kevglass
+[11:33:28] <Dragonene> Not a big deal...
+[11:33:37] <Dragonene> but why do you have pure yellow, but not pure magenta? :)
+[11:34:36] <Dragonene> also CYAN
+[11:34:38] <Dragonene> uh
+[11:34:39] <Dragonene> cyan*
+[11:34:44] <Dragonene> I don't know why I wrote that in caps :)
+[11:34:59] <Dragonene> You have 6 of the 8 extreme value colors as statics :)
+[11:35:32] <kevglass> they are the ones i've used
+[11:35:37] <kevglass> I don't like CYAN or MAGENTA :)
+[11:35:41] <Dragonene> Right, but...
+[11:35:46] <Dragonene> >)
+[11:35:58] <Dragonene> Would it be a lot of work to implement a larger palette?
+[11:36:18] <kevglass> um no
+[11:36:21] <kevglass> but you can use any int
+[11:36:37] <kevglass> so you can use whatever colour you want
+[11:36:50] <Dragonene> oh I see
+[11:37:10] <Dragonene> I thought the int was just to distinguish types
+[11:37:18] <Dragonene> as in, it'd only recognize the pre-defined static ones
+[11:37:22] <kevglass> no
+[11:37:26] <Dragonene> Oh, great
+[11:37:27] <Dragonene> :)
+[11:42:03] *** CIA-46 has quit IRC
+[11:42:50] <doohan> oh kev, on your blog if you want to use real names you can call me Adam if you want :)
+[11:42:59] <kevglass> okie dokie
+[11:43:22] <doohan> Shame I didn't have a better video though
+[11:43:39] <kevglass> np, it still might encourage more people to try it
+[11:43:42] <doohan> But my brothers camera is a little bit poor at video
+[11:43:56] <kevglass> I like the idea of the iphone market being taken over by Java develoeprs
+[11:43:56] <kevglass> :)
+[11:44:07] <doohan> haha that would be awesome
+[11:44:09] <kevglass> I was looking for minigames to port :)
+[11:44:15] <doohan> Java developers in disguise realy.
+[11:44:29] <doohan> Stuff like breakout?
+[11:44:36] <kevglass> na, existing java games
+[11:44:39] <doohan> Ahh
+[11:44:43] <kevglass> that could ported quickly and easyily
+[11:44:48] <doohan> I'm sure you've grot quite a few
+[11:44:51] <doohan> got*
+[11:44:52] <kevglass> just saw the gameboy emulator and wondered :)
+[11:45:01] <kevglass> I have yes, but where's the fun in porting my stuff? :)
+[11:45:10] <doohan> Ahhh
+[11:45:26] <kevglass> should get back to the footie game really tho
+[11:45:37] <kevglass> spent a bunch of time on the RPG over the weekend to get it running nicely
+[11:45:38] <doohan> Yeah finish that off first :)
+[11:45:56] <doohan> The footie game can't be all that far off from being done can it?
+[11:46:11] <kevglass> needs online play :)
+[11:46:17] <kevglass> and tournament mode
+[11:46:17] <doohan> ooh
+[11:46:22] <kevglass> and goalie, ref and fouling rules.
+[11:46:35] <doohan> that's turning into a list :P
+[11:46:43] <kevglass> aye, it's in my book :)
+[11:46:51] <kevglass> (which I've left at home :()
+[11:48:31] <Dragonene> If it wasn't utterly unfeasible
+[11:48:37] <Dragonene> you should port graviroids
+[11:48:43] <Dragonene> such an awesome game.
+[11:49:41] *** CIA-47 has joined #LWJGL
+[11:51:06] <Dragonene> kevglass: I admit to being a bit confused by your all-interface javadoc
+[11:51:20] <Dragonene> If one wanted to load an image into an offscreen image
+[11:51:32] <doohan> look in Images.java
+[11:51:39] <Dragonene> would one have to write the code to convert from an inpustream to image oneself?
+[11:51:45] <doohan> No he's done that already
+[11:52:00] <Dragonene> oO
+[11:52:05] <Dragonene> I'm not seeing anything for that
+[11:52:14] <doohan> Give me a second
+[11:52:56] <Dragonene> oh
+[11:53:00] <doohan> star = context.loadImage("assets/res/star.png", OffscreenImage.BITMASK);
+[11:53:01] <Dragonene> it's in the GameContext interface
+[11:53:09] <doohan> Yeah
+[11:53:15] <Dragonene> ...that feels rather arbitraryf
+[11:53:17] <Dragonene> arbitrary*
+[11:53:33] <Dragonene> But should work well enough I'm sure
+[11:53:36] <doohan> Well any api is going to be arbitrary at some point
+[11:53:42] <doohan> Dragonene, works perfectly for me :)
+[11:54:11] <Dragonene> doohan: that's not a great excuse though :P
+[11:54:22] <doohan> It doesn't need an excuse :P
+[11:54:30] <Dragonene> It'd make more sense to me to have it in, I don't know, an ImageLoader class and pass the game context to that if it's needed
+[11:54:31] <kevglass> how so arbitrary?
+[11:54:45] <Dragonene> I don't know, I'm not quite sure what GameContext is
+[11:54:45] <kevglass> thats just bloat
+[11:54:51] <kevglass> read the javadoc then?
+[11:54:53] <Dragonene> but it's not where I'd expect the imageLoading function
+[11:54:56] <Dragonene> Yeah, looking through it
+[11:55:10] <kevglass> the GameContext provides anything that is specific to the platform the game is running in
+[11:55:19] <kevglass> i.e. it's the CONTEXT in which the GAME runs
+[11:55:28] <Dragonene> right... but that's not immediately intuitive from the name
+[11:55:36] <Dragonene> I'm not saying you should change it, just that I didn't get that at first.
+[11:55:38] <kevglass> image loading, font loading (and future adds) will be there
+[11:56:07] <kevglass> you don't think the name GameContext is intuitive for a class that provides the interfeace to the context in which the game runs?
+[11:56:40] <Dragonene> you make it sound so obvious >)
+[11:56:48] <kevglass> I'm not saying I'm going to change anything, just surprised you'd see it as non-obvious
+[11:56:54] <Dragonene> I didn't get it, so clearly it wasn't intuitive to me.
+[11:56:56] <Dragonene> Maybe it is to others.
+[11:57:25] <Dragonene> See, even though those things are platform-dependent
+[11:57:31] <Dragonene> I don't think of them as belonging to the game context
+[11:57:56] <Dragonene> game context sounds like something decidedly game related to me
+[11:58:02] <Dragonene> which that thing isn't necessarily
+[11:58:21] <kevglass> just don't use the API then :)
+[11:58:33] <Dragonene> Aw don't do that :<
+[11:58:42] <kevglass> well don't just pick holes for the sake of it then
+[11:59:06] <Dragonene> I'm not! I honestly didn't get it until I started randomly clicking classes and stumbled upon the method
+[11:59:15] <Dragonene> I had no idea where to find it.
+[11:59:30] <doohan> I think if you look at the example game in the pacakge it'll all be very obvious
+[11:59:50] <Dragonene> yeah might be, I haven't looked at any sample code
+[11:59:56] <kevglass> if I'd put it ImageLoader
+[11:59:58] <doohan> Best place to start
+[12:00:03] <kevglass> then you would have had to look that up from GameContext
+[12:00:11] <kevglass> and then you'd be saying "how do I find the ImageLoader"
+[12:00:17] <kevglass> why is that any more likely to be on GameContext
+[12:00:32] <Dragonene> unless you had the user pass the current game context to the loader?
+[12:00:39] <Dragonene> I don't know
+[12:00:48] <Dragonene> I don't know the backend workings of this so that might not make any sense
+[12:00:52] <kevglass> then I'd have to have the ImageLoader proxy to implementation class
+[12:01:00] <kevglass> so that'd which would just be yet more bloat
+[12:01:16] <kevglass> for the sake of single method
+[12:01:17] <Dragonene> Well, needn't be just images
+[12:01:20] <Dragonene> could've been
+[12:01:22] <Dragonene> AssetsLoader
+[12:01:24] <Dragonene> uh
+[12:01:26] <Dragonene> hm
+[12:01:27] <Dragonene> bad name
+[12:01:36] <kevglass> aye
+[12:01:36] <Dragonene> given that you have a ResourceLoader
+[12:01:52] <Dragonene> okay, but what I sort of expected when looking at the api is this:
+[12:02:01] <Dragonene> "Oh, ResourceLoader, I bet that's where I'll go to load my resources"
+[12:02:18] <kevglass> even though you used Slick?
+[12:02:21] <kevglass> you still thought that?
+[12:02:22] <Dragonene> which it could be if I wrote my own image parsing class I guess
+[12:02:38] <Dragonene> well in slick I just go Image = new Image("path")
+[12:02:45] <Dragonene> :>
+[12:02:53] <kevglass> yes, which makes it a pain in the read to abstract rendering
+[12:03:05] <kevglass> which isn't a problem for slick because it explicitly intended not to worry about abstraction
+[12:03:12] <Dragonene> yeah, I can understand that
+[12:03:17] <kevglass> however, this API is explicitly intended for abstraction
+[12:03:24] <kevglass> so everything is an interface
+[12:03:31] <kevglass> and you use a platform specific bootstrap to start the game
+[12:03:39] <Dragonene> Yes, I know all that
+[12:03:47] <Dragonene> I'm just saying I got confused by it, that's all :<
+[12:04:00] <Dragonene> I don't have a clear suggestion for better naming
+[12:05:40] <Dragonene> I'm not trying to sound negative on purpose here, I really like the idea of the API and I'm looking forward to trying it out when I get more time.
+[12:10:19] <doohan> Hmmm blog needs a title
+[12:10:37] <doohan> I'll take suggestions from the floor :)
+[12:12:59] <Dragonene> what's it for?
+[12:13:15] <doohan> blog for my game and keeping track of aboid stuff I've worked out
+[12:14:50] *** locks has joined #lwjgl
+[12:15:38] <doohan> gah the wordpress dashbaord is all ajaxy now
+[12:21:19] <kevglass> "Just Doohan It"
+[12:21:24] <doohan> haha
+[12:21:40] <kevglass> "Adventures in Mobile Space"
+[12:21:42] <doohan> That's pretty good, maybe for a personal blog I'd use that :)
+[12:25:06] <kevglass> Moblog?
+[12:26:14] <doohan> For now I've gone with Java in Disguise, I did go see the transformers movie the other day :)
+[12:26:21] <kevglass> genius
+[12:26:49] <kevglass> you having any problems with 30fps btw?
+[12:26:56] <kevglass> or have you changed that?
+[12:26:58] <doohan> Nah that's working for me
+[12:27:04] <kevglass> cause the path following looks really smooth in the video
+[12:27:05] <doohan> I had a play in the applet to get it closer to 40
+[12:27:26] <doohan> But it didn't make that much of a difference
+[12:28:11] <doohan> So 30 if still fine for me
+[12:28:13] <doohan> is*
+[12:29:28] <doohan> Not sure if that's at the 40 or not though.
+[12:29:53] <doohan> The 30 did seem a bit unsmooth in the applet which is why I changed it
+[12:30:08] <kevglass> have some smoothing issues on the RPG atm
+[12:30:08] <Dragonene> I need to see this video
+[12:30:16] <kevglass> so might be just a bit slow atm
+[12:30:20] <doohan> I actually changed the sleep amount from 15 to 5
+[12:30:20] * Dragonene looks
+[12:30:22] <doohan> as well
+[12:30:26] <Dragonene> It's the one linked to from kev's blog, yes?
+[12:30:29] <doohan> Yeah
+[12:30:31] <kevglass> thats right Dragonene
+[12:30:39] <Dragonene> oh wait
+[12:30:40] <kevglass> is very short
+[12:30:44] <Dragonene> kev uploaded it though...?
+[12:30:45] <doohan> 5 seconds or so
+[12:30:47] <doohan> Yeah
+[12:30:49] <Dragonene> okay.
+[12:31:55] <doohan> Chaging that did make it a bit smoother
+[12:31:58] <doohan> Changing*
+[12:32:23] <kevglass> think anyone minds us spamming this channel with non lwjgl relates stuff?
+[12:32:31] <kevglass> I know I always do, but it's been alot the past week or so
+[12:32:41] <doohan> I'm sure they'd have said if they did?
+[12:33:10] <doohan> Though I guess if it gets more popular you might have to get it it's own channel
+[12:33:19] <doohan> Did the xmlvm guys ever get back to you?
+[12:33:21] <kevglass> nope
+[12:33:34] <kevglass> I've taken a cut of the xmlvm code in the current distribution
+[12:33:44] <kevglass> striped out everything but the iphone stuff
+[12:33:49] <doohan> Cool
+[12:34:08] <kevglass> it's still got to be GPL license for the tooling, but thats not so bad
+[12:34:17] <Dragonene> kevglass: I don't think they mind
+[12:34:19] <doohan> Yeah that's not the end of the world
+[12:34:21] <Dragonene> It's a quiet channel anyway
+[12:34:39] <Dragonene> I wish I had an apple platform so I could test this iphone stuff
+[12:34:42] <Dragonene> :<
+[12:34:56] <doohan> Hackintosh is te way forward there.
+[12:35:05] <Dragonene> I'm on an old laptop
+[12:35:16] <doohan> How old?
+[12:35:23] <doohan> What processor?
+[12:35:27] <Dragonene> Pentium M
+[12:35:36] <doohan> It'd be hit and miss with that I guess.
+[12:35:36] <Dragonene> Like... 3 years old?
+[12:35:43] <doohan> You might get something working though
+[12:36:01] <Dragonene> but the graphics card is a version which was only shipped with a few laptops, OEM
+[12:36:05] <doohan> http://wiki.osx86project.org/wiki/index.php/HCL_10.5.2
+[12:36:12] <Dragonene> standard drivers won't accept it
+[12:36:15] <kevglass> nv?
+[12:36:18] <Dragonene> 6200 go turbocache
+[12:36:20] <kevglass> go?
+[12:36:25] <doohan> Mobile
+[12:36:26] <kevglass> they have a driver for that
+[12:36:32] <kevglass> yeah, I have a go also
+[12:36:33] <Dragonene> even the turbocache stuff?
+[12:36:37] <doohan> Yeah they have drivers for loads of stuff
+[12:36:38] <doohan> Maybe
+[12:36:38] <kevglass> but not the turbocache I don't think
+[12:36:44] <Dragonene> It's not really useful without it
+[12:36:45] <doohan> What is the notebook?
+[12:36:48] <Dragonene> 16mb ram is nothing
+[12:36:54] <Dragonene> doohan: acer c200
+[12:37:35] <doohan> Hmm you'd probably have to look up each bit of hardware in it seperatly
+[12:37:44] <doohan> And jsut cause it isn't in the lists doesn't mean it won't work either
+[12:37:51] <kevglass> wait til you get home Dragonene
+[12:37:53] <kevglass> prolly easiest
+[12:37:58] <doohan> Yeah
+[12:38:06] <Dragonene> yeah
+[12:38:08] <Dragonene> sadly :<
+[12:38:08] <kevglass> with luck you could develop against the api now and port later
+[12:38:16] <Dragonene> Maybe
+[12:38:19] <kevglass> stay away from complicated java tho :)
+[12:38:19] <Dragonene> Bit short on time anyway
+[12:38:25] <kevglass> fair enough,
+[12:38:28] <kevglass> you're travelling soon right?
+[12:38:31] <Dragonene> aye
+[12:38:36] <Dragonene> leaving melbourne on friday
+[12:38:51] <Dragonene> Pretty excited about it actually
+[12:39:03] <Dragonene> Not that I don't like melbourne, I just feel I've been here long enough
+[12:39:57] <doohan> ARGH!!
+[12:40:10] <doohan> I just realised I'm going to have no internets for about 2 or 3 weeks
+[12:40:15] <kevglass> ick
+[12:40:15] <doohan> Moving a week today
+[12:40:29] <doohan> I will have the 3g on the phone though I supose
+[12:40:41] <Dragonene> kev: does typeface accept any truetype font?
+[12:40:43] <doohan> Enough for irc
+[12:41:05] <kevglass> all of the ones I've tried Dragonene
+[12:41:15] <kevglass> should handle unicode fine
+[12:42:46] <Dragonene> cool
+[12:47:46] *** Ina has joined #lwjgl
+[12:50:15] *** Jvlaple has joined #lwjgl
+[12:50:24] <Jvlaple> how can I load LWJGL.DLL into a java applet?
+[12:50:34] <Jvlaple> it keeps throwing AccessControlException ...
+[12:58:11] *** betel has joined #lwjgl
+[12:58:30] <kevglass> you need to pack the natives into a jar
+[12:58:33] <kevglass> and sign the lot of them
+[12:58:40] <kevglass> check out the lwjgl gears applet for an example
+[12:59:27] <Ina> Latest update on my land generator: http://www.swampwitchgames.com/stuff/land7.png
+[13:02:26] <doohan> landy
+[13:02:36] <doohan> I think I can see my house from here
+[13:03:29] <Jvlaple> Thanks :)
+[13:03:40] <Jvlaple> I got it to work, I use a batch file to sign it, quick and easy <3
+[13:07:19] <doohan> I want to do more of my game now :(
+[13:07:40] <doohan> Other people commitments suck :)
+[13:08:03] <kevglass> this work thing just gets in the way :)
+[13:08:23] <doohan> It's terrible!
+[13:08:41] <doohan> I have the blog set up, no post yet but it's up and running
+[13:08:42] <Jvlaple> Um, if I pack it in a JAR
+[13:08:45] <Jvlaple> how do I load it?
+[13:08:55] <Jvlaple> isn't System.load supposed to load a unpacked DLL?
+[13:09:48] <kevglass> you can use the lwjgl applet loader to handle it
+[13:09:52] <kevglass> it extracts stuff locally
+[13:09:56] <Jvlaple> ah ok
+[13:10:09] <Jvlaple> is there a source for that?
+[13:10:15] <Jvlaple> I'm also trying to load my own DLL
+[13:10:38] <Jvlaple> which can um, read OBJ's
+[13:11:16] <kevglass> yeah, source is in control with everything else lwjgl
+[13:11:30] <Jvlaple> where is the CVS/SVN for it?
+[13:13:17] <doohan> I got to eat
+[13:13:25] <doohan> Potato Scone on a roll for me :)
+[13:13:41] <kevglass> google is your friend :)
+[13:14:03] * kevglass just had a ham sandwich and read the BB updates :)
+[13:14:52] *** delt0r___ has quit IRC
+[13:15:50] *** delt0r___ has joined #lwjgl
+[13:16:59] <doohan> BB?
+[13:17:02] <doohan> Not big brother
+[13:17:07] <doohan> Kev?
+[13:19:55] <kevglass> fraid so
+[13:19:57] <kevglass> big fan
+[13:27:45] <doohan> Oh no.
+[13:28:40] <doohan> What happened to you kev? You used to be cool.
+[13:28:42] <doohan> :P
+[13:28:58] <doohan> I found some bacon too
+[13:29:01] <doohan> This is a winning roll
+[13:29:30] <kevglass> :)
+[13:29:36] <kevglass> BB is good
+[13:29:44] <kevglass> especially late at night when code is hurting my head
+[13:29:49] <kevglass> fantastic mong tv
+[13:30:33] <doohan> I'd rather go to the zoo :)
+[13:30:41] <doohan> See some intelligent animals :P
+[13:31:33] <Dragonene> See, I can appreciate liking the kind of TV that BB represents, what with the arguments and all
+[13:31:53] <Dragonene> But my understanding (from watching an episode or so of the swedish version) is that it's mostly eventless
+[13:31:57] <Dragonene> and actually pretty dull.
+[13:33:01] <doohan> What I hate is the way they all expect to be celebrated for being brainless dolts.
+[13:33:16] <kevglass> both of those things is what makes it so interesting to me
+[13:33:24] <doohan> Real high calibre people they get on it
+[13:33:27] <kevglass> I like watching how people interact
+[13:33:35] <doohan> But they aren't normal people though
+[13:33:38] <kevglass> exactly.
+[13:33:46] <doohan> They're sepcially selected weirdos
+[13:33:54] <kevglass> they're extremes of different segments of the population
+[13:34:00] <Dragonene> Well see
+[13:34:08] <Dragonene> I've turned on the TV at random intervals
+[13:34:13] <Dragonene> and they're not even interacting
+[13:34:21] <Dragonene> It's stuff like "the camera is watching person A sleep"
+[13:34:23] <kevglass> you're watching the live feed?
+[13:34:33] <Dragonene> I don't watch it at all.
+[13:34:33] <kevglass> I don't do that (infact, mostly you can't here)
+[13:34:39] <Dragonene> Except what comes on TV?
+[13:34:46] <Dragonene> Maybe that was the live feed when they had nothing else to show
+[13:34:50] <kevglass> just the highlights show, the bblb, the bbbm
+[13:34:53] <Dragonene> right
+[13:35:00] <doohan> I'm stuffed now
+[13:35:09] <doohan> bacon+potato scone == win
+[13:35:17] <doohan> Would have been even more win with some haggis on it though
+[13:35:18] * kevglass adds a new category
+[13:35:36] <doohan> category?
+[13:35:49] <kevglass> so I tag my blog posts
+[13:35:53] <doohan> Ahhh
+[13:36:15] <doohan> Do you think it would take alot to get some sort of equivalent for awt set up?
+[13:36:23] <kevglass> how do you mean?
+[13:36:38] <doohan> Things like button, text field and label
+[13:36:38] <kevglass> an implementation for AWT? The applet one does that
+[13:36:41] <kevglass> ooooh
+[13:36:45] <kevglass> yes, it'd be a bit of pain
+[13:36:50] <doohan> Well yeah I mean we have graphics right?
+[13:36:57] <kevglass> I'm going to have to support text field entry via virtual keyboards for online play tho
+[13:37:10] <kevglass> sure, on the handsets you need to use the keyboard input facilities tho
+[13:37:25] <doohan> Hmm
+[13:38:51] <kevglass> I was thinking I'd add the ability to request the game context to get a text input from the user
+[13:39:03] <kevglass> how it did that could be based on platform APIs (including virtual keyboard support)
+[13:39:17] <kevglass> that way you could draw a text field/button/label etc
+[13:39:22] <doohan> ahhhhhh
+[13:39:25] <doohan> That'd be cool
+[13:39:25] <kevglass> then when they tap the field, it just prompts the user to get text
+[13:40:01] <kevglass> on applet that could just be a simple text field or something
+[13:40:06] <kevglass> on the other two it's a bit more fiddly :)
+[13:40:09] <doohan> Hmm
+[13:40:22] <doohan> Well they do have their own equivalent widgets for that stuff though
+[13:40:40] <kevglass> yep, but you don't really want to show widgets do you?
+[13:40:47] <doohan> Then there's always the thing of just making something that looks like a textbox
+[13:40:47] <kevglass> breaks the look of the game
+[13:40:50] <doohan> nice and themeable
+[13:40:55] <kevglass> aye, thats the way I think I'd go
+[13:41:02] <doohan> That'd be very smart
+[13:41:08] <kevglass> in time
+[13:41:10] <kevglass> :)
+[13:41:14] <doohan> And graphically not too ahrd
+[13:41:26] <doohan> Since that could be done in java
+[13:41:32] <doohan> It's just getting the input
+[13:43:02] <kevglass> aye which is where the lib should come in I think
+[13:43:47] <doohan> Yeah
+[13:43:49] <kevglass> cool
+[13:44:04] <doohan> You've actually made quite a few posts on this
+[13:44:18] <lwjglbot> lwjglforum: Re: 2D sprite animation: one or more textures? <http://lwjgl.org/forum/index.php/topic,2938.msg16278.html#msg16278>
+[13:44:39] <kevglass> aye, few comments compared to normal tho
+[13:44:44] <kevglass> think it might not be explained very well
+[13:44:51] <kevglass> maybe too bad to understand
+[13:45:30] <doohan> I think as more example show up it'll get more popular
+[13:45:47] <doohan> I think once Iget to writing stuff up tonight I'll maybe get a simple tutorial done.
+[13:46:06] <doohan> I still haven't properly set up a new project, just been sticking my stuff into TestGame really.
+[13:46:15] <kevglass> fair enough
+[13:46:21] <kevglass> if you get the new distribution, it'll be slightly easier
+[13:46:24] <kevglass> and you'll get lint checking
+[13:46:31] <doohan> Yeah I'll be trying that out too :)
+[13:47:58] <doohan> I actually wrote all my code for that in textwrangler and just used ant
+[13:48:11] <doohan> It was actually kind of cool not having and ide for a bit
+[13:48:17] <kevglass> heh
+[13:48:22] <kevglass> I find that when I'm debugging the obj
+[13:48:31] <kevglass> just use vi, make and running the thing
+[13:48:36] <doohan> Yeah
+[13:48:47] <doohan> And I have my makefile for arm too :)
+[13:49:13] <doohan> Took a few tweaks and adding a symlink but that's probably something you might want to have in the build?
+[13:50:34] <doohan> I just love that you can completely avoid xcode :)
+[13:50:55] <kevglass> I'm not bright
+[13:51:03] <kevglass> the arm makefile is to build it for the iphone itself?
+[13:51:06] <doohan> Yeah
+[13:51:11] <kevglass> that requires Jailbreak?
+[13:51:30] <doohan> It shouldn't if you have the stuff to sign it with properly
+[13:51:34] <kevglass> are you signing it in the make file, and if so could I use my developer keys and have a full distributable app
+[13:51:37] <kevglass> that'd be awesome
+[13:51:44] <kevglass> stay the fck away from xcode :)
+[13:51:47] <doohan> I'll try add that into it
+[13:51:59] <kevglass> damn I hate that tool
+[13:52:07] <kevglass> even reading the documentation in it is painful
+[13:52:07] <doohan> At the moment I did a pseudo sign on the device itself for the jailbreak
+[13:52:10] <doohan> I know
+[13:52:42] <doohan> I like this because it really does free you from the terrible ecosystem they're trying to build.
+[13:52:48] <doohan> All around xcode
+[13:52:50] <doohan> Euch
+[13:52:52] <kevglass> aye
+[13:53:00] * kevglass goes to register openiphonegames.org :)
+[13:53:05] <doohan> ooooh nice
+[13:53:14] <kevglass> not really ;)
+[13:53:49] *** Jvlaple has quit IRC
+[13:53:51] <kevglass> is available actually
+[13:53:55] <kevglass> coo
+[13:54:07] <doohan> I've found a new respect for ant and make though
+[13:55:33] *** tsku has joined #lwjgl
+[13:55:45] <Dragonene> too long a domain :)
+[13:57:15] <Ina> Dragonene, not any longer than swampwitchgames.com :p
+[13:59:12] <Dragonene> that's somewhat easier to remember
+[13:59:23] <Dragonene> But still slightly too long if you ask me :)
+[13:59:36] <Dragonene> I have a domain that's short and hard to remember :P
+[13:59:38] <Dragonene> (x2d.org)
+[14:00:20] <kevglass> whats x2d about?
+[14:00:33] <kevglass> x to decimal conversion?
+[14:07:33] <locks> Dragonene: it is weirdly hard to remember
+[14:08:03] <Dragonene> http://www.wayofthepixel.net/pixelation/upload/hexquisite/hexquisite_final.gif
+[14:08:16] <Dragonene> kevglass: yeah, hex to decimal in some cases
+[14:08:27] <Dragonene> originally we chose it because we were doing webdesign in 2d
+[14:08:37] <Dragonene> the x was a generic "extreme" or "explosive" or some such
+[14:08:43] <Dragonene> It's pretty bad really
+[14:08:50] <Dragonene> Just keep it because it's short, these days
+[14:08:55] <locks> omg what's that gif? :oo
+[14:09:16] <Dragonene> pixelation collab
+[14:09:29] <locks> dude fapfapfap
+[14:10:11] <Dragonene> I made one of the worst tiles :)
+[14:10:32] *** kappaOne has joined #lwjgl
+[14:12:25] <locks> the one on the octopus head
+[14:13:00] <locks> is it?
+[14:13:34] <Dragonene> No
+[14:13:42] <doohan> That's how I imagine a bad lst trip would look.
+[14:13:44] <doohan> lsd
+[14:14:16] <doohan> Those collabs are always interesting though
+[14:14:54] <Dragonene> http://www.wayofthepixel.net/pixelation/upload/hexquisite/hexquisite_final_m.gif
+[14:14:57] <locks> which one is it? :(
+[14:14:58] <Dragonene> there's what it looked like until just now
+[14:15:01] <Dragonene> #7 is mine
+[14:15:20] <locks> morre?
+[14:15:25] <Dragonene> yea
+[14:15:39] <doohan> car?
+[14:15:48] <locks> that's portuguese for "die"
+[14:16:00] <Dragonene> yea
+[14:16:04] <Dragonene> locks: people keep saying that
+[14:16:04] <Dragonene> :)
+[14:16:09] <locks> :P
+[14:16:25] <Dragonene> I don't particularly mind though
+[14:16:31] <locks> ikke has a few panels
+[14:16:34] <Dragonene> maybe that's why it sometimes taken tho
+[14:16:38] <Dragonene> on forums and stuff
+[14:16:49] <locks> is that the pallet you could use?
+[14:17:28] <Dragonene> yeah
+[14:18:07] <locks> I like yours
+[14:18:23] <Dragonene> ta, it's pretty bad in comparison to all the others tho :)
+[14:18:23] <locks> 86 is just... something I don't understand
+[14:20:51] <locks> pixelart rox
+[14:21:00] <locks> do you use paint or something? :p
+[14:21:30] <Dragonene> I used paint, yea
+[14:21:34] <Dragonene> don't have anything else on this machine
+[14:22:06] <locks> I like pixen on mac
+[14:22:14] <locks> but it hasn't been developed in ages
+[14:22:46] <Ina> I use paint.net for pixelart.
+[14:22:52] * kevglass gimps.
+[14:23:12] *** Gwinnell has joined #lwjgl
+[14:27:32] <Dragonene> I'd use graphicsgale if I had it
+[14:27:34] <kevglass> do you know anyone who doesn't know who He-Man is?
+[14:27:37] <Dragonene> It's good stuff for pixelling
+[14:28:10] <locks> kevglass: anyone 3 years younger than me
+[14:28:17] <locks> heck, even people my age
+[14:28:25] <kevglass> thats just wierd.
+[14:29:01] <Dragonene> I've never really seen any he-man
+[14:29:06] <doohan>  kevglass I guess my niece :)
+[14:29:07] <Dragonene> I know him, but that's it
+[14:29:26] * kevglass is definitely getting old.
+[14:29:30] <doohan> Actually alot of people my age probably don't. I had older siblings though
+[14:29:41] <Ina> I know of the existance of he-man, though I never watched the show.
+[14:29:54] <locks> i did
+[14:29:54] <kevglass> thundercats?
+[14:30:02] <doohan> Thundercats was awesome
+[14:30:07] <kevglass> mysterious cities of gold?
+[14:30:08] <Dragonene> thundercats?
+[14:30:08] <locks> thundercats never was on tv here
+[14:30:10] <Dragonene> doesn't ring a bell
+[14:30:13] <locks> mysterious what?
+[14:30:18] <doohan> Sight beyond sight guys
+[14:30:22] * kevglass grins
+[14:30:32] <kevglass> thunder thunder thunder cats HOOOOOOO!!!!
+[14:30:43] <kevglass> damn this is wierd.
+[14:30:52] <Ina> Same deal as with he-man.
+[14:31:00] <doohan> But liono we'll get uin trouble snarf snarf
+[14:31:03] <Dragonene> They should make a Centurions movie
+[14:31:04] <locks> http://www.wayofthepixel.net/pixelation/index.php?topic=6247.0
+[14:31:06] <Dragonene> That'd be awesome
+[14:31:08] <Ina> More familiar with the birds, tho'
+[14:31:09] <locks> holy shit the guys rock
+[14:31:23] <Dragonene> Iso collab is old tho
+[14:31:29] <Dragonene> the one I linked to is new :)
+[14:31:51] <locks> OH MY GOD
+[14:31:56] <locks> THANK YOU Dragonene !!!!
+[14:32:00] <Dragonene> kevglass, doohan: See? I've pixelled! (The car was the one I couldn't put up on my blog, because of the hexquisite thingy)
+[14:32:03] <Dragonene> locks: huh?
+[14:32:05] <locks> centurions FUKKING ROcK :D
+[14:32:10] <Dragonene> ah :D
+[14:32:12] <locks> I didn't know the name of the show
+[14:32:18] <locks> my brother had an old vhs tape
+[14:32:21] <locks> I watched all the time
+[14:32:27] <locks> it had centurions, denver the dinosaur
+[14:32:30] <locks> that kind of thing
+[14:33:43] <Dragonene> :D
+[14:34:16] <locks> I want a really cheesy centurions life action movie
+[14:34:47] <locks> that'd rock
+[14:35:03] <Dragonene> yeah
+[14:35:10] <locks> "Hey! Where's anyone?"
+[14:35:11] <locks> x'D
+[14:35:25] <locks> http://www.youtube.com/watch?v=w-YnVYToBsg
+[14:35:43] <locks> sexual harassment and all
+[14:35:57] <locks> ah, the 80s
+[14:37:12] <Dragonene> :)
+[14:37:54] <Ina> B-E-A-Utiful: http://www.youtube.com/watch?v=Zk69e1Vcmvg
+[14:40:14] *** kevglass has quit IRC
+[14:50:24] <locks> i'm on http://www.wayofthepixel.net/pixelation/index.php?topic=7798.0
+[14:50:34] <locks> http://img159.imageshack.us/img159/6304/bbeditdn8.png i'm laughing so hard at this
+[14:59:08] <doohan> My brother just got the most awesome domain name
+[14:59:23] <doohan> fullforcejava.com :)
+[14:59:36] <Dragonene> :)
+[15:00:21] <locks> sweet domain
+[15:07:53] *** Schnitter has joined #lwjgl
+[15:14:36] <lwjglbot> lwjglforum: Re: 2D sprite animation: one or more textures? <http://lwjgl.org/forum/index.php/topic,2938.msg16279.html#msg16279>
+[15:17:00] *** Schnitter has quit IRC
+[15:26:12] *** betel has quit IRC
+[15:30:20] <Ina> New version! http://www.swampwitchgames.com/stuff/land8.png
+[15:41:57] <doohan> I can see my house from here!
+[15:43:38] <doohan> I like the desert bit
+[15:44:40] <lwjglbot> lwjglforum: Re: Timer on steroids? <http://lwjgl.org/forum/index.php/topic,2201.msg16280.html#msg16280>
+[16:06:57] <jonkri> any idea why my meshes disappear when i call GL11.glEnable(GL11.GL_DEPTH_TEST)?
+[16:19:57] *** Schnitter has joined #lwjgl
+[16:32:40] *** Scient|wrk has quit IRC
+[16:44:47] <lwjglbot> lwjglforum: ArenaWars - a game using lwjgl <http://lwjgl.org/forum/index.php/topic,2949.msg16281.html#msg16281>
+[16:47:45] <Ina> http://www.swampwitchgames.com/stuff/land9.png
+[16:51:02] <doohan> I can see me house!
+[16:51:05] <doohan> my*
+[16:52:48] <Ina> :P
+[16:54:18] *** Endolf has joined #lwjgl
+[17:20:52] <Gwinnell> what are you making, Ina?
+[17:21:15] <doohan> The world
+[17:21:16] <Ina> Gwinnell, Procedural Terrain maker to learn how to do it.
+[17:22:12] * Gwinnell shrugs.
+[17:22:19] <Gwinnell> I think the sea gets darker closer around the land. :]
+[17:24:56] <doohan> I thought lighter
+[17:25:06] <Gwinnell> i mean, it gets darker sooner.
+[17:25:10] <Gwinnell> :p
+[17:25:30] <doohan> I think it's looking pretty good ina
+[17:26:02] <doohan> I like how there's even bits that could be cliffs and not just beach
+[17:26:08] <doohan> And what about shingle beaches?
+[17:26:27] <doohan> The gravely kind
+[17:35:43] *** aho has joined #lwjgl
+[17:38:52] <doohan> hey aho
+[17:39:36] <aho> yo
+[17:39:40] <doohan> How do?
+[17:39:47] <aho> tired, i am
+[17:41:14] *** freaks has quit IRC
+[17:41:15] *** freaks_ has joined #lwjgl
+[17:42:46] <NoobFukaire> jonkri: they're probably failing the depth test
+[17:42:51] <NoobFukaire> so they're occluded for some reason
+[17:43:01] <NoobFukaire> maybe you're forgetting to clear the depth buffer after each frame?
+[17:56:14] *** logan_barnett has joined #lwjgl
+[17:59:59] *** logan_barnett has quit IRC
+[18:04:10] *** Schnitter has quit IRC
+[18:10:57] <jonkri> NoobFukaire: i think i am. thanks :)
+[18:26:30] *** kevglass has joined #lwjgl
+[18:27:03] <kevglass> lo
+[18:27:54] <Ina> Hey kevglass
+[18:28:29] *** locks has quit IRC
+[18:29:45] *** Diablo-D3 has joined #lwjgl
+[18:34:35] <doohan> hey kev
+[18:34:51] <doohan> What do you think of my new domain name: fullforcejava.com ?
+[18:35:05] <doohan> Doesn't link to anything yet but it will soon
+[18:35:55] <tsku> what is it going to be about related to java
+[18:36:39] <doohan> For the time being mostly kevs aboid stuff and xmlvm plus whatever other java things I like :)
+[18:37:03] <tsku> k cool
+[18:38:59] *** Ina has quit IRC
+[18:39:22] *** Ina has joined #lwjgl
+[18:50:48] *** NoobFukaire has quit IRC
+[18:51:33] *** aho has quit IRC
+[18:53:02] *** mattdesl has joined #lwjgl
+[18:54:40] <kevglass> good name doohan
+[18:57:13] <Dragonene> doohan: wasn't that your brother's domain name?
+[18:57:17] <Dragonene> You're confusing me
+[18:57:41] <kevglass> sharing mebbe?
+[18:57:58] <Dragonene> maybe
+[19:00:19] *** Notch_ has joined #lwjgl
+[19:00:36] <kevglass> Notch!
+[19:04:00] <Notch_> kev!
+[19:04:07] <Notch_> so are YOU coming to No More Sweden? =D
+[19:13:47] <kevglass> eh?
+[19:13:56] *** logan_barnett has joined #lwjgl
+[19:16:27] <Dragonene> It's an indie developer meetup
+[19:16:29] <Dragonene> notch is going
+[19:16:33] <Dragonene> I'd go if I was in Sweden at the time
+[19:17:05] <Dragonene> www.nomoresweden.com
+[19:17:17] <Dragonene> I'm really sad I can't go
+[19:17:19] *** woogley has quit IRC
+[19:20:40] <doohan> Dragonene, me and my brother are using it
+[19:20:46] *** woogley has joined #lwjgl
+[19:21:11] <Dragonene> right
+[19:22:02] <doohan> But the blasted thing is still "pending registrar completion"
+[19:22:05] <doohan> Whatever that means.
+[19:22:29] <Dragonene> yeah, usually takes a day or two I think?
+[19:22:36] <Dragonene> ~ish
+[19:22:38] <doohan> Yeah I guess so
+[19:23:06] <doohan> I thought of a cool sort of title screen image to draw for my game too
+[19:23:14] <doohan> But I'm suffering from being rubbish :)
+[19:24:16] <Notch_> kevglass: What Dragonene said! You! Go!
+[19:24:36] <Notch_> We'll shake hands and say manly things like "motoroil" and "nude ladies"
+[19:25:05] <doohan> Notch_, when is it?
+[19:25:30] <Dragonene> We'll shake hands and say manly things like "motoroil" and "nude ladies" <-- that should be a quote somewhere
+[19:26:37] <Notch_> doohan: 16'th to 19'th of july
+[19:27:06] <doohan> I'm poor next month, having to pay the deposit for the new place :(
+[19:27:17] <doohan> Now if it was in the UK
+[19:30:11] <Notch_> aww
+[19:30:37] <Notch_> it's a 4.5 hour train ride from stockholm. I'm bringing my macbook, a four pack of red bull, and a good pair of headphones
+[19:30:57] <doohan> That's not too bad
+[19:31:00] <Ina> I'm already going to BIG, can't afford going foreign twice a year.
+[19:31:01] * Dragonene is envious
+[19:31:13] * Dragonene would totally go if it was in august instead
+[19:31:21] <Notch_> my patience limit is about three hours
+[19:31:26] <Notch_> more than that, and I start to lose hp
+[19:31:30] <Notch_> i mean get bored.
+[19:31:36] <doohan> haha
+[19:31:44] <doohan> you can have 2 geek points.
+[19:31:52] <Notch_> yay!
+[19:32:38] <Dragonene> Haha
+[19:33:03] <kevglass> hmm
+[19:33:10] <kevglass> in sweden?
+[19:33:17] 
+[19:33:18] <kevglass> short flight
+[19:33:31] <Notch_> probably faster than it takes me..
+[19:33:42] <kevglass> when is?
+[19:33:50] <Notch_> july 16 to 19
+[19:34:00] <kevglass> open to all?
+[19:34:28] <Dragonene> yeah, need to register via that website first though
+[19:34:38] <Notch_> yep
+[19:34:42] <Dragonene> just by sending an e-mail to them
+[19:34:51] <Dragonene> Aw damn
+[19:34:53] <Dragonene> if kev goes
+[19:34:59] <Dragonene> And I'll miss both of you...
+[19:35:05] <Dragonene> :'(
+[19:35:10] <kevglass> getting disapproving looks from the mrs
+[19:35:16] <Dragonene> Meh
+[19:35:24] <Notch_> i tried to convince cas.. didn't seem to work
+[19:35:41] <Dragonene> You mistake "Yay, yay, go! <3" for disapproving
+[19:35:57] <Dragonene> Look again kev, you'll note it's clearly not disapproving.
+[19:36:04] * kevglass grins
+[19:37:00] <doohan> Youch
+[19:37:10] 
+[19:38:06] <Notch_> whoa
+[19:38:10] <Notch_> that's insane!
+[19:38:18] <Dragonene> crazy indeed
+[19:38:25] <Notch_> do you mean the actual aircraft?
+[19:38:28] <Notch_> or the trip?
+[19:38:35] <Notch_> 'cause I'm not so sure at those prices
+[19:39:11] <Dragonene> Notch_: which post?
+[19:39:14] <Dragonene> I want to read it now :)
+[19:39:33] <kevglass> I miht have to reregister for jgo :(
+[19:39:34] *** Schnitter has joined #lwjgl
+[19:39:54] <Dragonene> oh hey
+[19:39:55] <Dragonene> http://blog.csdn.net/cping1982/archive/2009/05/21/4207241.aspx
+[19:40:00] <doohan> Train more like 300
+[19:40:01] <Dragonene> so mootox, kitipong and breaking the tower is there
+[19:40:03] <Dragonene> grats you folks
+[19:40:10] <kevglass> bunny press also
+[19:40:16] <Dragonene> right
+[19:40:18] <Dragonene> that too
+[19:40:31] <kevglass> infinite mario bros
+[19:40:47] <Notch_> whoa, three of mine? :-O
+[19:40:59] <Dragonene> aye
+[19:41:31] <doohan> train + ferry + train + train about 350
+[19:41:45] <doohan> But of of those options take about 2 days
+[19:42:27] <doohan> Ahh wait
+[19:42:29] <tsku> announcement: SF4 PC, Jul 7th   :)
+[19:42:35] <doohan> Those guide were about getting to stockholm first
+[19:43:24] 
+[19:43:29] <doohan> london to harwich, ferry to esbjerg, train to copenhagen, then train to malmo
+[19:43:30] <Schnitter> I only know apo from a german forum
+[19:43:42] <kevglass> did he ask?
+[19:43:46] <Dragonene> he did yeah
+[19:43:51] <Dragonene> so nothing wrong with it
+[19:43:54] <kevglass> aye
+[19:43:57] <Dragonene> also it's a bsd license
+[19:44:00] <kevglass> he's always asked with mine
+[19:44:02] <Dragonene> so I guess he didn't even have to ask
+[19:44:16] <Dragonene> I think I should be honored maybe? :)
+[19:44:20] <Dragonene> I'm not quite sure what to think :D
+[19:44:37] <Dragonene> His version has more interesting gameplay than towerball actually
+[19:44:52] <Dragonene> But I think his level design could use some work
+[19:44:54] <Dragonene> :)
+[19:45:18] <kevglass> maybe he could provide links back to his inspiration I suppose
+[19:45:19] *** _cg_ has quit IRC
+[19:45:21] <kevglass> that might be a bit more polite
+[19:45:31] *** _cg_ has joined #LWJGL
+[19:45:37] <Dragonene> oh he does, http://apo-games.de/apoBounceStar/
+[19:45:44] <Dragonene> on the game's front page, but not near the applet
+[19:45:56] <Dragonene> I asked him to link back to me and clearly say which game it was based on when he asked to post it
+[19:46:21] <kevglass> doesn't for apo mushroom
+[19:46:27] <Dragonene> Yeah, he didn't for my game either
+[19:46:34] <Dragonene> until I sent him a PM asking for it
+[19:46:41] <kevglass> oh
+[19:46:47] <Dragonene> I don't know, maybe I was a bit obnoxious?
+[19:46:57] <kevglass> maybe
+[19:47:06] <kevglass> but polite would be to link back with asking
+[19:47:08] <Dragonene> But I sort of feels like it's fair to link back to the original
+[19:47:14] <kevglass> given it's derivative.
+[19:47:32] <Dragonene> He polishes the games nicely, I'll give him that
+[19:47:37] <Dragonene> They're pretty high quality
+[19:48:03] <kevglass> they're consistant at least
+[19:48:03] <Dragonene> I wonder how he finds the will to do what he does though, just remaking or porting games all the time
+[19:48:16] <Dragonene> I'd get bored in no time doing that
+[19:48:18] <kevglass> wouldn't call them polished really tho, the art is a little on the low quality side
+[19:48:40] <kevglass> look at the quality on something like gcom
+[19:48:49] <doohan> I love the style in gcom
+[19:48:49] <kevglass> and thats super early on
+[19:48:50] <Dragonene> gcom?
+[19:48:52] *** woogley has quit IRC
+[19:48:54] <kevglass> galatic commander
+[19:49:01] <kevglass> appel's latest thing
+[19:49:05] <doohan> Does the red stuff remind anyone else of old star trek films?
+[19:49:08] <kevglass> or for that matter Don's planet Z
+[19:49:09] *** david_koontz has joined #lwjgl
+[19:49:28] <doohan> Like the klingon computer screens
+[19:49:55] <Dragonene> oh yes, appel's latest is looking great
+[19:50:05] <Dragonene> kev: is apoMushroom based on yours?
+[19:50:08] <Dragonene> maybe I should try it
+[19:50:14] <Dragonene> I could never get your mushroom game to work
+[19:50:16] <Dragonene> kept crashing for me
+[19:50:36] <kevglass> aye
+[19:50:43] <Dragonene> We haven't settled on anything yet, but we'll need to pick our project relatively soon
+[19:51:01] <Dragonene> We're considering starting over with Planet Z, trying to do some real work on it
+[19:51:13] <Dragonene> We'd be making it in 3d but using a 2d plane for movement
+[19:51:33] <Dragonene> Kind of like... an even simpler version of the 3d in warcraft 3
+[19:51:44] <Dragonene> just tilt the camera some to give perspective
+[19:52:06] <Dragonene> I'm picturing bumpmapped planets and planets with craters and stuff, but maybe I'm getting ahead of myself :)
+[19:52:48] <kevglass> 200 gbp to stockholm
+[19:52:49] <kevglass> and back
+[19:52:50] <kevglass> flight
+[19:53:08] <Notch_> that's not bad, kev
+[19:53:11] <kevglass> aye
+[19:53:12] 
+[19:53:13] <Notch_> wait, stockholm
+[19:53:16] <doohan> kevglass, where did you find that?
+[19:53:20] 
+[19:53:22] <doohan> Aim for copenhagen
+[19:53:23] <Dragonene> Stockholm is where me and notch are usually
+[19:53:26] <kevglass> https://bookings.flysas.com/sasinternational_uk/AirSearchActionResult.do?followAction=AirSearchAction&amp;time=1245692786206
+[19:53:34] 
+[19:53:41] 
+[19:53:48] <Dragonene> might be possible to fly straight there.
+[19:53:50] <doohan> Yeah but noone seems to fly there
+[19:53:54] <doohan> Which is why it costs so much
+[19:53:56] <kevglass> Malmo?
+[19:54:02] <Dragonene> Yep
+[19:54:06] <Dragonene> That's where no more sweden is
+[19:54:08] <kevglass> k, just checking
+[19:54:21] <Notch_> is openal reliable?
+[19:54:24] <Dragonene> Me and Notch are both in Stockholm tho
+[19:54:26] <Dragonene> As in... usually.
+[19:54:32] <Dragonene> Notch_: Depends on who you ask
+[19:54:35] <Notch_> lol
+[19:54:41] * Notch_ takes that as a "no"
+[19:54:46] <Dragonene> OpenAL has given me more crashes and startup problems than anything else I've used
+[19:54:54] <Dragonene> But nobody else seems to have any problems with it
+[19:54:57] <kevglass> it's fine
+[19:54:58] <Dragonene> so perhaps I'm just using it wrong
+[19:54:59] <kevglass> really
+[19:55:19] <kevglass> can't fly to malmo it seems
+[19:55:54] <kevglass> anything else close?
+[19:55:56] <Dragonene> copenhagen
+[19:55:58] <Dragonene> in denmark
+[19:56:02] <Dragonene> is just across the water
+[19:56:06] <Dragonene> there's a bridge to malmo from there
+[19:56:20] <kevglass> searching....
+[19:57:05] <kevglass> cheaper still
+[19:57:06] <kevglass> 200 quid
+[19:57:09] <kevglass> 183
+[19:57:24] <Notch_> go! come!
+[19:57:29] <kevglass> not allowed
+[19:57:32] <kevglass> sucks
+[19:57:41] <Notch_> kill her!
+[19:57:41] <doohan> kevglass, i got 150
+[19:57:45] <kevglass> kill her?
+[19:57:47] <kevglass> seriously?
+[19:57:48] <Notch_> wait, no, don't kill her, sorry
+[19:57:52] <kevglass> ah
+[19:57:53] <kevglass> fair enough
+[19:57:55] <kevglass> Notch!
+[19:57:55] <Notch_> no, i got confused.
+[19:58:03] <kevglass> when are we having the minecraft on iphone?
+[19:58:04] <Dragonene> He meant "Killer!"
+[19:58:07] <Dragonene> Look behind you kev
+[19:58:12] <Notch_> Remember kids: do not kill people.
+[19:58:14] <doohan> kevglass, I was thinking about that earlier too
+[19:58:15] <Dragonene> He was trying to warn you.
+[19:58:26] <Notch_> kevglass: Probably never. But android..
+[19:58:36] <kevglass> give me both please :)
+[19:58:36] <Dragonene> Notch_: have you seen kev's lib?
+[19:58:38] <Dragonene> Never say never.
+[19:58:42] * kevglass pimps new tech.
+[19:58:43] <Dragonene> Aboid saves the day
+[19:58:52] <kevglass> not for minecraft, but xmlvm could do it
+[19:58:55] <doohan> Software rendered minecraft
+[19:58:57] <doohan> :)
+[19:59:00] <Notch_> i haven't! You make an iphone liv?
+[19:59:00] <kevglass> gles
+[19:59:14] <doohan> Notch go check kevs blog
+[19:59:19] <Notch_> doohan: It's not impossible for short rendering distances. Remember Descent? =D
+[19:59:24] <Dragonene> He made a tiny framework that crosscompiles to applet, android, iphone
+[19:59:24] <doohan> I know :)
+[19:59:24] <kevglass> both android and iphone are using accelerated rendering atm doohan :)
+[19:59:27] <kevglass> even for this 2D
+[19:59:47] <doohan> Hmmm
+[19:59:49] <kevglass> how about a nice java api that lets you use GLES on both android and iphone
+[19:59:56] <Dragonene> Yeah, that'd be sweet
+[20:00:01] <Dragonene> But seems like it'd be a lot more work
+[20:00:03] <Dragonene> Wouldn't it?
+[20:00:11] <kevglass> prolly a little less
+[20:00:16] <kevglass> given there's no abstraction to do
+[20:00:30] <Dragonene> Hm
+[20:00:31] <kevglass> need have a common interface for the API
+[20:00:37] <Dragonene> Yeah
+[20:00:47] <Dragonene> Okay
+[20:00:49] <kevglass> but that could just be a copy of the android one
+[20:00:50] <Dragonene> It's past 4am
+[20:00:53] <Dragonene> I need to sleep
+[20:01:02] <Dragonene> 'night folks
+[20:01:12] <kevglass> nn
+[20:02:28] <Dragonene> just one last thing
+[20:02:40] <Dragonene> is that star rotated?
+[20:02:47] <doohan> Nah
+[20:03:01] <Dragonene> ...there *is* a rotation method tho
+[20:03:04] * Dragonene just found it.
+[20:03:06] <doohan> When the tank moves in the video it's rotation is done by loading a rotated sprite
+[20:03:17] <doohan> Dragonene, I shall give that a erm spin :)
+[20:03:27] <kevglass> there wasn't when he did that
+[20:03:32] <Dragonene> Oh, okay
+[20:03:46] <Dragonene> I see rotation doesn't take any parameters for which point to rotate around
+[20:03:54] <doohan> Does it assume centre?
+[20:03:56] <Dragonene> although that should be easy to implement by the dev anyway
+[20:04:02] <Dragonene> so no problem really
+[20:04:17] <Dragonene> I assume it rotates around 0,0?
+[20:04:18] <kevglass> correct
+[20:04:58] <Dragonene> right, now I'm off for sleep for real
+[20:05:04] <doohan> g'night
+[20:05:04] <Dragonene> been putting it off for too long
+[20:05:05] <kevglass> have meg on lap sorry for slow typing
+[20:05:10] <kevglass> nn
+[20:05:35] *** Dragonene has left #lwjgl
+[20:06:49] <doohan> kevglass, that site is pretty good for getting cheap flights out that way
+[20:06:58] <kevglass> aye
+[20:07:08] <doohan> 150 to copenhagen with 2 weeks notice isn't that bad
+[20:07:26] <doohan> More than I'm allowed to spend just now though :)
+[20:08:14] <kappaOne> ryanair usually has pretty cheap flights
+[20:08:22] <kappaOne> to stockholm and back
+[20:10:48] <doohan> nice
+[20:48:48] <doohan> :(
+[20:49:04] <doohan> I was walking up the stair with a raspery turnover and I tripped up and dropped it on the carpet
+[20:49:07] <doohan> stairs*
+[20:51:58] *** OrangyTang has joined #lwjgl
+[20:59:32] *** delt0r___ has quit IRC
+[21:13:04] <tsku> u have 5 seconds!
+[21:13:07] <tsku> too late
+[21:14:58] * kevglass icks
+[21:15:04] <kevglass> turnover turned over?
+[21:15:45] *** delt0r___ has joined #lwjgl
+[21:18:18] *** NoobFukaire has joined #lwjgl
+[21:21:01] <doohan> It went in the bin
+[21:21:56] <doohan> heh dragons den: "and what's your average turnover?" "um well, usually apple, but raspery is good too!"
+[21:22:08] *** Schnitter has quit IRC
+[21:30:05] *** betel has joined #lwjgl
+[21:41:46] *** NoobFukaire has quit IRC
+[21:45:38] *** NoobFukaire has joined #lwjgl
+[21:50:34] <doohan> kevglass, reckon at somepoint xmlvm could also work for the Pre?
+[22:01:44] *** locks has joined #lwjgl
+[22:06:56] *** locks has quit IRC
+[22:07:04] *** locks has joined #lwjgl
+[22:09:16] *** Schnitter has joined #lwjgl
+[22:15:18] <kevglass> no idea, what does pre use?
+[22:17:56] <NoobFukaire> html
+[22:18:03] <NoobFukaire> and javascript
+[22:19:00] <kevglass> thats it?
+[22:19:02] <kevglass> nothing else?
+[22:20:12] <NoobFukaire> http://en.wikipedia.org/wiki/Palm_webOS
+[22:21:29] <NoobFukaire> they should have called it the Palm What?
+[22:21:35] <NoobFukaire> or maybe the: Palm Meh
+[22:23:08] <doohan> Well apparently it's capable of opengles
+[22:23:16] <kappaOne> Symbian is still suppose to have biggest market share though
+[22:23:27] <doohan> So I can't imagine them not having some sort of c/c++ toolchain at somepoint
+[22:23:58] <doohan> Symbian phones are still all over the shop though
+[22:24:07] <doohan> Each phone is completely different from the next
+[22:24:11] <kappaOne> it has JavaME though
+[22:24:20] <doohan> That is true
+[22:31:51] <kappaOne> Pre also supports flash, so could use that
+[22:32:04] <doohan> That's true
+[22:32:11] <kappaOne> plus Flash support for aboid would be awesome :)
+[22:32:28] <kappaOne> code java deploy as flash :)
+[22:32:33] <kevglass> yawn :)
+[22:32:41] <kevglass> can't get my AI heuristic right
+[22:34:07] <doohan> kappaOne, http://osflash.org/j2as
+[22:34:13] <doohan> java 2 actionscript
+[22:34:19] <kappaOne> yeh seen that but does it work?
+[22:34:23] <doohan> No idea :)
+[22:35:11] <doohan> I guess it could work the same way as xmlvm stuff, just add flash things
+[22:35:20] <doohan> Instead of objc stuff
+[22:35:49] <kappaOne> yeh think it'd be better to get xmlvm working with flash
+[22:35:50] <doohan> I guess the more targets you aim at though the more likely you are to have problems
+[22:37:33] <MatthiasM> ^why try to target all these inferior platforms ?
+[22:38:05] <kappaOne> they have better deployment/penetration?
+[22:38:18] <MatthiasM> waste of time
+[22:38:24] <kappaOne> easier to use mochiad's with flash games
+[22:39:01] <kappaOne> but mainly since its cool :)
+[22:39:21] <NoobFukaire> just upgraded to gallileo
+[22:39:30] <NoobFukaire> and it broke all the plugins
+[22:39:33] <NoobFukaire> hooray!
+[22:39:40] <MatthiasM> heh
+[22:39:59] <doohan> That j2as look like it hasn't seen anywork since 2005
+[22:40:15] <NoobFukaire> it sucked my SSD died today
+[22:40:27] <NoobFukaire> good thing I keep my home dir on a real HD
+[22:40:42] <MatthiasM> how can a SSD die ? ESD ?
+[22:41:07] <kappaOne> doohan theres also http://osflash.org/projects/j2as3
+[22:41:23] <NoobFukaire> I dunno what happened exactly
+[22:41:24] <kappaOne> again not been updated in a while
+[22:41:25] <doohan> Just found that one too :)
+[22:41:37] <NoobFukaire> it just started throwing all kinds of scary IO errors
+[22:41:45] <NoobFukaire> and I rebooted and grub wouldn't boot
+[22:41:54] <doohan> the j2as3 on google last got an update in march this year
+[22:41:54] <doohan> That
+[22:41:59] <doohan> That's better than 2005
+[22:45:43] <doohan> http://code.google.com/p/j2as3/wiki/PageName
+[22:46:12] * kevglass grins
+[22:46:15] <kevglass> just write an output
+[22:46:24] <kevglass> for xmlvm
+[22:46:57] <doohan> That would probably be the nicest solution
+[22:47:09] <kevglass> as3 isn't that different to objc ;)
+[22:47:11] <kevglass> almost as ugly
+[22:47:16] <doohan> haha
+[22:58:01] <_cg_> kevglass: thank you for coke and code, enjoy it immensly - reading and (trying) to learn ;)
+[22:58:05] <_cg_> good night everyone
+[22:58:21] *** _cg_ has quit IRC
+[22:59:05] <kevglass> wierd.  :)
+[23:05:24] *** kappaTwo has joined #lwjgl
+[23:20:06] *** kappaOne has quit IRC
+[23:27:57] *** Notch_ has quit IRC
+[23:29:01] *** tsku has quit IRC
+[23:32:33] <doohan> hey kevglass
+[23:33:05] <doohan> Started trying to make some retro style box art for the iphone game
+[23:33:18] <Diablo-D3> lol tanks
+[23:33:22] <doohan> Going to photshop it and add walls and things in
+[23:33:27] <doohan> Mkae them glow
+[23:34:05] <kevglass> heh, neat.
+[23:34:53] <doohan> Need to find soemthing to render it in
+[23:34:59] <doohan> gmax doesn't actually have a renderer
+[23:35:01] <kevglass> lwjgl :)
+[23:35:20] <doohan> hmmm
+[23:36:02] <doohan> I'm being told it's bed time now
+[23:36:13] <doohan> Night night everyone
+[23:38:04] *** doohan has quit IRC
+[23:40:26] <kevglass> yay, ref moves around now
+[23:46:33] *** tsku has joined #lwjgl

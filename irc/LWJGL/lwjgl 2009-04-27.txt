@@ -1,0 +1,715 @@
+[00:16:35] *** Evil-Devil has quit IRC
+[00:18:14] *** jonkri has quit IRC
+[00:35:45] * DarkProphet shoots Generics in the face
+[00:35:47] <DarkProphet> argh!
+[00:36:53] * MatthiasM pats DarkProphet
+[00:37:06] <DarkProphet> i solved my problem by the way
+[00:37:14] <DarkProphet> why do I need parents?! so I got rid of em :)
+[00:37:34] <MatthiasM> youkilled them ? O_o ?!?!
+[00:37:45] <DarkProphet> lol, no dude...the xml problem
+[00:37:48] <DarkProphet> with the tree
+[00:37:57] <DarkProphet> lol, i can see how that came across tho :S
+[00:37:58] <DarkProphet> lol
+[00:38:24] <MatthiasM> now be careful - it's in the logs :P
+[00:39:33] <MatthiasM> anyway - n8
+[00:41:45] <aho> nn matt
+[00:42:03] <DarkProphet> aho, your good with generics aren't you? :D
+[00:42:16] <aho> not really .)
+[00:42:26] <aho> i only use the basics... sometimes
+[00:42:38] <DarkProphet> its just my logic with it that needs rectifying :)
+[00:43:36] <DarkProphet> ive got this controller<T> that defines: update(float time, T parent);...its stored in an StormObject<T extends StormObject> ArrayList<Controller<T>>
+[00:44:01] <DarkProphet> StormObject has an update(float) function that goes through all of the controllers and updates em...but its throwing some shitty error on update(...);
+[00:44:18] <aho> bleh :>
+[00:44:23] <DarkProphet> exactly
+[00:47:12] *** do0han has quit IRC
+[01:03:41] <DarkProphet> i'm off to bed
+[01:03:42] <DarkProphet> laers
+[01:03:46] <DarkProphet> laters*
+[01:03:49] *** DarkProphet has quit IRC
+[01:12:16] *** caustic1 has left #lwjgl
+[01:17:12] *** keisangi has joined #lwjgl
+[01:17:47] *** NoobFukaire has quit IRC
+[01:18:51] *** NoobFukaire has joined #lwjgl
+[01:20:42] *** keisangi__ has quit IRC
+[01:53:36] *** locks has quit IRC
+[02:07:08] *** OrangyTang has quit IRC
+[02:17:12] *** locks has joined #lwjgl
+[02:20:57] *** NoobFukaire has quit IRC
+[02:23:09] *** NoobFukaire has joined #lwjgl
+[03:05:41] *** locks has quit IRC
+[03:56:58] *** woogley has joined #lwjgl
+[04:03:33] *** Woflborg3 has quit IRC
+[04:16:25] *** Woflborg has joined #lwjgl
+[04:38:28] <NoobFukaire> man, DSDT is fucking retarded
+[04:39:29] *** MatthiasM has quit IRC
+[04:39:34] *** MatthiasM has joined #lwjgl
+[05:06:56] *** Orphis has quit IRC
+[05:07:00] *** Orphis has joined #lwjgl
+[05:09:20] *** Orphis has quit IRC
+[05:09:26] *** a_insomni has joined #lwjgl
+[05:09:37] *** Orphis has joined #lwjgl
+[05:11:49] *** Orphis has quit IRC
+[05:11:54] *** Orphis has joined #lwjgl
+[05:15:53] *** Woflborg has quit IRC
+[05:47:25] *** Orphis has quit IRC
+[05:47:33] *** Orphis has joined #lwjgl
+[05:58:23] *** Orphis has quit IRC
+[05:58:31] *** Orphis has joined #lwjgl
+[06:02:47] *** Orphis has quit IRC
+[06:03:18] *** Orphis has joined #lwjgl
+[06:09:37] *** Orphis has quit IRC
+[06:14:45] *** Orphis has joined #lwjgl
+[06:28:18] *** woogley has quit IRC
+[06:43:13] *** kbotnen has joined #lwjgl
+[06:46:39] *** kusok_sna has quit IRC
+[08:03:35] *** Dragonene has joined #lwjgl
+[08:44:58] *** do0han has joined #lwjgl
+[08:49:33] *** aho has quit IRC
+[08:57:53] *** jweyrich has joined #lwjgl
+[09:15:22] *** jweyrich has quit IRC
+[09:20:28] *** jweyrich has joined #lwjgl
+[09:39:55] *** Nexon has joined #lwjgl
+[09:40:18] *** Nexon is now known as orisiss
+[09:40:38] *** orisiss is now known as Nezzon
+[09:41:01] *** Nezzon is now known as Jvlaple
+[09:43:18] *** kevglass has joined #lwjgl
+[09:43:36] <Jvlaple> hey
+[09:43:39] <Jvlaple> does anyone know how to make a good swear filter using RegEXP?
+[09:47:30] <do0han> No idea soory Jvlaple
+[09:47:33] <do0han> but
+[09:47:35] <do0han> sheeps!!
+[09:47:35] <do0han> http://media.pyweek.org/dl/8/GI/sheeps2.png
+[09:48:10] <Dragonene> It's just "sheep"
+[09:48:11] <Dragonene> :)
+[09:48:18] <do0han> I know :)
+[09:48:32] <do0han> But it's more fun to call 'em sheeps
+[09:48:46] <do0han> How are you Dragonene?
+[09:49:07] <Dragonene> good.
+[09:49:07] <Dragonene> you?
+[09:49:16] <do0han> Good thanks
+[09:50:26] <do0han> I'm taking part in pyweek but may or may not be cheating since I'm using jython and I might use slick too
+[09:51:00] <Dragonene> slick?
+[09:51:03] <Dragonene> :D
+[09:51:06] <do0han> mmm
+[09:51:06] <Dragonene> awesome.
+[09:51:18] <do0han> That'd also mean I could have an applet too :)
+[09:51:39] <do0han> Instead of just using regular python
+[09:51:54] <do0han> And pygame...euch
+[09:54:54] *** kappaOne has joined #lwjgl
+[09:58:25] <do0han> hey kappaOne
+[09:58:56] <kappaOne> lo there do0han
+[09:59:04] <do0han> How do?
+[09:59:46] <kappaOne> i'm ok, you?
+[10:01:57] <jweyrich> hi guys.
+[10:07:14] <do0han> Good thanks, just telling Dragonene about my strange pyweek entry
+[10:07:27] <do0han> Jython and maybe slick as well :)
+[10:07:36] <kappaOne> oh pyweek and interesting combo
+[10:07:47] <do0han> So far I have sheep
+[10:07:48] <kappaOne> didn't know that slick could be used with python
+[10:07:54] <do0han> http://media.pyweek.org/dl/8/GI/sheeps2.png
+[10:08:00] <do0han> It can't but jython can call java stuff
+[10:08:10] <kappaOne> cool
+[10:08:20] <do0han> I guess it's like cpython using sdl
+[10:08:33] <do0han> So should be allowed, even if it isn't it should be interesting all the same
+[10:09:25] <kappaOne> yeh looks like it fits in the rules
+[10:09:28] <do0han> Trying to work out how to make it into an applet though
+[10:09:53] <do0han> Which would be cool since python doesn't let you do that, java 1 : python 0 :)
+[10:10:00] <kappaOne> hehe
+[10:10:10] <kappaOne> its not too hard to do applets with slick
+[10:10:18] <kappaOne> not sure how jython works
+[10:10:23] <do0han> I know, it's just getting the jython stuff in
+[10:10:33] <do0han> I think it can compile python into java byte code
+[10:14:31] <kappaOne> theres a few jython applets on the jython site
+[10:14:40] <Dragonene> I'm off for a while
+[10:14:42] <Dragonene> later.
+[10:14:50] <do0han> see ya Dragonene
+[10:17:04] <kevglass> mornin
+[10:17:26] <kappaOne> lo kev
+[10:18:09] <do0han> hey kevglass
+[10:23:06] <kappaOne> kev working on anything interesting ?
+[10:24:02] <kevglass> been trying to rationalise the verlet stuff I did for 4k
+[10:24:05] <kevglass> into some normal code
+[10:24:09] <kevglass> integrate with slick
+[10:24:17] <kevglass> make a bridge building / puzzle / bubble / goo game
+[10:24:30] <kevglass> not had much luck yet
+[10:24:41] <kevglass> lost momentum on the rogue like atm
+[10:24:52] <kevglass> doesn't work well on a phone with the current controls and style
+[10:24:56] <kevglass> so lost meaning
+[10:25:51] <kappaOne> oh cool stuff
+[10:26:01] <kappaOne> rouge controls should be fixable
+[10:27:00] <kappaOne> that python + slick thing by do0han looks interesting would be pretty cool if it works
+[10:27:58] <kevglass> rogue controls on a phone just feel naff
+[10:28:11] <kevglass> thinking about changing it to a more tap oriented game
+[10:28:19] <do0han> Phone controls in general feel pretty naff :(
+[10:28:23] <kevglass> tap to move rooms, encounters, a bit like twitter rpg.
+[10:28:34] <kevglass> need to make use of the touch screen ftw I think
+[10:28:46] <do0han> It shame the phone makers don't spend a few more pennies to put nicer button on phones
+[10:28:47] <kappaOne> rts styles controls might work?
+[10:29:55] <do0han> hmmm looks likes they've removed the jython compiler in 2.5
+[10:29:56] <kappaOne> or a joypad that appears on screen once the screen it touched
+[10:30:13] <kevglass> screen res is too small to be putting controls up
+[10:30:14] <do0han> Means I'd need to bundle the jython interpreter with the applet making it pretty big :(
+[10:30:21] <kevglass> touch based rooms would be nicer
+[10:30:27] <kevglass> prolly easier to play anyway
+[10:30:38] <kevglass> but play with the verlet stuff first to get myself back in the swing
+[10:30:43] <kevglass> haven't coded for a couple of weeks now
+[10:30:43] <kappaOne> how big it jython interpreter?
+[10:30:46] <kappaOne> *is
+[10:32:08] <do0han> A few meg
+[10:32:42] <do0han> Tell you in a minute
+[10:32:51] <kappaOne> you can also proguard it
+[10:32:52] * do0han is making the standalone jar just now
+[10:32:54] *** jweyrich has quit IRC
+[10:32:56] <do0han> kappaOne, good thinking
+[10:33:03] <kappaOne> which should cut a lot of the crap
+[10:33:08] <do0han> You might need to tell me how to use that though
+[10:33:11] <kappaOne> but not sure how well it'll work
+[10:33:14] <do0han> hmm
+[10:33:19] <do0han> It's always worth a try though
+[10:33:46] <kappaOne> 3-4mb applet is pretty ok'ish i reckon
+[10:33:50] <do0han> It's 7.68 meg...
+[10:33:55] <kappaOne> O_o
+[10:33:58] <kappaOne> thats pretty heavy
+[10:34:01] <do0han> Exactly.
+[10:34:08] <kappaOne> i've done a slick applet in 300kb
+[10:34:23] <do0han> I don't know how well that#ll trim
+[10:34:25] <kappaOne> and even that was mostly the game resources
+[10:34:48] <do0han> The standalone jar includes all the test classes.
+[10:34:53] <do0han> That's a bit lazy
+[10:35:04] <do0han> Not that many of them though
+[10:35:09] <kappaOne> well if you can get the slick + python application working
+[10:35:14] <kappaOne> applet should be easy
+[10:35:26] <do0han> Still need to get the jython code to run in the applet
+[10:35:39] <do0han> If I can compile the jython to java classes we're gold
+[10:35:55] <do0han> If not and I need to inculde the interpreter I might have to pass on the applet :(
+[10:36:19] <kappaOne> could always use java web start
+[10:36:31] <do0han> I was thinking that
+[10:36:35] *** Dragonene has quit IRC
+[10:36:46] <do0han> I'm going to ask some question in #hython and see what they say
+[10:36:52] <do0han> #jython
+[10:37:01] <do0han> If anyone is awake :)
+[10:40:40] <do0han> I tihnk I;ve found out how to do it
+[10:49:53] *** systat has joined #lwjgl
+[10:52:37] <do0han> kappaOne, does proguard profile the running of a program to see what classes are used and then strip everything else out?
+[10:52:51] <do0han> Including stuff from jars?
+[10:53:14] <kappaOne> no don't think so
+[10:53:25] <kappaOne> think it just checks which class are called in the code
+[10:53:42] <kappaOne> and removes the ones that aren't used
+[10:53:59] <kappaOne> so you may need to manually tell it to include some classes
+[11:04:16] *** weston-code has quit IRC
+[11:13:19] *** doub has joined #lwjgl
+[11:32:19] *** Dragonene has joined #lwjgl
+[11:43:21] <do0han> kappaOne, I'm getting somewhere now
+[11:43:45] <kappaOne> cool
+[11:43:50] <do0han> Just need to sort out this now:  java.security.AccessControlException: access denied (java.io.FilePermission sheep1.png read) :)
+[11:43:57] <do0han> basicly, stick the picture in the jar
+[11:50:52] <do0han> hmm
+[11:51:00] <do0han> I seem to be having some problems with that
+[11:51:09] <Dragonene> hold on a sec
+[11:52:58] <Dragonene> do0han: http://pastebin.com/d7ba020a6
+[11:53:00] <Dragonene> does that help? :)
+[11:53:14] <Dragonene> should be able to load pictures from a JAR file.
+[11:53:25] <do0han> Yeah, I'm having trouble adding them to the jar :)
+[11:53:35] <Dragonene> oh. I see.
+[11:53:41] <do0han> But yea that's the way I'd do that bit :)
+[11:53:46] <Dragonene> ...that shouldn't be hard.
+[11:53:48] <Dragonene> :P
+[11:53:52] <Dragonene> adding them to the jar that is
+[11:53:52] <do0han> I know it shouldn't.
+[11:54:02] <Dragonene> which OS are you on?
+[11:54:13] <do0han> But it's just dumping the contents of the png to stdout and beeping at me
+[11:54:15] <do0han> vista
+[11:54:29] <Dragonene> I mean, if all else fails you, just add it manually
+[11:54:29] <do0han> java 1.6.0_13
+[11:54:38] <Dragonene> (rename to zip, add images to the zip file)
+[11:54:39] <Dragonene> :P
+[11:54:55] <do0han> I thought jar updated other things though?
+[11:55:02] <Dragonene> nah
+[11:55:05] <Dragonene> I don't think so
+[11:55:07] <do0han> in it goes then :)
+[11:55:08] <Dragonene> JAR = ZIP
+[11:55:19] <do0han> I though it had a manifest or seomthing
+[11:55:20] <kappaOne> i usually do
+[11:55:26] <kappaOne> BufferedImage img = ImageIO.read(getClass().getClassLoader().getResource(pathToImage));
+[11:55:31] <kappaOne> to load an image
+[11:55:52] <do0han> I'll need to pythonise that
+[11:55:54] <kappaOne> from a jar
+[11:56:29] <Dragonene> kappaOne probably does stuff more right than I.
+[11:56:32] <Dragonene> So listen to him :)
+[11:57:16] <kappaOne> don't do that, your more likely to fail in the long run :)
+[11:57:45] <do0han> I should have it all working in about 10 minutes if everything goes to plan from here
+[11:58:49] <do0han> hmm
+[11:58:55] <do0han> I normally skip the getClassLoader bit
+[11:59:03] <do0han> getClass().getResource()
+[11:59:10] <do0han> Is there much difference in that really?
+[12:00:18] <kappaOne> can't remember exactly right now but think there was some sort of path problem if i didn't use it
+[12:00:38] <Dragonene> in either case
+[12:00:41] <Dragonene> it's counterintuitive
+[12:00:54] <Dragonene> if this was processing it'd just be something like Image a = new Image("a.gif")
+[12:00:57] <Dragonene> or slick for that matter
+[12:00:58] <Dragonene> :P
+[12:03:10] <do0han> Yeah it should be like that
+[12:03:30] <do0han> For some unknown reason programmers seem to go for counter intuitive
+[12:03:32] <do0han> Not sure why that is
+[12:04:03] <do0han> My other peave is people designing applications they have no intention of using, the usually end up being really useless
+[12:08:15] <do0han> Or rather, don't think about the people that will be using it
+[12:20:09] <do0han> Jython is making it more difficult than it should be to get the classloader
+[12:31:06] *** jonkri has joined #lwjgl
+[12:38:45] *** Woflborg has joined #lwjgl
+[12:39:52] <kbotnen> hmm. this might be a silly question. But I am writing a .obj loader, and now I wonder where the light information is to be found? Is there such thing as "Light0:information...". or is it treated as part of the .mtl, truncated to properties of the material at export time?
+[12:47:19] <kbotnen> geometry only on the .obj ofcourse. so I guess light information is discarded completely then?
+[12:47:45] <kappaOne> yes
+[12:48:55] <kappaOne> but you do have lighting information in the mtl
+[12:49:22] <kappaOne> and normal coordinates in the obj
+[12:51:40] <kbotnen> so the effect is the same when Im loading it in my program.
+[12:52:27] <kbotnen> if there is a light source located at 'a' pointing at 'b' making a bright spot at 'b', the same effect will still be there when exported to .obj and loaded into a new program.
+[12:53:14] <kappaOne> yes
+[12:53:33] <kbotnen> ok. good :)
+[12:53:36] <kappaOne> provided the light is position in the same place in the program
+[12:53:43] <kappaOne> *posititioned
+[12:54:09] <kbotnen> but how can I now where to position it when the information is lost at export.
+[12:54:10] <kbotnen> ?
+[12:54:40] <kappaOne> your 3d program should tell you the position and orientation of the light
+[12:54:44] <kappaOne> source
+[12:55:02] *** MarkusP has joined #lwjgl
+[12:55:16] <kappaOne> just create a similar positioned and orientation light in opengl
+[12:55:42] <kbotnen> my goal is to load random .obj file. so I assume no knowledge about the incoming scenery.
+[12:56:16] <kbotnen> but I guess Im screwed then. with .obj.
+[12:58:08] <kappaOne> light source shouldn't really be part of the model format
+[12:58:49] <kappaOne> if you want a bright spot on the model regardless of light source position it should be part of the model's texture
+[12:59:59] <kappaOne> can be done in some 3d programs by baking the texture with light source
+[13:01:25] <kbotnen> ok. I know .3ds comes with lights and more. so I just assumed that .obj did it too. But I guess first version will be with "ambient" light only then. maybe with an option to provide baked textures, or own lightmaps.
+[13:18:56] *** jweyrich has joined #lwjgl
+[13:19:49] *** Notch_ has joined #lwjgl
+[13:20:24] *** MarkusP has quit IRC
+[13:21:06] <kevglass> it's Notch!
+[13:24:32] <Notch_> it sure is!
+[13:24:39] <Notch_> hey kev
+[13:24:55] *** |Evil-De| has joined #lwjgl
+[13:25:13] <|Evil-De|> hello
+[13:25:18] *** |Evil-De| is now known as Evil-Devil
+[13:51:02] <Dragonene> It is kevglass and Notch_!
+[13:51:14] <Dragonene> And Evil-Devil!
+[13:51:14] <Notch_> it's Dragonene!
+[13:52:20] <kevglass> where?
+[13:52:21] <Dragonene> I haven't tried your LD14 entry yet.
+[13:53:43] <Notch_> i haven't rated any at all yet, been too busy. So I'm going to do as many as I can this week
+[13:54:08] <Notch_> does this work? http://www.mojang.com/notch/bunnypress/
+[13:54:09] <Notch_> err
+[13:54:15] <Notch_> wrong url! http://www.mojang.com/notch/city/
+[13:55:17] <Evil-Devil> is there any goal to reach?
+[13:55:27] <Notch_> no, not yet, it's just an engine test
+[13:55:37] <Notch_> and a walk animation, yay
+[13:55:40] <Dragonene> Haha Notch_, I like the "woohoo" sounds
+[13:55:47] <Evil-Devil> k, runs smoth on this machine and i like the walkin anim ^^
+[13:56:21] *** kappaOne has quit IRC
+[13:56:25] <Notch_> great, thanks. The collision detection is a bit new, I think it's allocating too many objects. Does it eat your ram? =)
+[13:56:32] <Notch_> Dragonene: Thanks! That's me. =D
+[13:56:35] <do0han> Notch_, that's pretty cool
+[13:57:00] <Notch_> oops, meeting time!
+[13:57:27] <kevglass> pretty cool
+[13:57:31] <Evil-Devil> hard to guess if it eats my ram. this is a dev machine and eclipse/firefox all time running.
+[13:57:46] <Evil-Devil> have to test it at home or later when the tools have been shutdown
+[13:58:05] <Dragonene> Notch_: is there a way to restart the level?
+[13:58:12] <Evil-Devil> F5 ;)
+[13:59:25] <Dragonene> no
+[13:59:26] <Dragonene> :)
+[13:59:35] <kevglass> shift+f5
+[13:59:55] <Evil-Devil> weird, mine reloads with F5...
+[14:00:01] <Evil-Devil> ...ok...my FF cache is perm disabled
+[14:00:05] <Notch_> bunny press has escape or backspace, but only in the post compo version
+[14:00:14] <Notch_> the compo version doesn't have that.. i forgot to add it. :-(
+[14:01:10] <Dragonene> Notch_: some levels are just annoying
+[14:01:16] <Dragonene> like this "back and forth" ones
+[14:01:17] <Dragonene> one*
+[14:01:38] <Dragonene> takes forever die to die and you need to herd the rabbits with is a pain to do
+[14:01:39] <Notch_> really? that's my favorite one. =D
+[14:02:03] <Dragonene> Notch_: I couldn't get a rabbit to the goal before it crossed it
+[14:02:08] <Dragonene> and now I have to wait for it to kill me
+[14:02:11] <Dragonene> which takes literally minutes
+[14:02:20] <Dragonene> not very rewarding play time
+[14:02:23] <Notch_> ahh. yeah. the lack of an ability to reset the level in the compo version is VERY bad
+[14:02:32] <Notch_> you can even get stuck forever
+[14:03:02] <Notch_> i wonder when my meeting will start..
+[14:03:10] <Notch_> nobody's showed up yet
+[14:03:36] <elias_naur> wrong conference room?
+[14:04:41] <Evil-Devil> bunnypress -> rated M :D
+[14:04:53] <Dragonene> Yay
+[14:04:55] <Dragonene> "You won"
+[14:05:14] *** systat has quit IRC
+[14:05:16] <Dragonene> Notch_: I've only reviewed about 10-15 games
+[14:05:17] <Notch_> elias_naur: No, double checked. I guess it's just monday
+[14:05:19] <Dragonene> not all that many
+[14:05:58] <Notch_> if everyone does that, we'll have plenty of reviews. =)
+[14:06:15] <Dragonene> Notch_: city works
+[14:06:19] <Dragonene> but has some problems
+[14:06:26] <Notch_> what kind of problems?
+[14:06:32] <Notch_> eating ram? it's eating ram, isn't it?
+[14:06:32] <Dragonene> one rendering issue where the character is not properly hidden by the walls
+[14:06:37] <Dragonene> if you're right next to it and jumping
+[14:06:45] <Notch_> which wall? (the level is always the same)
+[14:06:55] <Dragonene> uh... I was left of a wall to the left
+[14:07:04] <Dragonene> it's sort of in the middle of the map vertically
+[14:07:13] <Dragonene> and I went to the far left where there's a pit you can get stuck in
+[14:07:16] <Dragonene> (no way up)
+[14:07:26] <Dragonene> and if you go as far right as you can in the pit, to the high wall
+[14:07:27] <Dragonene> and you jump
+[14:07:29] <Notch_> ahhh, I see it. It's a double tall wall
+[14:07:35] <Dragonene> yeah
+[14:07:37] <Notch_> yeah, it's rendering through the wall. Thanks
+[14:07:45] <Dragonene> I also think the jumping physics feel a bit, uh...
+[14:07:46] <Dragonene> floaty?
+[14:08:04] <Notch_> noted
+[14:08:19] <Dragonene> And, uhm
+[14:08:22] <Dragonene> It flickers for me
+[14:08:25] <Dragonene> so does bunny press
+[14:08:31] <Notch_> whoa, really?
+[14:08:33] <Notch_> all the time?
+[14:08:34] <Dragonene> aye
+[14:08:37] <Dragonene> no
+[14:08:41] <Dragonene> occasionally
+[14:08:48] <Dragonene> flickers in black
+[14:09:08] <Notch_> that's the bg color of the applet. I'm guessing I should do something better in paint(Graphics g) then
+[14:09:14] <Notch_> or perhaps it's update
+[14:09:28] <Notch_> what java version?
+[14:09:40] <Dragonene> seems to only flicker in opera
+[14:09:56] <Notch_> ah, ok. I'll try it in opera then, tonight.
+[14:10:09] <Notch_> hopefully I'll be able to reproduce it
+[14:10:15] <Notch_> thanks for the help. =)
+[14:10:17] <Dragonene> No, wait
+[14:10:21] <Dragonene> seems to flicker in chrome also
+[14:10:24] <Dragonene> just not as often
+[14:10:52] <Notch_> hm, it's solid for me in chrome
+[14:11:02] <Dragonene> hm, in chrome it only flickers when I defocus or focus the applet
+[14:11:13] <Notch_> ah, got it
+[14:11:30] <Notch_> clicking outside the applet and holding tab pressed makes it flicker
+[14:12:36] <Dragonene> apart from that it looks good
+[14:12:45] <Dragonene> how are you going to use that depth walking mechanic?
+[14:13:33] <Notch_> I'm not sure if I'll keep it or not. One example would be for stairs
+[14:13:59] <Notch_> they'd take up the back half of a tile, so if you walk past it near the front you miss it, but near the back and you walk up the stairs
+[14:14:13] <Dragonene> righ
+[14:14:15] <Dragonene> right
+[14:14:34] <Dragonene> I was going to have a similar mechanic, but with discrete layers, for a blocks-pushing puzzle platformer once
+[14:14:39] <Dragonene> I never finished the game tho
+[14:15:19] <Notch_> finishing games is hard
+[14:15:26] <Notch_> i keep coming up with new ideas, heh
+[14:15:29] <Dragonene> yeah
+[14:15:31] <Dragonene> me too :P
+[14:15:34] <Notch_> i only finish stuff for competitions
+[14:15:39] <Dragonene> aye
+[14:15:40] <Dragonene> same here
+[14:15:56] <Dragonene> Well, just one or two finished games outside competitions really
+[14:15:56] <Notch_> hehe
+[14:16:04] <Notch_> url!
+[14:16:15] <Dragonene> url?
+[14:16:21] <Dragonene> to?
+[14:16:21] <Notch_> i want to see the games. =)
+[14:16:47] <Dragonene> http://www.x2d.org/games
+[14:16:54] <Dragonene> Is my site nowadays :)
+[14:17:10] <Dragonene> Multitris wasn't made for a competition.
+[14:17:25] <Dragonene> Fluffschack wasn't either (although it's not much of a game)
+[14:17:45] <Dragonene> And there's one more that's half-finished that wasn't made for a competition.
+[14:18:04] <Dragonene> It's finished as far as the requirements for school went but not release-worthy :)
+[14:20:08] <Notch_> oh yeah, I remember most of these. You've got talent. =)
+[14:20:32] <Dragonene> Aw, thanks. :>
+[14:20:37] <Dragonene> You would though, wouldn't you
+[14:20:51] <Dragonene> Pretty much every single one of them was made for the java4k or ludum dare
+[14:20:51] <Dragonene> :D
+[14:21:08] <Notch_> haha fluffshack is.. odd. =D
+[14:21:13] <Dragonene> :D
+[14:21:26] <Dragonene> Try this
+[14:21:40] <Dragonene> Go to View (is it called that? Dunno) and check "Hide board"
+[14:21:44] <Dragonene> or uncheck "show board" or whatever
+[14:21:58] <Dragonene> Now, imagine yourself playing five-in-a-row in multiplayer without the board.
+[14:22:03] <Notch_> haha
+[14:22:03] <Dragonene> It's... tricky ;)
+[14:22:09] <Notch_> i think my brain died
+[14:22:13] <Dragonene> Haha
+[14:22:16] <Dragonene> There's patterns though
+[14:22:28] <Notch_> lol alternate mode
+[14:22:38] <Dragonene> :D
+[14:22:51] <Dragonene> look at the help menu and then open the documentation
+[14:22:57] <Dragonene> or about -> help or wherever it may be
+[14:23:02] <Dragonene> then scroll down and it'll show you patterns.
+[14:23:26] *** garrettsf has joined #LWJGL
+[14:23:57] <Notch_> ah
+[14:24:45] <garrettsf> Can this library be used to make a graphics overlay?  the overlay needs to draw over an opengl game.  It would be similar to xfire
+[14:25:39] <Dragonene> Notch_: We put fluffschack under "external links" for "adjacency matrix" for wikipedia, as an educational game. Because it was partly made to be that.
+[14:25:53] <Dragonene> and then later on, we randomly googled for the domain (x2d.org)
+[14:26:06] <Dragonene> and found that there was this link to a college in the US
+[14:26:32] <Dragonene> so we go to the page, and some class has "in-class experiment: use fluffschack [link] to create an adjacency matrix"
+[14:26:39] <Dragonene> it was really quite entertaining. :>
+[14:26:58] <Notch_> neat =)
+[14:27:16] *** kevglass has quit IRC
+[14:27:26] <Notch_> garrettsf: Do you have the source code for that game, or is it a separate precompiled thing?
+[14:28:21] <Dragonene> Notch_: seems to be an exciting meeting
+[15:01:37] <Notch_> it was ok. =)
+[15:01:56] <Notch_> delayed 30 minutes. grr
+[15:06:44] <Dragonene> :>
+[15:08:00] <Dragonene> I wonder if I m
+[15:08:03] <Dragonene> just made a mistake
+[15:08:20] <Dragonene> I sent an e-mail to my project group saying I can't work super hard on the project next week
+[15:08:28] <Dragonene> hope they don't think it's too aggressive or anything
+[15:14:12] <Dragonene> oh well, time for bed
+[15:14:14] <Dragonene> 'night.
+[15:14:57] *** Dragonene has left #lwjgl
+[15:19:06] *** kappaOne has joined #lwjgl
+[15:19:56] <kappaOne> ah java 6 u14-05 released http://blogs.sun.com/SDNProgramNews/entry/java_se_6_update_143
+[15:20:05] *** garrettsf has quit IRC
+[15:20:25] <kappaOne> not changed much looking at the change log
+[15:20:43] <kappaOne> but does have some nice optimisations to increase boot speed
+[15:21:12] <kappaOne> such as lazy loading a few classes that don't need to be loaded at boot time
+[15:24:20] <do0han> It's alive!!
+[15:24:45] <kappaOne> O_0
+[15:25:07] <do0han> MUAHAHAHAHAHA
+[15:25:13] <do0han> And so forth
+[15:26:30] <do0han> The whole thing comes in at around 2.5 meg
+[15:26:35] <do0han> 2.32 rather
+[15:26:38] <do0han> but no slick yet
+[15:26:52] <kappaOne> ah thats very nice
+[15:27:01] <do0han> I'm going to be honest and say this is more hasle than it's really worth though, better off just using java :)
+[15:27:07] <kappaOne> slick isn't really that big especially once you delete the svg package :)
+[15:27:19] <Evil-Devil> why to use slick?
+[15:27:35] <do0han> Well, I'm using jython for pyweek
+[15:27:55] <do0han> And I have regular j2d working so far
+[15:27:56] <kappaOne> jpython + java + native library + applet = cool :)
+[15:28:00] <do0han> Yup
+[15:28:22] <do0han> What kappaOne said :)
+[15:29:08] <do0han> Oh I take that back
+[15:29:14] <do0han> It's onl 938kb
+[15:29:21] <do0han> :)
+[15:30:08] <Evil-Devil> does slick support DDS allready or still not suppored?
+[15:30:12] <Evil-Devil> supported
+[15:30:38] <kappaOne> not supported
+[15:31:02] <Evil-Devil> so still no use for me :|
+[15:32:18] <do0han> kappaOne, does this work for you:  http://graveindustries.com/doohan/pyweek/applet.html
+[15:32:45] <Notch_> works for me. Neat graphics =)
+[15:33:05] <do0han> Cheers Notch_ :)
+[15:33:10] * kappaOne waits for his computer to explode as he clicks the link
+[15:33:14] <do0han> Haha
+[15:33:24] <do0han> Just regular j2d just now
+[15:33:27] <kappaOne> yup works pretty well
+[15:33:31] <do0han> Woo
+[15:33:39] <Notch_> the fps seems a bit low/wonky
+[15:33:50] <do0han> Yeah, well I only call repaint every 30ms
+[15:33:56] <do0han> And update
+[15:34:01] <Notch_> it's mostly 31/32, and every now and then a 60-something flashes by
+[15:34:12] <do0han> 60?
+[15:34:13] <do0han> That's odd
+[15:34:14] <Notch_> you should look into doing an active rendering loop instead
+[15:34:21] <do0han> How would that work?
+[15:34:47] <do0han> Or rather, what do you mean by active?
+[15:35:09] <Notch_> you do all rendering yourself, and leave paint() and update() alone. possibly by using BufferStrategy
+[15:35:17] <do0han> Ahh
+[15:35:30] <Notch_> if you rely on paint() and update(), all the rendering goes via the awt dispatch thread, which can cause odd delays
+[15:35:49] <do0han> ahh
+[15:35:55] <Notch_> I'm not saying it has to be the right solution for your project. But I know I've had good experiences with it. =)
+[15:35:59] <do0han> At the moment I'm using a swingTimer to call repaint
+[15:36:24] <Notch_> http://java.sun.com/javase/6/docs/api/java/awt/image/BufferStrategy.html
+[15:36:30] <Notch_> there's some great example code there
+[15:36:41] <do0han> I'm reading this one just now: http://java.sun.com/docs/books/tutorial/extra/fullscreen/rendering.html
+[15:49:57] <do0han> I need a reminder, do I have to change anything in a slick game to make it an applet?
+[15:50:02] <do0han> Does it just have to implement basic game?
+[15:50:27] <kappaOne> nope
+[15:50:37] <do0han> Excellent
+[15:50:42] <kappaOne> just create a normal slick application
+[15:51:10] <kappaOne> and just call the AppletGameContainer to run it through html
+[15:51:16] <do0han> Excellent
+[15:53:27] <kappaOne> heres a slick applet example if it helps http://bossattack.com/games/temp/applet_example.zip
+[15:55:23] <do0han> cheers kappaOne I'll let you know soon as I have something working :)
+[16:16:34] *** Schnitter has joined #lwjgl
+[16:27:07] <do0han> hmmm
+[16:27:20] <do0han> jython isn't the most well documented thing in the world.
+[16:39:21] *** jweyrich has quit IRC
+[16:41:41] *** jweyrich has joined #lwjgl
+[16:43:06] <do0han> kappaOne, I don't know if I can get this to work
+[16:43:20] <do0han> Mon Apr 27 15:44:24 BST 2009 ERROR:MyGame
+[16:43:20] <do0han> java.lang.InstantiationException: MyGame
+[16:43:20] <do0han> 	at java.lang.Class.newInstance0(Unknown Source)
+[16:43:20] <do0han>
+[16:48:06] *** Notch_ has quit IRC
+[16:49:41] <do0han> Is there an equivalent to void Rawr() throws crazyException
+[16:49:48] <do0han> wrong chan
+[16:53:01] *** kappaTwo has joined #lwjgl
+[16:53:38] *** kappaOne has quit IRC
+[16:54:35] <kappaTwo> eww that looks like a horrid exception
+[16:56:01] <do0han> mmm
+[16:56:16] <do0han> No idea how to go about debugging it reallty
+[16:57:19] <do0han> I think it has somethin to do with the way that basic game is extended then you have to override certain methods
+[17:04:03] *** systat has joined #lwjgl
+[17:13:16] * Evil-Devil pushes Schnitter in the pool :p
+[17:13:30] <Schnitter> wh00t :D
+[17:25:03] <do0han> I could really do with more verbose errors
+[17:30:00] *** DarkProphet has joined #lwjgl
+[17:35:42] <do0han> kappaTwo, I think I might be giving up on getting slick to work with jython
+[17:39:32] <kappaTwo> oh well bests go with what works then
+[17:40:23] <kappaTwo> but was a cool idea
+[17:40:29] <do0han> Just looking through the code java that the compiler spits out
+[17:40:40] <kappaTwo> would have been pretty awesome to get fast hardware accelerated python
+[17:40:58] <kappaTwo> embeded applet games
+[17:41:06] <do0han> That is would
+[17:41:10] <do0han> I don't think it's impossible
+[17:41:21] <do0han> I think I'd just need a better understanding of what's going on in jython
+[17:41:28] <kappaTwo> its probably too many hoops to jump thourgh to get a simple game up
+[17:41:46] <do0han> It's certainly feeling that way at the moment
+[17:42:03] <do0han> Though I'm sure if you could get the framework set up you could automate alot of it
+[17:43:24] <do0han> kappaTwo, that's the python converted to java: http://pastebin.com/m23704b62
+[17:44:08] <DarkProphet> ello
+[17:44:19] <do0han> lo DarkProphet
+[17:51:53] <NoobFukaire> doohan: alot of that is gonna change w/ java 7
+[17:52:09] <NoobFukaire> dynamic languages won't have to be handled in as much of an "alien" way
+[17:52:30] <do0han> NoobFukaire, yeah java 7 should have lots of nice things in it
+[17:54:30] <do0han> But that doesn't make jython suck less at the moment :)
+[17:56:33] <do0han> I mean, it's not terrible, it's just easier to stuff in java than it is to use jython to do it
+[17:58:28] <do0han> I'm not sure why the AppletGameContainer doesn't like that class
+[17:58:36] <do0han> It looks like it has all the right stuff in it
+[18:03:08] <Schnitter> http://msdn.microsoft.com/en-us/devlabs/cc950524.aspx
+[18:03:10] <Schnitter> O_o
+[18:04:41] <NoobFukaire> that's pretty cool
+[18:04:46] <NoobFukaire> it would be great for kids
+[18:05:03] <Evil-Devil> Work is over ^^
+[18:08:44] *** Evil-Devil has quit IRC
+[18:46:46] *** Woflborg has quit IRC
+[18:59:04] *** kappaTwo has quit IRC
+[19:04:04] *** david_koontz has joined #lwjgl
+[19:15:42] *** kappaOne has joined #lwjgl
+[19:28:55] *** bobjob has joined #lwjgl
+[19:30:59] *** doub has quit IRC
+[19:35:40] *** roxlu_ has quit IRC
+[19:36:34] *** DarkProphet has quit IRC
+[19:42:20] *** NoobFukaire has quit IRC
+[19:58:13] *** Woflborg has joined #lwjgl
+[20:01:33] *** kevglass has joined #lwjgl
+[20:04:04] <kevglass> evening
+[20:08:48] <do0han> evening
+[20:08:58] <do0han> kevglass, I can't get slick to work with jython :(
+[20:10:22] *** aho has joined #lwjgl
+[20:12:57] <kevglass> oh, thats a shame
+[20:13:42] <kevglass> was it just a statement
+[20:13:45] <kevglass> ?
+[20:13:45] <kevglass> :)
+[20:14:57] <aho> there isn't anything in the way
+[20:15:13] <aho> jython is pretty meh tho :>
+[20:15:22] <kevglass> jython is lovely.
+[20:15:24] <aho> does it still do this indexing thing?
+[20:15:25] <kevglass> everyone knows that.
+[20:15:49] <kappaOne> jruby > jython :)
+[20:16:05] <kevglass> java > jruby > jython
+[20:16:09] <kevglass> scripting in java = bit daft.
+[20:18:01] <do0han> aho I can't use jruby for pyweek :)
+[20:18:15] *** locks has joined #lwjgl
+[20:22:40] <do0han> kevglass, the appletcontainer couldn't instantiate the jython class that extended BasicGame
+[20:22:49] <do0han> But I couldn't work out why
+[20:23:25] <do0han> The error didn't tell me enough
+[20:23:37] <do0han> ANd I don't know enough about slick or jython to really make it work
+[20:23:44] <do0han> But, it would have been cool though :)
+[20:25:20] <aho> Inspired Bicycles - Danny MacAskill April 2009 | http://www.youtube.com/watch?v=Z19zFlPah-o
+[20:25:23] <aho> O_O
+[20:30:42] <do0han> That's crazy
+[20:30:54] <aho> it's NAAAAWTS!
+[20:30:58] <aho> :)
+[20:33:11] *** Schnitter_ has joined #lwjgl
+[20:33:48] <bobjob> wow, its allllll in the bike, :P
+[20:34:57] *** Schnitter_ has quit IRC
+[20:42:09] *** Jvlaple has quit IRC
+[20:42:36] *** kappaOne has quit IRC
+[20:42:50] <kevglass> um, you got an error?
+[20:43:49] <do0han> Yes I did
+[20:45:14] <do0han> kevglass, http://pastebin.com/m426aa089
+[20:45:32] *** Orphis_ has joined #lwjgl
+[20:46:15] <kevglass> was there any more
+[20:46:25] <kevglass> normally you'd get a cause from InstatiationExpceiton
+[20:46:55] <do0han> Fraid not :(
+[20:47:13] <do0han> If there was more error I wouldn't have given up so fast
+[20:49:26] <aho> how does your jython code look like?
+[20:50:32] <do0han> One sec
+[20:50:43] <aho> and how do you create the interpreter and invoke the script?
+[20:51:11] <do0han> Well, I'm using jythonc to compile it to java which is then compiled using javac
+[20:51:15] <do0han> I can show you both things
+[20:51:16] <do0han> one sec
+[20:51:31] <aho> oh
+[20:51:40] <aho> thought you were using the interpreter directly
+[20:51:45] <aho> (that's how i did it)
+[20:51:57] <kevglass> in that case have you got the jar with the class in somewhere?
+[20:52:08] <do0han> I do
+[20:52:13] <do0han> Would you like the whole lot?
+[20:52:38] <kevglass> sure, sounds fun
+[20:52:42] <do0han> Cool :)
+[20:53:09] <aho> pyInt.execfile(getClass().getResourceAsStream(script_name));
+[20:53:09] <aho> playable = (Playable) pyInt.get("playable", Playable.class);
+[20:53:12] <aho> did it like that
+[20:53:21] <aho> Playable is some interface btw
+[20:53:26] <do0han> I have a working applet already but not using slick just j2d
+[20:53:42] <do0han> kevglass, do you have jython 2.21 installed?
+[20:53:44] <aho> class Test(Playable): <- jython side
+[20:53:54] <kevglass> no
+[20:54:02] <kevglass> jython is da evils!
+[20:54:22] *** kappaOne has joined #lwjgl
+[20:55:07] <do0han> ah well
+[20:55:14] <do0han> The python code is: http://pastebin.com/m5c58476
+[20:55:27] <do0han> the javaified version of it is: http://pastebin.com/m41049b63
+[20:56:36] <aho> oh barf
+[20:56:38] <aho> :>
+[20:56:42] <do0han> mmmm
+[20:56:44] <do0han> Exactly
+[20:57:00] <do0han> But it does look like it has the right method signatures
+[20:57:28] <bobjob> im not fimilar with jython or its uses, what is the reason that someone would not directly program in java?
+[20:57:45] <do0han> pyweek
+[20:57:50] <do0han> :)
+[20:58:40] <aho> sparkle some sysouts over it... and see how far it gets
+[20:58:40] *** Orphis__ has joined #lwjgl
+[20:59:02] <do0han> I tried that, it didn't seem to even do the __init__
+[21:00:11] <david_koontz> bobjob: python is also a much higher level language, can be easier for complex logic, same for Ruby via JRuby
+[21:00:49] <kevglass> need no arg constructor
+[21:01:09] <do0han> No arg constructor?
+[21:01:22] <aho> public Barf(){...}
+[21:01:27] <kevglass> public MyGame() { super("MyGame") }
+[21:01:36] <do0han> That's in there isn't it
+[21:01:40] <kevglass> applet doesn't pass in a game name for you
+[21:01:47] <do0han> def __init__(self):
+[21:01:47] <do0han> 		BasicGame.__init__(self,"RAWR")
+[21:01:47] <do0han> 		print dir(self)
+[21:01:55] <bobjob> k, i see, thanx david
+[21:02:02] <do0han> That's the closest it has to super.
+[21:02:04] *** Orphis has quit IRC
+[21:02:18] <kevglass> in the java version the MyGame consturctor takes a string
+[21:02:56] <do0han> Ahhh
+[21:02:57] <do0han> I see that
+[21:03:03] <do0han> Well spotted
+[21:03:12] <do0han> Gah, how do I make python not put that in there
+[21:03:40] <do0han> jython rather
+[21:08:59] *** Orphis_ has quit IRC
+[21:14:49] *** jweyrich_ has joined #lwjgl
+[21:21:37] *** locks has quit IRC
+[21:25:37] *** jweyrich has quit IRC
+[21:35:20] <kevglass> any luck?
+[21:36:04] <do0han> Looking more at it now, was sorting out some stuff for work.
+[21:36:18] <do0han> The way it mangles the constructor is a bit of a pain.
+[21:36:37] *** Schnitter has quit IRC
+[21:46:10] *** kevglass has quit IRC
+[21:47:56] <do0han> can anyone think of any string that self would have?
+[21:48:33] *** OrangyTang has joined #lwjgl
+[22:02:28] <do0han> Looks like theres nothing that can make the constructor right
+[22:09:01] *** Nanowar has joined #lwjgl
+[22:10:48] *** kappaOne has quit IRC
+[22:11:08] *** jweyrich has joined #lwjgl
+[22:15:34] *** caustic1 has joined #lwjgl
+[22:17:11] *** Gwinnell has joined #lwjgl
+[22:29:56] *** HideousNashimoto has joined #lwjgl
+[22:30:41] *** jweyrich_ has quit IRC
+[22:31:18] <do0han> Don't suppose anyone here is set up to compile slick are they?
+[22:31:46] <MatthiasM> that's easy
+[22:32:05] *** HideousNashimoto has quit IRC
+[22:32:35] *** HideousNashimoto has joined #lwjgl
+[22:34:05] <do0han> Hmm
+[22:34:08] <do0han> I have another solution
+[22:44:38] *** kappaOne has joined #lwjgl
+[22:47:01] *** systat has quit IRC
+[22:48:19] *** jweyrich has quit IRC
+[22:53:56] *** Scient|wrk has quit IRC
+[22:54:11] *** Scient|wrk has joined #lwjgl
+[23:17:49] *** OrangyTang has quit IRC
+[23:43:32] *** kappaOne has quit IRC
+[23:49:38] *** kbotnen has quit IRC
+[23:55:33] *** Scientz has joined #lwjgl
+[23:59:09] *** Scientz is now known as Scient_

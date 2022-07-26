@@ -1,0 +1,510 @@
+[00:01:33] *** kappaOne has quit IRC
+[00:03:26] *** jweyrich has joined #lwjgl
+[00:04:58] <kbotnen_> monty_hall, export to .obj. and use GLapp to handle it.
+[00:05:10] <kbotnen_> it also handles .3ds (the format) but not as good.
+[00:05:50] <kbotnen_> glapp library is here: http://potatoland.com/code/gl/
+[00:06:54] <kbotnen_> or you can use the mri3ds (not maintained any longer) which do handle .3ds files. But I ended up with glapp since it still maintained.
+[00:10:48] *** natte|wrk has quit IRC
+[00:11:05] *** natte|wrk has joined #lwjgl
+[00:26:38] *** kbotnen_ has quit IRC
+[00:26:53] *** davedes has joined #lwjgl
+[00:32:07] *** Scient has quit IRC
+[00:33:18] *** Scient has joined #lwjgl
+[00:38:05] *** do0han has quit IRC
+[01:45:05] *** betel has quit IRC
+[01:53:21] *** betel has joined #lwjgl
+[01:58:06] *** systat has quit IRC
+[02:11:01] *** OrangyTang has joined #lwjgl
+[02:15:17] *** bobjob has quit IRC
+[02:49:56] *** jweyrich_ has joined #lwjgl
+[02:54:09] *** davedes has quit IRC
+[03:01:33] *** jweyrich has quit IRC
+[03:06:15] *** woogley has joined #lwjgl
+[03:09:17] *** david_koontz has quit IRC
+[03:17:23] <NateS> mooooooo
+[03:17:24] *** NateS has quit IRC
+[03:37:16] *** betel has quit IRC
+[03:48:53] *** jweyrich_ is now known as jweyrich
+[04:21:12] *** Dragonene has joined #lwjgl
+[04:41:10] *** MatthiasM has quit IRC
+[04:41:14] *** MatthiasM has joined #lwjgl
+[04:49:02] *** OrangyTang has left #lwjgl
+[05:37:11] *** monty_hall has quit IRC
+[06:20:29] *** Orphis has joined #lwjgl
+[06:36:00] *** Orphis_ has quit IRC
+[06:38:33] *** kappaOne has joined #lwjgl
+[06:52:14] *** kbotnen has joined #lwjgl
+[07:15:31] *** aho has quit IRC
+[07:17:05] *** kbotnen_ has joined #lwjgl
+[07:35:25] *** kbotnen has quit IRC
+[07:38:34] *** jweyrich_ has joined #lwjgl
+[07:47:52] *** jweyrich has quit IRC
+[08:00:54] *** pstickne_ has quit IRC
+[09:01:29] *** woogley has quit IRC
+[09:20:52] *** Schnitter has joined #lwjgl
+[09:41:37] <Mazon> http://www.youtube.com/watch?v=e3kyNGVK-hI
+[10:10:04] *** betel has joined #lwjgl
+[10:10:36] <Dragonene> MatthiasM: you around?
+[10:10:45] <MatthiasM> yep
+[10:11:30] <Dragonene> hm, I think I may have just solved it
+[10:11:54] <MatthiasM> and I just uploaded a patch to TWL :)
+[10:13:05] *** kbotnen__ has joined #lwjgl
+[10:16:18] <Dragonene> agh
+[10:16:24] <Dragonene> I have the most annoying problem
+[10:16:27] <Dragonene> :P
+[10:16:42] <Dragonene> See, I have this BigInteger that I write as a string to a file
+[10:16:46] <Dragonene> And then I read it again
+[10:17:11] <Dragonene> But see, when I re-read it, I may lose leading 0s
+[10:17:15] <Dragonene> And I can't allow that
+[10:19:26] *** notch has joined #lwjgl
+[10:19:39] <Dragonene> Heya notch
+[10:19:45] <notch> hey =)
+[10:19:58] <MatthiasM> Dragonene: why?
+[10:20:54] <Dragonene> MatthiasM: Uhm, because even the 0s could potentially mean something.
+[10:21:10] <notch> what are you discussing? =D this sounds like fun
+[10:21:34] <MatthiasM> design issues :P
+[10:22:14] <Dragonene> Well, I just discovered I had the number of bits desired saved in the txt file
+[10:22:16] <Dragonene> so I can just add 0s
+[10:22:21] <Dragonene> It's still not working though
+[10:22:22] <Dragonene> ack :S
+[10:31:41] *** kbotnen_ has quit IRC
+[10:33:51] <Dragonene> I just got an arrayindexoutofbounds at -11158
+[10:33:52] <Dragonene> :S
+[10:34:00] <MatthiasM> nice :)
+[10:34:13] <MatthiasM> if you now wait long enough it will be positive again :P
+[10:35:17] <Dragonene> yay, I fixed it
+[10:35:18] <Dragonene> :D
+[10:35:44] <Dragonene> Now to test if my "improvement" actually improves anything.
+[10:35:48] <Dragonene> I doubt it.
+[10:36:19] <Dragonene> MatthiasM: I'm implementing LZ77
+[10:36:37] <MatthiasM> why do you need BigInteger for that ?!?
+[10:37:42] <Dragonene> Hah, well, the base code is a port of a python implementation
+[10:37:56] <Dragonene> and the python version makes use of the fact that python's integers can have arbitrary length
+[10:38:49] <MatthiasM> take a C example as base
+[10:38:56] <MatthiasM> should be easier and faster
+[10:39:24] <Dragonene> Well
+[10:39:26] <Dragonene> I don't have one
+[10:39:32] <Dragonene> the python example was provided by our lecturer.
+[10:39:46] <Dragonene> Also, I'm running out of time
+[10:39:49] <Dragonene> so no time to start over
+[10:40:10] <MatthiasM> ohh
+[10:40:27] <Dragonene> *Agh*, I just implemented a feature that's supposed to improve compression
+[10:40:40] <Dragonene> It made the file bigger
+[10:40:41] <Dragonene> :(
+[10:40:44] <MatthiasM> heh
+[10:41:49] *** betel has quit IRC
+[10:46:19] <notch> :D
+[10:47:05] <MatthiasM> compression is a very complex topic
+[10:47:25] <notch> bordering on AI research
+[10:54:31] *** Core-Dump has joined #lwjgl
+[10:57:20] *** systat has joined #lwjgl
+[11:14:51] *** jweyrich_ has quit IRC
+[11:18:16] <Dragonene> So far, I've managed to slow my compression down and make it worse. We're supposed to improve upon it. :S
+[11:18:17] <Dragonene> Ack
+[11:19:52] <notch> :D
+[12:10:18] *** Core-Dump has quit IRC
+[12:27:53] *** Scient has quit IRC
+[12:30:20] *** Scient has joined #lwjgl
+[12:49:28] *** Evil[1] has joined #lwjgl
+[12:49:44] <Evil[1]> howdy :-)
+[13:41:34] *** Evil[1] has quit IRC
+[14:26:09] *** OrangyTang has joined #lwjgl
+[14:27:56] *** logan_barnett has joined #lwjgl
+[15:04:45] *** Gwinnell has joined #lwjgl
+[15:18:44] *** kevglass has joined #lwjgl
+[15:18:48] <kevglass> lo
+[15:19:13] <notch> kev
+[15:19:45] <kevglass> how do?
+[15:20:02] <notch> do confused. do?
+[15:20:12] <kevglass> do good.
+[15:24:09] <kevglass> http://www.cokeandcode.com/yoren/yoren3.png
+[15:24:17] <kevglass> getting somewhere! :)
+[15:24:25] <kevglass> <-- enjoying code again, tis strange.
+[15:24:29] <Dragonene> It's bread!
+[15:24:33] <kevglass> it is!
+[15:24:35] <Dragonene> Good going kev :)
+[15:24:42] <notch> nice =)
+[15:24:49] <notch> what's your trick? I don't enjoy at all right now
+[15:24:58] <kevglass> http://www.cokeandcode.com/images3/yoren4.png
+[15:25:01] <kevglass> just started on combat
+[15:25:02] <Dragonene> Why is there a "weapon down" button?
+[15:25:09] <kevglass> thats a parry skill.
+[15:25:13] <Dragonene> oh
+[15:25:16] <Dragonene> That's not obvious.
+[15:25:17] <Dragonene> :)
+[15:25:18] <kevglass> heh
+[15:25:23] <kevglass> free art
+[15:25:31] <kevglass> will redraw skills with time
+[15:25:33] <Dragonene> kevglass: Oh, tactical combat?
+[15:25:39] <Dragonene> That's nice.
+[15:25:42] <kevglass> not sure really :)
+[15:26:12] <Dragonene> I'm sort of enjoying game code, but this thing I'm working on for school
+[15:26:15] <Dragonene> Ack, it's killing me
+[15:26:19] <Dragonene> I just want it to be over with
+[15:26:28] <Dragonene> But I need to keep working on it because I'm running out of time
+[15:27:03] <kevglass> work is like that :(
+[15:27:08] <kevglass> but tis ok, week off.
+[15:27:26] <Dragonene> Lucky you. :)
+[15:27:33] <Dragonene> I'm having the very opposite of week off
+[15:27:56] <kevglass> sry :)
+[15:33:26] <OrangyTang> lo all
+[15:33:54] <Dragonene> Hey OT
+[15:33:57] <Dragonene> How's it going?
+[15:34:19] <OrangyTang> not bad, but game progress is slowed right down :S
+[15:36:12] <Dragonene> Yeah, I know how that feels.
+[15:36:12] <Dragonene> :)
+[15:37:02] <OrangyTang> thou i did get this neat piece of debug functionality in http://triangularpixels.net/games/development/2009/05/07/get-rescuesquad2renderstats-11/
+[15:39:11] <Dragonene> Oh cool
+[15:39:41] <kevglass> heh, daft but cool :)
+[15:43:02] <OrangyTang> want to get it returning internal gl state like textures and render targets for easier debugging
+[16:10:44] *** NoobFukaire has quit IRC
+[16:23:50] <kevglass> ack, boredom
+[16:24:19] <kevglass> anyone got a demo?
+[16:27:44] *** NoobFukaire has joined #lwjgl
+[16:49:37] *** woogley has joined #lwjgl
+[17:06:40] <logan_barnett> kevglass: Did I ever give you a download for Gravitor?
+[17:08:32] <logan_barnett> kevglass: In case I didn't: http://www.logustus.com/2009/01/gravitor.html
+[17:08:37] <Dragonene> 'fraid not kevglass :)
+[17:08:41] <logan_barnett> Links at the bottom.
+[17:10:45] *** doohan has joined #lwjgl
+[17:15:55] *** logan_barnett has quit IRC
+[17:22:39] *** Core-Dump has joined #lwjgl
+[17:27:22] <doohan> lo everyone
+[17:27:32] <NoobFukaire> hey
+[17:27:47] <Dragonene> hi
+[17:28:07] <doohan> how you guys doing?
+[17:28:49] <NoobFukaire> awesome
+[17:32:52] *** natte|wrk_ has joined #lwjgl
+[17:34:09] *** natte|wrk has quit IRC
+[17:50:03] *** lefty2shoes has joined #lwjgl
+[17:51:49] <doohan> Good
+[17:53:23] *** lefty2shoes has quit IRC
+[18:15:37] *** Riven_ has joined #lwjgl
+[18:19:44] *** kevglass has quit IRC
+[18:20:10] *** kevglass has joined #lwjgl
+[18:22:42] <Riven_> hey kev, any new screenies?
+[18:23:39] *** woogley has quit IRC
+[18:26:41] *** Core-Dump has quit IRC
+[18:30:56] *** kevglass has quit IRC
+[18:34:13] <NoobFukaire> http://voices.washingtonpost.com/securityfix/2009/05/zeustracker_and_the_nuclear_op.html
+[18:34:26] <NoobFukaire> lol
+[18:46:15] <Riven_> might just as well be a 'charity' that buys out botnets and 'frees' them from their chains =D
+[18:46:25] <Riven_> i could imagine more subtile ways though
+[18:50:43] *** kevglass has joined #lwjgl
+[18:50:49] <kevglass> whee
+[18:51:09] <Riven_> the moment we all have been waiting for!
+[18:51:11] <Dragonene> time for bed.
+[18:51:13] <Dragonene> 'night.
+[18:51:18] <kevglass> awwww
+[18:51:22] <doohan> Night Dragonene
+[18:51:41] *** Dragonene has left #lwjgl
+[18:51:47] <doohan> Lo kevglass
+[18:52:26] <kevglass> lo
+[18:53:34] <Riven_> hey kev, what's the ETA on your new screeny
+[18:55:27] <kevglass> bout a week maybe
+[18:55:28] <kevglass> ?
+[18:55:53] <Riven_> oh man! you were popping out screenies on a daily basis!
+[18:56:33] <kevglass> I'm on holiday for a week as of tomorrow
+[18:56:57] <kevglass> going to the seaside with my wife and daughter
+[18:57:00] <Riven_> i hope it's worth being away from a keyboard for that long
+[18:57:01] <kevglass> yay for buckets and spades.
+[18:57:29] <Riven_> manual labor on holiday?
+[18:59:45] <Riven_> or is it some expression i'm unfamiliar with
+[19:00:36] <NoobFukaire> http://games.slashdot.org/article.pl?sid=09/05/09/1436248&art_pos=2
+[19:00:36] <elias_naur> toy buckets and spades?
+[19:00:39] <NoobFukaire> wouldn't that be crazy
+[19:01:57] * kevglass nods
+[19:02:01] <kevglass> toy buckets and spades
+[19:02:08] <kevglass> for making the sand castles with don't you know
+[19:02:19] <Riven_> little miss kevin :p
+[19:02:23] <kevglass> ;)
+[19:03:15] <Riven_> one day, i'll be thrilled with anticipation for such acts, too!
+[19:03:32] <kevglass> heh
+[19:03:36] <NoobFukaire> man, it would be AWESOME if apple bought EA and forced them to make games for macintosh
+[19:03:38] <kevglass> you can but hope
+[19:03:46] <kevglass> that would suck NoobFukaire
+[19:03:48] <NoobFukaire> opengl would get a huge shot in the arm
+[19:03:56] <NoobFukaire> directx would take a hit
+[19:04:27] <Riven_> fukaire, your sentense would be much more sensible when it would have ended at the word 'games'.
+[19:04:59] <NoobFukaire> that's an interesting pretence, Riven_
+[19:05:01] <Riven_> nowadays they just release beta stuff
+[19:05:18] <NoobFukaire> I wouldn't know, I can't remember the last EA game I've bought
+[19:05:21] <NoobFukaire> maybe Alice?
+[19:05:33] <NoobFukaire> wait no
+[19:05:34] <NoobFukaire> BF2
+[19:05:47] <Riven_> for me it was C&C: the first decade - you can't lose money on that one
+[19:06:08] <notch> it's free? :-O
+[19:06:21] <Riven_> the game before that, from EA was RedAlert2... so i'm not playing that much games, as you may have noticed
+[19:06:50] <Riven_> hey notch, i have this weird question for you
+[19:07:04] <kappaOne> GTA games make tons of money and EA has that too
+[19:07:05] <notch> awesome
+[19:07:15] <NoobFukaire> man they have the rights to all the awesome bullfrog titles
+[19:07:24] <NoobFukaire> Syndicate, Dungeon Keeper, Magic Carpet
+[19:07:37] <NoobFukaire> it's a shame peter molyneux sucks at making games now
+[19:07:43] <notch> what? gta is published by rockstar, isn't it?
+[19:07:56] <NoobFukaire> and that a company like EA owns awesome IP like that
+[19:07:58] <Riven_> aren't you secretly very proud that after is has been so long since you did your stuff to WurmOnline, that that bunch of programmers that took over, weren't able to change much to your masterpiece?
+[19:08:01] <NoobFukaire> and makes GARBAGE instead
+[19:08:31] <notch> something like that, Riven_. =)
+[19:08:48] <Riven_> i find the lack of added features such a shame
+[19:09:15] <Riven_> but hey, i guess, in return for leaving Wurm, you got your life back
+[19:09:24] <notch> there's been a fair bit of added features, to be fair
+[19:09:53] <Riven_> nothing fancy in the terrain renderer, and most new features eat serious GPU and CPU cycles.
+[19:09:59] <notch> I'm planning on losing my life again. ;)
+[19:10:09] <Riven_> big plans?
+[19:10:17] <notch> I quit my job for a non gamedev job so I can focus on indie games on my free time
+[19:10:27] <Riven_> seriously..
+[19:10:33] <Riven_> i hope you saved up some money :)
+[19:10:35] <notch> I'm not technically allowed to make games during my free time
+[19:10:39] <Riven_> will be hard times
+[19:10:46] <Riven_> wtf
+[19:10:49] <notch> the new job pays more than my current one
+[19:11:08] <Riven_> i'm allowed to work on my own libs at work, and use them however i see fit =) (fancy contract!)
+[19:11:50] <notch> nice
+[19:11:53] <Riven_> hm... J2EE?
+[19:11:57] <Riven_> i mean.. JEE
+[19:12:11] * kevglass nods.
+[19:12:18] <kevglass> real life (tm)
+[19:12:58] <kevglass> there ya go riven: http://www.cokeandcode.com/yoren/yoren5.png
+[19:13:15] <Riven_> i do a lot of serverside stuff too, but then again, datamining server software sometimes gets dull too, i only like it for the insane optimising
+[19:13:23] <kappaOne> is that a vista background in that screenshot? :)
+[19:13:30] <kevglass> shhh ;)
+[19:13:40] <Riven_> (fluffy gfx)++
+[19:13:57] <kevglass> the opponents have taken their turn, just working on having the player attack back
+[19:14:01] <Riven_> now anymate it, lazy bastard
+[19:14:09] <Riven_> animate* (pff)
+[19:14:12] <kevglass> animation is for losers
+[19:14:16] <Riven_> oh, ok
+[19:14:21] <notch> it's true
+[19:14:36] <kevglass> next time, you'll be saying, do your own art or something stupid like that!
+[19:14:40] <Riven_> hehe, when you left, Wurm didn't have much animation, indeed
+[19:14:42] <jezek2> then i'm looser right now :D
+[19:14:47] <kevglass> ;)
+[19:15:00] * kevglass gives Riven a digging stick
+[19:15:03] <kevglass> it's much easier with one
+[19:15:03] <notch> shh, riven. ;)
+[19:15:16] <Riven_> nah, you did write that XSI importer...
+[19:15:24] <Riven_> that saved the day for the next generation
+[19:15:26] <kevglass> best noise ever "dinners ready!"
+[19:15:39] <Riven_> lucky
+[19:15:41] <notch> the xsi import stuff was fun. :D
+[19:15:44] <Riven_> i gotta cook my own
+[19:16:00] <Riven_> enjoy it kev
+[19:16:03] <notch> i should go shop for some kind of food or something
+[19:17:54] <Riven_> do they even have shops in sweden?
+[19:18:01] <Riven_> not living off nature?
+[19:18:12] <notch> correct!
+[19:18:31] <Riven_> incredible
+[19:22:59] <Riven_> did you know your avatar has been 404 for years?
+[19:23:16] <notch> haha, no, i didn't. =D
+[19:23:38] <Riven_> seriously? i bet you're using opera then, because it doesn't show that empty rectangle
+[19:23:50] <Riven_> or firefox, maybe... darn it
+[19:23:53] <notch> on jgo, you mean?
+[19:23:55] <Riven_> yeah
+[19:24:14] <Riven_> it used to be that orange mojang runset
+[19:24:25] <Riven_> http://www.mojang.com/mojangbutton.gif == 404
+[19:25:29] <Riven_> what did you think i meant?
+[19:25:52] <notch> jgo, that's why I asked about it
+[19:26:20] <Riven_> i guess i could have said it earlier :)
+[19:26:32] <Riven_> did you design that old logo?
+[19:26:37] <notch> yes
+[19:27:04] <Riven_> nifty, i completely such at design
+[19:27:12] <notch> there, the avatar is back. :D
+[19:27:18] <Riven_> my only feature is that my avatar rotates, but i fear nobody notices
+[19:28:19] <Riven_> hm, must be an old one, not the latest, with orange skies
+[19:28:36] <Riven_> (not that there's anything wrong with it!)
+[19:28:39] <notch> aye, can't find that one
+[19:30:16] <Riven_> can't find it in google image search
+[19:38:43] *** jweyrich has joined #lwjgl
+[19:47:31] <Mazon> http://www.youtube.com/watch?v=u_3yheHGW8I
+[19:51:44] *** Suzy has quit IRC
+[19:52:55] *** kevglass has quit IRC
+[19:56:59] *** Suzy has joined #lwjgl
+[20:00:24] <Riven_> i wonder how they did those rather realistic fluids/gasses
+[20:00:52] <Riven_> they either faked it, or CPUs are simply fast ernough these days
+[20:02:45] <doohan> Well the ps3 does have a fair amount of processing power in it
+[20:03:45] <NoobFukaire> yeah the cell is awesome for doing fluid simulation
+[20:03:56] <NoobFukaire> so is the GPU, and luckily the ps3 has both
+[20:18:43] *** betel has joined #lwjgl
+[20:23:43] <Riven_> the grid is also very big, so I think they actually keep it small, and just move it with the viewport
+[20:24:00] <Riven_> and push some momentum with it
+[20:24:22] *** Suzy has quit IRC
+[20:24:30] *** Suzy has joined #lwjgl
+[20:24:46] <OrangyTang> why would you need the momentum?
+[20:25:22] <OrangyTang> you keep the grid snapped to world coords but copy rows/collumns accross as the camera moves
+[20:31:37] <Riven_> because normally the flow would accelerate, as everything out of the viewport would continue to push it, i think
+[20:32:26] <OrangyTang> i would have thought it would be easier to just have a buffer region so the grid is a bit bigger than the viewport
+[20:32:43] <OrangyTang> then any oddities around the edge of the grid aren't visible
+[20:49:39] *** kevglass has joined #lwjgl
+[20:51:25] <kevglass> re
+[20:52:18] <doohan> wb
+[21:22:43] *** natte|wrk has joined #lwjgl
+[21:24:14] *** natte|wrk_ has quit IRC
+[21:32:18] *** Suzy has quit IRC
+[21:35:01] *** bobjob has joined #lwjgl
+[21:36:50] *** Suzy has joined #lwjgl
+[21:48:34] *** Suzy has quit IRC
+[21:48:42] *** Suzy has joined #lwjgl
+[21:51:41] * kevglass yawns
+[21:52:05] * Riven_ seconds
+[21:52:29] <kevglass> they fight!
+[21:52:45] <Riven_> while being stationairy?
+[21:52:48] <kevglass> yes
+[21:52:50] <kevglass> exactly.
+[21:53:02] * Riven_ equips LONG sword
+[21:53:02] <kevglass> animation is for losers.
+[21:53:11] <kevglass> I thought we covered this already?
+[21:53:16] <Riven_> yes yes
+[21:53:27] <kevglass> can I claim blood splats and numbers appearing as animation?
+[21:53:45] <Riven_> certainly, if your targetting morons
+[21:54:11] <Riven_> but particle engines (even if they render numbers to the srceen) is cool enough for an RPG
+[21:54:20] <kevglass> they weren't my original target
+[21:54:25] <kevglass> but I suppose there are plenty of them out there
+[21:54:37] <kevglass> probably a fairly good demo from a cashflow point of view
+[21:54:51] <Riven_> can you zoom in?
+[21:55:05] <kevglass> um, no
+[21:55:29] <Riven_> you can 'fake' aniomation by zooming out so far that you can't really tell, and the blood spatters are convincing
+[21:55:39] <kevglass> heh
+[21:55:42] <kevglass> it's really not that sort of game
+[21:55:50] <Riven_> tell me all about it
+[21:55:54] <Riven_> what's the purpose
+[21:55:55] <kevglass> it's purely turn based tactical affair
+[21:56:03] <kevglass> it's intended to be on a phone eventually
+[21:56:12] <Riven_> android.gameCount++
+[21:56:15] <kevglass> aye
+[21:56:18] <kevglass> hence the resolution
+[21:56:38] <Riven_> will that JAR 'just run' ?
+[21:56:59] <kevglass> which jar?
+[21:57:08] <Riven_> or is it like coding for JavaME
+[21:57:13] <kevglass> oh I see
+[21:57:18] <Riven_> i mean... the game distribution JAR
+[21:57:25] <kevglass> na, theres a bunch of stuff you need to do for android
+[21:57:27] <kappaOne> are the battles final fantasy like? http://www.newgrounds.com/portal/view/493714
+[21:57:31] <kevglass> but I'm abstract with the rendering
+[21:57:45] <kevglass> and input
+[21:57:48] <Riven_> maybe another gfx impl. for Slick?
+[21:57:48] <kappaOne> like ff6
+[21:57:51] <kevglass> so I think it'll port pretty quick
+[21:57:59] <kevglass> yeah, one day Slick will be on Android
+[21:58:04] <kevglass> did a prototype a while ago
+[21:58:08] <kevglass> just trying the link kappa
+[21:58:38] <kevglass> it was a bit slow to use the GLES stuff tbh
+[21:59:26] <kevglass> wants and email and stuff
+[21:59:45] <kevglass> oh, that was an add
+[21:59:54] <Riven_> yeah, was kinda confused right there
+[22:00:09] <kevglass> just taking ages on my terrible connection
+[22:01:00] <Riven_> what will be the goal in your RPG kev
+[22:01:09] <kevglass> combat is just like that kappa
+[22:01:16] <kappaOne> oh excellent
+[22:01:17] <kevglass> accept without the wonderfully cool looking graphics
+[22:01:29] <kevglass> as you level up you get more skills to use
+[22:01:30] <Riven_> leveling?
+[22:01:33] <Riven_> ah
+[22:01:37] <kappaOne> well as long as the sprites move a little forward and back when they attack, tis cool :)
+[22:01:38] <kevglass> there are quests riven
+[22:01:40] <kevglass> and a dungeon
+[22:02:35] <Riven_> and outdoor stuff? would maybe make it more lively
+[22:02:39] <kevglass> so you just like wander round th dungeon with your party
+[22:02:42] <Riven_> plants and whatnot
+[22:02:43] <kevglass> having combat
+[22:02:49] <kevglass> discover chests
+[22:02:53] <kevglass> and segments on the quest
+[22:03:28] <Riven_> I guess RPG is not really my thing... I'm much more into RTS, i don't have the patience to slowly build a character
+[22:03:41] <kevglass> fair enough
+[22:03:49] <Riven_> i hope you tune down a bit on 'magic' ?
+[22:03:53] <kevglass> another exciting screen shot: http://www.cokeandcode.com/yoren/yoren6.png
+[22:04:02] <kevglass> magic is just skills for a magic user
+[22:04:09] <kevglass> same as attacking skills for warrior
+[22:04:48] <Riven_> maybe some lighting effect between the 2 fighting parties? ("why don't you add ..")
+[22:04:56] * kappaOne imagines glowing eyes on the grim reaper :)
+[22:05:26] <kevglass> just noticed, I've labelled mummies as zombies
+[22:05:46] <kappaOne> hehe, zombie mummies
+[22:05:52] <kevglass> awesome
+[22:05:58] <kevglass> attack of the zombie mummies from outer space!
+[22:06:11] <kevglass> a game waiting to be written right there!
+[22:06:18] <Riven_> :-o
+[22:06:29] <Riven_> how the heck did they end up up there
+[22:06:36] <kevglass> mummies of aliens
+[22:06:45] <Riven_> naturally
+[22:06:48] <kevglass> brought back to life by alien necromancers.
+[22:06:52] <kevglass> aliens see
+[22:07:00] <kappaOne> zombie alien mummies O_o
+[22:07:07] <kevglass> wow
+[22:07:07] <Riven_> that's why the moon is so grey, all those bandages!
+[22:07:13] <kevglass> there we go
+[22:07:15] <kevglass> it all makes sense!
+[22:08:47] <Riven_> be sure to put all that in the intro
+[22:08:54] <Riven_> as a solid backstory
+[22:09:53] <Riven_> and now that plasma effect in your GUI makes sense too, as a silent alien remainder
+[22:10:01] <kevglass> na,
+[22:10:04] <kevglass> thats mystic forces
+[22:10:11] <kevglass> it's a different game
+[22:10:24] <kevglass> mystic dark forces driving the undead enemies to fight
+[22:10:35] *** honk has quit IRC
+[22:10:36] <Riven_> hm... good thinking
+[22:10:43] *** honk has joined #lwjgl
+[22:11:02] <kevglass> decided what you're going to write yet btw?
+[22:11:42] <Riven_> yeah, bunny community with airplanes throwing bombs
+[22:11:50] <kevglass> awesome!
+[22:11:55] *** honk has quit IRC
+[22:12:06] <Riven_> yeah, pretty original, and very fluffy
+[22:12:12] *** honk has joined #lwjgl
+[22:12:30] <Riven_> the AI will multiply, beat that!
+[22:12:34] *** honk has quit IRC
+[22:12:43] *** honk has joined #lwjgl
+[22:13:55] <kevglass> eta?
+[22:14:00] *** aho has joined #lwjgl
+[22:14:01] <Riven_> 27 may...
+[22:14:15] * kevglass notes in diary
+[22:14:27] <Riven_> yeah.. i'll prolly stick with 2D
+[22:14:33] <Riven_> otherwise i won't make it
+[22:14:48] <kevglass> don't forget the animation
+[22:14:57] <Riven_> i already have something for that
+[22:15:12] <Riven_> a 2D app that has a skeleton and keyframes
+[22:15:22] <Riven_> where you can just drag the limbs around, and it will interpolate
+[22:15:23] <kevglass> cool
+[22:15:35] <Riven_> even lerp between different animations
+[22:15:49] <Riven_> for nice (or very weird) looking transitions
+[22:16:22] <Riven_> it's rather confusing to look at the fight <-> sleep transition
+[22:16:39] <kevglass> screenie!
+[22:16:45] <Riven_> one moment
+[22:20:31] <Riven_> http://indiespot.net/files/bunnyframe.png
+[22:20:53] <Riven_> the orange rect will display the anim
+[22:21:10] <Riven_> this is my.... editor... everything else is hardcoded :)
+[22:21:13] <Riven_> (and in XML)
+[22:21:50] <aho> eh... yea, confusing indeed :>
+[22:22:00] <kevglass> odd for sure
+[22:22:50] <Riven_> hey oNyx, you witty guy! you had japanse/chinse chars in your JGO signature... and now you're wondering why everybody is confused eh? me not crazy!
+[22:23:12] <Riven_> (i just had to say that)
+[22:23:24] <Riven_> as you can see kev... GUI is not my thing
+[22:23:35] <kevglass> nn all
+[22:23:43] <bobjob> night
+[22:23:47] <aho> nn kev
+[22:23:53] <Riven_> n!
+[22:24:10] <aho> oh that... that's just "danmaku"  :>
+[22:24:20] <Riven_> that explains it :p
+[22:25:02] <Riven_> it stil feeds the subconscious
+[22:25:32] <Riven_> what's "danmaku" then
+[22:25:49] <aho> curtain fire (bullet hell)
+[22:26:39] <Riven_> inspiring...? :) any reason to put that in your sig?
+[22:27:07] <aho> well, it's a nice genre .>
+[22:27:45] <Riven_> and while we're at it, why is the N a capital, in oNyx
+[22:28:26] <aho> because it looks sine-wave-y
+[22:30:49] <Riven_> my nick looks like (1/x)+y then
+[22:32:15] *** kevglass has quit IRC
+[22:33:48] *** honk has joined #lwjgl
+[22:36:24] *** Scient has quit IRC
+[22:36:49] *** Scient has joined #lwjgl
+[22:39:24] <doohan> Turns out with pack200 and lzma you can get the jython jar down from 7.8 meg to 2.4meg
+[22:39:40] <doohan> kappaOne, a more pythony way of doing the applets that means.
+[22:39:53] <doohan> I imagine theres stuff in there you can chuck out too though
+[22:39:56] <aho> isn't pyweek over already? :>
+[22:40:15] <doohan> Yeah, but I was curious after playing with pack200 and the lwjgl applet loader
+[22:41:23] <doohan> That stuff is awesome
+[22:50:51] <doohan> I just got plants vs zombies
+[23:04:23] *** HideousNashimoto has joined #lwjgl
+[23:11:31] *** jweyrich_ has joined #lwjgl
+[23:17:46] *** jweyrich has quit IRC
+[23:23:05] *** systat has quit IRC
+[23:29:47] *** OrangyTang has quit IRC
+[23:59:51] *** monty_hall has joined #lwjgl

@@ -1,0 +1,1369 @@
+[00:07:29] *** kbotnen has joined #lwjgl
+[00:11:05] *** Riven_ has joined #lwjgl
+[00:14:26] <appel> bad woogley
+[00:14:32] <appel> shutting down slick forums
+[00:14:33] <appel> :(
+[00:14:57] <NateS_> for the love of god specify an input file!
+[00:17:34] *** kappaOne has quit IRC
+[00:19:02] *** OrangyTang has joined #lwjgl
+[00:19:49] *** doohan has quit IRC
+[00:21:48] *** jweyrich has joined #lwjgl
+[01:10:09] *** Riven_ has quit IRC
+[01:25:24] *** ako has joined #lwjgl
+[01:25:38] *** NateS_ has quit IRC
+[01:41:30] *** betel has quit IRC
+[01:42:49] *** aho has quit IRC
+[01:53:56] *** OrangyTang has left #lwjgl
+[01:54:15] *** kbotnen_ has joined #lwjgl
+[01:54:49] *** kbotnen has quit IRC
+[02:16:11] *** ako has quit IRC
+[03:26:51] *** jonkri has quit IRC
+[03:27:45] *** david_koontz has quit IRC
+[03:29:46] *** jonkri has joined #lwjgl
+[03:53:40] *** pstickne has quit IRC
+[04:22:31] *** pstickne has joined #lwjgl
+[04:39:58] *** MatthiasM has quit IRC
+[04:40:03] *** MatthiasM has joined #lwjgl
+[05:12:58] *** woogley has joined #lwjgl
+[05:18:41] *** Dragonene has joined #lwjgl
+[05:25:17] *** kbotnen_ has quit IRC
+[06:09:56] *** monty_hall has left #lwjgl
+[06:44:09] *** keisangi_ has joined #lwjgl
+[07:12:35] *** keisangi_ has quit IRC
+[07:14:34] *** bobjob has joined #lwjgl
+[07:15:44] *** bobjob has quit IRC
+[08:10:42] *** woogley has quit IRC
+[09:24:44] *** systat has joined #lwjgl
+[10:19:28] *** Dragonene has left #lwjgl
+[10:20:43] *** loz- has joined #lwjgl
+[10:22:57] *** doohan has joined #lwjgl
+[10:29:58] *** natte has quit IRC
+[10:34:04] *** pstickne has quit IRC
+[10:38:00] *** natte has joined #lwjgl
+[10:38:42] *** kappaOne has joined #lwjgl
+[10:46:52] <kappaOne> http://piliq.com/javafx/?p=943 :)
+[10:47:03] <kappaOne> lwjgl ftw :)
+[10:55:51] <kappaOne> to bad the javaunlimited host is down
+[11:00:17] *** jweyrich has quit IRC
+[11:05:16] *** davedes has quit IRC
+[11:24:21] *** systat has quit IRC
+[11:37:33] <lwjglbot> lwjglforum: Re: GL11.glGetTexParameter doesn't accept GL12.GL_TEXTURE_3D <http://lwjgl.org/forum/index.php/topic,2900.msg16007.html#msg16007>
+[11:50:48] *** betel has joined #lwjgl
+[11:53:54] *** kappaOne has quit IRC
+[12:15:18] *** kappaOne has joined #lwjgl
+[12:16:37] *** loz- has quit IRC
+[12:58:12] *** Notch has joined #lwjgl
+[13:00:06] *** Riven_ has joined #lwjgl
+[13:03:19] *** kbotnen has joined #lwjgl
+[13:12:50] <Riven_> don't you just love gouessej... [http://www.javagaming.org/index.php/topic,20435.0] he thinks that because HE emailed Russell, it will be fixed instantly, eventhough numerous devs have sent emails
+[13:12:51] *** kappaTwo has joined #lwjgl
+[13:14:20] <Riven_> he would be good attorney material
+[13:18:53] <jezek2> lol
+[13:27:24] <jonkri> :)
+[13:31:05] *** kappaOne has quit IRC
+[13:33:52] <Notch> is building display lists slow?
+[13:34:09] <Notch> i was trying to narrow down a performance issue last night.
+[13:34:17] <jezek2> yes if you want it doing per frame
+[13:35:58] <Notch> ok. hum. I guess I should use vertex buffers instead
+[13:36:13] <Notch> they don't update each frame, but often enough to cause concern
+[13:36:15] <Riven_> it has a rather big overhead, yes, but the performance is probably optimal, once you got them
+[13:36:29] <Riven_> i remember a grid of 16x16 quads, took 10ms
+[13:36:37] <Riven_> but that was like 4 years ago
+[13:36:45] <Notch> yeah, I'm working on an infiniminer clone
+[13:37:03] <Riven_> les me lookup that game name... !
+[13:37:08] <Notch> I've got chunks of blocks, 16x16x16 blocks. Each block can have a maximum of three quads, but that's worst case scenario
+[13:37:42] <Notch> rebuilding a chunk of these takes almost 100 ms, but that's everything, including tesselation, calculating lighting, and building the display list
+[13:38:15] <Notch> i don't do vertex buffers in an attempt to save memory since I don't want to have the worst case amount of memory reserved for each chunk
+[13:38:16] <Riven_> just one a sidenote: never use COMPILE_AND_EXECUTE, but you probably are not using that anyway
+[13:38:23] <Notch> I'm not. =)
+[13:39:01] <Notch> this is infiniminer: http://www.youtube.com/watch?v=Cd-eUIMPIjI
+[13:39:44] <Riven_> well, vertexbuffers are not that memory consuming anyway, the only advantage DisplayLists have, is that they don't *store* repeating vertex attributes (like sequences of vertexcolors are red)
+[13:40:19] <Riven_> just slice() the buffers, don't create new ones, as they are have an overhead of 4K, but hey, why am i telling you :p
+[13:40:40] <Notch> won't I get fragmentation problems?
+[13:40:53] <Riven_> i just rememing you once made a vertex array in Wurm for every tile. it suddenly took 3 minutes to launch the game :p
+[13:41:20] <Notch> heh
+[13:41:23] <Riven_> 'just' write your own memory manager, if you are disposing/allocating a lot
+[13:41:29] <Notch> haha
+[13:41:34] <Notch> oh god, this is getting complex
+[13:41:39] <Riven_> nah
+[13:41:45] <Riven_> it's actually very easy
+[13:42:10] <Riven_> you can just alloc a bytebuffer of like 1MB, slice it until you can't slice it anymore
+[13:42:18] <Riven_> and then jsut ditch is, let the GC figure it out
+[13:42:23] <Notch> i had totally forgotten about the buffer overhead, so thanks for telling me. =)
+[13:42:47] <Riven_> it's all about MappedByteBuffers... which are notoriously useless anyway
+[13:43:13] <Riven_> it's actually worse on solaris, are you get set the pagesize to like 2MB there, and the overhead is the pagesize
+[13:43:29] * Riven_ doesn't care about solaris
+[13:45:06] <Notch> ngh.. I'm trying to do the math, but I suck. :D
+[13:45:32] <Riven_> if you were to use VBOs, you can simply recreate the geometry on demand, and let the GPU deal with fragmentation (which also means you lost control)
+[13:46:12] <Notch> I want to avoid fancy features. Compatibility issues with wurm has taught me that. ;)
+[13:46:50] <Riven_> yeah, DisplayLists are a relic of the dark ages, nothing fancy
+[13:47:17] <Notch> 8 floats per vertex, 4 vertices per quad, worst case 8*8*8*3 quads per chunk, that's almost 24 kb per chunk
+[13:47:19] <Notch> that's not bad
+[13:47:36] <Notch> I could just preallocate room for all chunks.
+[13:47:52] <Riven_> and remember to create all displaylists in batches
+[13:47:59] <Notch> batches?
+[13:48:08] <Riven_> glGenLists
+[13:48:14] <Riven_> not one at a time
+[13:48:19] <Notch> why's that?
+[13:48:22] <Riven_> faster
+[13:48:35] <Notch> even after allocation, or just during?
+[13:48:48] <Notch> I just allocate them once, then reuse them, but it's per chunk.
+[13:48:56] <Notch> so there's one glGenLists per Chunk constructor
+[13:48:57] <Riven_> at allocation time, then just overwrite them, if you feel like it
+[13:49:04] <Notch> ok, good
+[13:49:33] <Riven_> you know you can nest displaylists, often overlooked, but extremely nice! you can dramatically reduce your glCallList count, to... maybe... 1 per frame
+[13:50:03] <Notch> hehe, yeah. And it even stores the callList, not the result of it, so if you change the child, you don't have to recompile the top one
+[13:50:14] <Riven_> the displaylists are als NOT inlined, so you can modify a displaylists, which is nested in another, and you'll see the change immediately
+[13:50:42] <Riven_> ... yes :)
+[13:51:00] <Notch> wait, I think I did my math wrong here somewhere. 3 terabytes of ram?
+[13:51:10] <Riven_> i nested tried to make an infinitely recursing list
+[13:51:21] <Riven_> just release your game in 20 years from now
+[13:51:25] <Notch> haha
+[13:53:09] <Notch> no, it's "just" 12 gb
+[13:53:36] <Riven_> also, 8*4*8*8*8*3 != 24kb, but 196K byte
+[13:54:06] <Notch> yerp, this is getting big
+[13:54:15] <Notch> I can't allocate space for the worst case scenario. ;)
+[13:54:26] <Riven_> let me watch that youtube movie you sent
+[13:55:40] *** Jvlaple has joined #lwjgl
+[13:55:47] <Riven_> where do those 16x16x16 blocks come from
+[13:56:27] <Notch> space partitioning, for frustum culling and for (I thought) baking them into display lists
+[13:56:32] <kappaTwo> wow inifiniminer looks awesome
+[13:56:52] <Notch> so if a 16^3 chunk is visible, I render its display list, and if a block changes, I don't have to modify a too big display list
+[13:57:00] <Notch> but for some assy reason, it's taking 100 ms
+[13:57:07] <Notch> I expected like perhaps 1 ms
+[13:57:28] <Riven_> DisplayLists try to index your geometry
+[13:57:42] <Riven_> matching everything against everything
+[13:57:47] <Notch> oh wow, ok
+[13:58:21] <Riven_> even then, with nested displaylists, you can probably reduce your 'chunk' to 8^3 blocks
+[13:58:41] <Riven_> should be 8 times faster... i hope
+[13:59:22] <Notch> i tried it, it wasn't.
+[13:59:27] <Riven_> darn
+[13:59:38] <Riven_> then you probably have to switch to vertext arrays
+[14:00:01] <Notch> although this time INCLUDES java time for calculating visibility and stuff
+[14:00:12] <Notch> so it's entirely possible the bug is in there.
+[14:00:15] <Riven_> and glDrawElements... also... interleaving your data is twice as fast, and indexing your data is also twice as fast
+[14:00:25] <Notch> oh, wow
+[14:00:38] <Notch> can I do both? =D
+[14:00:44] <Riven_> ofcourse
+[14:00:50] <Riven_> at least... i do
+[14:01:01] <Notch> is it possible to have a different index list for vertex coords and another for texture coords?
+[14:01:25] <Riven_> nope
+[14:01:29] <Notch> damn, that sucks
+[14:01:49] <Riven_> that would make the 'gather op' in the GPU way too slow
+[14:01:51] <Notch> I'll have to repeat all corners three times then since each face has a different color
+[14:02:01] <Riven_> indeed, no way around that
+[14:02:23] *** Dragonene has joined #lwjgl
+[14:02:27] <Notch> crap. I'm wasting a lot of ram on color data and texture coords that is pretty much the same all over the place
+[14:02:36] <Riven_> you could get rid of coloring, and use textures, using NEAREST sampling
+[14:02:42] <Dragonene> well what do you know
+[14:02:45] <Riven_> then you can use shared vertices
+[14:02:47] <Dragonene> it's notch and riven
+[14:02:48] <Dragonene> !
+[14:03:03] * Riven_ hides
+[14:03:06] <Notch> but then I have to change the texture coords?
+[14:03:10] <Notch> so I still can't share
+[14:03:19] <Dragonene> Where'd Riven go?
+[14:03:22] <Riven_> the corners share the texcoords
+[14:03:27] <Dragonene> there he is!
+[14:03:35] <Dragonene> Sorry I'm not being funnier.
+[14:03:37] <Dragonene> I'm exhausted.
+[14:03:41] <Riven_> it's just that your texture now must include very precise colors
+[14:03:46] <Notch> no, they don't?
+[14:04:04] <Riven_> are you currently using COLROS + TEXTURES ?
+[14:04:05] <Notch> each corner is used in three different faces, all can be a different color
+[14:04:13] <Notch> yes
+[14:04:15] <Riven_> darn, my bad
+[14:04:25] <Riven_> well, even then
+[14:04:30] <Riven_> you just can't share the top/bottom
+[14:04:34] <Notch> but getting rid of colors is absolutely doable
+[14:04:37] <Riven_> all sides can be shared
+[14:05:07] <Riven_> all 4 sides*
+[14:05:08] <Notch> I use VERY low res textures, so I can definitely dupe textures just for different lighting levels
+[14:05:21] <Riven_> and disable mipmapping
+[14:05:29] <Notch> i use a single large texture to avoid texture swapping
+[14:05:32] <Riven_> or handcraft your texture-levels
+[14:05:34] <Notch> the textures are like 16x16 pixels
+[14:05:41] <Riven_> 1337
+[14:05:59] <Riven_> i'm suddenly not too sure
+[14:06:03] <Notch> I could have the sides mirror back and forth, haha
+[14:06:05] <Riven_> because what will be corners look like
+[14:06:07] <Notch> then I can reuse coords
+[14:06:27] <Riven_> you have to trial-and-error your texcoords i think
+[14:06:55] <Notch> I could solve so much of this with a very simple vertex shader
+[14:07:00] <Riven_> and then, you can share all the 'top' faces among blocks :)
+[14:07:22] <Riven_> fancyness(vertex shader) > fancyness(VBO)
+[14:07:31] <Notch> hehe
+[14:08:10] <Riven_> i think however, that we're doing some premature optimisation...?
+[14:08:16] <Dragonene> I'll be off.
+[14:08:19] <Dragonene> No, wait!
+[14:08:20] <Riven_> have fun!
+[14:08:21] <Notch> aww Dragonene!
+[14:08:22] <Dragonene> First I shall ask something
+[14:08:26] <Dragonene> is Riven_ Riven on JGO?
+[14:08:37] <Dragonene> because well, if you are, I haven't seen you on here much
+[14:08:40] <Riven_> yeah... i'm that bastard
+[14:08:44] <Dragonene> Well I haven't seen you much here anyway
+[14:08:46] <Notch> Riven_: 100 ms lag spikes make the game unplayable right now, and they happen every time a block changes.. soo.. :-\
+[14:09:09] <Dragonene> Nah, Riven_, you made all sorts of good posts in the 4k forums :D
+[14:09:12] <Riven_> with VA, you won't get spikes, unless the spikes are caused by java code, that is
+[14:09:17] <Dragonene> (I only know people who post in the 4k forums.)
+[14:09:21] <Dragonene> (Mostly.)
+[14:09:45] <Notch> ok, i'll toy around some more to see if it's the java code, then I'll start looking at how to manage the data
+[14:09:46] <Riven_> my reputation is such a burden on me!
+[14:09:51] <Dragonene> Anyway, I've gotta shower, just came back from playing frisbee
+[14:09:52] <Dragonene> Ciao.
+[14:09:57] <Riven_> just System.nanoTime the darn thing
+[14:10:06] <Riven_> have fun, bring your dog!
+[14:10:06] <Notch> I could do fancy stuff like limiting ram use so that once the scene gets complex, you only see stuff near the player.
+[14:10:07] <Dragonene> Hah
+[14:10:12] <Dragonene> System.currentTimeMillis will do fine
+[14:10:16] <Dragonene> Don't give in to nanoTime!
+[14:10:19] <Dragonene> It's a 100 ms spike dammit
+[14:10:24] <Dragonene> you don't need millisecond precision!
+[14:10:29] <Riven_> you do!
+[14:10:33] <Dragonene> you don't!
+[14:10:34] <Notch> nanotime is awesome, but every now and then I forget a 0 or two and get a heart attack
+[14:10:40] <Dragonene> haha
+[14:11:07] <Notch> considering I want it to run in 1 ms, I do need nanotime. ;)
+[14:11:10] <Dragonene> Notch: Also knowns as "Level of detail"... :P
+[14:11:14] <Riven_> yeah... that happens like... once every 5 years... as I put that in a utility method :p
+[14:11:15] <Dragonene> known*
+[14:11:27] <Riven_> you really need a shower, boy!
+[14:11:31] <Dragonene> Yeah
+[14:11:32] <Dragonene> I do.
+[14:11:33] <Dragonene> :D
+[14:11:33] *** Schnitter has joined #lwjgl
+[14:11:36] * Dragonene is off.
+[14:11:38] <Riven_> bye
+[14:11:51] <Schnitter> hi :>
+[14:11:51] <Notch> not using the large texture sheet would allow me to join adjacent quads of the same type
+[14:12:07] <Notch> and that's a potentially MASSIVE speedup for simple scenes
+[14:12:11] <Riven_> yeah... 1 texture restricts you pretty bad
+[14:12:38] <Notch> but texture switches don't work too well with many polys.. is there some trick you know of?
+[14:13:31] <Riven_> you just have to think about it like this: you can remove the bottlenecks, everywhere that it aint restricting you. if the 'scene' prohibits you from using the 'fast' path, no need to rollback to the slow path for your whole scene, just the part that requires it
+[14:13:37] *** jonkri has quit IRC
+[14:14:07] <Riven_> like... calculate the 'strategy' for each chunk
+[14:14:37] <Schnitter> MatthiasM: you here?
+[14:15:16] <Notch> this is true
+[14:15:41] <Notch> I focus too much on the worst case. It's just that I can't stop thining "but what if some crazy person checkerboards the entire level?"
+[14:16:07] <Riven_> add a 'checkerboard strategy' :p
+[14:16:16] <Riven_> i'm sure there are ways to optimize
+[14:16:22] <Notch> haha
+[14:16:30] <Notch> hum, you might be right. =D
+[14:16:36] * Notch finds himself thinking in new lines
+[14:16:40] <Notch> along?
+[14:17:05] * Riven_ doesn't know
+[14:17:16] <Notch> thanks for the insights, Riven_ =)
+[14:17:56] <Riven_> as gouessej says, 'english is not my mother tongue'
+[14:18:07] <Riven_> Notch, don't forget, you're smarter :p
+[14:18:13] <Notch> haha =D
+[14:18:26] <Riven_> gotta redo that darn test
+[14:18:33] <Notch> you know about these things than I do, though. =D
+[14:18:56] <Riven_> you know what the thing is... last lines of OpenGL i've written are more than 3 years ago
+[14:19:07] <Riven_> i've never programmed a game, only Poker4K
+[14:19:10] <Jvlaple> wtf
+[14:19:20] <Jvlaple> w/c
+[14:19:23] <Jvlaple> :$
+[14:19:37] <Notch> game making is fun!
+[14:19:38] <Riven_> so most of my advice is from totally different work, like... building administration software
+[14:19:43] <Riven_> yeah... no time :(
+[14:19:50] <Notch> ack
+[14:20:15] <Riven_> i'm in the process of developing a server cluster with my own datamining software
+[14:20:25] <Riven_> very fun too... with my own darn database
+[14:20:43] <Riven_> that's how i know what to optimize :p
+[14:20:51] <Riven_> anyway, enough about me..
+[14:20:54] <Notch> you wrote your own db? =D
+[14:20:57] <Riven_> yeah
+[14:21:06] <Riven_> it completely blasts MySQL out of the water
+[14:21:08] * Notch awards five nerdpoints
+[14:21:11] <Notch> awesome
+[14:21:33] <Riven_> i can join tables in nearly 0ms :p
+[14:21:41] <Riven_> (okay, that's not true)
+[14:21:51] <Notch> what's it called?
+[14:22:04] * Riven_ collects Notch's nerdpoints
+[14:22:11] <Riven_> it's not called anything, it's closed source
+[14:22:25] <Riven_> and i'm the only employee at the company i work for
+[14:22:37] <Notch> you still have to name it!
+[14:22:46] <Notch> what's the package name?
+[14:22:48] *** kappaTwo has quit IRC
+[14:22:50] <Riven_> my boss has no idea what i'm doing... he is only happens when it works
+[14:23:04] <Riven_> tt.db2
+[14:23:12] <Notch> so there's your name!
+[14:23:17] <Riven_> happens = happy (darn fingers)
+[14:23:18] <Notch> not very sexy, but it works
+[14:23:28] <Riven_> it is an improvement over tt.db
+[14:23:40] <Notch> so that's what the 2 is about. :D
+[14:23:52] <Riven_> yeah, it took me really lonng to come up with that
+[14:24:19] <Notch> haha. Sounds like you've got a pretty good job
+[14:24:33] <Riven_> it certainly SOUNDS like it, yes
+[14:24:49] <Riven_> but there is little money for advertising, so that's where it all crashes down
+[14:25:06] <Riven_> my product is superious (by far!) to the competition, but who's gonna know
+[14:25:07] <Notch> but you get to design your own db!!
+[14:25:22] <Riven_> shh, my boss doesn't know
+[14:25:39] <Riven_> it's only another item on my todo list
+[14:25:50] <Riven_> eh... 'in progress' list
+[14:26:14] <Notch> haha
+[14:26:19] <Notch> awesome euphemism
+[14:26:22] <Riven_> it handles gigabytes of data each day... my stresstest is to put the JAR on the live server
+[14:26:43] <Notch> ack!
+[14:27:01] <Riven_> not really, but my point was that the server is stressed
+[14:27:39] <Notch> sounds like there are customers already then
+[14:27:51] <Riven_> but it's really weird to do a binary search on a RandomAccessFile :)
+[14:28:26] <Riven_> ofcourse! customers means $$, and every $ we got, is put in advertising...
+[14:28:39] <Notch> what's the product?
+[14:28:53] <Riven_> GoogleAnalytics, but thenMUCH more info
+[14:29:03] <Riven_> it tracks every mouse movement
+[14:29:12] *** jonkri has joined #lwjgl
+[14:29:17] <Riven_> and not just renders 'clickmaps''
+[14:29:21] <Notch> woo
+[14:29:36] <Riven_> it really does fancy stuff, with programmable filters
+[14:30:06] <Riven_> best of all: the frontend is a desktop app
+[14:30:22] <Riven_> so you can really burn some CPU cycles (and have to deal with compatibility)
+[14:31:05] <Riven_> so I also have to compress the data that is gathered, and stream it to the clients
+[14:31:17] <Riven_> that have their own DB
+[14:31:29] <Riven_> so there are a dozen big projects, in this product
+[14:31:39] <Notch> still sounds like a great job to me. =D
+[14:32:00] <Riven_> believe me... my boss has no clue, so can't really appreciate, so it's only an ego trip
+[14:32:35] <Notch> and you get nerd respect on irc
+[14:32:51] <Riven_> yeah... that's what it is all about :)
+[14:32:54] <Notch> which, I guess, isn't worth much at the end of the day. ;)
+[14:33:18] <Riven_> i can dream about it, for 8 hrs a day, pretty good investment
+[14:33:18] <kbotnen> hi. how do you guys handle different material / textures with rendering with VBO? Ive sorted my indices by material and render one vbo pr.material, doing materialstatechange inbetween the "batches". But this get horribly slow when materialnr goes up.
+[14:33:39] <kbotnen> it works, but its slow.
+[14:33:46] *** keisangi has quit IRC
+[14:33:58] <kbotnen> but whats worse its that whhen going to wireframe mode its even slower :/
+[14:34:09] <Riven_> wireframe is always slower
+[14:34:11] <Notch> wireframe has always been slow for me
+[14:34:40] <Notch> In my most recent project, I've got a large texture map containing all textures in the game, and then offset the u,v values for each primitive
+[14:34:51] <NoobFukaire> sounds like you're either doing something wrong elsewhere or you're having some kind of driver problem
+[14:34:53] <kbotnen> ok. thanks for the information about wireframe speed (or lack of) :)
+[14:34:53] <Notch> this reduces the texture switching a lot, but means I can't have repeating textures
+[14:35:20] <NoobFukaire> we atlas our textures and our geometry
+[14:35:22] <Notch> noobFukaire: Why do you say that?
+[14:35:38] <kbotnen> Hmm. I dont have any knowledge about what textures and models arrives to the application (user load it) thus I cannot create atlases and similar on beforehand.
+[14:35:50] <NoobFukaire> What kind of textures are you using? Are they huge?
+[14:35:55] <kbotnen> Or If I do I have to create a separate "preprocess" app for that.
+[14:36:10] <Riven_> well, if you really need different materials, then you really have to split up your data, like you're doing now... HOWEVER... if most of your scene is 'fairly' static (not changing for a few frames), then just group some VBOs of a certain material, and just merge it. like putting multiple totally distinct objects in one VBO
+[14:36:14] <Notch> oh wow, that's what that is called. Atlas. =D
+[14:36:16] <kbotnen> Right now its no texture present, 32 different materials, thus 32 batches of vbo.
+[14:36:40] <NoobFukaire> shaders then or just color?
+[14:37:13] <kbotnen> its not shaders. not yet. I suppose thats the next step, but not for this version of the app.
+[14:37:22] <Riven_> what kinds of stuff are you rendering
+[14:37:36] <kbotnen> right now I render a house with interior.
+[14:37:59] <Riven_> i jused to render completely buildings using VBOs of simgle bricks... then merged, and merged, and merged, and in the end i only got a handfull of VBOs for a whole street
+[14:38:52] <Notch> haha
+[14:39:10] <Riven_> blazing fast too... so don't make your VBOs bound to the items you're going to render, make them more abstract, and in... what do i want to render, instead of what items to i want to show
+[14:39:13] <Notch> perhaps I could try one VBO per block.. :D
+[14:39:33] <Riven_> only VBO per material (or.. texture)
+[14:39:36] <NoobFukaire> we have a kind of "virtual memory" system
+[14:39:43] <Riven_> you can freely interchange VBOs and VAs
+[14:39:47] <NoobFukaire> where you allocate a buffer from our graphics api
+[14:40:00] <NoobFukaire> it's in reality part of a bigger "super" vbo
+[14:40:09] <NoobFukaire> and then the graphics api can decide which vbo to put it into
+[14:40:19] <NoobFukaire> i.e. spatial sorting in an octree, etc
+[14:40:44] <Notch> Riven_: But what about space partitioning?
+[14:40:48] <kbotnen> hmm..
+[14:40:58] <Notch> you don't want to render the 70% of the scene that isn't even on screen
+[14:41:27] <Riven_> you can render sub ranges of VBOs
+[14:41:49] <kbotnen> so maybe I should put all indices into one VBo, create subranges for each material.
+[14:41:50] <NoobFukaire> yeah but you still need to watch it
+[14:42:02] <NoobFukaire> because binding the vbo can be expensive
+[14:42:25] <Riven_> just put your groups of indices (grouped by spatial parti.) in the tree, and then just render the visible groups
+[14:42:28] <kbotnen> ok. because now, with 32 materials I got 32 bindings pr frame.
+[14:42:53] <Riven_> you only have to bind the VBO once, then you can render different ranges
+[14:43:31] <Notch> for chaging geometry, there will be fragmentation, though
+[14:43:43] <Riven_> that's why i used it for buildings
+[14:43:53] <Riven_> not much happening, geometry wise
+[14:44:02] <Notch> then again, if each block in my game has a maximum of 8 quads, I can just "allocate" space in 8*4 vertex slots
+[14:44:32] <Notch> wait, since I group per material, it's even easier. One quad at a time
+[14:44:43] <Notch> if one vanishes, move the last one to its place
+[14:45:18] <Notch> this could actually work!
+[14:45:23] <Riven_> yeah, the standard 'remove by overwriting with last item, then shrink size' algorithm :)
+[14:45:48] <Notch> if I bake lighting into the textures (which are tiny anyway), I can probably get away with this
+[14:45:58] <Riven_> go girl!
+[14:46:04] <Riven_> but...
+[14:46:09] <Notch> noooo! no buts!
+[14:46:11] <kbotnen> Ok. I have to create some sort of space partitioning (culling right?) scheme. and put everything in one VBO, and render ranges for each materialstate I guess. at least for now, until I get more skilled in this game, hehe.
+[14:46:33] <Riven_> lighting in LINEAR sampled textures kinda looks ugly, of you have gradients, that is
+[14:47:31] <Riven_> just make those 16x16 pixels the same light intensity, and you're done
+[14:48:22] <Notch> it's flat shaded. =)
+[14:48:37] <Riven_> kbotnen: spatial partitioning is not really trivial to implement, so don't give up if you struggle a bit
+[14:48:57] <Riven_> raytrace the darn thing, for ultimate leetness
+[14:49:26] <Riven_> it's trivial to raytrace a grid... i even did that in that cloud renderer (sorry..)
+[14:49:46] <kbotnen> Riven_, thanks for that advice :) Ill close this version of the app with material/texturing working, but slow, and partitioning, culling, etc goes for the next version. Deadline in 7 days, so better be realistic, hehe.
+[14:50:12] <Riven_> yeah, and for an interiour renderer, you don't exactly need 100fps
+[14:50:34] *** jonkri_ has joined #lwjgl
+[14:50:48] <kbotnen> http://visualisere.org/screendumps/3dgui.html
+[14:51:10] <kbotnen> the second picture. 55-60fps. good enough. thats when outside, faster when inside.
+[14:51:25] <Riven_> seems like you have the greatest gains in LODing
+[14:51:43] <Riven_> looks like you have multiple triangles per pixel, in certain areas
+[14:52:57] <Dragonene> where is tmccrary these days btw?
+[14:53:02] <Dragonene> !seen tmccrary
+[14:53:02] <lwjglbot> Dragonene: tmccrary was last seen in #lwjgl 13 weeks, 4 days, 11 hours, 6 minutes, and 42 seconds ago: <tmccrary> Using it is like torture
+[14:53:08] <Dragonene> :S
+[14:53:13] *** jonkri has quit IRC
+[14:53:16] <Schnitter> tmccrary = noobfukaire
+[14:53:21] <kbotnen> hmm.. That might be correct. But just a quickie. Partiotioning, culling and LOD does almost the same (reduce amount of rendered information).?
+[14:53:38] <Dragonene> oh really?
+[14:53:42] <Dragonene> I didn't know that
+[14:53:48] <Dragonene> then I talked to him just yesterday
+[14:53:52] <Schnitter> really :)
+[14:53:55] <Dragonene> NoobFukaire: Stop being so stealthy with your nicks!
+[14:54:08] <Schnitter> also curious for me :x
+[14:54:08] <Dragonene> what about void, he hasn't been here for ages
+[14:54:11] <Dragonene> :(
+[14:54:26] <Schnitter> isn't he only here at night?
+[14:54:45] <Dragonene> !seen void256
+[14:54:45] <lwjglbot> Dragonene: void256 was last seen in #lwjgl 1 day, 7 hours, 54 minutes, and 9 seconds ago: <void256> \o/
+[14:54:47] <Dragonene> Not lately.
+[14:54:51] <Dragonene> oh what
+[14:54:55] <Dragonene> oh no
+[14:54:57] <Dragonene> that's not him
+[14:55:04] <Dragonene> that's NoobFukaire who changed his nick to imitate void
+[14:55:09] <Dragonene> he was really here like 4-5 weeks ago last
+[14:55:27] <Schnitter> wow
+[14:56:26] <Schnitter> last twitter update 25 days ago
+[14:56:48] <Riven_> Notch: http://www.indiespot.net/files/20090513_145605/index.html
+[14:57:25] <Riven_> default hovermap with clicks added
+[14:57:27] <Notch> I love how the scrollbar shows up
+[14:57:39] <Notch> clicks are the white areas?
+[14:57:40] <Riven_> yeah, not everybody uses that scrollwheel
+[14:58:04] <Riven_> yeah... they are dynamically faded, so that the highest intensity is always white
+[14:58:24] <Riven_> so with few clicks, you get very obvious white dots
+[14:58:42] <Notch> looks great. And as usual, the ads to the right are cooold, as is everything below the fold
+[14:58:50] <Riven_> i actually had to compensate for the scrollbars, as about 20% of all clicks end up there
+[15:00:12] <Riven_> with filters, you can specify your own 'groups' and give them a different color, like red dots
+[15:00:36] <Notch> gathered via javascript, I assume?
+[15:00:40] <Riven_> what you see is aggregate data of 27000 hits
+[15:01:00] <Riven_> yeah... i hate javascript
+[15:01:05] <Notch> haha
+[15:01:06] <Dragonene> hey that's cool Riven_
+[15:01:35] <Riven_> my boss is responsible for the website... it's horrible
+[15:01:46] <Riven_> only for that it will never be a success
+[15:03:57] *** Jvlaple is now known as orsiris
+[15:04:09] *** orsiris is now known as orisis
+[15:05:05] *** orisis is now known as OdinMS
+[15:05:12] <Riven_> identify crisis
+[15:05:18] *** OdinMS is now known as Orisis
+[15:05:42] *** Orisis is now known as Jvlaple
+[15:08:08] <Riven_> Last one, I promise, it's just a pretty picture: http://www.indiespot.net/files/20090513_150923/index.html
+[15:08:41] <Riven_> hovermap, clickmap, flowmap (scroll down)
+[15:08:50] <Notch> oh nice! a vector field =D haha
+[15:09:16] <Schnitter> I can only see a coloured picture site? O_o
+[15:09:21] <Riven_> 16.000 visits rendered in 3 seconds, and you have all kinds of sliders and checboxes to modify it
+[15:10:26] <Riven_> nah, you can uncheck the hovermap, and you'll see the site in original colors, it will still show the clicks and flow
+[15:11:28] <Schnitter> the source code is only a table with <img> tags?
+[15:11:48] <Riven_> this is an exported 'presentation' ... another feature!
+[15:12:21] <Riven_> it's not a webservice, it's generated by a desktop app
+[15:15:24] <Riven_> next thing you know I'm selling you all very expensive accounts...
+[15:15:28] * Riven_ dreams on
+[15:16:32] <Notch> I'll get two!
+[15:17:03] <Dragonene> I'm off for TV
+[15:17:04] <Dragonene> later.
+[15:17:07] <Riven_> cya
+[15:17:10] <Notch> toodles
+[15:17:21] *** kappaOne has joined #lwjgl
+[15:17:23] <Riven_> how's that chunk packing algorithm coming along?
+[15:17:43] <Riven_> already determined the bottleneck?
+[15:18:00] <Notch> I can't until I get home. =)
+[15:18:04] *** Schnitter has quit IRC
+[15:18:56] <Riven_> so, you're saying your boss wouldn't benefit of you working on a personal project??
+[15:19:27] <Riven_> can't you streamline it right onto your webservice, as an easteregg?
+[15:19:39] <Riven_> surely your boss would understand
+[15:20:38] <Notch> haha
+[15:23:27] <kappaOne> some pretty cool java snippets http://viralpatel.net/blogs/2009/05/20-useful-java-code-snippets-for-java-developers.html
+[15:23:33] <kappaOne> didn't know about the fast file copy
+[15:24:21] <Riven_> DMA operation... zero  copy
+[15:24:40] <Notch> "Get name of current method in Java"
+[15:24:42] <Notch> lol, what?
+[15:24:48] *** betel has quit IRC
+[15:24:49] <kappaOne> hehe
+[15:25:08] <kappaOne> still cool to know, even though it'll probably never be used
+[15:25:14] <Riven_> haven't you used that in your own logging API? :p (I do)
+[15:26:16] <Riven_> the thing is that it behaves differently in Java 1.5 and 1.6
+[15:26:33] <Riven_> you have to lookup another index in your stacktrace
+[15:26:38] <Notch> it's also slow since it creates a new stacktrace.
+[15:27:11] <Riven_> ofcourse it's slow! but very handy when debugging
+[15:27:13] *** do0han has joined #lwjgl
+[15:27:22] <Notch> yes. =)
+[15:27:57] <Notch> wait, if you only do it once per class, it's not slow any more
+[15:28:05] <Riven_> I have this Logger.printHere() method, i rarely use it, but it's worth it when it trouble
+[15:28:17] <Riven_> in* trouble
+[15:28:20] <Notch> like private Logger logger = new Logger() once per class, then the logger constructor checks the calling class's name
+[15:28:31] <Notch> i have to start doing that
+[15:28:52] <kappaOne> is there anyway to grab the contents of the java console after an app has crashed?
+[15:28:55] <Riven_> you still woudln't get the method name... then
+[15:28:58] <Notch> that singleton example looks wrong to me
+[15:29:03] <kappaOne> say like when you catch the exception
+[15:29:06] <Notch> it's not thread safe, for one
+[15:29:34] <kappaOne> or do you have to set the app to catch Syste
+[15:29:41] <kappaOne> *System.out
+[15:29:46] <Notch> and it won't compile since singleInstance isn't static..
+[15:29:46] <kappaOne> from the begining
+[15:29:52] <Notch> private SimpleSingleton singleInstance = null;
+[15:29:54] <Notch> should be
+[15:30:04] <Notch> private static SimpleSingleton singleInstance = new SimpleSingleton();
+[15:30:28] <Riven_> "is there anyway to grab the contents of the java console after an app has crashed?" - sure, just start the process with Runtime.exec() to get yourself a Process instance, and then listen on the stdout/stderr
+[15:30:57] <kappaOne> hmm difficult if its an applet :)
+[15:31:01] <Riven_> that way you can even catch VM messages, like when something totally crashes
+[15:31:59] <kappaOne> signed applet that is
+[15:32:19] <Riven_> Notch, you actually pinpoint some feature in the JVM that is little known. The JVM must use quite a few tricks there to sync that properly
+[15:32:35] <Notch> yeps. =)
+[15:32:47] <Riven_> why am i telling you..
+[15:32:53] <Riven_> :)
+[15:33:50] <Riven_> then just implement your own OutputStream, that forwards all bytes to multiple OutputStreams...
+[15:34:22] <Riven_> System.setOut(new MultiOutputStream(System.out, new Socket(myServer).getOutputStream))
+[15:34:39] *** monty_hall has joined #lwjgl
+[15:34:52] <Notch> I've written a couple of those. The first one was buuuggy, hehe
+[15:35:15] <Notch> wurm uses one for its console
+[15:35:23] <Riven_> I remove all streams that throw IOEs from the list, and only rethrow them, once the list is empty
+[15:35:53] <Notch> so you could get a very outdated IOE? =D
+[15:35:56] <Riven_> so it loses functionality silently ;)
+[15:36:17] <Riven_> nah, retrow the last once, that caused the last stream to fail (i was a bit vague, yes)
+[15:36:46] <Riven_> if anything, it would be worth as much as the ancient IOE, though
+[15:38:43] <Notch> ahh
+[15:39:18] <Riven_> I also have this TraceOutputStream, that looks for "\n" and inserts the current method (like Logger.printHere)... it's very nice to find those System.out.println()s that you forgot in your code
+[15:39:22] <Notch> you could have an IoeListener interface as well, I guess
+[15:39:33] <Notch> oh, that's an awesome idea!
+[15:39:34] <Riven_> yeah, but i thought... would i ever make an impl.
+[15:39:43] <Notch> then again, search all files should find most
+[15:40:07] <Riven_> I can use it on any OutputStream
+[15:40:18] <Notch> true. Never add code you don't use, unless it's part of somethiing someone else will use :D
+[15:40:38] <Notch> I was just thinking about solutions to that problem. As long as I know there is a solution, I'm happy. ;)
+[15:40:40] <Riven_> it's also extremely nice when you're tracing down a single threaded problem
+[15:40:46] <Notch> that means I CAN fix it if it turns out I have to
+[15:40:59] <Riven_> yeah... dirty solutions are just fine
+[15:41:10] <Notch> as long as you don't end up in a dead end in the code, yes
+[15:41:24] <Riven_> there is a nasty sideeffect though
+[15:41:30] <Notch> oh?
+[15:41:47] <Riven_> in multithreaded code, most raceconditions simply down happen if you have a dogslow logger in your inner loop
+[15:41:53] <Riven_> down = don't
+[15:42:03] <Notch> haha, yes. I've seen that
+[15:42:05] <Notch> heisenbug. =)
+[15:42:15] * Riven_ googles
+[15:42:19] <Notch> http://en.wikipedia.org/wiki/Heisenbug#Heisenbug
+[15:42:32] <Riven_> ah
+[15:42:55] <Riven_> the JIT is a massive heigenbug
+[15:43:08] <Riven_> it's not even deterministic in single threaded code
+[15:43:17] <Riven_> but i think i rambled enough about that
+[15:43:43] <Riven_> "make your innerloop twice as fast, by adding +0 in your calculation!"
+[15:43:47] <Notch> aye. we ran into a massive loop peeling optimization bug with it at work
+[15:44:20] <Riven_> i loved it when WURM (of all...!) found a bug in the short primitive
+[15:44:28] <Notch> basically, this code would fail: int a = 10; for (int i=0; i<10000; i++) { ham[i] = a; a=9; }
+[15:44:31] <Notch> fail as in crash the jvm
+[15:44:41] <Notch> we did?
+[15:44:51] *** doohan has quit IRC
+[15:44:53] <Riven_> yeah. in beta 1.6
+[15:45:09] <Notch> don't remember any such thing. refresh my memory if you can =D
+[15:45:16] <Riven_> the cast was after the 16 bit mask
+[15:45:29] <Riven_> yeah... in 1.6 your oceans would be insanely high
+[15:45:38] <Riven_> 0 -> 65536
+[15:45:39] <Notch> ahhh, java 1.6
+[15:45:55] <Riven_> nobody else complained, only you :p
+[15:46:11] <Notch> :D
+[15:46:13] <Riven_> if that would have made it in the JVM, i would have cried a little
+[15:46:28] <Riven_> i mean... don't they have unittest
+[15:46:29] <Riven_> s
+[15:46:40] <Notch> you can't unit test for everything
+[15:46:59] <Notch> that's one of the biggest flaws of unit testing. You can rely on it too much, but it's impossible to test everything
+[15:47:01] <Riven_> no, but "casting to short" should have been in a unittest in Java 1.0
+[15:47:06] <Notch> yes.
+[15:47:13] <Notch> I just wanted to rant a little. ;)
+[15:47:38] <Riven_> yeah, if something better comes along, i'll jump on that boat
+[15:47:53] <Riven_> until then, I'm writing a few test per... month :(
+[15:47:59] <Notch> i don't know of anything better
+[15:48:33] <Notch> it's a very good tool for regression tests of small features
+[15:48:58] <Riven_> yup... but in the J2EE world, they took it a bit too far, with all those Stubs
+[15:49:17] <Notch> I've never worked properly with j2ee
+[15:49:18] <Riven_> you're writing more stubs than actual code, and what if you bug your stub
+[15:49:35] <Notch> haha yeah
+[15:49:41] <Riven_> j2ee is my secret synonym for horrific
+[15:49:56] <Riven_> it's SO HIGHLEVEL... it's not funny
+[15:50:03] <Riven_> i hope you'll never have to work with it
+[15:50:13] <Notch> as do I
+[15:51:26] <Riven_> it's like, adding an annotaion to this statement: (not even a field!)    Something thing = null; and the J2EE jumps in and initializes that value for you, from some database connection, behind at least 5 abstraction layers, all described in a zillion XML files
+[15:51:57] <Riven_> it's ... NOT FUNNY
+[15:52:16] <Notch> :-\
+[15:52:30] <Riven_> that's why my datamining servers are running on my own HTTP server :)
+[15:52:46] <Notch> =D
+[15:52:55] <Notch> you're hardcore
+[15:53:08] <Riven_> i only use 3rd party products if performance doesn't matter
+[15:53:38] <Notch> like the jre?
+[15:53:44] <Notch> (OH SNAP!)
+[15:53:45] <Riven_> i do use MySQL for handling all user account statistics, because things like PHPmyAdmin are just so damn convenient
+[15:54:07] <Riven_> i just rolled my own bytecode interpreter... it's faster than javascript!
+[15:54:13] <Jvlaple> lol
+[15:54:17] <Jvlaple> !lol
+[15:55:02] <Riven_> it's so nice to call step() on a method :)
+[15:55:29] <Jvlaple> lol stop showing off :(
+[15:55:39] <Notch> no, continue!!
+[15:55:44] * Riven_ continues
+[15:55:53] <Jvlaple> ._.
+[15:55:56] <Jvlaple> ;_;
+[15:56:08] <Riven_> i also rolled my own RMI impl. it's so much better than Suns, and it's really fast... (doh)
+[15:56:14] <kappaOne> you roll so much of your own stuff, do you get anything done? :)
+[15:56:18] <Riven_> i use that in my datamining serers too
+[15:56:20] <Jvlaple> there you go again
+[15:56:53] <kappaOne> you really must join the openjdk project too
+[15:57:01] <Riven_> most of those things are only 3-4 days works... there are 365 days per year
+[15:57:06] <Riven_> enough time to get productive
+[15:57:22] <Jvlaple> ._.
+[15:57:51] <Riven_> best of all, if you encoutner a bug, you can fix it instantly, because you KNOW how it works... with 3rd party stuff, you have to dig through sourcecode, and file a bug report, then wait 3 weeks
+[15:58:00] *** keisangi has joined #lwjgl
+[15:58:04] <Riven_> same for adding new features
+[15:59:09] <Riven_> actually, you're chatting to my chatbot.
+[15:59:27] <Notch> OH DEAR LORD!
+[15:59:43] <kappaOne> hehe
+[15:59:48] <Jvlaple> lies
+[16:00:00] <Jvlaple> nice try though
+[16:00:02] <Jvlaple> :P
+[16:01:04] <Riven_> that was all i had to say, now it's time to do something
+[16:01:07] <kappaOne> there was actually a talking bot here a while ago
+[16:01:17] <Jvlaple> like this
+[16:01:20] <Jvlaple> !lol
+[16:01:25] <kappaOne> think Suzy use to talk
+[16:01:29] <Riven_> it's rather easy to fake intelligence with MarkovChains
+[16:01:29] <Jvlaple> lwjglbot rofl
+[16:01:42] <Jvlaple> !insult lwjglbot
+[16:01:42] <lwjglbot> lwjglbot - You are nothing but a humid stack of vain heads.
+[16:01:49] <kappaOne> not it only good for api finding
+[16:01:52] <kappaOne> *not = now
+[16:02:03] <kappaOne> ~api Image
+[16:02:03] <Suzy> http://java.sun.com/javase/6/docs/api/java/awt/Image.html
+[16:02:05] <NoobFukaire1> !findbot lwjgl
+[16:02:16] <Jvlaple> ~wat
+[16:02:17] <Riven_> it's just stitching segments of sentenses
+[16:02:22] <Jvlaple> ~api Image
+[16:02:22] <Suzy> http://java.sun.com/javase/6/docs/api/java/awt/Image.html
+[16:02:29] <Riven_> ~api Unsafe
+[16:02:29] <Suzy> No matches found.
+[16:02:34] <Riven_> darn ignorant
+[16:02:37] <Jvlaple> ~api youfail
+[16:02:37] <Suzy> No matches found.
+[16:02:41] <Jvlaple> :(
+[16:02:52] <Jvlaple> !insult Suzy
+[16:02:52] <lwjglbot> Suzy - You are nothing but a puny gob of Microsoft-loving eel.
+[16:03:02] <Jvlaple> ~insult lwjglbot
+[16:03:25] *** Riven_ is now known as RivenBot
+[16:03:36] <Jvlaple> ...
+[16:03:41] <Jvlaple> changing your name won't help
+[16:03:51] <RivenBot> darn, not so easy to fool you guys
+[16:04:30] *** Jvlaple is now known as JvlapleBot
+[16:04:39] <RivenBot> I'm only IRCing since last week or so... anybody knows how I can claim "Riven" ?
+[16:04:41] <JvlapleBot> Hi Guys Im a BOT :D
+[16:04:43] *** kappaOne is now known as kappaBot
+[16:04:58] <RivenBot> because first time i logged in here, "Riven" was free... :(
+[16:05:06] <RivenBot> now it's taken
+[16:05:10] <RivenBot> how to claim it back?
+[16:05:11] <JvlapleBot> kill the owner
+[16:05:12] <Notch> RivenBot: lol, markov chains will not ever pass the turing test. =)
+[16:05:16] <kappaBot> register it
+[16:05:28] *** kappaBot is now known as kappaOne
+[16:05:29] <JvlapleBot> [Bot] Starting
+[16:05:40] <JvlapleBot> [Bot] Crashed -> YOU FAIL
+[16:05:42] <RivenBot> depends on the *other* chatbot, Notch
+[16:05:46] <Notch> haha
+[16:05:53] <Notch> that makes no sense. :D
+[16:06:02] *** JvlapleBot is now known as Jvlaple
+[16:06:09] <RivenBot> two bots testing eachother, both morons
+[16:06:09] <Notch> they're fun, though. Great for generating names for games :D
+[16:06:17] <Notch> a bot can't do the test
+[16:06:30] <Notch> the point is that a human can't distinguish a bot from a human
+[16:06:30] <RivenBot> so you're told
+[16:06:31] <Jvlaple> its easy to make a bot
+[16:06:35] <Jvlaple> just make it a packet editor
+[16:06:37] <Jvlaple> >.>
+[16:06:41] *** RivenBot is now known as Riven_
+[16:06:47] <kappaOne> to be a true bot you have to top the stat over at http://echelog.matzon.dk/stats/lwjgl.html
+[16:06:54] *** Jvlaple is now known as RlVEN
+[16:06:57] <Riven_> KappaBot, how do i register it..?
+[16:06:58] <RlVEN> YAY
+[16:07:06] <Riven_> faker
+[16:07:09] <RlVEN> lol
+[16:07:25] <Riven_> tell me the dirty secrets of IRC :(
+[16:07:29] <RlVEN> !insult RlVEN
+[16:07:29] <lwjglbot> RlVEN - You are nothing but an infected puddle of horn-beat eel.
+[16:07:29] <Riven_> i want my nick back
+[16:07:36] <RlVEN> fine
+[16:07:39] <RlVEN> here you go
+[16:07:43] <Riven_> nah, with an i
+[16:07:45] *** RlVEN is now known as Jvlaple_Robot
+[16:08:01] *** Jvlaple_Robot is now known as Jvlaple
+[16:08:04] <kappaOne> info on how to register nicks @ http://freenode.net/faq.shtml
+[16:08:12] <Riven_> thx!
+[16:08:12] <Jvlaple> lol!
+[16:08:16] *** d0ohan has joined #lwjgl
+[16:08:17] <Jvlaple> just type /cs register help
+[16:08:23] <Notch> * [riven] (n=colin@pdpc/supporter/professional/riven): Colin Aarts
+[16:08:55] <Dragonene> NoobFukaire: Schnitter tells me you're tmccrary in disguise
+[16:09:00] <Dragonene> Why did you not say so? :D
+[16:09:03] <Jvlaple> .__________.
+[16:09:37] <kappaOne> i new that :)
+[16:09:44] <kappaOne> *knew
+[16:09:50] <Jvlaple> L_L
+[16:10:11] <Riven_> i can't register Riven, as I'm not able to login as Riven :"(
+[16:10:12] <NoobFukaire1> Dragonene: haha, sorry ;)
+[16:10:18] <Jvlaple> Lol
+[16:10:23] <NoobFukaire1> I'm tmccrary in disguise ;)
+[16:10:31] <NoobFukaire1> more than meets the eye
+[16:10:45] <Notch> Riven_: Riven's already registered..
+[16:10:55] <Riven_> it wasn't the first time i logged in :(
+[16:10:58] <Riven_> last week
+[16:11:07] <kappaOne> maybe it was and the user just wasn't logged in
+[16:11:08] <Jvlaple> :'(
+[16:11:10] <Jvlaple> I cant use it either
+[16:11:25] *** Jvlaple is now known as IRCBot
+[16:11:26] <Riven_> an underscore isn't that bad... (pff)
+[16:11:31] <kappaOne> well theres always RivenOne :)
+[16:11:35] <Notch> notch's registered as well
+[16:11:56] <IRCBot> I AM UR BOT
+[16:11:57] *** Notch is now known as Notch_
+[16:12:14] * Riven_ melts with warm feelings
+[16:12:28] * IRCBot is a bot
+[16:12:45] * IRCBot *is a bot*
+[16:13:14] * IRCBot slaps Riven_ around about with a large trout fresh from my toilet
+[16:13:44] *** Riven_ is now known as dRiven
+[16:13:46] *** IRCBot is now known as Riven__
+[16:13:58] *** Riven__ is now known as Riven_
+[16:14:08] <Riven_> Lol you protected this name
+[16:14:09] <Riven_> :(
+[16:14:14] *** do0han has quit IRC
+[16:14:21] <dRiven> please stop that
+[16:14:23] *** Riven_ is now known as George_Bush
+[16:14:44] <George_Bush> I am George bush
+[16:14:46] <George_Bush> :D
+[16:14:52] *** George_Bush is now known as Obama
+[16:15:00] <Obama> HAI ITS OBAMA
+[16:15:22] *** Obama is now known as Guest59571
+[16:15:28] *** dRiven has quit IRC
+[16:15:34] *** Guest59571 is now known as ||
+[16:15:50] <||> I like my new name
+[16:16:38] *** || is now known as River
+[16:16:42] <Notch_> you scared him off :-\
+[16:16:48] <River> dam
+[16:16:56] <River> I was copying him =(
+[16:17:07] <Notch_> it's neither funny nor nice
+[16:17:13] <River> =(
+[16:17:22] * River suicides
+[16:17:47] *** Riven_ has joined #lwjgl
+[16:17:55] <River> WB RIVEN
+[16:18:03] <Riven_> it was a struggle
+[16:18:09] <River> lool
+[16:18:09] <Riven_> but eventually... i failed
+[16:18:20] <Notch_> what was a struggle?
+[16:18:23] <River> !lol
+[16:18:33] <River> lwjglbot you suck
+[16:19:13] <Riven_> first to come up with a nick, then registereing it, after i registered Riven_ which basically said i was already registered.. etc etc
+[16:19:27] <River> lol
+[16:19:30] <Notch_> :D
+[16:19:43] <River> 85.149.148.142
+[16:19:52] *** River is now known as |Riven|
+[16:19:57] <kappaOne> too bad unicode isn't allowed for nicks
+[16:19:59] <|Riven|> use this name :D
+[16:20:03] <kappaOne> thats be interesting ?
+[16:20:11] <Riven_> but i feel very comforted now that I see those appended underscores
+[16:20:22] <|Riven|> :( use this name
+[16:20:31] <Riven_> |Riven| == absolute Riven
+[16:20:35] <|Riven|> yea
+[16:20:44] <Dragonene> or Rivenevir if you want a palindrome
+[16:20:50] *** |Riven| is now known as Use|Riven|
+[16:21:08] <Riven_> very tempting
+[16:21:21] <kappaOne> Notch_ any big plans for jgo?
+[16:21:21] *** Use|Riven| is now known as ___Loser___
+[16:21:50] *** Riven_ is now known as [Riven]
+[16:21:53] *** ___Loser___ is now known as _2342424_
+[16:22:04] <_2342424_> I got an underLINED NAME
+[16:22:06] <_2342424_> :D
+[16:22:16] *** _2342424_ is now known as [Faggots]
+[16:22:32] *** [Faggots] is now known as [TrollBot]
+[16:22:53] <[Riven]> welcome back, to the hilarious adventures of renaming, part IV
+[16:22:58] <[TrollBot]> lol
+[16:23:22] <[Riven]> so it was all a big mistake
+[16:23:34] *** [Riven] is now known as Riven_
+[16:23:43] * kappaOne peers Notch_ new super mod powers :)
+[16:24:14] <[TrollBot]> I WANT SUPA MOD PWRS
+[16:24:44] <[TrollBot]> np
+[16:24:48] <[TrollBot]> whoops
+[16:24:50] <[TrollBot]> lol
+[16:24:59] *** [TrollBot] is now known as Guest2134234
+[16:25:06] <Riven_> I think everybody wants you for anything, because of your rep., but they may not realise you might not want to spend too much time on a webcommunity, as that's not exactly what your hobby is... me thinks
+[16:25:37] *** Guest2134234 is now known as MeThnks
+[16:25:43] *** MeThnks is now known as MeThinks
+[16:25:52] <NoobFukaire1> Begun the energy wars have
+[16:26:10] <Riven_> all your posts are belong to notch
+[16:26:32] <Riven_> anyway, i also think all those subforums do jgo some real hard, especially (!!) all those sticky posts
+[16:27:04] <Riven_> hard = harm (me blames finger)
+[16:27:28] *** MeThinks is now known as JGOCommunity
+[16:27:49] <JGOCommunity> lol
+[16:28:01] *** JGOCommunity is now known as MoveThreads
+[16:28:08] <Riven_> i'd love to see gouessej's reaction to merging the LWJGL and JOGL forums
+[16:28:18] *** MoveThreads is now known as MergingForums
+[16:28:45] *** MergingForums is now known as Bad_idea
+[16:28:56] <Riven_> adding functionality in an existing PHP/MySQL product, is really hard
+[16:28:57] *** Bad_idea is now known as OpenGL_bindings
+[16:29:24] <NoobFukaire1> punchout is released monday
+[16:29:26] <NoobFukaire1> in the US
+[16:29:36] *** OpenGL_bindings is now known as PHPMYSQL
+[16:29:50] *** PHPMYSQL is now known as Jvlaple
+[16:29:52] * Riven_ thinks renaming all the time is a tad annoying
+[16:30:03] * Notch_ agrees
+[16:30:05] * Jvlaple suicides
+[16:30:06] * kappaOne looks for the block user option :)
+[16:30:31] * Riven_ baries the remains
+[16:31:13] <Riven_> anyway... if you'd add functionality, it'd be almost easier to start from scratch and do it all in Java
+[16:31:13] * Jvlaple cuts his wrists
+[16:31:17] * Jvlaple cuts his wrists
+[16:31:54] * Jvlaple cuts his neck
+[16:32:03] <Riven_> xith was seperated from JGO, as about 80% of all post on JGO where about Xith...
+[16:32:17] <Dragonene> okay, I really have to sleep
+[16:32:17] <Riven_> all new* posts
+[16:32:18] <Dragonene> 'night.
+[16:32:24] <Riven_> sleep tight!
+[16:33:09] <Notch_> gnite Dragonene =)
+[16:33:14] <Riven_> i think the 'show unread posts' should be filtered to forums, so you can exclude everything you don't care about
+[16:33:31] <Dragonene> kappaOne:
+[16:33:34] <Dragonene> daily game news?
+[16:33:44] <Dragonene> I'm not sure that's doable for java games
+[16:33:54] <Dragonene> Unless you count android.
+[16:34:05] <Dragonene> Speaking of android, the G1 has sold a million units in the US now.
+[16:34:09] <kappaOne> well daily java/indie games or topics of likely interest
+[16:34:13] <Dragonene> and has uh, 6% of the smartphone market
+[16:34:18] <kappaOne> to the java game dev's
+[16:34:19] <Dragonene> so it's starting to get popular I guess
+[16:34:39] <kappaOne> plenty of stuff you can report like new tools
+[16:34:44] <Dragonene> yeah I guess
+[16:34:48] <Dragonene> I really need to sleep now :P
+[16:34:56] <Dragonene> I am not particularly tired but I have early school tomorrow
+[16:34:59] <kappaOne> articles on various game design and coding
+[16:34:59] <Dragonene> :S
+[16:35:12] <Dragonene> mirroring lostgarden.com...
+[16:35:14] <Dragonene> oh wait :P
+[16:35:20] <Dragonene> perhaps danc wouldn't appreciate that
+[16:35:20] <Dragonene> :D
+[16:35:44] <d0ohan> dancs updates are about once a month though
+[16:35:51] <d0ohan> excellent as they are
+[16:35:54] <kappaOne> yeh lostgardens could be added as a rss to news section
+[16:36:13] <kappaOne> so it just lists a small part of the article and to read the full article you go to his site
+[16:36:20] *** Scientz has joined #lwjgl
+[16:36:22] <Dragonene> I didn't mean using only danc's stuff
+[16:36:32] <Dragonene> just meant talking about his updates when they arrive...
+[16:36:32] <kappaOne> yeh various sources
+[16:36:33] <Dragonene> :)
+[16:36:45] <Dragonene> tigsource.com wrote about ludumdare
+[16:36:49] *** Scient has quit IRC
+[16:36:49] <kappaOne> but again all of this is alot of work
+[16:37:04] <kappaOne> sun should really hire ppl to do this :)
+[16:37:17] <Dragonene> why?
+[16:37:26] <Dragonene> It'd take a long while to get competetive
+[16:37:31] <Riven_> sun is only going to fire the coming months
+[16:37:32] <Dragonene> and it's unlikely to get them any revenue
+[16:37:39] <Riven_> and then oracle is going to fire more
+[16:37:51] <kappaOne> well applets are finally usable
+[16:38:00] <kappaOne> they want to push their javafx stuff
+[16:38:06] <Riven_> applets where indeed JIT
+[16:38:14] <Riven_> were*
+[16:38:15] <kappaOne> and gaming is the only market they can possiblily succeed
+[16:38:23] <kappaOne> although javafx will still fail :)
+[16:38:28] <Riven_> JavaFXs performance is dreadful
+[16:38:29] <kappaOne> but java applets cool live on
+[16:38:37] <kappaOne> *cool = could
+[16:39:23] <kappaOne> well as long as javafx can't play video's as well as or better than flash, it ain't getting any where
+[16:39:41] <kappaOne> its a dreadful user experience atm
+[16:40:08] <Riven_> JavaFX startup time is monsterous (worse than the old applets) and then you have 3 'i agree' buttons to click
+[16:40:20] * Riven_ reads
+[16:42:46] <kappaOne> well if they only want some ppl to mod the boards then jgo will largely be the same
+[16:43:01] <Notch_> spam will go away faster in the forums I read. :D
+[16:43:05] <Notch_> but that's about it
+[16:43:19] <Dragonene> oh damn
+[16:43:20] <Notch_> it doesn't need much moderating
+[16:43:23] <Dragonene> I'm still not in bed
+[16:43:26] <Dragonene> how did that happen
+[16:43:26] <Notch_> haha
+[16:43:36] <Notch_> go to bed without visiting go!
+[16:43:41] <Dragonene> haha
+[16:43:46] <Dragonene> you just reminded me of blackmail
+[16:43:52] <Notch_> the concept?
+[16:43:53] <Dragonene> it's this game we played because it had a cool name
+[16:44:00] <Dragonene> turns out it's just a horribly bad monopoly clone
+[16:44:13] <Notch_> haha
+[16:44:19] <Dragonene> it's like monopoly, but every turn, there's more than a 50% chance that absolutely nothing will happen
+[16:44:27] <Dragonene> and it has even less depth than monopoly
+[16:44:45] <Dragonene> Never play it.
+[16:44:45] <Dragonene> :)
+[16:45:04] <Riven_> nice twist, if you're lethargic
+[16:45:40] <Riven_> i wonder who could come up with such a game and deem it fun
+[16:46:48] <Dragonene> yeah
+[16:46:51] <Dragonene> we were playing it
+[16:46:59] <Dragonene> and all the while saying "who the hell came up with this"
+[16:47:02] <Dragonene> we gave up pretty fast though
+[16:47:13] <Dragonene> Here's the basic gameplay
+[16:47:19] <Riven_> maybe you misread the instructions
+[16:47:23] <Dragonene> nah
+[16:47:29] <Notch_> Dragonene: Bed!
+[16:47:42] <Dragonene> "Roll 2 dice. Nothing happens. Roll 2 dice. Nothing happens. Roll 2 dice. You lose half your money. Roll 2 dice. Nothing happens. Roll 2 dice. You lose half your salary."
+[16:47:58] <Dragonene> "salary" being the income when you pass "Go!"
+[16:47:59] <Riven_> reallife!
+[16:48:09] <Dragonene> Notch_: :'(
+[16:48:11] <Dragonene> I'm not tired
+[16:48:15] <Notch_> haha
+[16:48:15] <Dragonene> and I have a headache :P
+[16:48:17] <Notch_> well, ok then!
+[16:48:18] <Riven_> you will be, tomorrow
+[16:48:20] <Dragonene> I hate going to bed with a headache
+[16:48:30] <Dragonene> because I always, *always*, wake up with one
+[16:48:40] <Dragonene> if I go to bed with one
+[16:50:17] <Riven_> knock yourself out
+[16:50:20] <Riven_> literally
+[16:50:36] <Dragonene> that... wouldn't help me get rid of a head ache
+[16:50:44] <Dragonene> :\
+[16:51:00] <Riven_> you might now wakeup with a headache, if at all
+[16:51:08] <Riven_> now = not
+[16:51:20] <Riven_> (and there goes the fantastic timing of that joke)
+[16:51:57] <Notch_> haha
+[16:51:58] <Notch_> =D
+[16:52:13] <Dragonene> haha
+[16:52:21] <Riven_> group hug
+[16:52:35] * Notch_ hugs the group
+[16:52:49] <Notch_> oh dear, I get to go home and optimize soon!
+[16:52:54] <Riven_> and they lived happily every after
+[16:52:56] <Riven_> GO TO BED
+[16:53:03] <Notch_> no, never!
+[16:53:09] <Riven_> not you, silly
+[16:53:15] <Notch_> oh, ok
+[16:53:22] <Dragonene> :'(
+[16:53:27] <Dragonene> I want to work on games too
+[16:53:29] <Dragonene> but no time!
+[16:53:31] <Dragonene> :'(
+[16:53:42] <Riven_> you know what might hellp, just running around the block, maybe you need some fresh air
+[16:54:24] <Riven_> if you don't sleep soon, you'll feel like your head is stuffed up with fog tomorrow
+[16:54:38] <Dragonene> Riven_: yeah, I will :P
+[16:54:45] <Riven_> go girl!
+[16:54:51] <Dragonene> I won't do running though
+[16:55:10] <Dragonene> I came back from two and a half from ultimate frisbee a while ago
+[16:55:24] <Dragonene> two and a half hours of* ultimate frisbee
+[16:55:28] <Dragonene> (that's why I needed that shower...)
+[16:55:38] <Riven_> yeah... otherwise they don't fly in a straight line
+[16:55:58] <Notch_> wha?
+[16:56:04] <Riven_> a half frisbee
+[16:56:09] <Notch_> i see!
+[16:56:20] <Dragonene> oO
+[16:56:23] <Riven_> i realize it wasn't that funny
+[16:56:28] <Dragonene> Not particularly
+[16:56:28] <Notch_> now I go home. =D
+[16:56:32] <Dragonene> ciao
+[16:56:33] <Notch_> code code CODE COOOODDEEEEE!!!
+[16:56:33] <Riven_> run!
+[16:56:40] <Riven_> have fun!
+[16:56:41] <Dragonene> But seeing you say "I realize it wasn't that funny" made me laugh
+[16:56:43] <Dragonene> so you won anyway
+[16:56:45] *** Notch_ has quit IRC
+[16:56:51] <Riven_> :)
+[16:56:52] <Dragonene> now, I'm off for bed
+[16:57:01] <Riven_> cya!
+[17:01:26] *** Dragonene has left #lwjgl
+[17:02:28] *** Schnitter has joined #lwjgl
+[17:38:37] <lwjglbot> lwjglforum: Re: Error with 64 bit in 2.1.0 <http://lwjgl.org/forum/index.php/topic,2860.msg16008.html#msg16008>
+[17:43:15] *** d0ohan has quit IRC
+[17:45:17] *** aho has joined #lwjgl
+[17:46:18] *** woogley has joined #lwjgl
+[17:54:14] *** pstickne has joined #lwjgl
+[17:55:12] *** betel has joined #lwjgl
+[18:01:59] *** kappaOne has quit IRC
+[18:11:01] *** Jvlaple has quit IRC
+[18:14:52] *** Notch_ has joined #lwjgl
+[18:24:14] *** daydream8192 has joined #lwjgl
+[18:24:23] * Riven_ is away: botnet hogging my swapfile
+[18:25:29] * Riven_ is back (gone 00:01:07)
+[18:25:37] *** Riven_ has left #lwjgl
+[18:25:55] *** Riven_ has joined #lwjgl
+[18:26:13] *** daydream8192 has quit IRC
+[18:28:51] * Notch_ punches wall
+[18:28:53] <Notch_> take that, wall.
+[18:30:42] <Riven_> optimising not as easy as expected?
+[18:30:52] <Notch_> haven't started yet. =)
+[18:31:03] <Riven_> when what are you knowing down walls for
+[18:31:14] <Riven_> knocking*
+[18:31:15] <Notch_> general nerd rage =D
+[18:31:28] <Riven_> ah, i understand
+[18:31:39] <Notch_> ok, I'll start coding now. =D
+[18:31:51] <Riven_> be good
+[18:32:18] <Notch_> i'm still here, though.
+[18:32:27] <Riven_> and that's a relief...?
+[18:32:30] <Notch_> lol
+[18:32:34] * Notch_ shuts up
+[18:32:38] <Riven_> now i gotta monitor this darn chat for laughs!
+[18:37:08] <Notch_> 0.9 ms
+[18:37:15] <Notch_> damn
+[18:37:21] <Riven_> what changed
+[18:37:27] <Notch_> nothing, that's the speed of the java portion
+[18:37:34] <Notch_> ah, wait, no, haha
+[18:37:37] <Notch_> timed the wrong area
+[18:38:26] <Riven_> System.nanoTime isself talkes roughty 1100us
+[18:38:31] <Notch_> ok, 5 ms
+[18:38:41] <Riven_> pff... i should not type with 1 finger
+[18:38:45] <Riven_> (i'm eating)
+[18:38:58] <Notch_> it goes as low as 1, and as high as 12, but the 12 is the first one, so that's probably in intepreted mode. ;)
+[18:39:33] <Riven_> yeah, i occasionally run into cases where interpreted mode is fastest
+[18:39:41] <Notch_> haha
+[18:39:42] <Notch_> wow
+[18:40:26] <Riven_> so DisplayLists took 95ms?
+[18:40:31] <Riven_> or did you change much more
+[18:40:46] <Riven_> because, i worked with DLs, but they were not *that* slow
+[18:41:23] <Notch_> no, the total measured time is just under 10 ms now, including building the display list.
+[18:41:36] <Notch_> But when chunks are updating, the fps definitely drops down to single digits
+[18:41:54] *** Schnitter has quit IRC
+[18:41:59] <Notch_> I made it only update two chunks per frame maximum, and it's very slow
+[18:42:10] <Notch_> I'm doing something wrong in the code surrounding this. =)
+[18:42:16] <Riven_> how many chunks are updating per second?? (is your stresstest realistic? - destroying the whole scene is not)
+[18:42:41] <Notch_> 2 per frame. all chunks are initially dirty (ie blank)
+[18:42:53] <Notch_> then they compile until all chunks are not dirty
+[18:43:11] <Riven_> what's the performaance like in OpenGL immediate mode
+[18:44:20] <Notch_> what the hell, it's reporting a framerate of 279 when updating chunks (800 after)
+[18:44:43] <Riven_> you're staring the JIT right in the face :p
+[18:44:46] <Notch_> this is about the performance i expect from this, but it DEFINITELY doesn't look like 279 ingame. Weeeeeird
+[18:44:57] <Notch_> time to start calculating chunk updates/second
+[18:45:56] <Riven_> input thread getting starved?
+[18:46:02] <Riven_> (keyboard / mouse)
+[18:46:10] <Notch_> lwjgl, so there's no input thread.
+[18:47:56] <Riven_> i'd just render a rectangle on screen, that moves 1 pixel per frame. then you can see the speed, and whether it looks smooth or not
+[18:48:38] <Notch_> I managed to force it to do as I want now. 72 fps, 288 chunk updates per second
+[18:49:00] <Notch_> that's relatively close to 72*4, and I seem to be allowing FOUR updates per frame
+[18:49:01] <Riven_> is that throttled, or all out?
+[18:49:04] <Notch_> all out
+[18:49:30] <Notch_> chunks randomly get set to dirty to make sure there always are chunks to rebuild
+[18:49:57] <Riven_> well, as every chunk is 16^3 blocks, and there world is not constantly completely modifying, I guess it's just fine
+[18:49:59] <Notch_> and this works out to about 3.4 ms per chunk update.
+[18:50:10] <Notch_> so the math adds up!
+[18:50:18] <Riven_> are you using DLs now, or VAs ?
+[18:50:32] <Notch_> DLs built from VAs because immedate mode is faaar too slow from java
+[18:51:00] <Riven_> i vagely remember that there was some problem with that
+[18:51:01] <Notch_> (i have one va used for rendering. when it gets full, it flushes)
+[18:51:05] <Notch_> oh?
+[18:51:42] <Riven_> like you had to bind the data inside the DL too, not only call glDrawArrays
+[18:51:50] <Riven_> but again, it's a very vague memory
+[18:54:09] <Notch_> well, the data gets uploaded with VAs, and the display list is server side
+[18:54:26] <Notch_> the only issue I had was doing glEnableState on the arrays instead of glEnableClientState
+[18:54:41] <Riven_> yeah,a i know it hardly makes sense, but i know there was something funny about the DL/VA combo
+[18:54:52] <Notch_> i do that within the newList/endList, if it matters
+[18:55:03] <Notch_> shouldn't, since it's client side, as said. =)
+[18:55:05] <Riven_> well, if it works, you win :)
+[18:55:42] <Riven_> IIRC, VAs are also not indexed automatically
+[18:55:45] <Notch_> the chunk size is 16x16 now..
+[18:56:15] <Riven_> any premature screenshots? :)
+[18:56:47] <Notch_> 8x8 chunks are SLOWER
+[18:57:01] <Riven_> thanks for rubbing that in
+[18:57:05] <Notch_> 8x8x8, I mean. And not slower per chunk!
+[18:57:09] <Notch_> but per tile in the chunk
+[18:57:29] <Notch_> they run at 1.3 ms instead of 3.4
+[18:57:30] <Riven_> maybe you cull less faces
+[18:57:34] *** jonkri_ has quit IRC
+[18:58:18] *** jonkri_ has joined #lwjgl
+[18:58:52] <Notch_> 32^3 is 26.3 ms per chunk update
+[18:59:12] <Notch_> seems like 16 is optimal =)
+[18:59:17] <Riven_> that too is slower :)
+[18:59:21] <Riven_> 16 seems a sweetspot
+[18:59:28] * Notch_ grabs screenshot(s)
+[19:00:06] <Riven_> maybe there isn't a reason to stick with POT chunks... maybe the sweepspot is 14..
+[19:00:25] <Riven_> may require some padding at the edges though
+[19:00:42] <Notch_> good point! I "should" already have padding support, but it's not tested. ;)
+[19:00:52] <Notch_> hmm, I wonder if I could make a vid of this
+[19:01:14] <Riven_> yeah, requiring that army of artists to use POT dimensions is way too demanding
+[19:01:51] <Riven_> i found this silly java JAR that you feed PNGs or JPGs, and it spits out a massive AVI
+[19:02:14] <Riven_> just run your favourite codec over it
+[19:03:53] <Riven_> you could just use fraps ofcourse, but where's the fun in that
+[19:08:27] *** davedes has joined #lwjgl
+[19:09:25] <Notch_> I use camstudio. It's free, and works really well
+[19:09:30] <Notch_> and I need that jar!
+[19:10:39] <aho> mencoder would also work
+[19:11:17] <Riven_> uploading it now
+[19:12:08] <Riven_> http://www.indiespot.net/files/AVIDemo.jar
+[19:12:38] <Riven_> usage: http://pastebin.com/m4e39df2b
+[19:13:07] <aho> line-breaks like "AVID emo" here :>
+[19:13:50] <Riven_> eh, what do you mean?
+[19:14:02] <Notch_> haha, the video ended up at 1.05 GB
+[19:14:06] <Riven_> yeah
+[19:14:14] <Riven_> it's not compressed at all
+[19:14:16] <Notch_> I mean the one I recorded with camstudio just now
+[19:14:21] <Riven_> oh
+[19:14:29] <Riven_> problably also uncompressed :)
+[19:14:40] <Notch_> heh
+[19:15:36] <Notch_> well, this is annoying. I guess I have to recapture. Google has a limit of 2 gb
+[19:15:38] <Notch_> *1
+[19:15:58] <Riven_> compress it locally, you silly, uploading would take hours
+[19:16:06] <aho> just transcode it with virtualdub
+[19:16:09] <Riven_> unless you have an insane connection
+[19:16:21] <Notch_> I've got 100/100 mbps. Uploading to youtube is fast. :D
+[19:16:35] <aho> (install ffdshow-tryouts beforehand... then go with h264)
+[19:16:46] <Riven_> wtf, can i put my dedicated server under your bed?
+[19:17:16] <aho> se and fi got pretty nice connections :f
+[19:17:34] <Riven_> i have 20mbit, but upload is like 5mbit
+[19:18:26] *** kappaOne has joined #lwjgl
+[19:18:44] <Riven_> oh man, i'm ruining your productivenessyness
+[19:18:52] <Riven_> code!
+[19:19:53] <kappaOne> woogley javaunlimited slick forums are down :(
+[19:24:22] <Notch_> uploading to youtube now
+[19:30:40] <Notch_> as predicted, it's taking ages. =D
+[19:33:03] <Riven_> google isn't exactly the company you'd expect to cap their connections
+[19:33:41] <Notch_> I think it's on my side. Internet is slow in general for some reason
+[19:34:55] <Riven_> blame the pirate bay
+[19:35:30] <Notch_> =D
+[19:36:42] <Notch_> upload complete, processing video
+[19:36:45] <Notch_> don't expect much. ;)
+[19:36:52] <Notch_> it's extremely early. But you get to see the cells update!
+[19:37:09] <Riven_> don't apologize!
+[19:37:18] <Notch_> sorry!
+[19:37:19] <Notch_> wait..
+[19:37:24] <Riven_> :)
+[19:38:33] <NoobFukaire1> any one know if Sun abandoned "jxta"
+[19:38:54] <Riven_> it's slow
+[19:39:09] <Riven_> not really suited for realtime I/O
+[19:39:29] <NoobFukaire1> I'm interested in it for some server monitoring/communications stuff
+[19:39:52] <NoobFukaire1> or any p2p lib really
+[19:39:56] <NoobFukaire1> Is there anything better?
+[19:40:02] <Riven_> i'd make very sure you need it, because it's quite a beast, for little gain, generally
+[19:40:11] <Riven_> dunno
+[19:42:41] <Riven_> making P2P work through NAT is a can of worms too... so what exactly are you communicating/monitoring. you might even be better of simply using TCP
+[19:43:30] <NoobFukaire1> this would all be on internal networks, it's not for client purposes
+[19:43:47] <NoobFukaire1> I'm fully familiar with the issues around p2p communications
+[19:43:55] <Riven_> then just use UDP and some discovery mechanism
+[19:44:06] <Riven_> not much to go wrong there
+[19:44:29] <NoobFukaire1> I just got done writing a tcp replacement on udp for client/server use
+[19:44:42] <NoobFukaire1> not looking forward to writing one for p2p
+[19:45:11] <Riven_> i bet somebody already did it, in some obscure opensource project
+[19:45:16] <Riven_> worth googling
+[19:45:20] <NoobFukaire1> been doing that
+[19:45:31] <NoobFukaire1> but jxta dominates
+[19:45:55] <Riven_> well, it wqorks, it's just not very fast
+[19:46:00] <NoobFukaire1> my goal is to write a p2p communications framework and an sge service adapter
+[19:47:08] <Riven_> what is the problem you're trying to solve
+[19:47:44] <NoobFukaire1> handing off application server instances between different servers
+[19:47:53] <Riven_> do you have to route your messages through different networks, or is it all the same
+[19:48:05] <NoobFukaire1> its all on directly routable networks
+[19:48:49] <Riven_> then you don't *need* JXTA, that's especially created to bridge networks transparantly
+[19:49:04] <Riven_> you can use it though, if it solves other problems
+[19:49:18] <NoobFukaire1> yeah I'm sure it will work fine in routable networks as well
+[19:49:32] <Riven_> ofcourse
+[19:49:42] <NoobFukaire1> so far though it seems pretty heavyweight unfortunately ;)
+[19:50:18] <Notch_> ok, the quality is still crap until the processing finishes, but: http://www.youtube.com/watch?v=F9t3FREAZ-k
+[19:50:26] <Notch_> you can't see ANYTHING underground because of the compression, hehe
+[19:50:31] <Riven_> hehe, i was just going to bugger you
+[19:50:56] <kappaOne> awesome stuff that
+[19:51:12] <NoobFukaire1> looks cool, no idea whats going on? ;)
+[19:51:14] <kappaOne> no lava yet?
+[19:51:15] <Riven_> you can see you limited the updates to 2 per frame :)
+[19:51:21] <Riven_> hide it with fog :-p
+[19:51:37] <NoobFukaire1> its funny how youtube WRECKS videos like that
+[19:51:46] <Mazon> 19:53:00] <FN'Riven_> hehe, i was just going to bugger you <-- fairly certain you meant bug - at least Cas informed me of that once ...
+[19:51:48] <Notch_> i'll update tiles chunks the player first, and force a full update upon game start
+[19:51:56] <Notch_> haha mazon
+[19:52:05] <Mazon> to bugger someone is apparantly something entirely else
+[19:52:14] <Riven_> Mazon, my English is rather poor
+[19:52:15] *** woogley has quit IRC
+[19:52:32] <Notch_> it should go HD once the processing finishes, I uploaded it at the right resolution
+[19:52:37] <Riven_> so whatever you say, I accept as the thruth :)
+[19:52:47] <kappaOne> hehe
+[19:52:54] <Mazon> 1.  Vulgar Slang A sodomite
+[19:52:57] <Mazon> ;D
+[19:53:08] <Mazon> 1.  To practice sodomy with.
+[19:53:23] <Riven_> ah, i meant that!
+[19:53:30] <Mazon> sooo - todays less is: to - bug - not bugger someone :)
+[19:53:40] <Mazon> s/less/lesson
+[19:53:41] <Riven_> you don't wanna know
+[19:53:59] <Mazon> correct, I really _really_ dont want to know :)
+[19:54:32] <Riven_> Notch, got collision detection/response inthere?
+[19:54:44] <Notch_> yep
+[19:54:57] <Notch_> since it's all orthogonal, it's lightning fast as well
+[19:55:03] <Riven_> AABB are the natural answer here :p
+[19:55:07] <Notch_> exactly =)
+[19:55:29] <Notch_> I query the Level with an AABB, it returns AABBs for all tiles intersecting that original box.
+[19:55:45] <Notch_> the first box is the size of the entity plus the motion of the entity
+[19:56:03] <Notch_> then I just clip against the returned boxes
+[19:56:12] <Notch_> ooh, the video finished processing
+[19:56:16] <Notch_> it has a nice HD button now
+[19:56:31] <Riven_> i always build by octtrees using building spheres... yes, there is some overlap, but it's so fast it's not funny. Sphere<->Plane is much fuster than AABB
+[19:56:33] <Mazon> infiniminer looks odd!
+[19:56:50] <Notch_> infiniminer is great. It's very addictive
+[19:56:57] <Notch_> but yeah, it's odd. ;)
+[19:57:21] <Mazon> fairly certain its one of those games you have to try to understand
+[19:57:43] <Riven_> HD version is notoriously bugged here... it hangs
+[19:58:23] <Notch_> the sd version might've gotten more quality as well.. can't really tell
+[19:58:52] <Riven_> you mean... not all blurry grey? :)
+[19:59:01] <Notch_> OK I'LL TAKE A SCREENSHOT!!
+[19:59:03] <Notch_> ;D
+[19:59:58] <Riven_> it's clear enough :)
+[20:00:13] <Riven_> but do you generate that cave? 3D perlin noise?
+[20:00:22] <Riven_> are there fully enclosed holes?
+[20:01:10] <Notch_> i place a number of random blocks, then I iterate MAAANY times, picking random tiles. If the tile is immediately next to another tile, I make the new tile a copy of that first tile
+[20:01:13] <Notch_> *block
+[20:01:22] <Notch_> and some magic for the grass
+[20:01:41] <Riven_> so you grow the structure
+[20:01:54] <Notch_> the lighting just builds a 2d depth map of the entire map. All quads facing a tile above or at the depth of that column is considered lit
+[20:02:12] <Notch_> lit tiles get rendered in one pass, then I set up some fog and render the unlit
+[20:02:22] <Notch_> this means that if you build a roof in the game, the inside of your house will get darker
+[20:02:30] <Notch_> yep
+[20:02:39] <Notch_> it won't be like for the final, but it was the fastest way to test
+[20:02:58] <Notch_> it takes like 20 seconds to grow a 256*256*64 map, though. :-\
+[20:03:17] <Riven_> it's really not too hard to raytrace the lighting... only the dynamic nature would require a smart updater
+[20:03:41] <Riven_> don't switch to perlin noise... it will make you finetune your ass off
+[20:03:54] <Riven_> complete waste of time
+[20:03:55] <Notch_> yeah, but since I light it per quad, straight down works fairly well.
+[20:04:09] <Notch_> it feels very very game-y as well, which I kind of like for this project. ;)
+[20:04:29] <Notch_> like "THIS IS A TILE, AND IT IS LIT!". and the player goes "yeah, ok". Then there's a hippo or something.
+[20:04:33] * Notch_ loses it
+[20:04:47] <Riven_> radiosity would make it extremely nice, but then you'd have to reshade the whole world when 1 block is removed
+[20:05:25] <Notch_> I'm going for simple graphics, high interactivity with this one
+[20:05:26] <Riven_> yeah, but a lot of gray monsters down there
+[20:05:29] <aho> man
+[20:05:31] <aho> that vid is weird
+[20:05:35] <aho> and claustrophobic :>
+[20:05:42] <Riven_> with ROPES!
+[20:06:06] <Riven_> whatever you do, add ropes!
+[20:06:36] <Notch_> roooopes!
+[20:07:00] <Riven_> verlet integration!
+[20:07:17] <Riven_> physics in seconds
+[20:08:10] <Notch_> yes!
+[20:08:33] <Notch_> i'm going to use that for particles, and possibly for some simple cloth. the world collisions are basically free, so I can go pretty nuts
+[20:11:45] <Riven_> yeah, with good cloth physics, you can get away with a few strategically connected spheres as the 'player'
+[20:12:03] <Riven_> the cloth grids are very heavy on the CPU though
+[20:13:25] <Riven_> the only bad sting of verlet integration is that your ropes can go trhough the edges of the blocks, as there is no concept of volume, only particles
+[20:13:36] <Riven_> and faces..
+[20:15:00] <Riven_> you can dynamically add invisible spheres along your springs, which push the 2 endpoints out of collision of the world <-> spring
+[20:15:01] <Notch_> yeah. But as long as they never get too far apart, they should be fine
+[20:15:36] <Riven_> springs should be like... 1/10th of block size, then
+[20:15:47] <Riven_> you'd need a lot of springs to make the rope
+[20:15:52] <Notch_> oh yeah.. hmm
+[20:16:30] <Riven_> and don't forget that no matter what you set your spring length, it is very likely to stretch, under the weight of all those particles further down the rope
+[20:17:36] <Riven_> as you may have guessed, i have once did this - throwing ropes in 3d scenes, and tying up items with ropes, dragging them along - and it's very very hard to get that right with large springs
+[20:17:50] <Riven_> but you have the advanctage that your blocks are rather big
+[20:19:04] <Riven_> another thing i did, which may be of use, is that your phyical blocks are cubes, but graphically, you shave off the edges (this addds a lot of faces, and some CPU time)
+[20:19:40] <Riven_> then the ropes nicle wrap the visual block, while they potentially intersect the physical block
+[20:19:55] <Riven_> nicely*
+[20:20:00] <Notch_> hmm, yeah. I'm thinking if it's possible to hack the intersections
+[20:20:13] <Notch_> like if two particles in the rope cross a tile, render it as if it hugs the edge
+[20:20:35] *** jonkri_ has quit IRC
+[20:21:01] *** jonkri_ has joined #lwjgl
+[20:21:16] <Riven_> hm... good idea - faking it visually, instead of computationally, is most likely to produce best results
+[20:22:30] <Riven_> but when the particles are moving fast, you can really find yourself in weird cases where the particle is stuck in the infinitely thin space between blocks. so you probably want your particles to be spheres
+[20:22:46] <Notch_> haha, yes
+[20:22:51] *** locks has joined #lwjgl
+[20:23:00] <Notch_> i should probably add cylinders as well to the physics
+[20:23:09] <Notch_> then I can make the player a cylinder instead of an AABB
+[20:23:45] <Riven_> freely rotatable cylinders?
+[20:24:26] <Notch_> rotatable? no..
+[20:24:34] <Riven_> cylinders have some nasty properties, i'd go for capped capsules
+[20:25:39] <Riven_> you can compress space between the 2 caps, and then simply act as if it is a sphere
+[20:27:00] <Notch_> but I need the feet of the player to be flat
+[20:27:04] <Notch_> sliding of a block is annoying
+[20:27:12] <Riven_> slippery blocks rule
+[20:27:25] <Notch_> haha
+[20:27:33] <Notch_> time to add interactivity
+[20:27:43] <kappaOne> ice blocks that melt when they meet lava?
+[20:28:23] <Riven_> most fun thing to implement now regarding interactivity and physics is probably throwing a sphere in your scene, and watch it bounce around
+[20:28:49] <Notch_> oh yes. =)
+[20:28:50] <kappaOne> http://www.youtube.com/watch?v=9EbsMtEv2CE game looks pretty interesting
+[20:29:14] <kappaOne> lots of spheres to create water? :)
+[20:29:24] <Riven_> byebye framerate
+[20:29:31] <Notch_> haha =D
+[20:30:04] <Notch_> Riven_: Something like this? http://www.mojang.com/notch/chambered/bounce.gif
+[20:30:23] <Riven_> yeah, i remember that one - flat balls!
+[20:30:33] <Notch_> =D
+[20:30:41] <Riven_> seems you can pretty much copy and paste
+[20:30:54] <Notch_> kappaOne: that looks awesome
+[20:31:04] <kappaOne> yup
+[20:31:52] <Riven_> you can only really simulate what with spheres in realtime, in 2D these days
+[20:32:07] <Riven_> just like with any fluid / gass / smoke simulation
+[20:35:18] <Riven_> i'm rather glad we dont live in a 4D space world
+[20:36:53] <Notch_> haha
+[20:36:59] <Notch_> we'd have sooo much space, though
+[20:37:10] <Notch_> apartments in the city wouldn't be a problem
+[20:37:12] <Riven_> infinitely more than we currently have..
+[20:37:27] <Notch_> not if we were 4d beings
+[20:37:47] <Riven_> 'space' might not be the right word even... as it's point -> area -> space -> ..
+[20:37:54] <Notch_> hyperspace, then. =D
+[20:38:06] <Riven_> ah, naturally
+[20:38:36] <kappaOne> isnt' time the 4th dimention?
+[20:38:53] <Riven_> anytime there's a 'hyper' in a serious scientific name, it means that the person that came up with that, expects nobody to understand
+[20:39:01] <Riven_> 4D *space*
+[20:39:17] <Riven_> currently it's 3D space + 1D time
+[20:39:34] <Riven_> having 2 time dimension would also kick timeless ass
+[20:42:27] <Notch_> haha, yes =D
+[20:43:00] <kappaOne> productivity^2 :)
+[20:43:14] *** jonkri_ has quit IRC
+[20:43:20] <Riven_> i can't imagine it
+[20:43:33] *** jonkri_ has joined #lwjgl
+[20:44:09] <kappaOne> i'd imagine it'd be something like parallel dimensions
+[20:44:18] <Riven_> as if you can imagine that
+[20:44:29] *** monty_hall has quit IRC
+[20:44:47] <kappaOne> oh well 1d time ticks on :)
+[20:44:59] <Riven_> 2D -> 3D ------ if all you know is flat, how can you ever imagine a volume
+[20:45:01] *** aho has quit IRC
+[20:45:24] <Riven_> 3D -> 4D ------ if all you know has volume, how can you ever imagine ... yeah... what exactly
+[20:45:57] <Riven_> in maths it's easy though
+[20:46:03] <kappaOne> volume^2?
+[20:46:06] <Riven_> just add another multiply
+[20:46:19] <Riven_> volume != area^2
+[20:46:47] <Riven_> area == point^2
+[20:46:56] <Riven_> volume = area^3
+[20:47:22] <Riven_> or something silly like that
+[20:48:22] <Notch_> area = line^2
+[20:48:30] <Notch_> line = point^2
+[20:48:33] <Notch_> point = 0d
+[20:48:56] <Riven_> i knew it made no sense at all, but normally i get away with it :/
+[20:49:16] <Notch_> wait.. volume is line^3
+[20:49:24] <Notch_> what would area^2 be? haha
+[20:49:27] <Riven_> line = 1D
+[20:49:33] <Notch_> oh god, I just got very confused
+[20:49:41] <Riven_> so anything more is just line^(N+1)
+[20:49:55] <Notch_> ahhh yes
+[20:49:58] <Notch_> that makes sense
+[20:50:05] <Riven_> line = segment of axis
+[20:50:15] <Notch_> yep. =)
+[20:50:45] <Riven_> also, a line can go through any number of dimensions
+[20:50:58] <Riven_> and why are we discussing this?
+[20:52:13] <Notch_> i have no idea =D
+[20:52:48] <Riven_> also, a plane can go through >=2 dimension
+[20:53:05] <Riven_> also, a volume can go through >=3 dimensions
+[20:53:11] <Riven_> and now it gets interesting
+[20:53:44] <Riven_> now please remember me why it gets interesting
+[20:54:18] * Riven_ goes back to work
+[20:55:03] <Notch_> haha
+[20:57:29] <Riven_> you seem to have made the fatal mistake of saying you're looking for collaborations
+[20:57:34] <Riven_> it's a n00b magnet
+[20:58:03] <Notch_> =D
+[20:58:24] <Riven_> you might think otherwise, but I think it's really really hard to work with others, especially if there is no spec to follow
+[20:58:27] <NoobFukaire1> Whats that
+[20:59:02] <Notch_> i'd like to try it again with a smaller project. =)
+[20:59:16] <Riven_> you gotta be wise to pick your 2nd half, or you'll end up with frustrations and wasting endless amounts of time
+[20:59:53] <Riven_> but hey, maybe you play nice with othres... (i certanly don't)
+[21:01:13] <Riven_> only works IRL, in my experience
+[21:14:25] *** doohan has joined #lwjgl
+[21:15:31] <doohan> hello all
+[21:29:15] *** kbotnen has quit IRC
+[21:37:02] *** Greenleon has joined #lwjgl
+[21:37:57] <Greenleon> Hi. Can you show me an example of how to use the mouse event api? I just want to check if and which button was pressed.
+[21:39:21] <lwjglbot> lwjglforum: Re: Error with 64 bit in 2.1.0 <http://lwjgl.org/forum/index.php/topic,2860.msg16010.html#msg16010> || Re: GL11.glGetTexParameter doesn't accept GL12.GL_TEXTURE_3D <http://lwjgl.org/forum/index.php/topic,2900.msg16009.html#msg16009>
+[22:03:20] <kappaOne> Greenleaon you can have a look at the lwjgl examples
+[22:03:34] <kappaOne> found here http://www.lwjgl.org/demos.php
+[22:03:50] <kappaOne> just have a look at the MouseTest source code http://www.lwjgl.org/jnlp/source.php?path=test/input/MouseTest.java
+[22:06:42] <NoobFukaire1> I heart eclipse
+[22:19:48] *** logan_barnett has joined #lwjgl
+[22:21:59] <Greenleon> thanks kappaOne!
+[22:22:06] *** Greenleon has left #lwjgl
+[22:23:01] *** monty_hall has joined #lwjgl
+[22:41:06] *** kbotnen has joined #lwjgl
+[23:03:54] <monty_hall> Can I ask an OpenGL question that's actually using JOGL?
+[23:04:33] <NoobFukaire1> no one will hurt you
+[23:05:45] <monty_hall> Thanks...
+[23:06:01] <monty_hall> I'm trying to implement dynamic shadows and am using an example from the OpenGL super bible.
+[23:06:21] <monty_hall> I'm getting stranging artifacts that appear on the backside of my image.
+[23:06:48] <monty_hall> hold on.
+[23:07:23] <monty_hall> front.jpg and back.jpg @ http://rastar.merseine.nu/~hall_monty/
+[23:07:45] <monty_hall> It looks like some "voxelation" if that's a term.  It's kind of grainy on the back.
+[23:07:55] <monty_hall> Looks fine in the front.
+[23:08:19] <monty_hall> I'm assuming it's some type of texture parameter concerning 2d depth textures.
+[23:09:28] <lwjglbot> lwjglforum: Re: Where are the glTexCoord Integer Commands? <http://lwjgl.org/forum/index.php/topic,2901.msg16012.html#msg16012> || Where are the glTexCoord Integer Commands? <http://lwjgl.org/forum/index.php/topic,2901.msg16011.html#msg16011>
+[23:10:51] *** Riven_ has quit IRC
+[23:39:30] <lwjglbot> lwjglforum: Re: Where are the glTexCoord Integer Commands? <http://lwjgl.org/forum/index.php/topic,2901.msg16013.html#msg16013>
+[23:39:48] *** pstickne has quit IRC
+[23:45:27] *** kappaOne has quit IRC
+[23:59:00] *** ViRUS has joined #LWJGL

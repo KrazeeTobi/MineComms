@@ -1,0 +1,1548 @@
+[00:00:56] *** Greenleon has left #lwjgl
+[00:07:00] <appel> 2nd place :)
+[00:07:31] <_Riven> i knew it would end up high
+[00:07:43] <_Riven> who got nr1?
+[00:07:46] <appel> norway
+[00:19:00] *** Scient has quit IRC
+[00:20:41] *** do0han has joined #lwjgl
+[00:23:46] *** kappaOne has quit IRC
+[00:26:09] *** Scient has joined #lwjgl
+[00:34:24] *** doohan has quit IRC
+[00:45:20] *** matt has joined #lwjgl
+[00:47:03] *** matt has quit IRC
+[00:53:21] *** betel has joined #lwjgl
+[01:03:11] *** OrangyTang has left #lwjgl
+[01:03:28] *** _Riven has quit IRC
+[01:07:29] <Schnitter> can someone have a look at http://debnet.de/schnitterCode/upload/stuff/out.ogv and say me why the lighting looks so ugly?
+[01:07:36] <Schnitter> Looks like the light is rotated with the cube
+[01:09:26] *** OrangyTang has joined #lwjgl
+[01:25:49] <appel> I have spaceships, they need to push each other away so they won't collide. What's the best way to do this? Send some force vector to nearby ships?
+[01:28:03] *** Schnitter has quit IRC
+[02:02:03] *** jonkri has joined #lwjgl
+[02:10:50] *** jweyrich has joined #lwjgl
+[02:22:28] *** Scient has quit IRC
+[02:24:07] <lwjglbot> lwjglforum: Re: LWJGL Wiki <http://lwjgl.org/forum/index.php/topic,1236.msg16019.html#msg16019>
+[02:30:08] <lwjglbot> lwjglwiki: lwjgl:tutorials:index <http://lwjgl.org/wiki/doku.php/lwjgl/tutorials/index?rev=1242519524&do=diff> || lwjgl:tutorials:textures:tga - created <http://lwjgl.org/wiki/doku.php/lwjgl/tutorials/textures/tga?rev=1242518631&do=diff>
+[02:32:17] *** Scient has joined #lwjgl
+[02:47:14] *** woogley has joined #lwjgl
+[03:29:38] *** do0han has quit IRC
+[03:37:49] *** monty_hall1 has left #lwjgl
+[03:41:10] *** OrangyTang has left #lwjgl
+[03:48:47] *** betel has quit IRC
+[04:05:10] *** matt has joined #lwjgl
+[04:23:00] *** mattdesl has quit IRC
+[04:41:07] *** MatthiasM has quit IRC
+[04:41:12] *** MatthiasM has joined #lwjgl
+[04:51:52] *** matt has quit IRC
+[05:33:56] *** Dragonene has joined #lwjgl
+[05:58:14] <Dragonene> anybody awake who's good at tree traversal?
+[06:10:49] <woogley> what kind of tree o_o
+[06:11:20] <Dragonene> I... *think* I hacked it up a bit
+[06:11:24] <Dragonene> I haven't tested it ye
+[06:11:25] <Dragonene> yet
+[06:11:29] <Dragonene> I'll get back if it doesn't work :D
+[06:14:11] *** NoobFukaire is now known as NukeDukem
+[06:30:55] *** aho has joined #lwjgl
+[06:31:19] <aho> barf
+[06:44:25] *** woogley has quit IRC
+[07:11:52] *** woogley has joined #lwjgl
+[07:18:50] *** keisangi_ has joined #lwjgl
+[07:22:50] *** aho has quit IRC
+[07:36:49] *** keisangi has quit IRC
+[07:48:56] *** delt0r___ has joined #lwjgl
+[07:51:13] *** delt0r_ has quit IRC
+[08:24:06] *** Schnitter has joined #lwjgl
+[08:31:32] *** Schnitter has quit IRC
+[08:35:33] *** Schnitter has joined #lwjgl
+[09:11:43] *** jweyrich has quit IRC
+[09:57:28] *** woogley has quit IRC
+[10:06:47] *** systat has joined #lwjgl
+[10:07:00] <systat> Hello, I got a damn problem again
+[10:07:16] <systat> When I try to run a simplest slick application I get main class not found :(
+[10:10:53] <systat> Anyone?
+[10:17:30] <systat> This is what I get http://java.pastebin.ca/1425251
+[10:19:32] <Dragonene> what command do you run, systat
+[10:19:35] <Dragonene> to start it.
+[10:20:36] <systat> I put this in VM arguments -Djava.library.path=C:\Documents and Settings\marin\Desktop\java-api\slick\lib\ Dragonene
+[10:21:04] <systat> I extracted the files from windows-native.jar in same folder as it is
+[10:21:07] <Dragonene> oh, you're using eclipse or something?
+[10:21:14] <systat> Yes, I use Eclipse
+[10:21:35] <Dragonene> hm, then it should properly find the files...
+[10:21:53] <Dragonene> Just as a test
+[10:22:00] <systat> I don't get that LWJGL not found anymore, I get main class not found
+[10:22:04] <Dragonene> Try putting the native files in the same folder as the main class
+[10:22:10] <Dragonene> Oh, okay.
+[10:22:19] <systat> Even thoug hthere is main method
+[10:22:26] <Dragonene> Uh, are you sure you gave the right main class for the run settings?
+[10:22:40] <systat> I am not sure
+[10:22:51] <Dragonene> as in
+[10:22:59] <Dragonene> when you configure the "Run" thingy in eclipse
+[10:23:10] <Dragonene> have you input the main class in the main class field?
+[10:23:45] <systat> Yep It is in main class field
+[10:24:43] <Dragonene> and you've added the JAR files to the classpath?
+[10:25:14] <Dragonene> slick.jar and lwjgl.jar
+[10:25:25] <Dragonene> in the "classpath" tab of the run configuration in eclipse
+[10:26:44] <systat> Dragonen I got it working
+[10:26:52] <Dragonene> :)
+[10:26:54] <Dragonene> goodie
+[10:26:57] <Dragonene> what was it? :)
+[10:27:14] <systat> I can't believe how stupid this thing Is, It couldn't found it because there was a space between C:\Documents and Setting\...
+[10:27:18] <systat> Can you believe it
+[10:27:41] <Dragonene> :P
+[10:27:47] <Dragonene> you added " marks?
+[10:27:53] <systat> Nope ;)
+[10:27:54] <Dragonene> around the path? :)
+[10:27:57] <Dragonene> well
+[10:28:00] <Dragonene> you could've just done that :P
+[10:28:05] <Dragonene> I think
+[10:28:06] <systat> Yeah, I know, thx  for help
+[10:28:16] <Dragonene> no worries, I didn't really do anything... :P
+[10:28:20] * Dragonene goes off to study again
+[10:43:31] <Schnitter> Is there something wrong with http://rafb.net/p/9GWu3U42.html to create a very basic light?
+[10:48:41] *** Dragonene has quit IRC
+[10:50:16] <systat> Hey, how can I use each image from SpriteSheet?
+[11:17:34] *** kappaOne has joined #lwjgl
+[11:18:32] *** Dragonene has joined #lwjgl
+[12:09:28] *** illumi has joined #lwjgl
+[12:12:06] <systat> How can I set a reference point of an sprite, and then rotate it from that reference point?
+[12:12:41] <Schnitter> in slick?
+[12:12:57] <systat> Yes
+[12:13:31] <Schnitter> wasn't there a Image#setCenterOfRotation() or so?
+[12:14:02] <kappaOne> yup Image.setCenterOfRotation(float x, float y)
+[12:15:06] <systat> thnks
+[12:17:30] *** _Riven has joined #lwjgl
+[12:18:05] *** Dragonene has quit IRC
+[12:23:54] *** Dragonene has joined #lwjgl
+[12:29:56] <systat> Hey, I want to rotate the image, so that it simulates like it is on sea, it is a boat image, so I want to rotate it abit on one side, then to rotate it back on other side
+[12:30:19] <systat> Is there any function so taht I can see how much is an image rotated?
+[12:31:30] <kappaOne> Image.getRotation() ?
+[12:34:15] <Dragonene> sounds like you might want to do rotation based on a sine curve
+[12:34:23] <Dragonene> :(
+[12:34:24] <Dragonene> uh
+[12:34:31] <Dragonene> that was supposed to be a happy smiley, like this: :)
+[12:34:51] <_Riven> much funnier this way
+[12:36:47] *** OrangyTang has joined #lwjgl
+[12:38:32] <systat> Hmm
+[12:39:09] <systat> I want it to get rotated slowly by some ° and then when It reaches certain ° to go rotate back, and I want it in a continous loop
+[12:39:39] <_Riven> a sine wave has all those properties
+[12:40:27] <systat> _Riven, okay how to do it???
+[12:41:05] <kappaOne> or you can just manually do it in your Boat object, just have a variable called float angle and something like boolean movingLeft then just set angle as the image angle
+[12:41:06] <systat> ??
+[12:41:34] <kappaOne> angle += speed * delta; if movingLeft
+[12:41:56] <kappaOne> if (angle > 45) movingLeft = true;
+[12:42:23] <kappaOne> then just if movingLeft do angle -= speed * delta;
+[12:42:32] <kappaOne> if (angle < -45) movingLeft = false;
+[12:42:33] <kappaOne> and repeat
+[12:42:34] <Schnitter> shame that wolframalpha can't handle "WW2" :(
+[12:42:54] <_Riven> rotation = ((sin( time * factor) * 0.5)+0.5)*(maxAngle-minAngle) + minAngle
+[12:44:36] <_Riven> it basically converts your sine wave to go from 0 to 1 and back, instead of -1 to +1, and then you just use that value to interplate between minAngle and maxAngle
+[12:44:51] <_Riven> interpolate*
+[12:46:13] <_Riven> minAngle would be a negative value, and maxAngle would be positive... like -15 and +15 degrees
+[12:53:14] *** betel has joined #lwjgl
+[12:58:01] <systat> Take a look at this game, do you see how boat rotates a bit, I just want it like that
+[12:58:01] <systat> http://www.flashrolls.com/skill-games/Fishing-Game-Flash-Game.htm
+[12:59:27] <_Riven> i just gave you the answer
+[12:59:48] <systat> Okay, but I don't have a time variable in my game
+[13:00:00] <_Riven> System.currentTimeMillis
+[13:00:01] <systat> and what is factor
+[13:00:07] <systat> OK
+[13:00:28] <_Riven> you just adjust factor, until it looks right (it adjusts the speed of the animation)
+[13:00:30] <Dragonene> huh
+[13:00:33] <kappaOne> time in slick is "int time += delta"
+[13:00:36] <Dragonene> kappaOne is here
+[13:00:37] <Dragonene> good.,
+[13:00:39] <Dragonene> I shall bring notch
+[13:00:50] <_Riven> eh?
+[13:01:00] * _Riven summons Notch
+[13:01:14] <Dragonene> I have already summoned him!
+[13:01:18] <Dragonene> From another irc channel!
+[13:01:24] <_Riven> whatfor
+[13:01:34] <Dragonene> his applet crashes in opera
+[13:01:35] * kappaOne casts shields up himself
+[13:01:40] <kappaOne> *upon
+[13:01:43] <Dragonene> and kappaOne is knowledgeable with that stuff
+[13:01:49] <Dragonene> so I was hoping I could get the two to communicate
+[13:01:51] <Dragonene> until it works!
+[13:01:52] <Dragonene> :)
+[13:02:42] <kappaOne> well opera has the worst java plugin in the world
+[13:02:48] *** Notch_ has joined #lwjgl
+[13:02:58] <_Riven> it crashed opera for me too... i doubt a fix in the applet could fix that
+[13:03:04] <_Riven> oh well
+[13:03:19] <Notch_> discussing lwjgl applet crashes in opera?
+[13:03:20] <kappaOne> don't see why opera doesn't just use the official sun plugin
+[13:03:23] <Notch_> I get that with minecraft
+[13:03:25] <systat> _Riven, it is still making a full circle
+[13:03:41] <Dragonene> Notch_: Well yes, I told them I would try to summon you
+[13:03:47] <Dragonene> to talk to kappaOne and make it work!
+[13:03:48] <systat> I used image.rotate(rotation)
+[13:03:57] <Dragonene> It's the magic of multiple IRC channels
+[13:04:00] <kappaOne> systat use Image.setRotation()
+[13:04:15] <Dragonene> systat: you could also work with the graphics instead
+[13:04:15] <_Riven> systat: you probably have to convert the rotation from degrees to radians
+[13:04:37] <Dragonene> graphics.setRotation() and then graphics.drawImage(image...)
+[13:04:49] <Dragonene> _Riven: slick uses degrees
+[13:05:00] <_Riven> ok
+[13:05:09] <kappaOne> Image.rotate(angle) just added to the current angle the image is rotated too
+[13:05:16] <kappaOne> so ofcourse its gonna go in a circle
+[13:05:38] <Notch_> did you come to any conclusions about lwjgl in opera? Is it my fault, or external? Does it happen with other applets?
+[13:05:46] <_Riven> ah - well, i never worked with Slick - but there's nothing wrong with the formula i gave you
+[13:05:49] <kappaOne> Notch_ got a link?
+[13:05:56] <Notch_> http://www.mojang.com/notch/minecraft/
+[13:06:14] <systat> Well, it is making a full circle :(
+[13:06:14] <kappaOne> sec will see i can reproduce it
+[13:08:06] <_Riven> Putty Puzzle Game also crashed Opera
+[13:08:21] <kappaOne> is that on exit?
+[13:08:29] <_Riven> on launch
+[13:08:57] <Notch_> minecraft hangs the browser on exit for me
+[13:09:26] <_Riven> for me it always crashes on launch
+[13:09:51] <_Riven> ah... it has continued now!
+[13:10:02] * _Riven playing Putty
+[13:10:20] <kappaOne> riven does this one crash your browser http://kappa.javaunlimited.net/betashot5/betashot.html
+[13:10:22] <Dragonene> yep, that's tab closure for me
+[13:10:27] <Dragonene> minecraft that is
+[13:10:30] <Dragonene> or browser exit I guess.
+[13:11:00] <kappaOne> or the one here http://www.lwjgl.org/applet
+[13:12:02] <_Riven> kappaOne, your game works - already using the new Spline code? :p
+[13:12:24] <kappaOne> no thats a pretty old game
+[13:12:33] <kappaOne> not updated yet
+[13:12:49] <Schnitter> minecraft is funny :D
+[13:12:50] <_Riven> closing the tab also didn't result in a crash
+[13:13:34] <_Riven> Notch: minecraft didn't crash this time
+[13:14:01] <_Riven> eh, Notch_ :)
+[13:14:27] <Notch_> odd :-O
+[13:14:46] <_Riven> no updates i assume?
+[13:15:21] <_Riven> then it's just Opera being silly
+[13:15:36] <Notch_> i did a small update late last night, but nothing that should fix that, I think
+[13:16:03] <Notch_> kappaOne: The version number really should be better.. Changing 0.9 to 0.10 means it's LESS now, heh
+[13:16:24] <kappaOne> ah
+[13:16:33] <kappaOne> its just a float
+[13:16:34] <Notch_> but I can live with it. =)
+[13:16:44] <_Riven> incredible update! very nice caves!
+[13:16:50] <Notch_> ooh, thanky
+[13:17:07] <_Riven> blocky creatures getting stuck inthere :p
+[13:18:02] <_Riven> i can't remove blocks anymore with the RMB?
+[13:18:08] <kappaOne> so _Riven the applet no longer crashes opera?
+[13:18:17] <Notch_> it toggles between two edit modes now, _Riven
+[13:18:31] <Notch_> I think it's better in the long run, but we'll see.. It's not set in stone
+[13:18:35] <_Riven> Notch_: ah..
+[13:18:43] <_Riven> kappaOne: it didn't crash THIS time
+[13:18:55] <systat> WTF
+[13:19:03] <_Riven> that is a very poor choosing of words, Notch_ :-p
+[13:19:04] <systat> SetCentreOfRotation doesn't seems to work :(
+[13:19:13] *** keisangi_ has quit IRC
+[13:19:15] <Notch_> lol
+[13:19:20] <kappaOne> _Riven if you restart opera and try again, does it crash?
+[13:19:32] <kappaOne> restart will close the running vm
+[13:20:12] <_Riven> closing Putty didn't crash Opera, but closing Minecraft does :-/
+[13:20:34] <systat> Ohh, it work
+[13:20:48] <kappaOne> Notch_ are you destroying Display before exit?
+[13:20:53] <_Riven> it can be just as well some threading / driver issue
+[13:21:00] <Notch_> I think so, yes.
+[13:21:13] <_Riven> from the right thread, too?
+[13:21:19] <kappaOne> the way we usually do lwjgl applets is to run lwjgl in another thread
+[13:21:22] <Notch_> destroy() in the applet calls stop on the main game. That just sets a flag
+[13:21:25] <kappaOne> so even if it does blow up
+[13:21:35] <kappaOne> it doesn't take vm down with it
+[13:21:51] <Notch_> when that flag is set, the main loop exits and destroys the display before returning
+[13:21:59] <kappaOne> see here for the lwjgl gears applet http://java-game-lib.svn.sourceforge.net/viewvc/java-game-lib/trunk/LWJGL/src/java/org/lwjgl/test/applet/GearsApplet.java?view=markup
+[13:22:04] <_Riven> maybe you have to wait in the destroy method... for the LWJGL thread to 'notice' the changed flag
+[13:22:07] <Notch_> in destroy(), I .join() that thread to make sure the display really is gone before returning from destroy()
+[13:22:07] <kappaOne> lwjgl run in another thread
+[13:22:12] <_Riven> ah
+[13:22:25] <Notch_> yeah, I've got a dedicated thread for lwjgl
+[13:23:45] <kappaOne> you'll notice in the lwjgl gears applet that Display.destroy is called when the game loop finishes
+[13:23:48] <_Riven> it may just as well have been random behaviour - 50% of crashing
+[13:26:20] <kappaOne> also use the removeNotify() method of your canvas
+[13:26:36] <kappaOne> to make sure Display is destroyed
+[13:26:43] <kappaOne> before the canvas is
+[13:26:50] <Notch_> ohh
+[13:26:52] <kappaOne> that way it won't crash
+[13:26:54] <kappaOne> on exit
+[13:26:58] <_Riven> is your flag volatile? because if it isn't, maybe your join() call never returns
+[13:27:08] <_Riven> and hangs the browser
+[13:28:36] <kappaOne> mainly its the opera plugin to blame here, but guess we've got to work with what we have
+[13:29:26] <kappaOne> early versions of opera <= 9.5 crashed on exit no matter what
+[13:29:36] <Dragonene> you've talked to opera about it, right?
+[13:29:52] <_Riven> if the destroy() method blocks on thread.join(), and Opera blocks on destroy(), then as long as the LWJGL thread runs, Opera will freeze
+[13:29:52] <kappaOne> but after bugging opera on the forums and bug track, they fixed it
+[13:30:02] <Dragonene> right
+[13:30:16] <kappaOne> yeh i've asked them many times to use the sun plugin
+[13:30:30] <Notch_> why don't they? grr
+[13:30:40] <kappaOne> but not sure, guess they like their broken java plugin
+[13:31:36] <_Riven> it doesn't even support the "javascript:" protocol - which is widely abused to execute javascript code from within an applet
+[13:32:43] <kappaOne> had to use hacks on the AppletLoader just to get it to download files properly on opera
+[13:32:54] <_Riven> Notch_, this time launching Minecraft crashed the browser
+[13:32:56] <kappaOne> since URLConnection is also broken on opera
+[13:33:04] <Notch_> yesss, that fixed the leaving the page crash.
+[13:33:12] <Dragonene> It's such an obvious and not really tricky thing to do, but I still think one of the best features of multitris is that it generates parametrized JNLP files for each server that gets hosted, so you can join them directly from the browser without going via the menu
+[13:33:14] *** woogley has joined #lwjgl
+[13:33:25] <Dragonene> Maybe we should do that for applets as well :P
+[13:33:28] <Notch_> I did the removeNotify() and changed the timeout to volatile
+[13:33:37] <Dragonene> Notch_: Cool :)
+[13:33:47] <_Riven> w00t
+[13:34:07] <_Riven> volatile on multi-core CPU is really required - you sometimes get away with it on single cores
+[13:34:54] <_Riven> but it doesn't fix the crash-on-launch bug :-/
+[13:35:00] <Notch_> and now it works on the Eee
+[13:35:16] <Notch_> The error was that I was rendering empty vertex arrays sometimes
+[13:35:34] <_Riven> that crashes??
+[13:35:34] <Notch_> for example when there are no particles, or for printing the string ""
+[13:35:38] <_Riven> hm... good to know
+[13:35:39] <Notch_> on some cards, it seems
+[13:35:44] <Notch_> invalid value
+[13:36:03] * _Riven restarts Opera
+[13:36:08] <kappaOne> Notch_ is Display.create() on another thread?
+[13:36:13] <kappaOne> from the main one that is
+[13:36:18] <Notch_> it's in the main game thread
+[13:36:36] <Notch_> the thread only gets created once, in start, if it doesn't already exist
+[13:36:49] <Notch_> stop() just sets a pause flag, and start unsets it again
+[13:36:53] <Notch_> the pause flag stops all rendering
+[13:37:14] <Notch_> and adds a sleep.. so the game  thread is never destroyed
+[13:37:53] <_Riven> ah!
+[13:38:00] <Notch_> hm?
+[13:39:07] <_Riven> how long are you sleeping before you recheck the flag
+[13:39:29] <Notch_> i don't, i let lwjgl go as fast as it can. I check it once per frame
+[13:39:38] <Notch_> or do you mean the pause flag?
+[13:39:42] <_Riven> yup :)
+[13:39:44] <Notch_> wait, that needs to be volatile as well..
+[13:39:58] <_Riven> everything needs to be volatile these days :)
+[13:40:25] <Notch_> the sleep is 100 ms
+[13:40:45] <Notch_> when the flag is set, the main loop turns into just while (!paused && running) sleep 100ms
+[13:40:49] <Notch_> err.. while paused
+[13:41:57] <kappaOne> ah wait Notch_ just had a look at slick's applet stuff, seems like we use addNotify() too :)
+[13:41:58] <_Riven> ah, then it won't cause problems, destroy() is called immediately after stop(), i've yet to see those 2 detached
+[13:41:59] <kappaOne> https://bob.newdawnsoftware.com/repos/slick/trunk/Slick/src/org/newdawn/slick/AppletGameContainer.java
+[13:42:14] <kappaOne> to create the Display.create()
+[13:42:30] <kappaOne> so could be that causing crash on startup
+[13:42:34] <_Riven> i hope addNotify fixes the launch crash... it is now serisouly infecting my overal performance..
+[13:42:45] <Notch_> but the display create has to happen in the render thread, right?
+[13:42:53] <_Riven> yeah
+[13:43:01] <Notch_> ok, I'll give it a try
+[13:43:09] <kappaOne> addNotify start the new lwjgl thread
+[13:43:18] <kappaOne> where Display.create() happens
+[13:43:22] <kappaOne> and game loop
+[13:43:43] <_Riven> is should behave exactly like launmching that new thread in start() or init() though... i mean... those happen just after eachother, and your new thread can start at any moment
+[13:44:00] <Notch_> if that happens several times in the lifetime of an applet, i'd be in massive trouble..
+[13:44:01] <Notch_> can it?
+[13:44:22] <_Riven> yeah
+[13:44:33] <kappaOne> start() and stop() are rather dodgy, sometimes are called multiple times
+[13:44:45] <Notch_> start and stop are fine, I support that
+[13:44:49] <Notch_> they just set a pause flag
+[13:45:00] <_Riven> because you're sleeping 100ms, you can create the new LWJGL thread before you release the previous one
+[13:48:28] <_Riven> i think it's best to fully rely in {add/remove}Notify - maybe even blocking the EDT, waiting for your LWJGL thread, to prevent more than one LWJGL thread
+[13:48:58] <Notch_> I think I am doing that already with the .join()
+[13:49:03] <Notch_> the join() has a 2000 ms timeout
+[13:49:17] <Notch_> I'm about done with the new version..
+[13:49:48] <_Riven> i'd advise never to timeout your join
+[13:49:57] <_Riven> because it will crash the browser, on timeout
+[13:49:57] * kappaOne rolls the drums as _Riven's browser prepares to face crash doom again :)
+[13:50:24] <_Riven> yeah... my PC is getting slower after each crash... there is something naughty going on
+[13:50:43] <_Riven> Notch_, could you please uninstall that spyware in the next update?
+[13:51:00] <_Riven> taking a screenshot every second serisouly slows down my pc!
+[13:51:10] <Notch_> spyware?
+[13:51:19] <_Riven> joking... (not funny)
+[13:51:23] <Notch_> oh phew
+[13:51:30] <Notch_> but the join() could hang forever!
+[13:51:37] <Notch_> I'd rather crash the browser than hang the browser
+[13:51:41] <_Riven> i mean, i run your signed applet like there is nothing to it
+[13:52:29] <_Riven> then make the timeout 10s... 2s might be not enough, if you're HDD just does something silly, like swapping
+[13:52:39] <_Riven> your*
+[13:53:09] <Notch_> 0.0.10a should be up now
+[13:53:16] <_Riven> FYI, Opera always hangs for me... it's not really a crash, as the process has to be killed
+[13:53:20] <_Riven> thanks
+[13:53:22] <Notch_> wait..
+[13:53:30] <_Riven> ok
+[13:53:34] <Notch_> I forgot to take out the normal start() and destroy()..
+[13:53:45] <_Riven> good catch
+[13:53:55] <_Riven> saves me pulling my hair out
+[13:56:28] <_Riven> uploaded it?
+[13:56:51] <Notch_> wait, testing..
+[13:56:55] <Notch_> ok, it's up. 0.0.11a
+[13:58:29] <_Riven> hanging on launch -- but the first time it worked, it hanged too, and continued after a minute or so
+[13:58:34] <_Riven> CPU @ 0%
+[13:58:50] <Notch_> hm
+[13:59:09] <Notch_> it works for me in opera
+[13:59:13] <Notch_> did it redownload the game?
+[13:59:27] <Notch_> perhaps you got a cached .html with the old version number
+[13:59:30] <_Riven> yeah... LWJGL loader finished nicely
+[13:59:48] <_Riven> oh... you also updated the html... let me check
+[13:59:59] <systat> I set a rotation of an object, and then I want that it moves forward like that, on that angle I choose
+[14:00:07] <systat> How can I do that?
+[14:00:08] <systat> :p
+[14:01:08] <_Riven> "applet not found"
+[14:01:22] <Notch_> whoa, what?
+[14:01:26] <_Riven> yeah :/
+[14:02:03] <_Riven> java.lang.ClassNotFoundException: org.lwjgl.util.applet.AppletLoader
+[14:02:10] <Notch_> :-O
+[14:02:12] <_Riven> Caused by: java.io.IOException: HTTP Connection failed.
+[14:02:16] <Notch_> lol
+[14:02:20] *** Greenleon has joined #lwjgl
+[14:02:22] <Notch_> dear lord
+[14:02:33] <Notch_> every time?
+[14:02:35] <Greenleon> good morning lads
+[14:02:35] <_Riven> now checking in FF
+[14:02:36] <_Riven> yeah
+[14:02:41] <_Riven> can't get it to work
+[14:03:56] <_Riven> works instantly in FF
+[14:04:14] <_Riven> restarted Opera, it finds the jars :)
+[14:04:22] <_Riven> this is getting rediculous
+[14:04:26] <Notch_> I'm starting to think opera's just being a dick
+[14:04:38] <_Riven> crashed again
+[14:04:43] <Notch_> in opera?
+[14:04:46] <_Riven> yeah
+[14:04:49] <Notch_> ok..
+[14:04:50] <_Riven> FF == top notch
+[14:05:15] <_Riven> i should ask an hourly rate for this..!
+[14:05:20] <Notch_> haha
+[14:05:30] <_Riven> i could get rich
+[14:05:36] <_Riven> but it works for you in opera?
+[14:05:50] <Notch_> yeah, flawlessly now that I fixed the tab close bug
+[14:05:57] <_Riven> darn
+[14:06:04] <_Riven> i have 9.5 too
+[14:06:33] <Notch_> I wish Mouse.setGrabbed() would work in applet mode
+[14:06:48] <kappaOne> 9.5 might still have the crash bug
+[14:06:59] <kappaOne> you should update to 9.6*
+[14:07:07] <_Riven> the first time i tried (which worked..) the mouse was properly grabbed
+[14:07:36] <Notch_> I'm cheating with mouse grabs in applet mode, it's never worked for me
+[14:07:42] <_Riven> or are you faking it with hiding the cursor, and reseting the position with java.awt.Robot...?
+[14:07:43] <Dragonene> !
+[14:07:47] <Notch_> I hide the mouse cursor and set it manually to the center of the screen on each frame
+[14:07:48] <Dragonene> Sorry to pull you into this discussion Notch_
+[14:07:55] <Dragonene> I just want to be able to play it without it crashing on me :D
+[14:08:00] <Notch_> no, not robot, I don't want to sign it. ;D
+[14:08:17] <_Riven> i already have 2 accept buttons to click... why not make it 3 :p
+[14:08:17] <Notch_> Mouse.setCursorPosition
+[14:08:27] <Mazon> whats the point of minecraft? - write your name in the soil?
+[14:08:32] <_Riven> ah... didn't know about that method
+[14:08:40] <Notch_> there's no point yet, mazon. =)
+[14:08:47] <Mazon> (bit like peeing in the snow :)
+[14:08:53] <_Riven> it will eventually beat WoW though
+[14:08:54] <Notch_> I've posted some thoughts on game modes on my blog
+[14:08:59] <Mazon> kk
+[14:09:36] <_Riven> the hangs are so nasty, that my TaskManager takes a few minutes to popup
+[14:10:18] <Notch_> oh wow
+[14:10:54] <Dragonene> Notch_: Here's my thought on game modes
+[14:11:06] <Dragonene> Survival: NOOOO, NOT A GAME THAT MAKES ME EAT
+[14:11:15] <_Riven> Wurm 2.0
+[14:11:20] <Dragonene> I have yet to play a single game with eating as a game mechanic that wasn't made horribly worse thanks to food.
+[14:11:43] <Dragonene> I mean
+[14:11:44] <Notch_> I have. =D I like eating in games
+[14:11:49] <Dragonene> with monsters, material gathering, etc
+[14:11:54] <Dragonene> there's no point in having the food stuff as well
+[14:12:08] <_Riven> in all honestly, i liked Wurm better before eating was implemented (on that 4x4 map)
+[14:12:25] <Dragonene> Notch_: Ever played that diablo clone...
+[14:12:26] <_Riven> it's a drain, just like reallife
+[14:12:29] <Dragonene> uh, what was it called again
+[14:12:41] <Dragonene> It was pretty good
+[14:12:44] <Dragonene> Except that you had to eat
+[14:12:46] <Notch_> oh, ok, I'll skip food
+[14:12:52] <Notch_> you bunch of babies
+[14:12:53] <Dragonene> sort of diablo 1.5
+[14:12:54] <_Riven> darn, I'm already running Opera 9.64... nothing to update
+[14:13:26] <Dragonene> huh
+[14:13:31] <Dragonene> why can't I recall its name
+[14:13:32] <Dragonene> I even own the game
+[14:13:54] <Dragonene> ah
+[14:13:55] <Dragonene> Darkstone
+[14:13:56] <Dragonene> is the one
+[14:16:35] <Dragonene> other games that comes to mind are Savage (the really old one, lion simulator) and The Sims
+[14:16:45] <Dragonene> both of which efficiently uses eating to ruin gameplay
+[14:20:07] <OrangyTang> pacman would not be pacman without constant consumption of delectables :)
+[14:20:11] <kappaOne> btw Notch_ not sure if you already know this but i get this error on the console everytime it starts http://rafb.net/p/yKb1Vf39.html
+[14:20:15] <kappaOne> but still works
+[14:20:36] <Notch_> yeah, the level constructor tries to load a level before generating one. ;)
+[14:20:51] <Notch_> the standalone version automatically saves the level wne you quit
+[14:20:53] <Dragonene> OrangyTang: that's not quite the same.
+[14:20:58] <OrangyTang> heh
+[14:21:23] *** kevglass has joined #lwjgl
+[14:21:31] <Notch_> kev kev!
+[14:21:33] <Dragonene> lo kev
+[14:21:36] <Dragonene> how's it going?
+[14:21:36] <kevglass> yo notch
+[14:21:38] <kevglass> yo Dragonene
+[14:21:42] <kevglass> it goes ok cheers.
+[14:21:50] <kevglass> new game looks great Notch_
+[14:22:01] <kevglass> not sure what or where it's going, but I played for ages
+[14:22:20] <_Riven> i thinjk this was your original plan for tunnels in Wurm right?
+[14:22:34] <_Riven> then you had the same problem or memory consumption :)
+[14:22:54] <_Riven> or = of
+[14:23:04] <kappaOne> notch you can use the Applet.getAppletContext.setStream()/getStream() api, to save level data on the applet
+[14:23:19] <Notch_> cool
+[14:23:26] <Notch_> kappaOne: Wow. Where does that get saved?
+[14:24:18] <_Riven> and what JRE version does it require... i never heard of that API
+[14:24:25] <kevglass> 1.4
+[14:24:44] <_Riven> ah, then it's probably the same as webstart muffins
+[14:25:23] <kevglass> where does it get saved to?
+[14:27:54] <_Riven> probably just like the jnlp cache... somewhere at least 10 directories deep
+[14:28:13] <Notch_> haha
+[14:29:18] <_Riven> ....../webstart/hostname/port/cache/{jnlp|muffins}/something_else/dunnowhat/
+[14:29:40] <_Riven> it probably has its root in your user.home
+[14:30:09] <Dragonene>  /stillgoing/year2097/../year2097/../year2097/onelast
+[14:30:22] <kevglass> is fine tho :)
+[14:30:28] <Dragonene> yeah.
+[14:30:32] <Dragonene> How's yore coming?
+[14:30:35] <Dragonene> Any progress?
+[14:30:35] <kevglass> doesn't say anything about size restrictions tho
+[14:30:39] <kevglass> been away a week
+[14:30:43] <kevglass> just putting in death to combat
+[14:30:45] <Dragonene> Oh okay
+[14:30:48] <Dragonene> What did you do
+[14:30:49] <_Riven> i'm VERY sure there are size  restrictions
+[14:30:50] <Dragonene> Anything fun?
+[14:30:58] <kevglass> holiday
+[14:31:00] <kevglass> beach
+[14:31:01] <Dragonene> Sweet.
+[14:31:04] <_Riven> like 100KB IIRC, some very non-leet number
+[14:31:04] <Dragonene> Sounds lovely
+[14:31:05] <kevglass> aye, was nice
+[14:31:07] <Notch_> sweat!
+[14:31:12] <kevglass> 100k
+[14:31:15] <kevglass> thats plenty! :)
+[14:31:20] <_Riven> i'm not sure...
+[14:31:21] <Dragonene> that's 25 4k games
+[14:31:23] <_Riven> let me google
+[14:31:23] <Notch_> not for a 4 million tile map :D
+[14:31:26] <Dragonene> plenty indeed
+[14:31:32] <kevglass> plenty for yore tho ;)
+[14:31:34] <Dragonene> Notch_: Pfah, apply some of that 4k magic.
+[14:31:43] <_Riven> you save save to your own server, and store the URL in your miffin
+[14:31:54] <Dragonene> There should be a method for that in the standard api
+[14:31:54] <Notch_> my test map is 91.4kb.. and that's with gzip
+[14:32:06] <Notch_> true riven. =)
+[14:32:08] <Dragonene> Compress.get4K(MyProgram)
+[14:32:25] <_Riven> :-o
+[14:32:31] <_Riven> gimme that magic function
+[14:33:38] <OrangyTang> new game Notch_ ? anything playable?
+[14:33:49] <Notch_> http://www.mojang.com/notch/minecraft/
+[14:34:05] <Notch_> it's still alpha, no gameplay yet. But it's already pretty addictive
+[14:34:08] <Dragonene> _Riven: Heh. Well
+[14:34:16] <Dragonene> It *might* require some complicated decompression
+[14:34:19] <Dragonene> Like... uh...
+[14:34:21] <Dragonene> Un-hashing
+[14:34:34] <kevglass> and pixie dust
+[14:34:42] <kevglass> always need that
+[14:34:43] <Dragonene> Compression to constant size is easy
+[14:34:49] <Dragonene> decompression, on the other hand...
+[14:34:52] <_Riven> call me when you added granates, Notch_
+[14:34:53] <Dragonene> kevglass: True.
+[14:35:02] <Notch_> hehe
+[14:35:56] <Dragonene> There's a striking difference between #lwjgl and #tigirc, I just realized
+[14:36:08] <Dragonene> Both channels praise minecraft, but in here's there's techy talk going on
+[14:36:32] <Dragonene> while in #tigirc they're more about making the nicest structures and putting it in screenshots
+[14:37:11] <_Riven> those are the creative people
+[14:37:15] <_Riven> we are bitshifters
+[14:37:24] * Notch_ shifts his bits around
+[14:37:39] <_Riven> we lack all creativity bits
+[14:37:45] <_Riven> behave!
+[14:38:04] <kevglass> ew
+[14:38:16] <kevglass> cretive types.
+[14:38:17] *** OrangyTang has quit IRC
+[14:38:18] <Dragonene> you're distinguishing between "us" and "them" :P
+[14:38:21] <Notch_> :D
+[14:38:24] <Dragonene> I'm in both channels.
+[14:38:27] <kevglass> yes
+[14:38:43] <Dragonene> Does that make me part of both... or neither?
+[14:38:47] <kevglass> which one do you feel most comfortable in?
+[14:38:55] * kevglass chuckles.
+[14:38:55] <Dragonene> ...both? :D
+[14:39:02] <kevglass> impossible.
+[14:39:09] <Dragonene> :'(
+[14:39:13] *** OrangyTang has joined #lwjgl
+[14:39:20] *** illumi has quit IRC
+[14:39:27] <OrangyTang> Notch_: that locked up Opera quite badly here
+[14:39:33] <Dragonene> I spend more time in #tigirc because there's more talk going on
+[14:39:33] <kevglass> how to indicate dead player while keeping the icon on screen
+[14:39:35] <Dragonene> more users.
+[14:39:38] <kevglass> tried a skull, looks daft.
+[14:39:54] <_Riven> bones
+[14:39:54] <Dragonene> But it's rather impossible to have a nice bitshifting discussion in there...
+[14:39:55] <Dragonene> :D
+[14:40:07] <Dragonene> See, now
+[14:40:13] <Dragonene> kevglass is moving into tigirc territory
+[14:40:19] <Dragonene> You must now swap channels
+[14:40:33] <_Riven> kevglass has always been thew creative guy, it is his biggest secret
+[14:40:41] <Dragonene> He is that, isn't he
+[14:41:19] <Dragonene> If I had to choose one, I think I'd be the creative guy
+[14:41:22] <Dragonene> But it's so difficult!
+[14:41:40] <Dragonene> Okay, time for those pushups
+[14:41:41] <Dragonene> bbl
+[14:41:54] <Notch_> OrangyTang: Opera.. Grr, sorry about that. It works for me on opera, and "sometimes" for riven
+[14:42:13] *** indeterminatus has quit IRC
+[14:42:25] <_Riven> worked once for me
+[14:43:37] <Notch_> .. for some values of "somtimes", then. :D
+[14:43:48] <systat> Hey can  I programatically set opacity of an image?
+[14:43:51] <systat> with SLICK?
+[14:43:56] <Dragonene> #ludumdare sits nicely between #lwjgl and #tigirc on the Programmer-Gamer scale
+[14:44:19] <Dragonene> systat: You can render it with a transparent color filter, I should think?
+[14:45:17] <Dragonene> Image.draw(x,y,color) where color is some transparent color you created.
+[14:45:32] <Dragonene> I can't say for certain that it works but it'd make sense to me if it did.
+[14:45:43] <Dragonene> :)
+[14:46:39] <systat> Dragonene, no I have a bubbles in water,and I want taht they have less opacity as they rise from the depths of water :)
+[14:47:10] <kappaOne> yeh that appletcontext api is 1.4+ but so is lwjgl :)
+[14:48:05] <Dragonene> Yes
+[14:48:11] <Dragonene> systat: Still what I said?
+[14:48:27] <Dragonene> just create a new color depending on their y position or something
+[14:48:33] <Dragonene> oh well, I have to go do those pushups
+[14:48:35] <Dragonene> *afk*
+[14:50:55] <kappaOne> ah a creative channel, btw Drag which server is tigirc on?
+[14:55:02] <_Riven> hm... stream API is kinda weird
+[14:55:37] <_Riven> http://indiespot.net/files/stream_applet.html
+[14:55:41] <kappaOne> yeh it is
+[14:55:48] <_Riven> throws IOE at 32k
+[14:56:05] <kappaOne> that must be the limit then
+[14:56:18] <_Riven> yeah... it's rather low
+[14:56:23] <_Riven> maybe it's 32K per 'key'
+[14:56:41] <kappaOne> thats still that 8 4k games :)
+[14:56:50] <Notch_> wow, 32k
+[14:57:03] <Notch_> it's enough to store a username and a SID
+[14:57:04] <_Riven> excuse me, the last successful write is 32K
+[14:57:19] <_Riven> you don't wanna know my fulllength username
+[14:57:47] <_Riven> next i'll try to write into multiple keys
+[14:58:10] <kappaOne> yeh wonder if you can use multiple keys to increase size
+[14:58:46] <kappaOne> theres always cookies using javascript
+[14:58:46] <kappaOne> but thats messy
+[14:58:52] <kappaOne> and buggy
+[14:59:02] <kevglass> cookies via a remote server works ok
+[14:59:31] <kappaOne> bypasses liveconnect?
+[14:59:35] <kevglass> yeah
+[14:59:46] <kappaOne> oh sounds good too
+[14:59:52] <kevglass> have a php script that sets the cookie headers based on URL parameters
+[14:59:54] <kevglass> invoke that
+[15:00:04] <kevglass> thats what putty puzzle did
+[15:00:33] <kappaOne> i've got an AppletMuffin that uses the stream api :)
+[15:00:43] <kappaOne> not tested it yet though
+[15:01:06] <_Riven> applet.showDocument("javascript:window.cookie = ....");
+[15:01:15] <_Riven> or something like that
+[15:02:53] <kappaOne> with the plugin2 you applet can use Muffins
+[15:03:00] <kappaOne> but only if the applet is a jnlp
+[15:03:07] <kappaOne> *-you
+[15:03:54] <_Riven> clear your classloaders!
+[15:03:55] <_Riven> http://indiespot.net/files/stream_applet.html
+[15:04:10] <_Riven> i can keep writing new 32K into random keys
+[15:04:18] <kappaOne> wow
+[15:04:23] <kappaOne> unlimited space?
+[15:04:25] <_Riven> currently at 50x 32K
+[15:04:32] <Notch_> :D
+[15:04:47] <_Riven> i'm going to reduce that sleep... to 100ms
+[15:05:30] <_Riven> HDD very busy..
+[15:05:32] <kappaOne> currently at 100x 32k here
+[15:05:44] <kappaOne> thats more then enough space
+[15:05:45] <_Riven> clear classloader, it now writes 10x as fast
+[15:05:49] <_Riven> currently 300
+[15:05:54] <_Riven> 400x
+[15:05:58] <kevglass> bit of a security issue :)
+[15:06:01] <Notch_> =D
+[15:06:09] <Notch_> I hope there's a max cap
+[15:06:15] <_Riven> me too
+[15:06:18] <kappaOne> well if the baddies don't find it should work well for us :)
+[15:06:22] * kevglass nods, me too
+[15:06:29] <_Riven> 700x 32K
+[15:06:53] <kappaOne> cap might be the java cache size
+[15:06:54] <_Riven> i bet it's 64MB... let's see
+[15:07:34] <kevglass> that'd be so sweet tho
+[15:07:43] <kevglass> 64meg of no secuity required save space
+[15:07:48] <kappaOne> just check my java control panel, size to temporary files is 1000mb
+[15:08:00] <kappaOne> thats set by default
+[15:08:02] <_Riven> it should fail at 2048x 32K then
+[15:08:08] <_Riven> currently at 1700x
+[15:08:09] <Dragonene> kappaOne: Only... this channel is logged!
+[15:08:25] <Dragonene> They can find it now!
+[15:08:42] <kappaOne> well they'll still have to filter all the other crap that is posted here :)
+[15:08:44] <_Riven> hehe
+[15:08:49] <_Riven> applet stopped just over 2000
+[15:08:54] <_Riven> so the limit is 64MB
+[15:09:00] <kappaOne> awesome
+[15:09:25] <kevglass> http://www.cokeandcode.com/yoren/yoren7.png
+[15:09:28] <kevglass> combat didn't go well
+[15:09:31] <_Riven> JRE seems to be unresponsive :-/
+[15:09:44] <_Riven> can't even opeen the console...
+[15:09:50] <Dragonene> looks cool kev
+[15:10:02] <Dragonene> is that a phone-size window I see?
+[15:10:08] <Dragonene> with buttons appropriately shaped for fingers?
+[15:10:12] <kevglass> funny that
+[15:10:19] <_Riven> applet officialy crashed after 64MB
+[15:10:26] <kappaOne> riven its still going here at about 2500+
+[15:10:30] <_Riven> not just an exception
+[15:10:33] <kevglass> 480x320
+[15:10:36] <_Riven> hm
+[15:11:06] <kappaOne> riven if you go to your java control panel and click settings whats you size set too?
+[15:11:15] <kappaOne> for temp files
+[15:11:16] <Dragonene> what uses that res kevglass? :)
+[15:11:22] <kevglass> let me think
+[15:12:21] <kevglass> need to port the framework at some point
+[15:12:28] <_Riven> 1000MB
+[15:12:35] <kappaOne> same here
+[15:12:46] <kappaOne> its at 4000+ here now and still going
+[15:12:52] <_Riven> but that doesn't mean is can use 1000MB per applet
+[15:14:31] <_Riven> wtf..
+[15:14:41] <_Riven> after 2000, i get ---> Exception in thread "AWT-EventQueue-1" java.lang.OutOfMemoryError: Java heap space
+[15:14:49] <Notch_> whoa
+[15:14:51] <kappaOne> hehe
+[15:14:52] <Notch_> :-O
+[15:14:59] <kappaOne> 5200+ and still going here :)
+[15:14:59] <_Riven> i'm writing to disk, damnit
+[15:15:29] <_Riven> 2000x 32k == 64MB == heap size.... but... that makes no sense!
+[15:15:52] <kappaOne> maybe its the opera plugin again :)
+[15:15:57] <_Riven> MSIE 8.0
+[15:16:05] <Schnitter> even worse :x
+[15:16:08] <_Riven> yeah yeah
+[15:16:14] <_Riven> i was sick of Opera
+[15:16:18] <_Riven> so tried in MSIE
+[15:16:37] <_Riven> now trying in FF
+[15:17:04] <kappaOne> FF and IE should be pretty much the same since they both just use the sun plugin
+[15:17:50] <kappaOne> 7000+ now, thats over 220mb of cache available
+[15:17:55] <kappaOne> to the applet
+[15:18:46] <_Riven> it now writes 100x / second
+[15:18:59] <_Riven> also OOME in FF
+[15:19:11] <_Riven> just after 2000 writes
+[15:19:30] <kappaOne> also why use random instead of ++?
+[15:19:39] <kappaOne> since with random you can get duplicate keys
+[15:20:05] <_Riven> because then i get new IDs for each applet restart
+[15:20:16] <_Riven> + i'm lazy
+[15:20:33] <kappaOne> damn the update writes fast here :)
+[15:20:49] <kappaOne> 10000+ and still going
+[15:20:59] <_Riven> what JRE
+[15:21:00] <kappaOne> lets hope it stop and the 1gb limit
+[15:21:07] <_Riven> i'm using _13 / 64bit
+[15:21:08] <kappaOne> 1.6.0_13
+[15:21:13] <kappaOne> 64bit too
+[15:21:17] <kappaOne> linux
+[15:21:17] <_Riven> weird.
+[15:21:20] <_Riven> vista :)
+[15:22:09] <kappaOne> 20000+ and still going O_o
+[15:22:23] <_Riven> that's 640MB
+[15:22:24] <Notch_> :-O
+[15:22:26] <Notch_> jesus
+[15:22:30] <kappaOne> ah its stopped now
+[15:22:37] <_Riven>  + all data from the previous runs
+[15:22:46] <kappaOne> out of memory error on console
+[15:22:51] <Notch_> haha
+[15:22:59] <_Riven> this really makes no sense
+[15:23:05] <kappaOne> that heap size that it runs out of
+[15:23:06] <_Riven> there is a memoryleak there
+[15:23:30] <_Riven> did you get your applet heapsize to 1GB ? :)
+[15:23:38] <kappaOne> nope
+[15:23:46] <kappaOne> ah wait applet is still running
+[15:23:48] <kappaOne> after crash
+[15:23:49] <kappaOne> on console
+[15:24:01] <kappaOne> O_o
+[15:24:02] <_Riven> i'm using ByteArrayInputStream to feed the getStream, but that should be cleaned up - i'm not holding any references
+[15:24:09] <kappaOne> its still ticking on
+[15:24:13] <systat> Can someone help me with movement and angle?
+[15:24:34] <kappaOne> ok computer slowing down now
+[15:24:38] <kappaOne> better stop it
+[15:24:48] <_Riven> wicked... Eclipse just died on me... first time in a year...
+[15:25:15] <kappaOne> closed ff here and applet still running :)
+[15:25:52] <kappaOne> tis using over 700mb ram on the task manager
+[15:25:53] <_Riven> well... i call repaint() inside the paint(), but that shouldn't cause an infinite loop
+[15:25:54] *** keisangi has joined #lwjgl
+[15:26:05] <_Riven> i mean, unbreakable look
+[15:26:08] <_Riven> loop*
+[15:26:11] <kappaOne> why not just leave out the repainting
+[15:26:13] <kappaOne> and use the console
+[15:26:26] <_Riven> yeah... me == lazy
+[15:26:30] <kappaOne> :)
+[15:26:31] <_Riven> sorry for screwing up your PC
+[15:26:44] <kappaOne> hehe, now just gotta find where all the keys are stored :)
+[15:26:56] <_Riven> it's not in the JRE sinatll folder
+[15:26:58] <kappaOne> lots of tiny 32kb files i suspect
+[15:27:01] <_Riven> install*
+[15:27:09] <_Riven> MAYBE it's all in memory :)
+[15:27:09] <kappaOne> maybe in the cache folder
+[15:27:22] <_Riven> it is inside the applet *context* after all
+[15:27:41] <_Riven> that would be a deeply sad implementation though
+[15:27:56] <_Riven> but why would it run out of memory, if it wouldn't be so poorly implemented
+[15:29:02] <_Riven> TaskManager won't popup anymore
+[15:29:07] <kappaOne> its not in the cache folder
+[15:29:16] <kappaOne> since its only 70mb total
+[15:29:23] <kappaOne> should be over 700mb
+[15:29:45] <_Riven> my explorer.exe (not iexpore.exe) is crashed :) start menu is also dead
+[15:30:00] <Notch_> haha
+[15:30:00] <kappaOne> by an unsigned applet?
+[15:30:04] <_Riven> yes!
+[15:30:04] <kappaOne> hehe
+[15:30:12] <_Riven> i never had thixz
+[15:30:26] * _Riven goes off and rule the world
+[15:30:41] <_Riven> it's so easy to completely crash peoples systems
+[15:31:05] <_Riven> i'm going to reboot guys
+[15:32:51] <kappaOne> hmm not sure why java stored all that data
+[15:33:03] <kappaOne> its not in the java cache folder of the temp folder
+[15:33:06] <kappaOne> *or
+[15:34:58] <kappaOne> hmm gonna have to reboot too
+[15:35:14] *** __Riven has joined #lwjgl
+[15:35:22] <kappaOne> the 700mb memory java applet process is refusing to die
+[15:35:34] <__Riven> bah
+[15:35:35] <kappaOne> even when using the kill signal on it
+[15:35:44] <__Riven> i rebooted, but I'm still logged in here
+[15:35:57] <kappaOne> hehe, going down for a reboot here too :)
+[15:36:05] <__Riven> dangerous applet :-/
+[15:36:19] <__Riven> sorry
+[15:36:28] <kappaOne> quick contact ken russell
+[15:36:35] <kappaOne> :)
+[15:36:39] <__Riven> he only replies to geoussej
+[15:37:41] <kappaOne> brb
+[15:37:42] <Notch_> lool =D
+[15:37:46] *** kappaOne has quit IRC
+[15:38:04] <OrangyTang> ken IS goussej
+[15:38:08] <__Riven> i hope _Riven wil TCP timeout... i mean.. i rebooted, for fck sake
+[15:39:02] <__Riven> i'm going to modify that applet, to be a bit more friendly
+[15:40:32] *** Notch_ has quit IRC
+[15:41:26] *** kappaOne has joined #lwjgl
+[15:42:00] <kappaOne> gonna report it too sun?
+[15:42:55] <__Riven> i bet Notch just rebooted too
+[15:43:02] <kappaOne> hehe
+[15:43:03] <__Riven> uh... why not
+[15:43:42] <kappaOne> not sure how the process can continue to live after closing the browser and sending the kill signal to it
+[15:43:59] <__Riven> infinte loop on EDT i think
+[15:44:18] <__Riven> and the JVM lives in its own process... these days?
+[15:44:26] <__Riven> i mjean, not a child process
+[15:44:59] <kappaOne> even so there should be something to stop it
+[15:45:07] <kappaOne> or catch that sort of behaviour
+[15:45:25] <__Riven> if you put an infinite loop in a shutdownhook, you're screwed too
+[15:46:32] <__Riven> at least, last time i tried, a few years ago
+[15:46:59] <kappaOne> even so the claim that the new plugin can't crash the browser are simply not true
+[15:47:20] <__Riven> such claims are rediculous anyway
+[15:47:32] <__Riven> it is based on the assumption that there are no bugs
+[15:48:18] <kappaOne> even doing a System.exit(0); on a signed applet crashes the browser
+[15:48:28] <__Riven> :-o
+[15:48:57] <__Riven> if i close the tab, and start the (updated) applet, i get an OOME on the first 32KB :)
+[15:49:11] <__Riven> so it's not freeing any resources from the tab
+[15:49:15] *** delt0r___ has quit IRC
+[15:49:24] *** delt0r___ has joined #lwjgl
+[15:49:42] <__Riven> it is all just really bad
+[15:49:51] <__Riven> didn't they test this?
+[15:50:13] <__Riven> isn't it just silly that the data you write, it kept in memory, as opposed to written to disk
+[15:50:36] *** _Riven has quit IRC
+[15:50:59] *** __Riven is now known as _Riven
+[15:53:12] * _Riven is away: botnet hogging my swapfile
+[15:55:01] * _Riven is back (gone 00:01:49)
+[15:55:15] <_Riven> oh cool, the opera plugin doesn't suffer from OOME
+[15:56:54] <Dragonene> It is clearly superior to all other plugins :D
+[15:59:37] <_Riven> weird thing is, that my harddisk usage is not increasing
+[15:59:47] <_Riven> and memory usage neither
+[15:59:55] <_Riven> so where do all the bytes go...
+[16:00:08] <kappaOne> yeh noticed that
+[16:00:26] <kappaOne> it wrote over a gig here a not much disk activity
+[16:00:33] <kappaOne> must have all gone to memory
+[16:00:46] <_Riven> but for me it's also not going into memory
+[16:00:56] <_Riven> it's all stable
+[16:01:10] <_Riven> written 26K x 32KB
+[16:01:22] <kappaOne> maybe 32kb is so small that hd activity is not noticable
+[16:01:23] <_Riven> that's 800+MB
+[16:01:36] <_Riven> it must end up somewhere!
+[16:01:57] <kappaOne> time to look at the jre src then :)
+[16:02:02] <_Riven> i mean... when i check disk properties
+[16:02:10] <_Riven> it shows disk usage (free / total)
+[16:02:15] <_Riven> and it's not increasing
+[16:02:21] <_Riven> and memory usage is also constant
+[16:02:41] <kevglass> is the data actually available next run ?
+[16:02:51] * _Riven has no clue
+[16:05:17] <_Riven> i updated the applet
+[16:05:32] <_Riven> in FF, the keys are reset to 0 with each reload
+[16:05:40] <_Riven> eh
+[16:05:45] <_Riven> with each restart
+[16:06:00] <_Riven> after i press F5, i get 2000 found keys
+[16:06:23] <_Riven> so it is clearly bound to the applet-context, which is gone with a restart
+[16:07:11] <_Riven> same deal in MSIE
+[16:07:17] <jezek2> useful feature ;)
+[16:07:40] <_Riven> well, not for storing data... as it's gone when you close your browser
+[16:07:41] <jezek2> _Riven: or maybe it's compressed using pigzip ;)
+[16:07:48] <_Riven> oh, i see you were sarcastic
+[16:08:22] <_Riven> pigzip = compression to 0 bytes?
+[16:08:37] <jezek2> no actually 3 bytes, or so :)
+[16:09:10] <jezek2> http://www.hackles.org/cgi-bin/archives.pl?request=310
+[16:09:52] <_Riven> darn, Opera is really different
+[16:09:56] <_Riven> this.getAppletContext().getStreamKeys(); ===> null
+[16:10:09] <_Riven> not even an empty Iterator instance
+[16:10:15] <kevglass> naff
+[16:10:27] <_Riven> i'm pretty sure your data serisouly ends up NOWHERE
+[16:10:33] <kevglass> awesome.
+[16:10:38] <_Riven> you can't retreive what you have written =D
+[16:11:01] <_Riven> that's why it had no memory increase and no hdd activity
+[16:11:19] <_Riven> this is stupid .. ?
+[16:12:00] <jezek2> no... that's sun's way :)
+[16:12:02] <jezek2> :P
+[16:12:20] <_Riven> it's actually only in Opera's plugin
+[16:12:29] <_Riven> FF and MSIE serialize to RAM
+[16:12:37] <_Riven> Opera serializes to the trash can
+[16:12:44] <jezek2> aha
+[16:13:25] <_Riven> haha... pfff
+[16:13:47] <_Riven> context.setString(key, input)
+[16:13:53] <_Riven> uh
+[16:14:02] <_Riven> context.setStream(key, input)
+[16:14:11] <_Riven> context.getStream(key) ==> null
+[16:14:27] <_Riven> it is indeed a total NO-OP
+[16:15:19] <_Riven> kev, you know where the opera forums are?
+[16:15:40] <Dragonene> ~google opera community
+[16:15:41] <Suzy> My Opera Community - http://my.opera.com/ | All results: http://search.yahoo.com/search?p=opera+community
+[16:15:44] <Dragonene> :P
+[16:15:58] <Dragonene> There's also #opera and #snapshot in irc.opera.net
+[16:16:14] <Dragonene> irc.opera.com*
+[16:16:15] <Dragonene> even
+[16:16:39] *** _Riven has quit IRC
+[16:18:34] *** _Riven has joined #lwjgl
+[16:18:45] <_Riven> darn, switching servers disconnected me from freenode
+[16:19:49] <Dragonene> weird
+[16:20:00] <Dragonene> what client do you use
+[16:20:03] <_Riven> xchat
+[16:20:04] <Dragonene> I use opera's irc client :D
+[16:20:08] <_Riven> but i'm an IRC n00b
+[16:20:15] <Dragonene> :)
+[16:20:39] <_Riven> u just used /server irc.opera.com
+[16:20:43] <_Riven> I*
+[16:21:41] <kappaOne> http://my.opera.com/community/forums/
+[16:21:51] <kappaOne> good luck getting a response :)
+[16:22:43] <Dragonene> yeah, getting responses is hard
+[16:22:55] <Dragonene> they've a lot of users :P
+[16:23:10] <Dragonene> My personal guess is that a lot of opera users make request
+[16:23:19] <Dragonene> they've a smaller user base, but pretty much all the opera users are tech-savvy
+[16:23:33] <Dragonene> so there would be a higher percentage of users with requests
+[16:23:35] *** indeterminatus has joined #lwjgl
+[16:23:35] <Dragonene> I think.
+[16:24:26] <_Riven> i have somebody responsing in the IRC channel
+[16:24:50] <_Riven> responding*
+[16:24:59] <kappaOne> oh cool
+[16:25:11] <_Riven> LarsKL
+[16:25:19] <kappaOne> tell(beg?) them to use the Sun plugin :)
+[16:25:20] <_Riven> sounds norwegian :p
+[16:25:36] <Dragonene> larskl does some work for opera
+[16:25:38] <_Riven> i don't want to destroy my chances just yet :)
+[16:25:42] <Dragonene> he might even be in the team now
+[16:25:43] <kappaOne> opera plugin must die :)
+[16:25:44] <Dragonene> but he didn't use to be
+[16:25:52] <Dragonene> IIRC
+[16:25:57] <Dragonene> I'm not entirely sure but I think so.
+[16:26:06] <Dragonene> also, they respond all the time on IRC
+[16:26:12] <Dragonene> that doesn't mean they can necessarily fix it.
+[16:26:27] *** logan_barnett has joined #lwjgl
+[16:26:31] <_Riven> LarsKL> _Riven: opera doesn't use the plugin but accesses jre directly
+[16:26:35] <systat> Hey, how to set Line length in SLICK??
+[16:26:47] <kappaOne> width?
+[16:27:03] <kappaOne> g.setLineWidth(x);
+[16:27:44] <_Riven> systat, don't you have an IDE with autcompletion? then you could just figure it out yourself, within seconds
+[16:29:25] <logan_barnett> kevglass: Got a moment for a hopefully quick Phys2D question?
+[16:29:30] <Scient> to quote rails elitists "autcomplete is for dumb programmers who dont know their way around their code" :D
+[16:29:33] <Scient> just had to say it! :D
+[16:29:44] <Greenleon> Is there a way to attach the javadoc for lwjgl and/or slick in eclipse?
+[16:29:47] <Scient> anyone seen or perhaps even played Castle Crashers here?
+[16:30:06] <Greenleon> Eclipse only tells me method names, but no descriptioin
+[16:30:08] <logan_barnett> Scient: I'm a Rails developer, and I really like auto-complete d:
+[16:30:32] <Schnitter> Greenleon: when you create a User Library, you can attach the code/doc
+[16:30:37] <logan_barnett> But I guess that just means I'm not elitist.
+[16:30:46] <Scient> :P
+[16:30:47] <_Riven> Scient.. that makes no sense at all.. it just saves time. if i type NPE[cntr][space] it writes out "NullPointerException" for me.
+[16:31:01] <Scient> yeah well it was a dead end discussion anyhow
+[16:31:02] <Schnitter> netbeans?
+[16:31:07] <Scient> just makes me grin when i think about it :P
+[16:32:14] <Greenleon> Schnitter: how??
+[16:32:40] <Schnitter> Preferences->Java->BuildPath->User Libraries
+[16:32:58] * kappaOne oooo, as Riven gets upper cut in the opera chat room :)
+[16:33:37] <Greenleon> well and where can i download the javadoc??
+[16:34:00] <_Riven> what does 'upper cut' mean?
+[16:34:02] * _Riven hides
+[16:34:14] <Schnitter> on the lwjgl site?
+[16:35:05] <_Riven> kappaOne? ----^
+[16:35:10] <kappaOne> well you pointed out a bug and the reply was that they don't care about java :)
+[16:35:16] <_Riven> ah
+[16:35:28] <_Riven> more or less, yes
+[16:35:37] <_Riven> indifferent
+[16:36:13] <Greenleon> Schnitter: I did not find anything... thats why I asked. At least nothign to download
+[16:36:34] <_Riven> but then again, as the applet context is destroyed if the browser is terminated, i don't really give a damn about getStream/setStream
+[16:36:35] <Schnitter> lwjgl.org->download->klick the link->download the docs package
+[16:37:14] <Greenleon> oh.... yepp
+[16:37:15] <Greenleon> thanks
+[16:37:24] <kappaOne> hmm so guess it doesn't store the data then?
+[16:37:36] <kappaOne> on the hdd
+[16:37:39] <_Riven> in RAM, for both MSIE and FF
+[16:37:59] <_Riven> and it makes thense that the appletcontext is destroyed... it's all in the name
+[16:38:20] <kappaOne> meh, not much use then
+[16:38:20] <_Riven> it's probably for inter-applet-communication, whoever does that
+[16:38:54] <kappaOne> two applets on one page? oh, no one should do that :)
+[16:39:13] <_Riven> yeah, very high probability of a nasty crash
+[16:39:43] <_Riven> and they share the EDT, IIRC
+[16:40:18] *** Dragonene_ has joined #lwjgl
+[16:41:09] <_Riven> it was fun while it lasted... no 'muffins' for applets then
+[16:51:26] *** Dragonene has quit IRC
+[16:55:25] *** OrangyTang has quit IRC
+[16:57:50] *** woogley has quit IRC
+[17:07:13] *** OrangyTang has joined #lwjgl
+[17:08:35] <systat> How is called function to set fps in slick?
+[17:09:58] <kappaOne> container.setTargetFrameRate(int fps)
+[17:11:35] *** kevglass has quit IRC
+[17:13:13] *** honk has quit IRC
+[17:13:20] *** honk has joined #lwjgl
+[17:21:14] *** Dragonene_ has left #lwjgl
+[17:29:59] *** PainBank has joined #lwjgl
+[17:31:15] *** kappaOne has quit IRC
+[17:41:32] *** aho has joined #lwjgl
+[17:49:56] *** kappaOne has joined #lwjgl
+[18:01:01] <aho> yo kappa
+[18:01:22] *** Orphis_ has joined #lwjgl
+[18:01:23] <kappaOne> hey there aho
+[18:01:28] <kappaOne> how goes?
+[18:01:36] <aho> too much party yesterday .)
+[18:02:08] <aho> <:
+[18:02:12] <kappaOne> ouch :)
+[18:02:27] <aho> was pretty great tho
+[18:02:54] <kappaOne> oh look minecraft has appeared on IndieGames.com http://www.indiegames.com/blog/2009/05/browser_game_pick_minecraft_ma.html
+[18:03:28] <aho> oh wtf... it's done already? :o
+[18:03:55] <kappaOne> don't think its done yet but it is an LWJGL applet :)
+[18:04:06] <kappaOne> will see how well it goes down this time round
+[18:04:15] <aho> :)
+[18:04:45] <NukeDukem> cool
+[18:04:54] <kappaOne> putty puzzle had a lot of problems but hopefully alot has been fixed since then
+[18:05:56] <aho> putty did still fairly well (for an lwjgl applet)
+[18:07:02] <kappaOne> yeh it did pretty well
+[18:07:09] <aho> gonna order a wiz today, methinks
+[18:07:24] <aho> it's a nice nerd toy
+[18:07:25] <aho> :>
+[18:08:00] <aho> and i really want to see that amoled screen in action :>
+[18:13:19] <NukeDukem> all this working with SWT has made me forget how easy and fast swing programming can be
+[18:13:30] <NukeDukem> do bad it's still hideous
+[18:13:33] <NukeDukem> err too bad
+[18:15:10] <NukeDukem> the wiz is pretty cool, you'll have to write a review or something
+[18:15:16] <NukeDukem> it'd be great just for emulation
+[18:19:13] *** Orphis has quit IRC
+[18:21:55] <_Riven> http://www.indiespot.net/files/game/spritepath.png
+[18:22:08] <_Riven> yay for decals
+[18:22:14] <kappaOne> oh whats that?
+[18:23:10] <_Riven> a single sand textuyre, with a very crappy algorithm to 'eat the edges' -> that ends up more or less like a circle, and then i scale/rotate/jittle it across a spline
+[18:23:27] <_Riven> jitter*
+[18:24:10] <_Riven> nice for creating the terrain in my upcoming... game/demo
+[18:24:28] <_Riven> i use the same technique for grass (but then there is no spline, ofcourse)
+[18:26:03] <_Riven> it's not too fancy as of yet, but it's a nice start
+[18:27:29] <_Riven> this is the original texture http://www.indiespot.net/files/game/spritepath.png
+[18:27:32] <_Riven> uh
+[18:27:36] <_Riven> http://www.johnsusek.com/projects/textures/lawdogs/sand_1.jpg
+[18:37:19] <NukeDukem> so whats the jist of your game?
+[18:37:37] <NukeDukem> I've seen the screenshots and movie, but I don't get the gameplay?
+[18:37:51] <_Riven> my game?
+[18:38:04] <NukeDukem> are you the one doing the 3d block pixelated looking game?
+[18:38:12] <_Riven> you must mistake me for Notch
+[18:38:20] <NukeDukem> oh, ok ;)
+[18:44:56] <aho> wiz ordered
+[18:44:57] <aho> wee
+[18:46:03] <_Riven> early adopter eh?
+[18:47:09] <aho> no risk no fun
+[18:48:14] <_Riven> when will it arrive?
+[18:48:21] <_Riven> can you deploy your own apps on it? linux?
+[18:48:27] <_Riven> what was the website again?
+[18:48:47] <aho> ye, it's a homebrew machine
+[18:49:04] <aho> http://www.javagaming.org/index.php/topic,20482.0.html
+[18:49:07] <aho> links are there
+[18:50:05] <kappaOne> wiz does look a nice device, especially for retro gaming on the go
+[18:50:49] <aho> and well... it's fairly cheap
+[18:51:32] <_Riven> spec don't say what GPU is embedded
+[18:51:51] <aho> http://www.linuxdevices.com/news/NS4648734230.html
+[18:51:58] <aho> 533MHz ARM926EJ
+[18:52:15] <aho> eh gpu
+[18:52:15] <_Riven> ah, i thought that was the CPU
+[18:52:16] <aho> .)
+[18:52:16] <_Riven> my bad
+[18:52:34] <aho> well, it's a SoC thingy
+[18:52:41] <_Riven> yeah.. just realized
+[18:53:02] <_Riven> should be easy to get a JRE running on it
+[18:53:07] <NukeDukem> I love reading interviews with bill roper
+[18:53:12] <NukeDukem> he's made so many awesome games
+[18:53:37] <aho> jre with jazelle support would be awesome
+[18:53:45] <NukeDukem> http://www.gamasutra.com/view/feature/4026/the_hardwon_wisdom_of_bill_roper.php
+[18:54:13] <_Riven> it would be great if this would end up being as big as the DS... then we, java devs, could finally jump in the console market
+[18:55:47] <aho> it's more of a niche product with basically zero marketing
+[18:55:55] <aho> realistically speaking
+[18:56:17] <_Riven> yeah... it hasn't got a chance... but still, it would be fantastic if..
+[18:56:18] <NukeDukem> there really isn't good java support on that device
+[18:56:27] <NukeDukem> nor will there be, unless somebody steps up
+[18:56:49] <_Riven> you only need a crappy java interpreter as most of the CPU cycles are spent in OpenGL / OpenES
+[18:57:35] <NukeDukem> actually most of the cpu cycles will be spent running the crappy java interpreter ;)
+[18:57:42] <_Riven> nah
+[18:57:48] <_Riven> rendering 1 triangle is much harder
+[18:57:58] <NukeDukem> it has a gpu
+[18:58:07] <_Riven> i know..
+[18:58:08] <NukeDukem> and you'd be batching all your data
+[18:58:28] <NukeDukem> very little time would be spent on the cpu in regards to rendering, unless you messed up somewhere
+[19:18:16] <systat> How can I remove an Instance of object I don't need anymore??
+[19:20:58] <NukeDukem> remove all references to it
+[19:21:11] <systat> Uhm um, how?
+[19:21:12] <NukeDukem> and the gc will collected it from memory when possible
+[19:21:16] <systat> Okay
+[19:21:34] <NukeDukem> remove it from your lists, make it go out of scope, etc, etc
+[19:22:36] <systat> You don't understand, I have an array of objects, the images, and let's say taht those object controls images, so they rotate etc, now when an event occure, i want that specific instance get removed, not all instances
+[19:30:11] <NukeDukem> you can't explicitly manage memory in Java
+[19:30:32] <NukeDukem> you can only provide hints to the gc that certain memory should be freed
+[19:30:48] <NukeDukem> in your example, remove the object from the array and *any* other references
+[19:31:09] <_Riven> i think he wants to remove an entry from an array... it's a heck of a lot less work to use an ArrayList in this case
+[19:31:10] <NukeDukem> if there are any references, the gc will not be able to free that memory and you will get nice, hard to debug memory leak ;)
+[19:32:19] <systat> I just wanted  and enemy not to be visible after he is killed, I done it so that I just put him out of screen, on some crazy coordinates, is that good way to do it?
+[19:32:34] <_Riven> no
+[19:32:41] <systat> Okay, so how to do it
+[19:32:48] <_Riven> use.. a list, like i just said
+[19:32:48] <systat> I don't want to see dead enemy on screen
+[19:32:54] <systat> ok
+[19:33:54] <NukeDukem> you shouldn't rely on the gc for something like that
+[19:34:02] <NukeDukem> because it's not guaranteed to run at all in your application
+[19:34:18] <NukeDukem> you should use some kind of setVisible() method
+[19:34:23] <_Riven> noooo
+[19:34:30] <_Riven> just remove the darn thing from your list
+[19:34:45] <_Riven> it's not like you're ever going to use it again
+[19:34:49] <_Riven> it's a dead enemy
+[19:36:51] <MatthiasM> systat: just ignore the GC aspect - if you have a list or array of things to render - and you want to stop rendering one - then just remove it from this list/array
+[19:37:08] <MatthiasM> ArrayList.remove is very useful for this
+[19:37:25] <MatthiasM> NukeDukem: nice nick - you should add Never to it :P
+[19:39:23] *** NukeDukem is now known as NukeDukemTomorro
+[19:39:29] <MatthiasM> heh
+[19:40:06] <MatthiasM> or NukeDukemWhenItsDone
+[19:40:29] <NukeDukemTomorro> I think the whole shutdown is a big scam personally
+[19:40:40] <NukeDukemTomorro> there had to be signs they're were going to go under before they did it
+[19:41:00] <MatthiasM> 10 years dev time not enough signs ?
+[19:41:16] <Scient> that have already fucked up on a gigantic scale anyways
+[19:41:34] <MatthiasM> only US military projects have a longer dev time :P
+[19:41:42] <Scient> you would have to be a complete utter retarded by not managing to make money out of Duke Nukems sequel
+[19:41:58] <Scient> even fkin i would be able to make money from it in 10 years :P
+[19:42:20] <MatthiasM> and now you have it repay 10 years loans ...
+[19:42:22] <Scient> and that would include the time i would need to spend learning modelling .P
+[19:42:38] <NukeDukemTomorro> yeah but 3d realms had a few successful titles in the mean time
+[19:42:49] <NukeDukemTomorro> max payne, some other duke nukem games, prey
+[19:43:28] <Scient> that minecraft seems sluggish on Leopard...
+[19:43:40] <Scient> getting ~30ish FPS and the mouse movement is really jerky
+[19:43:45] <_Riven> seriously? i get 700fps
+[19:44:08] <kappaOne> what video card do you have?
+[19:44:10] <Scient> it seems to jump between 50 and 30 or something
+[19:44:14] <Scient> sec, ill check
+[19:44:16] <_Riven> 8600 GT
+[19:44:54] <kappaOne> i get 1500 fps
+[19:45:00] <Scient> i wonder where could i see what video i have :D
+[19:45:09] *** Evil-Devil has joined #lwjgl
+[19:45:14] <Evil-Devil> hiho
+[19:45:28] <NukeDukemTomorro> Evil Deevil
+[19:47:02] <Scient> NVIDIA GeForce GT 120
+[19:47:10] <Scient> 256MB
+[19:47:15] <_Riven> latest drivers?
+[19:47:27] <_Riven> sounds like you're getting software mode
+[19:47:30] <Scient> afai that should correspond to 8600 or something
+[19:47:46] <Scient> might be, not like i know my way around OSX :D
+[19:48:24] <Evil-Devil> gimme some comments ppl ^^ -> http://lwjgl.org/wiki/doku.php/lwjgl/tutorials/textures/tga
+[19:50:33] <MatthiasM> Evil-Devil: you use InputStream wrong
+[19:50:51] <Evil-Devil> explain please
+[19:51:11] <MatthiasM> ~api InputStream.read
+[19:51:11] <Suzy> http://java.sun.com/javase/6/docs/api/java/io/InputStream.html#read%28%29 | http://java.sun.com/javase/6/docs/api/java/io/InputStream.html#read%28byte[]%29 | http://java.sun.com/javase/6/docs/api/java/io/InputStream.html#read%28byte[]%2c%20int%2c%20int%29
+[19:53:42] <Evil-Devil> i don't see anything wrong with it
+[19:53:50] <Schnitter> I can't download the lwjgl tga logo
+[19:54:31] <MatthiasM> Evil-Devil: a read may return anything between 1 and 12 bytes when you request 12
+[19:54:33] <Evil-Devil> oh, haven't testet that last night....will fix it
+[19:56:01] <Evil-Devil> is it that bad? if i get less then 12 bytes the error handling should call in
+[19:56:23] <_Riven> no
+[19:56:24] <MatthiasM> yep - you can get the rest with another read call
+[19:56:32] <MatthiasM> so it is bad
+[19:56:45] <_Riven> and no, the error handling won't 'call in'
+[19:57:38] <_Riven> if you want a quick solution, wrap your stream in a DataInputStream, and call readFully
+[19:58:14] *** kevglass has joined #lwjgl
+[19:59:03] <Evil-Devil> hmm, in my last test project i used a prepared array with the header to compare the read data with my data. that worked as error handling fine
+[19:59:07] <kevglass> lo
+[19:59:18] <MatthiasM> Evil-Devil: it's still wrong
+[19:59:25] <NukeDukemTomorro> it will work until you filesystem stutters for some reason
+[19:59:46] <NukeDukemTomorro> for example, if you did this with a network stream, you'd definitely be feeling the effect already
+[19:59:52] <MatthiasM> or you use a URL.getContent
+[20:00:07] <MatthiasM> ehh - input stream from a URL
+[20:00:18] <_Riven> when you're going to read data from the network, you'll dedinitely run into this. with file I/O it is less likely, depeinding on your OS, but you MUST expect your read() not to return the number of bytes you asked for
+[20:00:37] <_Riven> URL.openStream
+[20:00:56] <Evil-Devil> Schnitter: fixed file download
+[20:01:49] <Evil-Devil> and how should i read the data then? 12 individual reads in a while loop?
+[20:02:05] <_Riven> again... use DataInputStream.readFully for a quick solution
+[20:03:24] <MatthiasM> or loop until you got all bytes
+[20:03:26] *** NateS has joined #lwjgl
+[20:03:39] <MatthiasM> just look how readFully is implemented
+[20:03:46] <NateS> suppl
+[20:04:15] <_Riven> yeah, it's very easy to do it yourself, but when you're doing it the first time in your life, it's very likely to get it wrong :)
+[20:04:19] <NateS> *sup ppl
+[20:04:30] <Scient> goddamn MS not accepting my CC
+[20:04:35] <Scient> guess they have enough money
+[20:04:36] *** mattdesl has joined #lwjgl
+[20:04:36] <Evil-Devil> i guess for the tutorial i could stick with readFully
+[20:05:07] <NateS> anyone want to help me with fixed point ffts in java? android doesn't have an FPU!
+[20:05:24] <_Riven> 16.16 format?
+[20:05:57] <NateS> _Riven: yeah that would be fine
+[20:06:13] <_Riven> do you have the code?
+[20:06:20] <_Riven> or is that the problem
+[20:06:51] <NateS> I ported a C function, but I'm not sure if I'm giving it the right input, or if I'm correctly making use of the output
+[20:07:32] <NateS> code: http://pastebin.com/d76cf44d9
+[20:08:03] <NateS> the only hint for how they do fixed point is in FIX_MPY
+[20:08:57] <NateS> so I guess my questions: should I convert my input to fixed point? how? should I convert the output from fixed point? how?
+[20:09:05] <_Riven> doesn't look like 16.16
+[20:09:47] <MatthiasM> 17.15
+[20:09:55] <_Riven> yes
+[20:10:22] <NateS> says "All data are fixed-point short integers, in which -32768 to +32768 represent -1.0 to +1.0 respectively."
+[20:10:46] <MatthiasM> that range doesn't fit in 16 bit ...
+[20:11:03] <_Riven> off by 1 :)
+[20:11:16] <NateS> heh, poor docs then
+[20:11:18] <_Riven> 32767
+[20:11:32] <MatthiasM> ^do you have a good reason to use fixed point over float point ?
+[20:11:44] <MatthiasM> esp with Java float should be equaly fast or even faster
+[20:11:50] <MatthiasM> (on x86 CPUs)
+[20:11:52] <NateS> MatthiasM: android hardware may not have an FPU
+[20:11:59] <MatthiasM> meh
+[20:12:00] <NateS> current hardware doesn't
+[20:12:20] <NukeDukemTomorro> it's funny how google cheaped out on that
+[20:12:25] <NukeDukemTomorro> I mean who uses floating point right? ;)
+[20:12:48] <NateS> it kills me. I could use my same code with no changes otherwise!
+[20:12:49] <NukeDukemTomorro> that said, the iphone doesn't have an fpu either
+[20:12:56] <NateS> iPhone does have an FPU
+[20:13:08] <NukeDukemTomorro> I swear I read it didn't or was disabled or something
+[20:13:27] <NateS> definitely does
+[20:13:35] <NateS> I've ported this same code to objc using floats and it runs great
+[20:14:19] <NukeDukemTomorro> are you sure it's doing that in hardware?
+[20:14:47] <NateS> from what I've read it has an FPU, so pretty sure
+[20:15:34] <NateS> its something like 500x slower on android (only have the emulator atm tho)
+[20:15:34] <NukeDukemTomorro> well could be, I puked when I realized I'd have to program for the iphone using a mac
+[20:15:35] <NukeDukemTomorro> rofl
+[20:16:11] *** logan_barnett has quit IRC
+[20:17:42] <Evil-Devil> readFully dislikes me :( uncompressed is broken now
+[20:17:49] <NateS> so if -32768 to 32767 represents -1 to 1, then it has to eb 16.16 as 17.15 wouldn't fit
+[20:18:52] <MatthiasM> 17.15 as 2^15 == 32768
+[20:19:16] <NateS> ah my bad
+[20:20:49] <NateS> how would i convert a 17.15 int to float?
+[20:20:58] <MatthiasM> ...
+[20:21:10] <NateS> (sorry MatthiasM :D)
+[20:21:22] <MatthiasM> if 32768 == 1.0
+[20:22:08] <NateS> (x << 17) / 32768f gives me the decimal portion
+[20:22:44] <NateS> nvm I'm messing with it
+[20:22:45] <MatthiasM> ??
+[20:24:22] <_Riven> x << 15
+[20:24:45] <MatthiasM> _Riven: no
+[20:25:12] <_Riven> oh wait, it is just applying a mask
+[20:25:22] <MatthiasM> no
+[20:27:32] <_Riven> the fractional part is in the lower 15 bits, so you just have to apply a mask to get those out
+[20:27:52] <MatthiasM> the question was "how to convert a 17.15 int to float"
+[20:27:58] <MatthiasM> that's just / 32768.0f
+[20:28:10] <Evil-Devil> ok, changed the input stream stuff to readFully. Thanx for pointing this out. Its the first time ever i use that method.
+[20:28:54] <NateS> ah, thanks MatthiasM, that helps :D
+[20:30:30] <MatthiasM> why are such basic things so hard for so many people who want to write SW ?
+[20:30:55] <_Riven> well, i was answering NateS comment on "... gives me the decimal portion"
+[20:31:03] <MatthiasM> http://en.wikipedia.org/wiki/Cross-multiplication
+[20:33:50] <_Riven> the fact that i'm answering another question, or... even if I was answering it wrong (again, i wasn't) that doesn't mean you have to act to superiour, you're really being lame
+[20:34:00] <NateS> sometimes it takes a bit to wrap ones head around things
+[20:34:27] *** woogley has joined #lwjgl
+[20:35:32] * kevglass chuckles
+[20:36:06] <_Riven> enjoying the massacre?
+[20:36:13] * kevglass nods
+[20:36:34] <kevglass> I've always loved how Matthias makes tricky things sound like they're simple
+[20:36:43] <kevglass> and I've always laughed at how blunt you are on the forums
+[20:36:47] <MatthiasM> huh?
+[20:36:58] <kevglass> why I didn't think of getting you two together before I don't know
+[20:37:02] <kevglass> its just fricking brilliant :)
+[20:37:18] <MatthiasM> lol
+[20:37:21] <kappaOne> hehe
+[20:37:22] <kevglass> lo matthiasM btw :)
+[20:37:29] <MatthiasM> hi kev
+[20:37:33] <_Riven> i was blunt only once, at then i got slaughtered, and i deleted my account
+[20:37:45] <kevglass> sure sure
+[20:37:46] <_Riven> for the rest, i'm not that blunt... or am i!
+[20:37:48] <kevglass> carry on
+[20:37:52] * kevglass gets popcorn.
+[20:38:47] <_Riven> do you think i hurt innocent souls, kev?
+[20:38:59] <kevglass> no one is innocent on the internet
+[20:39:18] <Evil-Devil> not? ^^
+[20:39:44] <_Riven> good point, but seriously... i'm not intending to be blunt on JGO...!
+[20:39:52] <_Riven> i fear it is just what i am... then? :)
+[20:39:58] <kevglass> I'm sure you're a lovely person irl, how you come across to different people across the wire doesn't really factor that in :)
+[20:40:20] <kevglass> at times, your brilliance shines so much that it blinds :)
+[20:40:37] <_Riven> let's turn on the red light
+[20:40:46] <NukeDukemTomorro> I'm here to chew gum and have a irc flame war
+[20:40:52] <_Riven> you're making me feel uncomfortable :p
+[20:41:08] * kevglass does that alot apparantly
+[20:41:09] <NukeDukemTomorro> and I'm all out of gum
+[20:41:21] <_Riven> if this is a flamewar...?
+[20:41:30] <NukeDukemTomorro> not yet, pal
+[20:41:33] <kevglass> no, like this
+[20:41:39] <_Riven> oh dear
+[20:41:44] <kevglass> java for game development is a retard's option
+[20:42:01] <NukeDukemTomorro> preach it
+[20:42:05] <kevglass> it has so many hurdles that prevent creativity it's just a waste of time
+[20:42:14] <_Riven> your intro took out the shock effect kev
+[20:42:15] <kevglass> go learn flash instead
+[20:42:19] * kevglass nods
+[20:42:25] <kevglass> terrible at flame wars me/
+[20:42:58] * _Riven continues to be rude on JGO
+[20:43:10] * kappaOne cries at kevs cruel analysis of java game developers :)
+[20:43:12] <_Riven> hm.. not much happening there
+[20:43:25] <Evil-Devil> flash is for kids
+[20:43:25] <kevglass> could you be a bit more rude to goussej pls?
+[20:43:40] <NukeDukemTomorro> goussej is the man
+[20:44:00] <kevglass> we call him KenR.
+[20:44:07] <_Riven> I'd live to, but i cannot beat Cas... he totally attacked TEUR once =D
+[20:44:17] <_Riven> love to*
+[20:44:20] <NukeDukemTomorro> yeah I don't follow jgo but that post was awesome
+[20:44:27] <NukeDukemTomorro> it was like that speech from happy gilmore
+[20:44:44] <_Riven> he was saying, what everybody had been thinking for years
+[20:45:07] <_Riven> but nobody dared to say, in fear of gouessej's retaliation
+[20:45:11] <NukeDukemTomorro> oh wait different sandler flick, billy madison
+[20:45:26] <NukeDukemTomorro> What you've just said is one of the most insanely idiotic things I have ever heard. At no point in your rambling, incoherent response were you even close to anything that could be considered a rational thought. Everyone in this room is now dumber for having listened to it. I award you no points, and may God have mercy on your soul.
+[20:45:40] <kappaOne> Cas was totally ripped goussej a new one, i'll never make fun of goussej after that
+[20:45:45] <kappaOne> *-was
+[20:45:57] <_Riven> i mean... somebody, on another forum, just called it "a piece of shit" once, and in just about every post, he referred to it
+[20:47:07] <kevglass> I got it in the neck for calling him a "chap"
+[20:47:26] <_Riven> it's also funny, how he's using portals, and the most advanced algorithms.. while the game would definitely run faster if he would just bruteforce the damn thing
+[20:47:44] <NukeDukemTomorro> it really reminds of me of that screensaver for win 3.1
+[20:47:45] <Evil-Devil> jgo is still alive? thought i died in dust of ignorance
+[20:47:50] <Evil-Devil> it
+[20:48:09] <kevglass> you died?
+[20:48:13] <_Riven> he died!
+[20:48:20] <kevglass> lody
+[20:48:54] <_Riven> kev, this is step 0.0.1 in my RTS
+[20:48:56] <_Riven> http://www.indiespot.net/files/game/spritepath2.png
+[20:48:58] <jezek2> _Riven: remember he's running on very old / lowend HW
+[20:49:08] <jezek2> _Riven: so brutefroce rendering won't help him
+[20:49:21] <_Riven> wolfenstein was more advanced
+[20:49:23] <jezek2> (or targetting)
+[20:49:33] <kevglass> you've go an algorithm to cut away at textures for terrain?
+[20:49:44] <jezek2> but yeah... portals sounds like overkill :)
+[20:49:58] <kevglass> thats not fair btw, wolfenstein was slighly less advanced
+[20:50:01] <_Riven> i'm fairly sure he can bruteforce his way out, even on crappy hardware... that game has only a few hundred quads
+[20:50:35] <kevglass> but it was like 15+ years ago
+[20:50:55] <_Riven> kevglass: i'm loading a texture, cutting holes at the edges, then splatting them along a spline, at various scales and rotations
+[20:51:12] <_Riven> it's extremely simple
+[20:51:34] <_Riven> i'm going to put the result in another texture, otherwise you'll have massive overdraw
+[20:51:44] <kevglass> use for terrain?
+[20:51:50] <_Riven> you can get away with that in 2d/iso games
+[20:52:00] <kappaOne> worms :)
+[20:52:32] <_Riven> yeah... stitching together terrains by splatting sprites within fancy algorithms
+[20:52:44] <_Riven> it's 2d, as in top-down, not like worms :)
+[20:53:54] <_Riven> anyway, back to bashing gouessej
+[20:54:33] <Evil-Devil> btw: does anyone know what have changed from tribaltrouble 1 to 2? i tried the beta, but haven't seen big differences.
+[20:54:42] <NukeDukemTomorro> The Journal of Urology : Re: Complication of Bowel Perforation
+[20:55:03] <NukeDukemTomorro> if you search for google, that's the first hit
+[20:55:07] <NukeDukemTomorro> err
+[20:55:12] <NukeDukemTomorro> if you search google for goussej
+[20:55:16] <NateS> I thought we were basking in the inferiority of those who ask basic questions ;)
+[20:55:24] <NukeDukemTomorro> kind of appropriate, google must be much more advanced than I previously thought
+[20:55:49] <kevglass> always
+[20:56:56] <_Riven> "if you search for google" ... wtf
+[20:57:25] <_Riven> life must be hard for you :p
+[20:57:34] <MatthiasM> ^search for "Chuck Norris" and press "Good Luck"
+[20:57:44] <NukeDukemTomorro> dumbfuck, did you see my next statement
+[20:58:16] <kevglass> awww
+[20:58:23] <kevglass> language timothy.
+[20:59:04] *** Orphis has joined #lwjgl
+[20:59:11] <NukeDukemTomorro> It's down to you and me, you one-eyed freak
+[20:59:31] * _Riven touched a nerve
+[20:59:53] <NukeDukemTomorro> and I thought cigars tasted bad
+[21:00:30] <kevglass> thats better
+[21:00:43] <kevglass> now back to your corners and come out fighting.
+[21:01:15] <NukeDukemTomorro> damn it I hate dealing with rendering artifacts in a gi rendering code
+[21:01:28] * _Riven drags himself to his opponent
+[21:02:29] <NukeDukemTomorro> I can't win Doc!
+[21:02:33] * _Riven throws NPE at timothy
+[21:03:04] <NukeDukemTomorro> I can't wait until tomorrow
+[21:03:07] <NukeDukemTomorro> punchout returns
+[21:03:11] * _Riven catches OOME
+[21:03:45] * NukeDukemTomorro throws a problematic frame at _Rivven
+[21:04:18] <_Riven> timoty crashes to the floor with an ACCESS_VIOLATION
+[21:04:40] <NukeDukemTomorro> Your punch is soft... just like your heart!
+[21:05:01] <kevglass> aww too cute
+[21:05:30] * _Riven handles NoSuchElementException
+[21:07:29] * _Riven timeouts
+[21:07:54] <_Riven> you win, me dumbfuck
+[21:08:34] * _Riven initiates EOL sequence
+[21:11:10] * kevglass renames Riven
+[21:13:01] <_Riven> The Riven 3 Platform 2.7_43 build 143a Server Edition shared mode
+[21:13:10] <kevglass> codename 'dumbfuck'
+[21:13:32] <_Riven> i bet suns marketing guys can learn from that one
+[21:13:55] <_Riven> it *is* a catchy name
+[21:13:58] <NukeDukemTomorro> you mean oracles marketing guy?
+[21:14:19] <NukeDukemTomorro> I'd say it's more apt than catchy, but that's just me
+[21:14:28] <_Riven> "All references to Dumbfuck on this javadoc page refer to Java 1.8"
+[21:15:58] <systat> How can I stop sound even though it is still playing
+[21:16:12] <_Riven> System.exit(0)
+[21:16:20] <systat> No, no that
+[21:16:23] <kevglass> sfx.stop() ?
+[21:16:27] <_Riven> be a little more specific
+[21:16:35] <_Riven> like, how are you playing the sound
+[21:16:50] *** Orphis_ has quit IRC
+[21:16:52] <kappaOne> Music.stop()
+[21:17:10] <kevglass> container.setMusicOn(false);
+[21:17:59] <kappaOne> hehe the new TF2 trailer is pretty funny http://www.gametrailers.com/video/meet-the-team-fortress/49383?r=1
+[21:21:26] <Schnitter> :D
+[21:22:23] *** Schnitter has quit IRC
+[21:22:25] <NukeDukemTomorro> yeah, this is fantastic
+[21:23:55] <systat> Why sound doesn't play after I reinit GC?
+[21:24:28] <kappaOne> you disabled it using container.setMusicOn(false);?
+[21:25:00] <systat> nope, I start game sound works fine, an event occurs, gc.reinit()'s, and then sound doesn't play anymore
+[21:25:10] <systat> Simple as that :)
+[21:25:25] <kevglass> reinit() is so dodgy
+[21:25:33] <systat> I made a mistake
+[21:25:40] <systat> And I need to finish this game today
+[21:25:46] <kevglass> why?
+[21:25:47] <systat> So, I can't fix it otherwise
+[21:25:52] <systat> It is for contest
+[21:26:14] <_Riven> which
+[21:26:34] <systat> An Unknown, small game dev forum from Croatia
+[21:26:43] <systat> Just 5 people are in
+[21:26:51] <systat> competition
+[21:26:58] <kevglass> big prizes?
+[21:27:02] <systat> Nope
+[21:27:03] * kevglass needs a new car.
+[21:27:06] <kevglass> damn it
+[21:27:22] <systat> So, can you help me with sound?
+[21:27:32] <kevglass> I'm not sure
+[21:27:36] <kevglass> you made a mistake you said?
+[21:27:44] <systat> Yes
+[21:27:55] <kappaOne> how bout you paste your reinit() method?
+[21:28:14] <kappaOne> ah wait reinit() is a slick method
+[21:28:19] <systat> Yes
+[21:29:02] <_Riven> i should really give slick a whirl one of these days, i can't answer a single question
+[21:29:11] <kevglass> why are you calling reinit()?
+[21:29:14] <_Riven> although often the answers are pretty obvious :)
+[21:29:36] <kevglass> the best fix if you need it finished today might be to not call reinit()
+[21:30:21] <systat> kevglass, after each level, I want to make more objects, and I keep damn object in array, I didn't used ArrayList, I know it's mistake. So, I can't do, ArraySize+=5 after each level, so that's why I need to use reinit
+[21:30:42] <systat> It terrible messed up my game
+[21:30:57] <kevglass> so what does reinit() do for you?
+[21:31:30] <systat> Well, I keep ArraySize as a global variable, and in init I do ArraySize+=5
+[21:31:58] <systat> So, it works like that
+[21:32:09] <kevglass> so couldn't you just call init() manually instead of reinit() ?
+[21:32:19] <systat> Hmm
+[21:32:23] <systat> I didn't thought about it
+[21:32:24] <systat> let me see
+[21:32:44] <systat> Hmm
+[21:33:07] <systat> How do I call init() manually?
+[21:33:27] <kevglass> you have an instance of game or gamestate?
+[21:34:15] <systat> Ohh
+[21:34:18] <systat> Managed to do it
+[21:34:23] <systat> Thx, sound now works :)
+[21:37:47] <kevglass> yay.
+[21:42:30] *** Evil-Devil has quit IRC
+[21:43:24] *** NateS has quit IRC
+[21:49:14] <aho> evening kev
+[21:53:57] <_Riven> i have this feeling kev is regarded as the local hero around here
+[21:54:16] <_Riven> i mean... i here too?!
+[21:54:30] <aho> evening riven :>
+[21:54:43] <_Riven> i had that one coming!
+[21:55:07] <NukeDukemTomorro> kev is like a cross between hulk hogan and RMS
+[21:55:17] <aho> eh. no :)
+[21:56:52] <aho> ahm... for something entirely different... how does opengl es development work in general?
+[21:57:04] <aho> are there now proper wrappers around?
+[21:57:35] <aho> http://developer.amd.com/GPU/OPENGL/Pages/default.aspx
+[21:58:35] <aho> Support for core OpenGL ES 2.0 functionality <- mh i need 1.1 tho (and 2.0 isnt backwards compatible)
+[22:00:59] <aho> man... i'm so clueless :)
+[22:01:58] <_Riven> we all are, i guess, i never worked with ES
+[22:04:20] <aho> Tips & Strategies To Maximize OpenGL ES 3D Graphics Performance On Handheld Devices (video) - http://news.developer.nvidia.com/2007/01/tips_strategies.html
+[22:05:00] <_Riven> ooh cool, you're answering your own question, so we can learn *with* you!
+[22:05:29] <aho> nah... that vid is only roughly related
+[22:05:30] <kappaOne> yup theres is a proper wrapper for opengl es
+[22:05:36] <kappaOne> not sure how well it works though
+[22:05:37] <aho> thought i should post it in case anyone is interested
+[22:06:25] <aho> hum hum... 16.16 fixed point :>
+[22:07:26] *** kevglass has quit IRC
+[22:25:08] <systat> I exported my SLICK project as a runnable jar, how can I run it now
+[22:25:30] <systat> In eclipse it said that JVM arguments won't be in that jar, and taht Ill need to do it manually
+[22:25:31] <systat> WHY?
+[22:25:33] <systat> THE FUCkl
+[22:27:06] <MatthiasM> use something like launch4j
+[22:27:09] <MatthiasM> or jws
+[22:28:30] <_Riven> he is struggling with arrays vs. lists. It's not a good idea to advice JWS
+[22:28:39] <Scient> :P
+[22:28:50] <MatthiasM> heh
+[22:30:02] <_Riven> best advice for him is to use a *.bat file
+[22:30:33] <MatthiasM> no - first to learn how to start a java app without using an IDE
+[22:31:15] <NukeDukemTomorro> oh come on, that's irrelevant
+[22:31:20] <_Riven> you should first know that, and only then advance to an IDE
+[22:31:26] <NukeDukemTomorro> in the future your OS will be running on eclipse anyway ;)
+[22:31:50] <_Riven> your OS is more likely to run virtualize due to a virus
+[22:31:54] <MatthiasM> lol
+[22:32:35] <MatthiasM> NukeDukemTomorro: you mean slow as hell, totally f**ked user interface ?
+[22:32:45] <MatthiasM> and can't do anything right
+[22:32:48] <NukeDukemTomorro> no I'm not talking about vista
+[22:32:52] <_Riven> NetBeans is... slower (flamewarrr!!)
+[22:33:24] <MatthiasM> NB is the better C++ IDE :P
+[22:33:39] <NukeDukemTomorro> I haven't tried NetBean's C++ support
+[22:33:45] <NukeDukemTomorro> maybe one day
+[22:33:48] <MatthiasM> the auto completion works
+[22:33:49] <NukeDukemTomorro> after netbeans loads
+[22:34:09] <NukeDukemTomorro> eclipse's autocomplete for C++ has gotten a lot better since ganymede
+[22:34:15] <MatthiasM> yeah - the startup could be a bit faster
+[22:34:17] <NukeDukemTomorro> I wonder what gallileo is going to have in store
+[22:34:22] <_Riven> i wonder what autocompletion does in a void*
+[22:34:36] <NukeDukemTomorro> I was joking though, IDE's all load slow and rightfully so
+[22:34:42] <NukeDukemTomorro> they're big programs
+[22:34:56] <MatthiasM> yeah - and even slower if you have 480k files in /tmp
+[22:34:59] <_Riven> and safe time bigtime
+[22:36:16] <_Riven> actually, eclipse has this massive filestructure
+[22:36:30] <_Riven> .../HEX/temp files
+[22:36:40] <_Riven> so you get 256 dirs to split the load
+[22:36:59] <_Riven> 00..FF
+[22:37:04] <MatthiasM> well -NB only creates 2 files in temp :)
+[22:37:33] <_Riven> eclipse logs everything, all refactorying... i can even revert back to refactorings from 2006
+[22:37:54] <MatthiasM> meh - local history should have a sane limit
+[22:38:01] * _Riven agrees
+[22:38:03] <MatthiasM> for the rest you have version control
+[22:38:17] <MatthiasM> misusing LH as VC is very dangerous
+[22:38:30] <MatthiasM> I think NB's default is 7 days
+[22:38:45] <_Riven> i know. i have version control,and daily backups
+[22:38:52] <MatthiasM> yep - meh too
+[22:39:06] <MatthiasM> and distributed backup on several PCs, mobile media etc
+[22:39:59] <MatthiasM> *me too :P
+[22:40:15] <NukeDukemTomorro> rsync ftw
+[22:40:18] <_Riven> i have it on 3 harddisks, and on a server
+[22:40:53] <_Riven> one of those died last week
+[22:40:59] <_Riven> (not the server..)
+[22:41:00] <NukeDukemTomorro> raid ftw
+[22:41:18] <NukeDukemTomorro> my stuff in on our scm, which is on network storage
+[22:41:29] <NukeDukemTomorro> and on my machine and weekly offsite backups
+[22:41:37] <_Riven> weekly??! aah
+[22:41:46] <_Riven> i once had lost like 2 hours of work
+[22:41:48] <MatthiasM> do you use Mercurial for your game ?
+[22:41:52] <_Riven> restoring that was aweful!
+[22:41:59] <NukeDukemTomorro> no, svn
+[22:42:08] <NukeDukemTomorro> not because I'm a huge fan of svn though
+[22:42:14] <NukeDukemTomorro> really we use svn because I hate cvs ;)
+[22:42:34] <MatthiasM> heh
+[22:42:44] <MatthiasM> Mercurial makes backups much easier
+[22:43:04] <NukeDukemTomorro> yeah, svn sucks for that stuff
+[22:43:06] *** Greenleon has left #lwjgl
+[22:43:23] <NukeDukemTomorro> our repo is like 25 gb right now
+[22:43:26] <MatthiasM> you have to stop it - or use it's file based storage
+[22:43:26] <NukeDukemTomorro> so it sucks backing that up
+[23:00:48] <_Riven> Hm... matthias, you said the answer was to divide through 32768
+[23:00:55] <_Riven> that's actually not fully accurate
+[23:01:11] <MatthiasM> for x.15 bit fixed point it is
+[23:01:48] <MatthiasM> that's not a signed fixed point with 15 bit fraction
+[23:02:06] <_Riven> you'd first have to convert to float, add 0.5, then divide by 32765.5
+[23:02:22] <_Riven> right?
+[23:02:44] <MatthiasM> no - then 0 != 0.0f
+[23:03:11] <_Riven> but otherwise you lose 1.0
+[23:03:18] <MatthiasM> x / ((x > 0) ? 32767f : 32768f)
+[23:03:27] <MatthiasM> but that would be very strange
+[23:03:32] <_Riven> yeah, but tit would be correct
+[23:03:37] <_Riven> it*
+[23:03:45] <_Riven> and a heck of a lot slower
+[23:04:03] <MatthiasM> depends - as this number representation is not linear
+[23:04:18] <_Riven> i can imagine in a lot cases, you really need 1.0
+[23:04:24] <MatthiasM> so math operations don't make sense
+[23:04:45] <MatthiasM> that's why you then use 2.14 if you really need 16 bit
+[23:05:11] <_Riven> hm
+[23:05:49] <_Riven> it would be better to threat 32767 at 1.0
+[23:06:08] <_Riven> and make 32768 NaN
+[23:06:17] <_Riven> at = as
+[23:06:20] <MatthiasM> you could do that - if you don't need to divide by 1.0
+[23:07:30] <MatthiasM> in most cases you try to use a 2^x as 1.0
+[23:08:16] <_Riven> bit if you're 'faking' it anyway, who cares if it is (2^x)-1
+[23:08:24] <_Riven> the math doesn't change
+[23:08:36] <_Riven> why would dividing by 1.0 be a spacial case (like you said?)
+[23:08:48] <_Riven> special*
+[23:08:51] <MatthiasM> if you create a FFT or FIR filter - you will get a offset / wrong result if it doesn't match
+[23:09:01] <_Riven> ah... i realize
+[23:09:23] <MatthiasM> basicly in fixed point you divide by 1.0 to get the integer part of your result
+[23:09:29] <_Riven> it will slowly increase your inaccuracy
+[23:10:13] <_Riven> with 2^x you have all bits unchanged
+[23:12:53] <_Riven> but how do you represent 1.0 in 17.15, if there is no 32768 value
+[23:13:08] <_Riven> you wouldn't be able to divide by 1.0 anyway
+[23:13:13] <MatthiasM> lol - 17.15 == 32 bit
+[23:13:26] <MatthiasM> so 1.0 is possible
+[23:13:47] <MatthiasM> only with 1.15 signed it's not possible
+[23:13:58] <_Riven> yes, i meant 1.15, sorry
+[23:14:44] <MatthiasM> depending on your filter coefs - you may not need anything >= 1.0
+[23:15:19] <_Riven> in 17.15 it's just (1<<15) and you got 1.0
+[23:15:34] <_Riven> hm... i never worked with FFT, so i wouldn't know
+[23:40:53] *** kappaOne has quit IRC
+[23:41:57] *** kappaOne has joined #lwjgl
+[23:47:20] *** _Riven has quit IRC
+[23:49:31] *** delt0r_ has joined #lwjgl
+[23:51:38] *** delt0r___ has quit IRC
+[23:58:40] *** systat has quit IRC

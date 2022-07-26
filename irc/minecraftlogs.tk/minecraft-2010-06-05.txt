@@ -1,0 +1,3163 @@
+
+#minecraft IRC Log
+
+Index
+IRC Log for 2010-06-05
+
+Timestamps are in GMT/BST/TheGame.
+
+[0:00] * Amatsu (amatsudark@204.237.65.192) Quit (Ping timeout: 180 seconds)
+[0:01] <blaster> Wow I have managed to get some realy good results
+[0:01] <blaster> Almost looks like fallout
+[0:02] * OnyxFantasy (Mibbit@76-255-181-64.lightspeed.rcsntx.sbcglobal.net) Quit (Quit: http://www.mibbit.com ajax IRC Client)
+[0:02] <blaster> http://i47.tinypic.com/ohsuad.png
+[0:02] <Tesla> oh hell, awesome
+[0:03] <Tesla> is that generated
+[0:03] <blaster> Sort of
+[0:03] <blaster> I took parthenons map he made with his generator
+[0:03] <blaster> And nuked it
+[0:03] <blaster> I have an idea on how to improve it more though
+[0:04] <Tesla> sepia tone? :D
+[0:04] <blaster> Nope
+[0:05] * Kimd41 (chatzilla@212.183.196.16.dyn.user.ono.com) Quit (Max SendQ exceeded)
+[0:05] <blaster> Using omens Smooth
+[0:05] * Jougi (asd.asd@a91-155-83-247.elisa-laajakaista.fi) has joined #minecraft
+[0:05] <blaster> I will have to see if it looks better or not
+[0:07] * Kimd41 (chatzilla@212.183.196.16.dyn.user.ono.com) has joined #minecraft
+[0:07] <blaster> Ooooh shit that does not look right
+[0:08] <blaster> I think the save corrupted, luckily I have backups
+[0:08] <blaster> And smoothing things makes it look terrible anyway
+[0:09] * eZek0 (nn@H2.C205.cci.switchworks.net) has joined #minecraft
+[0:11] * Amatsu (amatsudark@204.237.65.192) has joined #minecraft
+[0:14] * kratos (Mibbit@pool-74-100-251-90.lsanca.fios.verizon.net) has joined #minecraft
+[0:14] * pedobear1337 (Mibbit@wnpgmb0804w-ad03-81-212.dynamic.mts.net) Quit (Quit: http://www.mibbit.com ajax IRC Client)
+[0:14] * Amatsu (amatsudark@204.237.65.192) Quit (Ping timeout: 180 seconds)
+[0:14] * Megatron (Megatron@94-193-244-205.zone7.bethere.co.uk) Quit (Ping timeout: 180 seconds)
+[0:14] <kratos> this is rather quiet
+[0:15] * Megatron (Megatron@94-193-244-205.zone7.bethere.co.uk) has joined #minecraft
+[0:15] * kratos (Mibbit@pool-74-100-251-90.lsanca.fios.verizon.net) Quit (Quit: Client Exited)
+[0:16] <Zoltarization> yep
+[0:16] * Rawer (chatzilla@static243-185-214.mimer.net) has joined #minecraft
+[0:16] <Rawer> i am really bored
+[0:16] <Rawer> can anybody entertain me+
+[0:16] <blaster> Soon I can
+[0:16] <Rawer> ?*
+[0:16] <blaster> I am working on NukeCraft
+[0:16] <Rawer> Cool
+[0:17] <Tesla> Rawer
+[0:17] <Rawer> yes?
+[0:17] <Tesla> have you ever read homestuck
+[0:17] <Rawer> is it a book?
+[0:17] <Tesla> webcomic
+[0:17] <Tesla> google it
+[0:17] * Uniju (Noah@cpe-66-65-233-251.nycap.res.rr.com) Quit (Ping timeout: 180 seconds)
+[0:17] <Rawer> oh
+[0:17] <Tesla> it can leech hours of your time
+[0:17] <blaster> A new minecraft texturemod/map designed to create a game in nuclear apocalypseland
+[0:17] <Tesla> its not like a normal one though
+[0:17] <Tesla> it has a story
+[0:17] <Tesla> a pretty cool, complex one
+[0:17] <Tesla> but its still kinda funny
+[0:17] <Tesla> it is long though
+[0:18] <Tesla> and not even halfway through
+[0:18] * Uniju (Noah@cpe-66-65-233-251.nycap.res.rr.com) has joined #minecraft
+[0:18] <Rawer> lol
+[0:18] <Tesla> that should entertain you >_>
+[0:18] <Rawer> i've made texture packs
+[0:18] <Rawer> but i stopped
+[0:18] <Rawer> it wasn't funny anylonger
+[0:19] <Rawer> http://www.minecraftforum.net/viewtopic.php?f=25&t=13340
+[0:19] <Rawer> heres the texture pack
+[0:19] <blaster> Lol one of the captchas I just had given me the word tsarina
+[0:19] <Rawer> what are ya guys doing?
+[0:19] <Rawer> xD
+[0:20] <blaster> And the last tsarina kept fucking rasputin
+[0:20] <Rawer> lol
+[0:20] <Rawer> im really ear today
+[0:20] <blaster> http://i48.tinypic.com/1zbvuxy.png
+[0:20] * yoshibot (Kit@pool-71-123-232-122.dllstx.fios.verizon.net) Quit (Read error: Connection reset by peer)
+[0:20] <Rawer> rope with broken ear
+[0:21] <Rawer> that's meh
+[0:21] * Zoltarization (chatzilla@99-205-72-133.pools.spcsdns.net) Quit (Quit: ChatZilla 0.9.86 [Firefox 3.6.3/20100401080539])
+[0:21] <Rawer> What The Freaking Shiiiiiitt!!!! have you made all that?
+[0:21] <blaster> And also http://i46.tinypic.com/2ir0its.png
+[0:22] * Amatsu (amatsudark@204.237.65.192) has joined #minecraft
+[0:22] <blaster> Rawer, the original map was created by pantheons unfinished city generator
+[0:22] <blaster> I just nuked it
+[0:22] <Rawer> what nuke?
+[0:22] <blaster> Omen 3D brush tool
+[0:22] <blaster> with air
+[0:22] <sLayed> BLASTER WOW
+[0:22] <Laplace> \o/ for save editting
+[0:23] <Rawer> oh
+[0:23] * Kimd41 (chatzilla@212.183.196.16.dyn.user.ono.com) Quit (Max SendQ exceeded)
+[0:23] <blaster> Want an upload onto one of my savegame slots?
+[0:23] <sLayed> i only like survival mode really :x
+[0:23] <blaster> I will export it for indev, if someone has a way
+[0:23] <blaster> Because omen fucks it up badly
+[0:23] * lefishy (lefishy@dsl-217-155-139-150.zen.co.uk) has joined #minecraft
+[0:24] * lefishy (lefishy@dsl-217-155-139-150.zen.co.uk) has left #minecraft
+[0:24] <sLayed> i made a golden set of armor this morning
+[0:24] <sLayed> :D
+[0:24] * Griob\ (stuff@c-24-34-161-192.hsd1.ma.comcast.net) Quit (Quit: Client Exited)
+[0:24] <sLayed> and a golden sword
+[0:24] <sLayed> lol
+[0:25] * Uniju (Noah@cpe-66-65-233-251.nycap.res.rr.com) Quit (Ping timeout: 180 seconds)
+[0:25] <blaster> What a waste of shiny...
+[0:25] * shairn (chatzilla@modemcable115.89-81-70.mc.videotron.ca) has joined #minecraft
+[0:25] <SnowmanHTC> blaster, use the old converter
+[0:25] <shairn> hey.
+[0:25] <blaster> Where is it snowman?
+[0:25] * Kimd41 (chatzilla@212.183.196.16.dyn.user.ono.com) has joined #minecraft
+[0:25] <SnowmanHTC> Idk, search for it
+[0:25] <sLayed> well the only other thing i can do with gold is make gold blocks
+[0:25] <SnowmanHTC> It's on the forum
+[0:26] <SnowmanHTC> sLayed, make pimpin' armor from it :D
+[0:26] * Kimd41 (chatzilla@212.183.196.16.dyn.user.ono.com) Quit (Read error: Connection reset by peer)
+[0:26] * Kimd41 (chatzilla@212.183.196.16.dyn.user.ono.com) has joined #minecraft
+[0:27] <Rawer> did i miss something+
+[0:27] <Rawer> ?*
+[0:27] <Rawer> Who hates Justin bieber here?
+[0:28] <copyboy> NOTCH WAS ON?
+[0:28] <blaster> http://www.minecraft.net/play.jsp?user=blaster&id=0 Put on some 50's music and enjoy
+[0:28] <copyboy> DAMMIT!
+[0:28] <sLayed> SnowmanHTC i already made gold armor and a gold sword lol
+[0:28] <SnowmanHTC> He was?
+[0:28] <SnowmanHTC> sLayed, you're a real pimp now
+[0:29] <blaster> So what ya think of the map?
+[0:29] <Malizz> he's not a pimp until he has a gold ho
+[0:29] <Malizz> or five gold hoes
+[0:29] * mnjiman (Mibbit@d24-57-104-173.home.cgocable.net) has joined #minecraft
+[0:29] <sLayed> i have 100 gold bars
+[0:29] <Rawer> i would eat grass if there was no garden in my ear
+[0:30] * combo_express (stopitmist@fl-71-49-238-183.dhcp.embarqhsd.net) has joined #minecraft
+[0:30] <Rawer> cmon guys, do none says random things like me here+
+[0:30] <Rawer> meat balls on the floor
+[0:30] <blaster> Did you build a statue of yourself and live in it
+[0:31] <shairn> gold is useless in minecraft
+[0:31] <shairn> only good for making shiny blocks
+[0:31] <Calhoun> It's still a glorius bulding material
+[0:31] <shairn> and shiny stuff in general
+[0:31] <blaster> Well its a damn load better than cloth
+[0:31] * Eythor (eia234@157-157-78-216.static.simnet.is) has joined #minecraft
+[0:31] <shairn> but gold blocks look mismatched when put together :x
+[0:31] <Rawer> i ate a kitten then i had to throw it up again, bacause my granmothner was going to party. so i decided to make a lame video to have something to look at
+[0:32] <shairn> I think gold should have some other use
+[0:32] <shairn> that other blocks don't
+[0:32] <blaster> Well I made an epic map which people said WOW at the pictures but wont be bothered to look around
+[0:32] * Tesla (Mibbit@109.255.105.89) Quit (Quit: http://www.mibbit.com ajax IRC Client)
+[0:32] * yoshibot (Kit@pool-71-123-232-122.dllstx.fios.verizon.net) has joined #minecraft
+[0:32] <Budda> i looked around
+[0:33] <Budda> its prty gud
+[0:33] * Dysgalt is now known as Dys|AFK
+[0:33] <blaster> I am going to convert it for indev
+[0:34] * Gibri2 (eia234@vpnx175.nemendur.hi.is) Quit (Ping timeout: 180 seconds)
+[0:34] <shairn> what about taking 8 gold blocks makes an altar which heals you fully once a day
+[0:34] <shairn> hm.
+[0:35] <shairn> when you right click it of course
+[0:35] <blaster> And fill your base with em?
+[0:35] <Rawer> why am i a kebab?
+[0:35] <eZek0> because kebabs are tasty
+[0:35] <shairn> I find it hard to fill your base with something that takes up 72 gold bars
+[0:35] <shairn> :P
+[0:35] <blaster> I think gold should be some omniblock, you can turn it into any other block
+[0:35] * Chris|InGame is now known as Chris220
+[0:35] <Laplace> Wait
+[0:35] <blaster> Like 5 gold blocks turn into 1 diamond
+[0:35] <Laplace> Gold ingot or gold block?
+[0:35] <eZek0> blaster: everyone would turn it into diamond, nothing else
+[0:35] <shairn> gold block
+[0:36] * Madrick (butts2@13-38.97-97.tampabay.res.rr.com) has joined #minecraft
+[0:36] <Laplace> ouch
+[0:36] <shairn> making it easier to make than a gold block would make no sense :P
+[0:36] * Rawer (chatzilla@static243-185-214.mimer.net) Quit (Quit: ChatZilla 0.9.86 [Firefox 3.6.3/20100401080539])
+[0:37] * Knuk (Waffles@bas1-quebec14-1128686801.dsl.bell.ca) has joined #minecraft
+[0:37] * Madrick (butts2@13-38.97-97.tampabay.res.rr.com) Quit (Quit: Client Exited)
+[0:38] * Eythor (eia234@157-157-78-216.static.simnet.is) Quit (Ping timeout: 180 seconds)
+[0:38] <shairn> it would also make sense to mine gold then
+[0:38] <shairn> other than being pimp
+[0:41] * Kimd41 (chatzilla@212.183.196.16.dyn.user.ono.com) Quit (Max SendQ exceeded)
+[0:44] * Kimd41 (chatzilla@212.183.196.16.dyn.user.ono.com) has joined #minecraft
+[0:44] * AcidMan (AcidMan@41.174.24.16) Quit (Read error: Connection reset by peer)
+[0:44] * Knuk (Waffles@bas1-quebec14-1128686801.dsl.bell.ca) has left #minecraft
+[0:47] * mnjiman (Mibbit@d24-57-104-173.home.cgocable.net) Quit (Quit: http://www.mibbit.com ajax IRC Client)
+[0:48] <blaster> Can someone find me the map converter to convert creative maps into indev maps
+[0:49] <Budda> can someone stop makin shit out of a hat.
+[0:49] <[JD]> there is a hat?
+[0:49] <Budda> [08:47:35] <cartmin45> wasnt doin any of that shit.
+[0:49] <Budda> [08:47:42] <cartmin45> stop makin shit out of a hat.
+[0:49] * Griskard (chatzilla@213.117.dsl.syd.iprimus.net.au) has joined #minecraft
+[0:49] <[JD]> there is a hat?
+[0:50] * Budda is now known as a_hat
+[0:50] <[JD]> =O
+[0:50] <[JD]> now your making shit into a hat
+[0:50] <[JD]> ba dum, tsch
+[0:50] * a_hat is now known as Budda
+[0:50] <Budda> :(
+[0:50] * Griskard (chatzilla@213.117.dsl.syd.iprimus.net.au) has left #minecraft
+[0:50] <[JD]> :P
+[0:51] * Megatron (Megatron@94-193-244-205.zone7.bethere.co.uk) Quit (Quit: Quitting)
+[0:54] * cheezychicken (cheezychic@saqqara.demon.co.uk) has left #minecraft
+[0:55] * mnjiman (Mibbit@d24-57-104-173.home.cgocable.net) has joined #minecraft
+[0:55] * Piecat (chatzilla@adsl-68-248-226-7.dsl.milwwi.ameritech.net) has joined #minecraft
+[0:55] <Piecat> Hello
+[0:56] <Piecat> is notch here?
+[0:56] <vede> Gee, I dunno.
+[0:56] <Piecat> no :|
+[0:56] * Piecat (chatzilla@adsl-68-248-226-7.dsl.milwwi.ameritech.net) Quit (Quit: Client Exited)
+[0:57] <blaster> Nope
+[0:57] <Laplace> Welp
+[0:57] <blaster> But nukes just hit the capital city of minecraft
+[0:57] <Laplace> that problem was solved sure swiftly.
+[0:57] <blaster> http://i46.tinypic.com/2ir0its.png
+[0:57] * Skynet (Skynet@modemcable186.146-70-69.static.videotron.ca) has joined #minecraft
+[0:57] * mnjiman (Mibbit@d24-57-104-173.home.cgocable.net) Quit (Quit: Client Exited)
+[0:58] <Laplace> Hmmm
+[0:58] <Laplace> I wonder how scary it'd be if someone made a city generator for infdev.
+[0:59] <blaster> Someone did
+[1:00] <blaster> But as far as I know it only works with linux
+[1:00] * tyteen4a03 (tyteen4a03@183.178.201.219) Quit (Ping timeout: 180 seconds)
+[1:00] * Animator (theysayima@adsl-11-207-24.mia.bellsouth.net) has joined #minecraft
+[1:00] * ChanServ sets mode +o Animator
+[1:01] <Animator> I'M BACK BITCHES. Unforeseen circumstances are convienant.
+[1:01] * Animator changes topic to 'Rules are renewed, read them now if you haven't already done so: http://www.minecraft.net/ircrules.jsp | Logs for conversations: http://minecraftlogs.tk/ | Notch's Blog: http://notch.tumblr.com/'
+[1:01] <vede> BRB downgrading to Mint 7.
+[1:01] <sLayed> http://www.youtube.com/watch?v=hhyIOv_rMCY&annotation_id=annotation_113757&feature=iv
+[1:01] <blaster> Animator, see this http://i46.tinypic.com/2ir0its.png
+[1:02] <Animator> Damn.
+[1:02] <Animator> That'
+[1:02] <Animator> *That's pretty nice.
+[1:03] <Animator> Is it like a whole stone building, or is it a village in construction?
+[1:03] <blaster> http://www.minecraft.net/play.jsp?user=blaster&id=0 to play it
+[1:03] <blaster> Its a nuked city
+[1:03] * Uniju (Noah@cpe-66-65-233-251.nycap.res.rr.com) has joined #minecraft
+[1:04] * vede (joshua@wsip-174-79-147-235.tu.ok.cox.net) Quit (Read error: Connection reset by peer)
+[1:05] * tyteen4a03 (tyteen4a03@183.178.201.219) has joined #minecraft
+[1:05] * Kimd41 (chatzilla@212.183.196.16.dyn.user.ono.com) Quit (Max SendQ exceeded)
+[1:05] * Undead_Zeratul (Undead@adsl-99-18-143-224.dsl.emhril.sbcglobal.net) has left #minecraft
+[1:06] * Darkebrz (Darkebrz@71-13-57-154.dhcp.bycy.mi.charter.com) has joined #minecraft
+[1:07] * Kimd41 (chatzilla@212.183.196.16.dyn.user.ono.com) has joined #minecraft
+[1:07] * Visiiri (Visiiri@96.18.163.231) has joined #minecraft
+[1:07] <Visiiri> WOAAHHHHH
+[1:07] <Visiiri> FIRST TRY CONNECT
+[1:07] <Visiiri> NEW RECORD
+[1:07] <Darkebrz> What
+[1:08] <Visiiri> It usually takes me 8-10 tries to connect to IRC
+[1:08] <Visiiri> This time it was first
+[1:08] * Fezinaru (Fezinaru@74-131-9-235.dhcp.insightbb.com) has joined #minecraft
+[1:08] <Darkebrz> ...
+[1:08] <Darkebrz> Okay
+[1:08] * Fezinaru (Fezinaru@74-131-9-235.dhcp.insightbb.com) Quit (Read error: Connection reset by peer)
+[1:09] * Seif_buttwink (seif@94-193-253-13.zone7.bethere.co.uk) has joined #minecraft
+[1:11] * Fezinaru (Mibbit@74-131-9-235.dhcp.insightbb.com) has joined #minecraft
+[1:12] * riverche_n (Mibbit@c-98-231-138-186.hsd1.md.comcast.net) has joined #minecraft
+[1:12] <Visiiri> Appearently, I was flaming when I say that something doesn't happen in real life
+[1:12] * waffle (Mibbit@174-26-11-220.phnx.qwest.net) has joined #minecraft
+[1:12] <Visiiri> When his post is like 6 words long
+[1:12] <Visiiri> and makes no sense.
+[1:12] <Visiiri> :\
+[1:12] <riverche_n> Sup.
+[1:12] * Uniju (Noah@cpe-66-65-233-251.nycap.res.rr.com) Quit (Read error: Connection reset by peer)
+[1:12] <Visiiri> Whatever, I'd be fine with a forum ban.
+[1:12] <gdude2002> http://www.youtube.com/watch?v=K8wD8fTBS8E
+[1:12] <gdude2002> Who can last out?
+[1:12] <riverche_n> WHAT!?!?
+[1:13] <eZek0> Lol, 57 minutes, seriously?
+[1:13] * Budda (budda13@124-197-20-145.callplus.net.nz) Quit (Quit: Client Exited)
+[1:13] <riverche_n> OMG.
+[1:13] <[JD]> lol
+[1:13] <riverche_n> Can someone teach me to play DnD?
+[1:13] <[JD]> someone had fun with copy paste
+[1:13] <waffle> do you think signs will have collisions?
+[1:13] <gdude2002> eZek0: seriously.
+[1:14] <riverche_n> I hope so.
+[1:14] <wry> buy a source book
+[1:14] <eZek0> I call shenanigans.
+[1:14] <wry> read
+[1:14] <riverche_n> BUt im broke.
+[1:14] <wry> then download one
+[1:14] <riverche_n> Well, i know the basic rules.
+[1:14] <riverche_n> can someone play with me over IRC?
+[1:15] <[JD]> i have a feeling the signs will be like the pictures, non collision, but I am probably wrong :P
+[1:15] * Fezinaru (Mibbit@74-131-9-235.dhcp.insightbb.com) Quit (Quit: Client Exited)
+[1:15] <sLayed> http://img175.imageshack.us/img175/7584/house1q.jpg
+[1:15] <Visiiri> I think that he's right.
+[1:15] <sLayed> http://img338.imageshack.us/img338/8906/house2p.jpg
+[1:15] <sLayed> thats my house in survival indev so far
+[1:15] <Visiiri> Otherwise you could just block doors with signs
+[1:15] <Visiiri> and they would be impassible
+[1:15] * dark (dark@c-66-177-248-172.hsd1.fl.comcast.net) has joined #minecraft
+[1:16] <riverche_n> Well, its a sign.
+[1:16] <[JD]> I tried to make a secret passage with a picture, but when i came back to it the picture had fallen off the wall :(
+[1:16] <riverche_n> Can you walk through a sign?
+[1:16] <riverche_n> Fail.
+[1:16] <sLayed> yeah if you walk through pictures they fall for some reason
+[1:16] <sLayed> :)
+[1:16] <[JD]> needs to be fixed! =D
+[1:16] <Siiseli> Greetings
+[1:17] <Siiseli> I bring you great tidings of joy, behold, for I have returned from the Abyss
+[1:17] * Jougi (asd.asd@a91-155-83-247.elisa-laajakaista.fi) Quit (Quit: ( www.nnscript.com :: NoNameScript 4.22 :: www.esnation.com ))
+[1:17] <waffle> but the only way to get a sign acording to the bloge off the ground iis to destroy the block under it wont that be a problem?
+[1:17] <Siiseli> not even a drop of hangover remains.
+[1:19] <shairn> you cna wlak through paintings in indev
+[1:19] <waffle> also any body else think that we will be getting a bigger crafting table soon to handle some of the bigger stuff or will be crafting parts of a bed or sometthing?
+[1:19] <shairn> o-O
+[1:19] * |Demosthenes| (Wervyn@adsl-219-227-155.asm.bellsouth.net) has joined #minecraft
+[1:19] <riverche_n> #DnD for someone to teach me.
+[1:20] * Perry (Perry@bas9-quebec14-1168092901.dsl.bell.ca) has joined #minecraft
+[1:20] <Perry> Hello
+[1:20] <waffle> elo
+[1:20] <Perry> Oh my! A waffle!
+[1:21] <gdude2002> I hope it's not blue.
+[1:21] <waffle> :3 taste good
+[1:21] <waffle> its not D:
+[1:21] <waffle> >.>
+[1:21] <gdude2002> good.
+[1:21] <gdude2002> :D
+[1:21] <riverche_n> BLUE WAFFLES
+[1:21] * gdude2002 eats waffle
+[1:21] * gear (Administra@c-76-110-75-142.hsd1.fl.comcast.net) has left #minecraft
+[1:21] <waffle> :'( its dark
+[1:21] * Wervyn (Wervyn@adsl-219-38-160.asm.bellsouth.net) Quit (Ping timeout: 180 seconds)
+[1:21] <Visiiri> That's a google joke.
+[1:21] <gdude2002> xD
+[1:21] <gdude2002> yes it is
+[1:21] * Visiiri punches gdude2002 in the gut, forcing him to vomit.
+[1:21] <gdude2002> aww
+[1:21] <waffle> YAY :D
+[1:21] <gdude2002> I was about to give him a torch
+[1:21] <gdude2002> lol
+[1:21] * Visiiri eats waffle
+[1:22] <gdude2002> xD
+[1:22] <waffle> FIRE!!!!! burn it down >:D
+[1:22] * gdude2002 forces visiiri to eat a torch
+[1:22] * _Demosthenes_ (Wervyn@adsl-219-112-43.asm.bellsouth.net) has joined #minecraft
+[1:22] <Visiiri> nom nom nom
+[1:22] <waffle> *burns throught
+[1:22] <Perry> "what are those strawberries doing on my nipples I need them for the fruit salad" -Google
+[1:22] <gdude2002> Rofl.
+[1:22] <waffle> o.o
+[1:22] <shairn> it's a book
+[1:22] <waffle> google is racist >.>
+[1:22] <riverche_n> ...
+[1:22] <shairn> something about feminism if I recall
+[1:23] <gdude2002> http://www.amazon.com/WHAT-THESE-STRAWBERRIES-DOING-NIPPLES/dp/075151005X
+[1:23] <gdude2002> lol.
+[1:23] <Visiiri> epic win
+[1:23] <Perry> O.O
+[1:23] * Tamschi (Tamschi@p5DC10D84.dip0.t-ipconnect.de) Quit (Ping timeout: 180 seconds)
+[1:23] * Tamschi (Tamschi@p5DC11215.dip0.t-ipconnect.de) has joined #minecraft
+[1:23] * |Demosthenes| (Wervyn@adsl-219-227-155.asm.bellsouth.net) Quit (Ping timeout: 180 seconds)
+[1:23] <gdude2002> rofl
+[1:23] * vede (joshua@wsip-174-79-147-235.tu.ok.cox.net) has joined #minecraft
+[1:23] <gdude2002> ever seen this: http://tinyurl.com/3x8vmpv
+[1:24] <Perry> Lmao
+[1:24] <Miclee> What Do Customers Ultimately Buy After Viewing This Item?
+[1:24] <Miclee> 44% buy
+[1:24] <riverche_n> lol
+[1:24] <Visiiri> http://abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijk.com/
+[1:24] <Visiiri> THAT IS EPIC
+[1:24] <Miclee> Rampaging Fuckers of Everything on the Crazy Shitting Planet of the Vomit Atmosphere
+[1:24] <Visiiri> MUST USE IT
+[1:24] <gdude2002> How to Raise Your I.Q. by Eating Gifted Children by Lewis B. Frumkes
+[1:24] <gdude2002> Lol/
+[1:24] <Visiiri> URL = REAL
+[1:25] <Perry> Brb
+[1:25] * Perry (Perry@bas9-quebec14-1168092901.dsl.bell.ca) Quit (Quit: I quit. Bye.)
+[1:25] * SnowmanHTC (androirc@sd51100a0.adsl.wanadoo.nl) Quit (Quit: Quitzorz)
+[1:25] * Mithril (Mithril2@e54013.upc-e.chello.nl) Quit (Quit: Quit)
+[1:25] * SnowmanHTC (androirc@sd51100a0.adsl.wanadoo.nl) has joined #minecraft
+[1:25] <waffle> NOM NOM NOM
+[1:25] <waffle> babies <3
+[1:25] <Visiiri> I punch babies
+[1:25] <shairn> the vagina ass of lucifer niggerbastard
+[1:25] <wry> ME TOO
+[1:25] <shairn> there's a book.
+[1:25] * riverche_n (Mibbit@c-98-231-138-186.hsd1.md.comcast.net) Quit (Quit: http://www.mibbit.com ajax IRC Client)
+[1:26] <gdude2002> lolwut
+[1:26] <Visiiri> gayniggers from space?
+[1:26] <shairn> a 69 page book of nonsense
+[1:26] <shairn> oh I saw that movie
+[1:26] * Perry|afk (perry@bas9-quebec14-1168092901.dsl.bell.ca) has joined #minecraft
+[1:26] <shairn> it's hilariously lame
+[1:26] <Perry|afk> Back :D
+[1:26] <Visiiri> hah
+[1:26] <Perry|afk> BTW why did that website google "palin: erection"?
+[1:26] * Perry|afk is now known as Perry
+[1:26] <gdude2002> Because I told it to
+[1:26] <gdude2002> lol
+[1:26] <Perry> =/
+[1:27] * mnjiman (Mibbit@d24-57-104-173.home.cgocable.net) has joined #minecraft
+[1:27] <gdude2002> Palin: Erection 2008
+[1:27] <gdude2002> comedy porno ftw
+[1:27] <Visiiri> pornos are bad
+[1:27] <gdude2002> yeah
+[1:27] <gdude2002> bu
+[1:27] <gdude2002> but
+[1:27] <gdude2002> you have to lol
+[1:28] <gdude2002> it's got obama and sarah palin in it
+[1:28] <gdude2002> xd
+[1:28] <gdude2002> xD
+[1:28] <Perry> A stupid prank to pull on people would be to tinyurl LMGTFY googling NSFW stuff
+[1:28] <Perry> or just tinyurl NSFW stuff
+[1:28] <eZek0> lmgtfy gives enough time to close it
+[1:28] <gdude2002> orly
+[1:28] <Perry> =/
+[1:28] <eZek0> before seeing anything
+[1:28] <gdude2002> yes it does
+[1:28] <shairn> just tinyurl thatsnotsexy
+[1:29] <shairn> works like a charm
+[1:29] <gdude2002> lolwut
+[1:29] <Perry> I am very bored
+[1:29] <gdude2002> shock sites
+[1:29] <gdude2002> ftw
+[1:29] * Fezinaru (fezinaru@74-131-9-235.dhcp.insightbb.com) has joined #minecraft
+[1:30] <gdude2002> http://answers.yahoo.com/question/index?qid=20081216020454AAJ2gAo
+[1:30] <gdude2002> Best answer by rick astley
+[1:30] <gdude2002> rofl
+[1:30] * Earfolds (ookami@host86-142-71-23.range86-142.btcentralplus.com) Quit (Remote host closed the connection)
+[1:30] * Fezinaru (fezinaru@74-131-9-235.dhcp.insightbb.com) Quit (Read error: Connection reset by peer)
+[1:31] <Visiiri> lolol
+[1:31] <Perry> rofl
+[1:31] <gdude2002> also
+[1:31] <gdude2002> o.o
+[1:31] <gdude2002> http://www.amazon.com/Rampaging-Fuckers-Everything-Shitting-Atmosphere/dp/1933929782/ref=pd_cp_b_0
+[1:31] <Visiiri> Someone email me
+[1:31] <Perry> RICK
+[1:31] <Visiiri> visiiri@abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijk.net
+[1:31] <Perry> WTFBOOK
+[1:31] * shairn (chatzilla@modemcable115.89-81-70.mc.videotron.ca) Quit (Quit: ChatZilla 0.9.86 [Firefox 3.6.3/20100401080539])
+[1:31] <gdude2002> mailed.
+[1:31] * Kimd41 (chatzilla@212.183.196.16.dyn.user.ono.com) Quit (Max SendQ exceeded)
+[1:31] <blaster> Guys I cannot access amazon
+[1:32] <Adam01> awwwww
+[1:32] <Visiiri> waiiit
+[1:32] <Visiiri> it's visiiri@abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijk.com
+[1:32] <Visiiri> not .net
+[1:32] <Visiiri> remail?
+[1:32] <gdude2002> sent.
+[1:33] <SnowmanHTC> More like visiiri@quatroworld.org
+[1:33] <gdude2002> xD
+[1:33] <vede> There ya go, Visiiri.
+[1:34] * Mive (Mive@x1-6-00-18-f8-6b-6e-71.k574.webspeed.dk) has joined #minecraft
+[1:34] * Kimd41 (chatzilla@212.183.196.16.dyn.user.ono.com) has joined #minecraft
+[1:34] * Earfolds (ookami@host86-152-212-212.range86-152.btcentralplus.com) has joined #minecraft
+[1:35] <vede> Now I gotta reboot to install vidya drahvurz.
+[1:35] <gdude2002> spam?
+[1:35] <Visiiri> I replied to both of your emails.
+[1:35] <Visiiri> :D
+[1:35] * gdude2002 is now known as nageM
+[1:36] * nageM is now known as ekaJ
+[1:36] * Conde (sefol@83.34.196.148) Quit (Quit: Client Exited)
+[1:36] * Conde (sefol@83.34.196.148) has joined #minecraft
+[1:36] * Visiiri is now known as kciD
+[1:36] <kciD> lolwut
+[1:36] * kciD is now known as Visiiri
+[1:36] * vede (joshua@wsip-174-79-147-235.tu.ok.cox.net) Quit (Read error: Connection reset by peer)
+[1:36] * ekaJ is now known as ikiruZ
+[1:36] * ikiruZ is now known as gdude2002
+[1:36] * vede (joshua@wsip-174-79-147-235.tu.ok.cox.net) has joined #minecraft
+[1:36] <Snowman> Don't even try it
+[1:36] * blaster (heliduels@78.145.63.237) Quit (Quit: Died)
+[1:36] <Visiiri> ikiruZ?
+[1:36] <Visiiri> Zuriki?
+[1:36] * SnowmanHTC is now known as namwons
+[1:37] <gdude2002> yeah
+[1:37] <gdude2002> lol
+[1:37] * Visiiri is now known as Snowmans
+[1:37] <Snowmans> pwnt
+[1:37] <Snowmans> I pwnt you
+[1:37] * Snowmans is now known as Snomwan
+[1:37] <Snomwan> hehehehehe
+[1:37] * setveen (setveen@d24-57-103-82.home.cgocable.net) has joined #minecraft
+[1:37] <setveen> moo
+[1:37] <gdude2002> he'll ghost you
+[1:37] <gdude2002> lol
+[1:37] <gdude2002> spam?
+[1:37] <Snomwan> I'm not snowman
+[1:37] * namwons is now known as namwonS
+[1:37] <Snomwan> I'm snomwan
+[1:37] <gdude2002> xD
+[1:38] <Snowman> No.
+[1:38] <namwonS> No.
+[1:38] <Snowman> Oh wait
+[1:38] <Snowman> No.
+[1:38] <namwonS> .oN
+[1:38] * setveen is now known as Snowrnan
+[1:38] <Snowrnan> <_<
+[1:38] <Snowman> Nice one
+[1:38] <Snomwan> waitwhat
+[1:38] <gdude2002> xD
+[1:38] <gdude2002> spam?
+[1:38] <Snowman> I'm so popular
+[1:38] <Snomwan> no me
+[1:39] <Snowrnan> moo
+[1:39] <Snomwan> yes
+[1:39] * gdude2002 is now known as nanrwonS
+[1:39] <nanrwonS> :D
+[1:39] <Snowman> FAIL
+[1:39] * Snomwan is now known as Visiiri
+[1:39] <Visiiri> Guize
+[1:39] <Visiiri> stop the nick spam
+[1:39] <Visiiri> choose a nick
+[1:39] <Snowman> nr doesn't look like a m anymore
+[1:39] <Visiiri> and stick
+[1:39] * nanrwonS is now known as iriisiV
+[1:39] <iriisiV> :P
+[1:39] <Visiiri> woah
+[1:39] <Visiiri> trippin
+[1:39] * iriisiV is now known as gdude2002
+[1:39] * namwonS is now known as SnowmanHTC
+[1:39] * Snowrnan is now known as Cow
+[1:39] * Visiiri registers that nick
+[1:40] * Visiiri is now known as iriisiV
+[1:40] <Snowman> Hmmm...
+[1:40] <Snowman> I'd better register Snowrnan as well, for impersonation
+[1:40] * Snowman is now known as Snowrnan
+[1:40] <Cow> nuuu
+[1:41] * Snowrnan is now known as Snowman
+[1:41] <Snowman> Ok
+[1:41] <Snowman> And I guess namwonS as well
+[1:41] * Cow is now known as cow_away
+[1:42] * kinkos8 (Mibbit@ip98-165-238-213.ph.ph.cox.net) Quit (Quit: http://www.mibbit.com ajax IRC Client)
+[1:43] <iriisiV> And Snomwan, right?
+[1:44] * iriisiV is now known as Visiiri
+[1:44] * Visiiri is now known as Vis{AFK}
+[1:45] * Eythor (eia234@157-157-78-216.static.simnet.is) has joined #minecraft
+[1:46] * LuciferZ (mrzillyhoo@108-17.125-70.tampabay.res.rr.com) has joined #minecraft
+[1:46] <LuciferZ> Hai guyz
+[1:47] <Ten_Tacles> Hey
+[1:47] <Ten_Tacles> :D
+[1:47] * Kimd41 (chatzilla@212.183.196.16.dyn.user.ono.com) Quit (Max SendQ exceeded)
+[1:48] <LuciferZ> Heya Ten
+[1:48] <LuciferZ> Long time no see
+[1:48] * Adam01 (Adam@cpc1-basl5-0-0-cust446.basl.cable.virginmedia.com) Quit (Quit: Leaving)
+[1:48] * blaster (heliduels@78.145.63.237) has joined #minecraft
+[1:48] <blaster> Oh shit bears have learnt how to use tools
+[1:48] <blaster> http://www.youtube.com/watch?v=kEI6lH1QDSk
+[1:49] * Conde (sefol@83.34.196.148) Quit (Quit: Client Exited)
+[1:49] <blaster> We must genocide them before they begin building wooden huts and farming
+[1:49] * gdude2002 (colesgaret@93.107.86.161) Quit (Quit: Hi, we heard you like blocks, so we put a block in your block so you can look at blocks while you look at blocks.)
+[1:50] * Kimd41 (chatzilla@212.183.196.16.dyn.user.ono.com) has joined #minecraft
+[1:51] <Perry> I am sooooo bored
+[1:51] <blaster> Same
+[1:51] <Perry> :o
+[1:52] <Perry> So huh...
+[1:52] <Perry> *awkward*
+[1:52] * cow_away is now known as Cow
+[1:52] <Perry> =/
+[1:52] <Perry> arr
+[1:52] <Perry> notch didn't update his blog yet
+[1:52] <Perry> >:(
+[1:53] * riverchen (Mibbit@c-98-231-138-186.hsd1.md.comcast.net) has joined #minecraft
+[1:53] * dark (dark@c-66-177-248-172.hsd1.fl.comcast.net) Quit (Ping timeout: 180 seconds)
+[1:53] <Perry> I feel like playing HL2 but I didn't finish HL1 yet
+[1:53] <Perry> -.-
+[1:54] <Perry> I can't wait for Black Mesa Source
+[1:54] <Perry> Well I guess I can wait
+[1:54] <riverchen> Who wants to play DnD?
+[1:54] <Perry> what's that
+[1:54] <Perry> ...
+[1:54] <formlesstree4|afk> Perry, you dunno what DnD is?
+[1:54] * formlesstree4|afk is now known as formlesstree4
+[1:54] <Perry> Probably because I don't own it
+[1:54] <Perry> what is it?
+[1:54] <formlesstree4> Dungeons and Dragons
+[1:54] * Aeomin (q365_3@adsl-75-37-20-145.dsl.pltn13.sbcglobal.net) has joined #minecraft
+[1:55] <Perry> Aaaaaah
+[1:55] <formlesstree4> It's like sex for nerds.
+[1:55] <formlesstree4> Seriously.
+[1:55] <Perry> Lol
+[1:55] <Perry> I'm not 100% nerd yet
+[1:55] * Cow is now known as setveen
+[1:55] <Perry> I'm more geek than nerd
+[1:55] <Perry> :l
+[1:55] <formlesstree4> Oei, do you program?
+[1:55] <formlesstree4> Enjoy math/science?
+[1:55] <Perry> Well I started learning
+[1:55] <Perry> I enjoy science
+[1:55] <blaster> And nerd means idiot anyway
+[1:55] <blaster> Sex for idiots is just... normal sex
+[1:55] <riverchen> ....
+[1:55] <formlesstree4> I fail to see that logic.
+[1:55] <riverchen> ...
+[1:55] <Perry> I'm only 13 years old yet but when I'll be in sec. 5 I'll take physics and chemistry
+[1:56] <Perry> BOTH
+[1:56] <Perry> at the same time
+[1:56] <Perry> maybe
+[1:56] <formlesstree4> normal people have normal sex..
+[1:56] <formlesstree4> why take phys and chem at once?
+[1:56] <formlesstree4> Kind of...just.
+[1:56] <Perry> I guess it'll be a lot of work
+[1:56] <riverchen> #DnD for a game
+[1:56] <formlesstree4> doesn't seem right.
+[1:56] <Perry> but I love physics
+[1:56] <blaster> Perry, I am doing physics, chemistry and biology at the same time
+[1:56] <Perry> and chemistry
+[1:56] <Perry> Yay!
+[1:56] <Perry> I'm normal :D
+[1:56] <riverchen> Physics pwns
+[1:56] <Mive> Captain obvious is obviously obvious
+[1:57] <Perry> sec. 5 is like USA's 11th grade
+[1:57] <Perry> well
+[1:57] * blarg (waffle@ool-4571bef9.dyn.optonline.net) has joined #minecraft
+[1:57] <Perry> it's the last grade of high school
+[1:57] <Perry> *confused*
+[1:57] <formlesstree4> Is it regged riverchen?
+[1:57] <Perry> it's hard to compare education systems :l
+[1:57] <riverchen> yeah
+[1:58] <Perry> you can do text DnD?
+[1:58] <Perry> Whoa
+[1:58] * Bored (Bored@CPE002129684fe2-CM0017ee5515e0.cpe.net.cable.rogers.com) has joined #minecraft
+[1:58] <Perry> if my nolife friend knew that I think he'd download an irc cloient
+[1:58] <Perry> well I'm not even sure he still plays dnd
+[1:58] * blarg (waffle@ool-4571bef9.dyn.optonline.net) Quit (Quit: blarg)
+[2:00] * Perry is now known as Perry|HL2
+[2:00] <Perry|HL2> afk playing hl2
+[2:00] <riverchen> I neeed 1 more player for DnD.
+[2:00] <riverchen> Anyone?
+[2:00] <Perry|HL2> ...
+[2:00] <riverchen> #DnD
+[2:01] <Perry|HL2> oops
+[2:02] <Perry|HL2> accidentally closed hl2
+[2:02] <Perry|HL2> :l
+[2:02] <blaster> On irc
+[2:02] <blaster> Ur... sure
+[2:02] <blaster> just gimme a moment
+[2:05] * Mive (Mive@x1-6-00-18-f8-6b-6e-71.k574.webspeed.dk) Quit (Quit: Leaving)
+[2:07] * Laplace is now known as outsomnia
+[2:07] * Superwafflez (jbrand@CPE-124-177-110-157.lns5.woo.bigpond.net.au) has joined #minecraft
+[2:08] <Superwafflez> sitrep!?
+[2:09] * MarkofBear (chatzilla@213-66-202-160-no30.tbcn.telia.com) Quit (Quit: ChatZilla 0.9.86 [Firefox 3.6.3/20100401080539])
+[2:10] * riverchen (Mibbit@c-98-231-138-186.hsd1.md.comcast.net) Quit (Quit: http://www.mibbit.com ajax IRC Client)
+[2:10] * Skynet (Skynet@modemcable186.146-70-69.static.videotron.ca) Quit (Quit: This quit message is /not/ self-referential.)
+[2:12] <Hunter712> Darn no update
+[2:13] * FNugget (sex@adsl-64-149-33-218.dsl.tul2ok.sbcglobal.net) has joined #minecraft
+[2:14] * layla (mykei@5adbd781.bb.sky.com) Quit (Quit: Client Exited)
+[2:14] * Vharc (Mibbit@97-88-200-235.dhcp.stls.mo.charter.com) has joined #minecraft
+[2:16] * Uniju (Noah@cpe-66-65-233-251.nycap.res.rr.com) has joined #minecraft
+[2:18] <blaster> Still need another player to play IRCD&D over at #DnD
+[2:19] <outsomnia> o.o
+[2:21] <Miclee> http://twitpic.com/1twtjx
+[2:21] * Kimd41 (chatzilla@212.183.196.16.dyn.user.ono.com) Quit (Quit: KEN LEE)
+[2:22] <Miclee> Everyone goto it.
+[2:22] <Miclee> And be amazed.
+[2:23] <LuciferZ> Hahahaha
+[2:24] * formlesstree4 screams bullsh*t
+[2:24] <LuciferZ> Full Life Consequences: Free Man
+[2:24] <Snowman> What is it even?
+[2:25] * blaster (heliduels@78.145.63.237) Quit (Quit: Died)
+[2:26] <Snowman> Sucks for blaster :/
+[2:26] * blaster (heliduels@78.145.63.237) has joined #minecraft
+[2:28] <Ten_Tacles> Lol
+[2:29] * Vharc (Mibbit@97-88-200-235.dhcp.stls.mo.charter.com) Quit (Quit: http://www.mibbit.com ajax IRC Client)
+[2:31] * Midvalley^gerber (bu@rrcs-71-42-132-192.sw.biz.rr.com) Quit (Ping timeout: 180 seconds)
+[2:32] * Adam01 (Adam@cpc1-basl5-0-0-cust446.basl.cable.virginmedia.com) has joined #minecraft
+[2:34] * laCour is now known as laCour|Offline
+[2:35] * Dys|AFK (Dysgalt@70.114.168.148) Quit (Quit: Leaving)
+[2:36] * laCour|Offline is now known as laCour
+[2:36] * Perry|HL2 is now known as Perry
+[2:36] * Saiko (saaaaiko@the-suites-4855-boulder.sites.intello.com) Quit (Ping timeout: 180 seconds)
+[2:37] * Chris220 (Chris@cpc3-farn7-2-0-cust104.know.cable.virginmedia.com) Quit (Ping timeout: 180 seconds)
+[2:39] * laCour (laCour@fire.worldofminecraft.com) Quit (Quit: Client Exited)
+[2:41] * Sade (Sade@97-113-192-163.tukw.qwest.net) Quit (Quit: Quitting)
+[2:43] * laCour (laCour@80.79.116.238) has joined #minecraft
+[2:44] * Cue_EeeXP (cueball61@cpc2-alde4-2-0-cust462.6-2.cable.virginmedia.com) has joined #minecraft
+[2:44] <waffle> so any body know if notch is just taking the day off to play with his pandora?
+[2:44] * Cue (cueball61@cpc2-alde4-2-0-cust462.6-2.cable.virginmedia.com) Quit (Quit: Client Exited)
+[2:44] * Perry (perry@bas9-quebec14-1168092901.dsl.bell.ca) Quit (Quit: SIS EXPLODING D:)
+[2:45] <waffle> elo? o.o
+[2:45] <waffle> how empty for 140 people.......
+[2:46] * Rens2Sea (Rens2Sea@s55929463.adsl.wanadoo.nl) Quit (Quit: Client Exited)
+[2:46] <Superwafflez> haha
+[2:48] <outsomnia> 138 actually
+[2:49] * Pwnly (Pwnly@pool-173-77-157-244.nycmny.fios.verizon.net) has joined #minecraft
+[2:49] * Bomb_Spammer (chatzilla@S010600262d6df833.ss.shawcable.net) has joined #minecraft
+[2:49] * mnjiman (Mibbit@d24-57-104-173.home.cgocable.net) Quit (Quit: http://www.mibbit.com ajax IRC Client)
+[2:49] * mnjiman (Mibbit@d24-57-104-173.home.cgocable.net) has joined #minecraft
+[2:50] <outsomnia> Okay, now it's 140 again.
+[2:54] * Pwnly (Pwnly@pool-173-77-157-244.nycmny.fios.verizon.net) Quit (Quit: ChatZilla 0.9.86 [Firefox 3.6.3/20100401080539])
+[2:55] * Ten_Tacles (chatzilla@levk-4db486ea.pool.mediaWays.net) Quit (Quit: ChatZilla 0.9.86 [Firefox 3.6.3/20100401080539])
+[2:55] * PickYerPoison (PYP@adsl-70-253-160-236.dsl.stlsmo.swbell.net) has joined #minecraft
+[2:55] <Azathoth> that new deus ex 3 trailer is awesome
+[2:55] <Azathoth> it's only a cinematic trailer, so it doesn't really tell you anything about the game, but it's still freakin sweet
+[2:55] <Malizz> AZZY
+[2:55] * Malizz is now known as Malikat
+[2:56] <Azathoth> hi baby
+[2:56] * mnjiman (Mibbit@d24-57-104-173.home.cgocable.net) Quit (Quit: http://www.mibbit.com ajax IRC Client)
+[2:57] * mnjiman (Mibbit@d24-57-104-173.home.cgocable.net) has joined #minecraft
+[2:57] <Azathoth> what's up mali?
+[2:57] <Malikat> not too much
+[2:57] <Malikat> woke up a few hours ago
+[2:57] <Malikat> still feel like i'm asleep
+[2:57] <Azathoth> i woke up an hour ago ><
+[2:58] * Maart3h (Maart3h@86.92.114.65) Quit (Ping timeout: 180 seconds)
+[3:00] <Azathoth> now i'm just fapping to deus ex 3
+[3:01] * Zeeky (nn@H2.C205.cci.switchworks.net) has joined #minecraft
+[3:03] * eZek0 (nn@H2.C205.cci.switchworks.net) Quit (Ping timeout: 180 seconds)
+[3:03] * setveen (setveen@d24-57-103-82.home.cgocable.net) Quit (Ping timeout: 180 seconds)
+[3:03] * Bomb_Spammer is now known as Bomb_Spammer|supper
+[3:05] * formlesstree4 is now known as formlesstree4|afk
+[3:05] * PickYerPoison (PYP@adsl-70-253-160-236.dsl.stlsmo.swbell.net) Quit (Read error: Connection reset by peer)
+[3:05] * PickYerPoison (PYP@adsl-70-253-160-236.dsl.stlsmo.swbell.net) has joined #minecraft
+[3:06] * Dysgalt (Dysgalt@70.114.168.148) has joined #minecraft
+[3:07] * Evicous (chatzilla@c-69-244-48-242.hsd1.az.comcast.net) has joined #minecraft
+[3:09] * Zeeky is now known as eZek0
+[3:09] * TW|Sleeping is now known as TrueWolve
+[3:09] * TrueWolve is now known as TrueWolves
+[3:09] * unbeliveably (sindrebj91@88.84.49.132) has joined #minecraft
+[3:10] * TrueWolves yawns
+[3:10] <TrueWolves> \o/
+[3:12] <eZek0> /o\
+[3:12] <Snowman> |o|
+[3:12] <unbeliveably> *\o/* Cheerleader :D
+[3:12] * Malikat waves
+[3:12] <Malikat> o`>
+[3:13] <Malikat> o/`
+[3:13] <unbeliveably> Like, waving with your hat is what that looks like to me..
+[3:13] * JJames19119 (cole19119@pool-96-240-114-133.sttlwa.dsl-w.verizon.net) Quit (Quit: Client Exited)
+[3:14] * Dudebro (Boschuh@99-6-225-96.lightspeed.rcsntx.sbcglobal.net) Quit (Quit: Dudebro)
+[3:16] * unbeliveably (sindrebj91@88.84.49.132) Quit (Quit: Client Exited)
+[3:16] <TrueWolves> heheh
+[3:17] * Eythor (eia234@157-157-78-216.static.simnet.is) Quit (Quit: Client Exited)
+[3:20] * copyboy (copyboy@p5B31F4D1.dip.t-dialin.net) Quit (Quit: Unfortunately not everyone likes rainbows and unicorns.)
+[3:25] * Dudebro (Boschuh@99-6-225-96.lightspeed.rcsntx.sbcglobal.net) has joined #minecraft
+[3:25] * causticLagomorph (chatzilla@client-82-26-148-107.pete.adsl.virginmedia.com) Quit (Quit: .)
+[3:25] * Guest34647 (nnscript@122-49-174-2.ip.adam.com.au) has joined #minecraft
+[3:25] * C418 (C418@p5B3D59A2.dip.t-dialin.net) Quit (Quit: C418)
+[3:26] * JJames19119 (cole19119@pool-96-240-114-133.sttlwa.dsl-w.verizon.net) has joined #minecraft
+[3:26] * v_ (nnscript@122-49-174-2.ip.adam.com.au) Quit (Ping timeout: 180 seconds)
+[3:27] * Dysgalt is now known as Dys|afk
+[3:28] * Superwafflez (jbrand@CPE-124-177-110-157.lns5.woo.bigpond.net.au) Quit (Ping timeout: 180 seconds)
+[3:28] * mnjiman (Mibbit@d24-57-104-173.home.cgocable.net) Quit (Quit: http://www.mibbit.com ajax IRC Client)
+[3:30] * KrimZon (krimzon@188-221-214-2.zone12.bethere.co.uk) Quit (Quit: Quit)
+[3:31] * setveen (setveen@d24-57-103-82.home.cgocable.net) has joined #minecraft
+[3:31] <setveen> moo
+[3:34] <slowriot> has he updated yet?
+[3:35] <Vis{AFK}> yes
+[3:35] <slowriot> srsly?
+[3:35] <slowriot> what's new?
+[3:35] <blaster> REALY
+[3:35] <TrueWolves> ...
+[3:35] * Cue_EeeXP (cueball61@cpc2-alde4-2-0-cust462.6-2.cable.virginmedia.com) Quit (Quit: Client Exited)
+[3:35] * TrueWolves facedesks
+[3:35] * TrueWolves facedesks
+[3:35] <Snowman> http://www.youtube.com/watch?v=Bq6xjTyw7zM
+[3:35] * TrueWolves facedesks
+[3:35] <Snowman> Oi
+[3:35] <Snowman> Stop spamming
+[3:35] * TrueWolves bleeeeeeds
+[3:35] <slowriot> your face is desking
+[3:36] <Vis{AFK}> Baby.. you're bleeding.
+[3:36] * Malikat deskfaces
+[3:36] <Vis{AFK}> Here, take this bandage.
+[3:36] * Malikat makes TrueWolves run into a UFO alone
+[3:37] <slowriot> so er
+[3:37] * Snowman aces defks
+[3:37] <slowriot> is signs the last thing?
+[3:37] <Malikat> you're dumb
+[3:37] <slowriot> rathergood.com/bite
+[3:38] <Malikat> if you want to know when it updates, watch notch.tumblr.com
+[3:38] <slowriot> no because if i refresh and he hasn't, the disappointment is too crushing
+[3:38] <Vis{AFK}> you like being trolled here more?
+[3:38] <Vis{AFK}> :\
+[3:38] <slowriot> hey, i'm doin the trolling
+[3:38] <Malikat> seriously, disappointment?\
+[3:38] <slowriot> ...or i thought i was
+[3:38] <Malikat> cry more
+[3:38] <slowriot> i can't cry more, all out of tears
+[3:39] <Malikat> cry the carbon dioxide out of your blood
+[3:39] <Malikat> dry ice tears
+[3:39] * slowriot was kicked from #minecraft by Animator
+[3:39] * whidgle (Mibbit@c-76-26-221-200.hsd1.sc.comcast.net) has joined #minecraft
+[3:39] * slowriot (slowriot@slowriot.demon.co.uk) has joined #minecraft
+[3:39] <slowriot> whoa
+[3:40] <Snowman> troll toll
+[3:40] <slowriot> there are ops
+[3:40] <Snowman> Nice one
+[3:40] <slowriot> also, good rhyme
+[3:40] <Animator> It's an old rhyme.
+[3:40] <whidgle> So, any news on when we can expect signs and stuff? Figured I'd ask here
+[3:40] <slowriot> oldies but goodies
+[3:40] <slowriot> whidgle: are you me?
+[3:40] <Vis{AFK}> I love google chrome
+[3:40] <whidgle> ?
+[3:40] <Snowman> whidgle, why should we know?
+[3:40] <Snowman> Are we prophets?
+[3:40] <Vis{AFK}> I'm a prophet
+[3:41] <whidgle> No idea, heard Notch comes here sometimes
+[3:41] <slowriot> at least i only ask questions about the past
+[3:41] <Vis{AFK}> and fucking assassin's creed 2 ruined that word
+[3:41] <Animator> He does come here sometimes.
+[3:41] <Snowman> He hasn't come here for a while
+[3:41] <whidgle> Rats
+[3:41] <Animator> My reccomendation is to follow the blog for more details.
+[3:41] <Vis{AFK}> I would like to point out that he last said that he STOPPED working on signs
+[3:41] <Vis{AFK}> in the middle.
+[3:41] <whidgle> Ah...
+[3:41] <Vis{AFK}> And switched to working on optimization
+[3:41] <slowriot> i wish he'd just do... something
+[3:41] <whidgle> k, thanks
+[3:41] <Vis{AFK}> (The game REALLY needed that anyways)
+[3:41] * whidgle (Mibbit@c-76-26-221-200.hsd1.sc.comcast.net) Quit (Quit: Client Exited)
+[3:41] <Vis{AFK}> you should stay in IRC more.
+[3:41] <Vis{AFK}> Awh, fail.
+[3:42] <Animator> More like a win for him, sparing him from a fate worse than death. *continues working on a skin*
+[3:42] <eZek0> Moar updates pl0x
+[3:43] * Dys|afk is now known as Dysgalt
+[3:45] * Dysgalt is now known as tlagsyD
+[3:45] <blaster> http://www.youtube.com/watch?v=JM_kzJjVFnM&annotation_id=annotation_353055&feature=iv
+[3:46] * tlagsyD is now known as glaDYS
+[3:46] * glaDYS is now known as GLaDYS
+[3:47] * GLaDYS is now known as Dysgalt
+[3:47] <outsomnia> Got'ta love that /nick function huh?
+[3:48] <Dysgalt> Animator
+[3:48] * slowriot is now known as tumbleweed
+[3:48] <Dysgalt> you haven't built on funland in forever :(
+[3:49] * tumbleweed is now known as slowriot
+[3:49] * Bomb_Spammer|supper is now known as Bomb_Spammer
+[3:49] <Vis{AFK}> http://img217.imageshack.us/img217/2969/awsnap.png
+[3:49] <Vis{AFK}> I <3 Google Chrome
+[3:49] <FNugget> are signs in?
+[3:50] <Vis{AFK}> Yes
+[3:50] <Vis{AFK}> It's funny to make ASCII art on them
+[3:50] <Vis{AFK}> :( Creepers can blow them up, though
+[3:50] <blaster> They arnt
+[3:50] <Vis{AFK}> blaster, tell me you didn't mean to spell 'aren't' like that.
+[3:50] <Vis{AFK}> If you meant to, you should die.
+[3:50] <blaster> I am just trying to type to fast
+[3:51] <FNugget> echidna dont has em. recipe?
+[3:51] <FNugget> or is it inf?
+[3:51] <blaster> FNugget they have NOT been added yet
+[3:52] * formlesstree4|afk is now known as formlesstree4
+[3:52] <FNugget> so...
+[3:52] * quaxar (quaxar@c-76-104-190-132.hsd1.wa.comcast.net) Quit (Ping timeout: 180 seconds)
+[3:53] * Varriount is now known as Meh
+[3:53] * Perry (perry@bas9-quebec14-1168092901.dsl.bell.ca) has joined #minecraft
+[3:53] <Perry> Guess what :D
+[3:53] * Evicous (chatzilla@c-69-244-48-242.hsd1.az.comcast.net) Quit (Quit: ChatZilla 0.9.86 [Firefox 3.6.3/20100401080539])
+[3:53] <eZek0> "What"
+[3:53] * Meh (Clay@pool-96-255-204-117.washdc.fios.verizon.net) Quit (Killed (NickServ (GHOST command used by i)))
+[3:53] <Perry> ...obvious one
+[3:54] <Perry> I'm shopping for two practice plastic ocarinas :D
+[3:54] <Perry> a six-holed one and a twelve-holed one :D
+[3:54] <eZek0> Why plastic?
+[3:54] * Varriount (Clay@pool-96-255-204-117.washdc.fios.verizon.net) has joined #minecraft
+[3:54] <Perry> They're not expensive, it's to practice
+[3:54] <Vis{AFK}> ...
+[3:54] <Vis{AFK}> You can't practice on a real one?
+[3:54] <Perry> one is 9$ and the other one 15 or 20
+[3:54] <Vis{AFK}> Having to buy a plastic and a real one seems like over kill
+[3:54] <Perry> Well yeah but
+[3:54] <Vis{AFK}> I don't think they break as you blow in them
+[3:55] <Perry> the real one I want for my birthday (I won't buy it with my money)
+[3:55] <Perry> is 105
+[3:55] <Vis{AFK}> Get a job?
+[3:55] <Perry> it's a replica of the Ocarina of Time
+[3:55] <Perry> haha
+[3:55] <Perry> I'm still young
+[3:55] <Vis{AFK}> I'm just sixteen.
+[3:55] <Perry> I'm younger
+[3:55] <Vis{AFK}> (I just got fired, hwoever)
+[3:55] <Vis{AFK}> *cough*nerd*cough*
+[3:55] <Perry> lolyeah
+[3:55] <Vis{AFK}> MUST HAS LoZ REPLICAZ
+[3:56] <Vis{AFK}> (I should shut up, I've got a triforce tatoo...
+[3:56] <Vis{AFK}> *tattoo
+[3:56] <Perry> a 12-holed ocarina of time with a 6-holed rupee ocarina
+[3:56] <Perry> :D
+[3:56] * Dudebro (Boschuh@99-6-225-96.lightspeed.rcsntx.sbcglobal.net) Quit (Quit: Dudebro)
+[3:56] <Perry> that's the thing: I want to play the ocarina, and I'll get those expensive ocarinas for my birthday this summer but
+[3:56] <Vis{AFK}> loz
+[3:56] <Vis{AFK}> yeeeaaaaaahhhhhhh
+[3:56] <Perry> I don't know how to play yet and I want to learn first
+[3:57] <Perry> DOLIEK triforce tatoo :D
+[3:57] * Darkflux (Darkflux@CPE-124-191-34-48.mxzn1.win.bigpond.net.au) has joined #minecraft
+[3:57] <Perry> Well I have a bit of experience with a 4-holed ocarina wich is almost the same as a 6-holed ocarina, but minus two holes to raise or lower by half a tone
+[3:57] <Perry> I think
+[3:58] <Perry> I know how to play part of the LoZ theme song on my virtual ocarina
+[3:58] <Perry> :D
+[3:59] <Perry> http://www.stlocarina.com/pl3.html that's the six-holed one I get
+[3:59] <Perry> you can listen to the demo
+[3:59] <Perry> sonuds great :D
+[3:59] <Perry> *sounds
+[3:59] <Perry> wait... I hesitate about the color
+[4:00] <Perry> white or blue?
+[4:00] <Perry> ...white
+[4:00] * Tiberrias (T@77-253-247-69.adsl.inetia.pl) Quit (Quit: quit)
+[4:01] <Vis{AFK}> Talking to yourself.
+[4:01] <Vis{AFK}> Nice.
+[4:02] <eZek0> I'm gonna have to turn in my nerd-badge, I'm just not this nerdy.
+[4:02] <eZek0> Sigh.
+[4:02] <Vis{AFK}> you're not ready for a blue one yet, Perry
+[4:02] <Vis{AFK}> Get a white one.
+[4:03] <Vis{AFK}> gtg
+[4:03] <eZek0> warawr
+[4:03] <Perry> Lol
+[4:03] <Perry> can't get a white one
+[4:03] <Vis{AFK}> D:
+[4:03] <eZek0> Why not
+[4:03] <Vis{AFK}> asdf
+[4:03] <Perry> the add to cart button for it doesn't exist
+[4:03] <Vis{AFK}> You said "white or blue?"
+[4:03] <Vis{AFK}> and now you're lying.
+[4:03] <Vis{AFK}> LIES
+[4:04] <Vis{AFK}> But K
+[4:04] <Vis{AFK}> Get blue then
+[4:04] <Perry> =/
+[4:04] <Perry> I'll get the blue
+[4:04] <Vis{AFK}> (Unless there's purple...)
+[4:04] <eZek0> Pink please
+[4:04] <Perry> there's green and yellow
+[4:04] <Perry> and for the 12-holed one, it's green or pink
+[4:04] <Perry> I took
+[4:04] <eZek0> FUCK YEAH PINK
+[4:04] <Perry> pin...GREen
+[4:04] <Perry> ...
+[4:04] <eZek0> Pink is super manly.
+[4:04] <Perry> ikr
+[4:04] <eZek0> Show your manliness with pink.
+[4:05] <Vis{AFK}> pink is hawt
+[4:05] * Earfolds (ookami@host86-152-212-212.range86-152.btcentralplus.com) Quit (Remote host closed the connection)
+[4:05] <Perry> pink is manly. I sweat PINK
+[4:05] <wry> vurtual: so, when we forming a guild?
+[4:05] <Perry> I pee PEENK
+[4:05] * fenixfurion (Fenix@74-140-206-154.dhcp.insightbb.com) has joined #minecraft
+[4:05] <eZek0> You shouldn't bleed when peeing/exercising, Perry.
+[4:05] <eZek0> That's not healthy.
+[4:05] <Perry> Lol
+[4:05] <Perry> I bleed GREEN
+[4:05] <Perry> I spit green too
+[4:05] <Perry> [/bullsquid]
+[4:05] <eZek0> Lots of phlegm
+[4:06] * mnjiman (Mibbit@d24-57-104-173.home.cgocable.net) has joined #minecraft
+[4:07] * Darkflux (Darkflux@CPE-124-191-34-48.mxzn1.win.bigpond.net.au) Quit (Quit: Leaving)
+[4:07] * Darkflux (Darkflux@CPE-124-191-34-48.mxzn1.win.bigpond.net.au) has joined #minecraft
+[4:09] <Snowman> Well, I'm off
+[4:09] <Snowman> Cyall
+[4:09] * Snowman (Snowman@sd51100a0.adsl.wanadoo.nl) Quit (Quit: Shutting down.)
+[4:09] <Perry> Checkec out
+[4:09] <Perry> *checked
+[4:09] * SnowmanHTC (androirc@sd51100a0.adsl.wanadoo.nl) Quit (Quit: Quitzorz)
+[4:09] <Perry> I'm now waiting for my order :D
+[4:09] * Perry waits at the mailbox
+[4:09] <Perry> They say it should be there in about a week :D
+[4:11] * fenixfurion (Fenix@74-140-206-154.dhcp.insightbb.com) Quit (Ping timeout: 180 seconds)
+[4:11] * ZzZ|Dae is now known as Dae
+[4:13] <Vis{AFK}> Expect it by your birthday
+[4:13] <Perry> Lol
+[4:13] <Perry> I'm trying TFC now
+[4:14] * Perry is now known as Perry|TFC
+[4:14] <Perry|TFC> downloading map...
+[4:14] <Perry|TFC> >.<
+[4:14] <Vis{AFK}> TFC?
+[4:14] <Perry|TFC> team fortress classic
+[4:14] <Vis{AFK}> The Fat Company/
+[4:14] <Vis{AFK}> oh...
+[4:15] <Perry|TFC> I am full of classic!
+[4:15] <Perry|TFC> omfglolz
+[4:16] <Perry|TFC> "downloading file 'maps/fishburger.tfc'"
+[4:16] <Perry|TFC> LOLWUT
+[4:16] <Perry|TFC> *Fishburgers.bsp
+[4:16] * Saiko (saaaaiko@the-suites-4855-boulder.sites.intello.com) has joined #minecraft
+[4:17] <Vis{AFK}> http://img217.imageshack.us/img217/2969/awsnap.png
+[4:17] <Perry|TFC> fail
+[4:17] <Perry|TFC> didn't work lol
+[4:17] * ThomasBags (ThomasBags@MW-ESR1-72-49-33-30.fuse.net) has joined #minecraft
+[4:17] <Perry|TFC> I think TFC may have issues with W7
+[4:17] <eZek0> Just play TF2
+[4:18] * fenixfurion (Fenix@74-140-206-154.dhcp.insightbb.com) has joined #minecraft
+[4:18] * mnjiman (Mibbit@d24-57-104-173.home.cgocable.net) Quit (Ping timeout: 180 seconds)
+[4:19] * waffle (Mibbit@174-26-11-220.phnx.qwest.net) Quit (Ping timeout: 180 seconds)
+[4:20] * _Demosthenes_ is now known as Wervyn
+[4:22] * Furyhunter (Furyhunter@cpe-70-112-108-97.austin.res.rr.com) Quit (Quit: Leaving)
+[4:25] * fenixfurion is now known as fenixfurion|AFK
+[4:28] * Tamschi (Tamschi@p5DC11215.dip0.t-ipconnect.de) Quit (Read error: Connection reset by peer)
+[4:30] * Superwafflez (jbrand@123.211.109.75) has joined #minecraft
+[4:33] * Dysgalt (Dysgalt@70.114.168.148) Quit (Quit: Leaving)
+[4:33] * Jat is now known as Jat-afk
+[4:34] * TkTech|Away is now known as TkTech
+[4:34] <Perry|TFC> it's so hard to tell your teammates and enemies apart in TFC
+[4:34] * Perry|TFC is now known as Perry
+[4:35] * Furyhunter (Furyhunter@cpe-70-112-108-97.austin.res.rr.com) has joined #minecraft
+[4:36] <Perry> Who has HL opposing force?
+[4:37] <Perry> I'd like to try it in multi
+[4:37] <Perry> player
+[4:37] * Perry is now known as Perry|OP4
+[4:38] <Perry|OP4> wait... I think this nick may be confusing
+[4:38] * Perry|OP4 is now known as Perry|AFK
+[4:40] * Sade (Sade@97-113-192-163.tukw.qwest.net) has joined #minecraft
+[4:41] * Aexis_Rai (aexis.rai@pool-96-253-221-158.sctnpa.east.verizon.net) has joined #minecraft
+[4:41] * Rautapalli (spam@dsl-kvlbrassgw2-fe3bdf00-54.dhcp.inet.fi) Quit (Quit: ( www.nnscript.com :: NoNameScript 4.22 :: www.esnation.com ))
+[4:44] * laCour (laCour@80.79.116.238) Quit (Quit: Leaving.)
+[4:45] * Brick (Brick@pool-71-184-110-176.bstnma.fios.verizon.net) has joined #minecraft
+[4:45] * Brick (Brick@pool-71-184-110-176.bstnma.fios.verizon.net) Quit (Read error: Connection reset by peer)
+[4:46] * laCour (laCour@fire.worldofminecraft.com) has joined #minecraft
+[4:46] <CrazySpai> Help me stress test
+[4:46] <CrazySpai> http://www.minecraft.net/play.jsp?server=de9135a93b5d20592ae45ce50af33f99
+[4:47] <CrazySpai> Alright
+[4:47] <CrazySpai> Not now.. it just decided to not have any ports open
+[4:48] * Curt` (DorkeyDear@75.10.138.29) Quit (Ping timeout: 180 seconds)
+[4:48] * Saiko (saaaaiko@the-suites-4855-boulder.sites.intello.com) Quit (Ping timeout: 180 seconds)
+[4:49] * EmpiresBane (EmpiresBan@pool-71-111-74-174.ptldor.dsl-w.verizon.net) has joined #minecraft
+[4:49] * _otokaM (Mibbit@pool-108-3-21-47.bltmmd.fios.verizon.net) has joined #minecraft
+[4:50] * Masshuu (quassel@99.198.122.172) Quit (Ping timeout: 180 seconds)
+[4:50] * _otokaM (Mibbit@pool-108-3-21-47.bltmmd.fios.verizon.net) Quit (Quit: Client Exited)
+[4:51] * ThomasBags (ThomasBags@MW-ESR1-72-49-33-30.fuse.net) Quit (Quit: Leaving)
+[4:53] * Cyrex (chatzilla@0x573a2744.odnqu2.dynamic.dsl.tele.dk) has joined #minecraft
+[4:54] * Varriount is now known as Meh
+[4:54] <Cyrex> >.> this is brilliant
+[4:54] <Cyrex> I made like a sunken pen like thing, then I just wait for whatever mob's pigs, etc come near it and fall down in it
+[4:54] * Curt` (DorkeyDear@76.241.95.16) has joined #minecraft
+[4:54] * Meh is now known as Vgor
+[4:55] <Cyrex> then I just drop a tnt into it whenever it gets pretty full
+[4:55] * mr_trousers (Mibbit@c-24-61-62-192.hsd1.ma.comcast.net) has joined #minecraft
+[4:55] <mr_trousers> anybody there/
+[4:56] <Cyrex> Looking at the list, probably
+[4:57] * Earfolds (ookami@host86-152-212-212.range86-152.btcentralplus.com) has joined #minecraft
+[4:57] <mr_trousers> im having trouble with minecraft map viewer Nbt when i load a mc file everything is just white
+[4:57] * Masshuu (quassel@99.198.122.172) has joined #minecraft
+[4:58] <mr_trousers> am i doing something wrong?
+[4:58] <Cyrex> Probably
+[4:59] <mr_trousers> any Tuts on how to use Nbt map viewer?
+[4:59] * TrueWolves (DontGiveUp@69-176-226-109.static.izoom.net) Quit (Ping timeout: 180 seconds)
+[5:02] <Aeomin> nbt map viewer?
+[5:02] <mr_trousers> i loaded my map and this came up http://tinypic.com/view.php?pic=2585qug&s=6
+[5:03] * Varriount (Varriount@pool-96-255-204-117.washdc.fios.verizon.net) has joined #minecraft
+[5:03] <Aeomin> you are at layer 63
+[5:03] <Aeomin> which is top of the map
+[5:04] <Cyrex> Is there a chance for a realtime version in the future anyhwo
+[5:04] <Cyrex> *how
+[5:04] <mr_trousers> witch layer should i be on
+[5:04] * TrueWolves (DontGiveUp@69-176-226-109.static.izoom.net) has joined #minecraft
+[5:04] * Animator sets mode +o TrueWolves
+[5:04] <Aeomin> whichever you want it to be..
+[5:05] <Aeomin> 0 is bottom of the map
+[5:05] * Varriount (Varriount@pool-96-255-204-117.washdc.fios.verizon.net) Quit (Quit: Client Exited)
+[5:06] <Cyrex> There's only 63 layers?
+[5:06] <mr_trousers> ok ty
+[5:06] <Cyrex> Coulda been sure there were more >.>
+[5:06] <Aeomin> his map is 64 height
+[5:06] <Aeomin> so it's 0-63
+[5:10] <Cyrex> Imma leave minecraft running overnight while encased in stone >.> gonna be interesting how any mobs there'll be when I wake up
+[5:11] * Perry|AFK is now known as Perry
+[5:11] <Perry> :D
+[5:12] * unsmith (davidhirsc@99-172-17-115.lightspeed.tukrga.sbcglobal.net) has joined #minecraft
+[5:12] <Cyrex> http://img687.imageshack.us/img687/3027/lolminecrafttrap.png This is what I had in around 24 ingame hours
+[5:13] * unsmith (davidhirsc@99-172-17-115.lightspeed.tukrga.sbcglobal.net) Quit (Quit: Client Exited)
+[5:13] * Vis{AFK} is now known as Visiiri
+[5:13] <Visiiri> http://www.abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijk.com/
+[5:13] <Cyrex> Interesting
+[5:14] <Perry> oh god
+[5:14] <Perry> I like
+[5:15] * King (Where@bl16-146-85.dsl.telepac.pt) Quit (Quit: (.))
+[5:15] <Perry> If you tell your email address to someone, I bet they don't believe you
+[5:15] <EmpiresBane> hm... perry said "oh god" at the same time this movie did
+[5:15] <Perry> What movie
+[5:15] * mr_trousers (Mibbit@c-24-61-62-192.hsd1.ma.comcast.net) Quit (Quit: http://www.mibbit.com ajax IRC Client)
+[5:15] <Perry> what cat
+[5:16] * Jat-afk is now known as Jat
+[5:16] <Perry> I don't think I want such an email address :l
+[5:16] * Adam01 (Adam@cpc1-basl5-0-0-cust446.basl.cable.virginmedia.com) Quit (Quit: Leaving)
+[5:16] <Perry> I already have plenty
+[5:17] * revenant (dlukes@pool-74-111-168-109.pitbpa.fios.verizon.net) has joined #minecraft
+[5:17] <Perry> My most notable one is my custom minecraft email from a minecraft server's forum
+[5:17] <Perry> @minecraftbaron.com
+[5:17] <Perry> :D
+[5:21] * Superwafflez (jbrand@123.211.109.75) Quit (Ping timeout: 180 seconds)
+[5:21] * cryzed (cryzed@i59F5EC28.versanet.de) Quit (Quit: Verlassend)
+[5:22] <EmpiresBane> you guys are boring. imma go play JC2
+[5:22] * EmpiresBane (EmpiresBan@pool-71-111-74-174.ptldor.dsl-w.verizon.net) Quit (Quit: Connection reset by your mom)
+[5:27] <Dman757> lol love this image http://media.moddb.com/images/games/1/13/12771/boxshot.png
+[5:28] * ChanServ sets mode +v Visiiri
+[5:31] * PickYerPoison (PYP@adsl-70-253-160-236.dsl.stlsmo.swbell.net) Quit (Quit: Mess with the best, die like the rest.)
+[5:33] * Schaap (Sch44p@78-27-5-151.dsl.alice.nl) Quit (Quit: erm, Bye)
+[5:33] <yoshibot> hmm
+[5:34] <yoshibot> why does world deleting take so long?
+[5:34] <yoshibot> i thought it was just a simple call to the filesystem module
+[5:34] <Aeomin> still take a while
+[5:35] <yoshibot> for 3mb?
+[5:35] <Aeomin> not for file size, but # of files
+[5:36] <blaster> Ok, in the d&d campign I am playing right now someone in my party climbed on a building and fell through the roof
+[5:36] <blaster> Killing someone by landing on them
+[5:38] <blaster> And now we just rushed through some people to get past and killed 5 of them
+[5:38] * fenixfurion|AFK (Fenix@74-140-206-154.dhcp.insightbb.com) Quit (Quit: The Game)
+[5:41] * Earfolds (ookami@host86-152-212-212.range86-152.btcentralplus.com) Quit (Remote host closed the connection)
+[5:42] * Midvalley^gerber (bu@cpe-68-201-97-181.rgv.res.rr.com) has joined #minecraft
+[5:44] <Visiiri> Is it disc or disk?
+[5:45] * AndrewPH|AFK is now known as AndrewPH
+[5:45] <SSC> G N8 @all
+[5:46] <AndrewPH> neight?
+[5:46] <AndrewPH> wat
+[5:46] * SSC (ssc@i59F53982.versanet.de) Quit (Quit: SSC)
+[5:49] <wry> kerbuble
+[5:50] * kinkos8 (Mibbit@ip98-165-238-213.ph.ph.cox.net) has joined #minecraft
+[5:51] * riverchen (Mibbit@c-98-231-138-186.hsd1.md.comcast.net) has joined #minecraft
+[5:51] * Var-ipod (Varriount@pool-96-255-204-117.washdc.fios.verizon.net) has joined #minecraft
+[5:54] * Var-ipod (Varriount@pool-96-255-204-117.washdc.fios.verizon.net) Quit (Quit: Client Exited)
+[5:54] * Var-ipod (Varriount@pool-96-255-204-117.washdc.fios.verizon.net) has joined #minecraft
+[5:55] * TKoopa (Mibbit@c-98-223-187-144.hsd1.in.comcast.net) has joined #minecraft
+[5:55] * Var-ipod is now known as Varriount
+[5:56] * FontPeg (localhost@c-75-74-41-4.hsd1.fl.comcast.net) Quit (Ping timeout: 180 seconds)
+[5:56] <TKoopa> What country be nothc living in?
+[5:56] <TKoopa> sweden?
+[5:56] * ClassiestMedic (Kevjohnson@pool-141-154-115-122.bstnma.btas.verizon.net) has joined #minecraft
+[5:56] <TKoopa> notch*
+[5:56] <eZek0> Why?
+[5:56] <ClassiestMedic> where?
+[5:57] <TKoopa> Just wondering
+[5:57] <TKoopa> Going to sync a computer clock to his time zone
+[5:57] <ClassiestMedic> lol
+[5:57] <TKoopa> so I know when to expect updates
+[5:57] <ClassiestMedic> Smart
+[5:57] <TKoopa> (on his blog)
+[5:57] * riverchen (Mibbit@c-98-231-138-186.hsd1.md.comcast.net) Quit (Quit: http://www.mibbit.com ajax IRC Client)
+[5:58] * riverchen (Mibbit@c-98-231-138-186.hsd1.md.comcast.net) has joined #minecraft
+[5:58] <TKoopa> Because checking at 6 PM seemed smart until I realized it's like, 4 AM over there
+[5:59] <TKoopa> Oh no wait it's 4 now
+[6:04] * TKoopa (Mibbit@c-98-223-187-144.hsd1.in.comcast.net) Quit (Quit: http://www.mibbit.com ajax IRC Client)
+[6:05] <Perry> I have to go now
+[6:05] <Perry> Bye :D
+[6:05] * Perry (perry@bas9-quebec14-1168092901.dsl.bell.ca) Quit (Quit: zzz...)
+[6:08] <Malikat> aaaa
+[6:09] * Miclee (Miclee@CPE001839f2360a-CM0012c99a3e00.cpe.net.cable.rogers.com) Quit (Ping timeout: 180 seconds)
+[6:10] * Saiko (saaaaiko@the-suites-4855-boulder.sites.intello.com) has joined #minecraft
+[6:10] * Roadcrosser (1305339@120.140.94.193) has joined #minecraft
+[6:12] * Varriount (Varriount@pool-96-255-204-117.washdc.fios.verizon.net) Quit (Quit: Colloquy for iPod touch - http://colloquy.mobi)
+[6:13] <setveen> moo
+[6:15] * GrammarNazi (chatzilla@pool-96-233-125-227.bstnma.fios.verizon.net) has joined #minecraft
+[6:15] <GrammarNazi> Should I get Minecraft!?
+[6:16] <setveen> maybe
+[6:16] <setveen> do you like minecraft?
+[6:16] <setveen> if so, get it
+[6:16] <setveen> if you dont, dont get it
+[6:18] <GrammarNazi> I've never played it.
+[6:18] <GrammarNazi> So how do I know?
+[6:18] <AndrewPH> uh
+[6:18] <AndrewPH> by playing it
+[6:18] <wry> PLAY IT
+[6:19] <GrammarNazi> But you need to buy it in order to play it?
+[6:19] <GrammarNazi> Right?
+[6:20] * combo_express (stopitmist@fl-71-49-238-183.dhcp.embarqhsd.net) Quit (Ping timeout: 180 seconds)
+[6:20] <wry> no
+[6:20] <GrammarNazi> My entire life.
+[6:20] <wry> some things, yes
+[6:20] <GrammarNazi> I've been living a lie.
+[6:20] <GrammarNazi> Like what?
+[6:20] * TheOne (theone@ks-76-7-206-114.dhcp.embarqhsd.net) has joined #minecraft
+[6:20] * combo_express (stopitmist@fl-71-49-238-183.dhcp.embarqhsd.net) has joined #minecraft
+[6:20] <riverchen> CREATIVE MULTIPLATYER!
+[6:20] <TheOne> anyone seen Lg_Legacy latley?
+[6:20] <riverchen> Playit.
+[6:20] <wry> the old version is free
+[6:21] * Smashing (Smashing@c-98-231-91-139.hsd1.fl.comcast.net) has joined #minecraft
+[6:21] * TheOne (theone@ks-76-7-206-114.dhcp.embarqhsd.net) has left #minecraft
+[6:22] * UltimateBudgie (IceChat7@c122-107-229-26.mckinn3.vic.optusnet.com.au) has joined #minecraft
+[6:22] <GrammarNazi> Wait
+[6:22] <GrammarNazi> What
+[6:22] <GrammarNazi> There's multiplayer!?
+[6:23] <GrammarNazi> FUCKIGN BUYING RIGHT NOW
+[6:23] * Varriount (Varriount@pool-96-255-204-117.washdc.fios.verizon.net) has joined #minecraft
+[6:23] <GrammarNazi> How much does this cost?
+[6:24] <wry> heh, it's been so long i don't even remember
+[6:24] <Malikat> what
+[6:24] <wry> i think it's ten bucks
+[6:24] <Malikat> uh
+[6:24] <eZek0> Obvious troll is obvious.
+[6:24] <Malikat> minecraft's multiplayer is free right now
+[6:24] <Malikat> indev and infdev is paid only
+[6:24] <wry> yes
+[6:25] <GrammarNazi> If you buy one do you get both infdev and indev? What's the difference between the two?
+[6:25] <eZek0> infdev is more infinite.
+[6:25] <Malikat> minecraft is, as you should know, an alpha
+[6:26] <Malikat> indev used to be a test version of the features notch wanted to be paid-only, but he wanted some testing done
+[6:26] <Malikat> for opinions and such
+[6:26] * Iguana (Iguana@CPE002191dd1c8e-CM00111ae61624.cpe.net.cable.rogers.com) Quit (Read error: Connection reset by peer)
+[6:26] <CrazySpai> I am now officially hosting minecraft servers
+[6:26] <Visiiri> Iguana you whore
+[6:26] <Malikat> he decided to change the size limits of maps, creating "infinite" maps, so he started work on infdev
+[6:26] <Visiiri> Silly silly whore
+[6:27] <Malikat> when you buy, you are buying minecraft
+[6:27] * Iguana (Iguana@CPE002191dd1c8e-CM00111ae61624.cpe.net.cable.rogers.com) has joined #minecraft
+[6:27] <Malikat> thus you get access to everything notch allows people to see
+[6:27] <eZek0> I've seen signs.
+[6:27] <Visiiri> Guys
+[6:27] <eZek0> I HAS NO ACCESS.
+[6:28] <Visiiri> can you help me rip a dvd?
+[6:28] <eZek0> WHAT THE FUCK.
+[6:28] <eZek0> Use Handbrake.
+[6:28] <wry> i briefly considered making my favored enemies elves
+[6:28] * riverchen (Mibbit@c-98-231-138-186.hsd1.md.comcast.net) Quit (Quit: http://www.mibbit.com ajax IRC Client)
+[6:28] <wry> i hate elves
+[6:29] <eZek0> favoured enemy?
+[6:29] <wry> ddo
+[6:29] <GrammarNazi> So Buy Minecraft = Infdev + indev + multiplayer? In online multiplayer does everyone get to work on shit together? Building and stuff?
+[6:29] * riverchen (Mibbit@c-98-231-138-186.hsd1.md.comcast.net) has joined #minecraft
+[6:29] <eZek0> you're my most favorite enemy, woo.
+[6:29] <wry> kinky?
+[6:29] <CrazySpai> GrammarNazi: Only creative mode has MP
+[6:29] <eZek0> So far.
+[6:29] <eZek0> Survival multiplayer is coming.
+[6:29] <CrazySpai> Survival (infdev/indev) is SP
+[6:29] <GrammarNazi> Creative mode = Just building stuff?
+[6:29] <CrazySpai> Sir
+[6:30] <CrazySpai> Si*
+[6:30] <wry> and destroying stuff
+[6:30] * Vgor (Clay@pool-96-255-204-117.washdc.fios.verizon.net) has left #minecraft
+[6:30] <GrammarNazi> So this is like
+[6:31] <GrammarNazi> A sandbox game, correct?
+[6:31] <eZek0> Why are you thinking of buying it without trying it at all?
+[6:31] <wry> my face is a sand box
+[6:31] <Malikat> GrammarNazi: right now, only creative has multiplayer
+[6:31] <Malikat> thus you only have sandbox mode
+[6:32] <Malikat> indev and infdev are early releases of the survival mode, where you have limited resources and need to make and use tools to succeed at things
+[6:32] <Malikat> and also not get your ass killed by monsters
+[6:32] <Malikat> survival will have multiplayer, soon, where you work together to accomplish those goals... or work against each other
+[6:32] <eZek0> You can register to the site and play Creative mode for free.
+[6:32] <Malikat> at least, i hope you'll be able to work against each other. i hope PVP is as simple as running up and hitting someone
+[6:33] <Malikat> yeah, if you make an account - which is free - you can play creative online or alone
+[6:33] <eZek0> As well as an old version of Survival.
+[6:33] <GrammarNazi> But Survival is only for those who buy, eh?
+[6:33] <eZek0> Which is kinda poopy.
+[6:33] <eZek0> Indev is a more recent version of survival, with added crafting and items etc.
+[6:33] <Malikat> eventually, creative will only be for those who buy, too
+[6:33] <Malikat> it's not a free game
+[6:33] <eZek0> Eventually the game will be paid only.
+[6:33] <Malikat> it's only free because it's an alpha
+[6:34] <Malikat> eventually it will be a finished game, and there will be a free demo
+[6:34] <eZek0> Right now the price is half off what it will be at release-- once the game hits beta, which will be soon... the price will go up.
+[6:35] * Dysgalt (Dysgalt@70.114.168.148) has joined #minecraft
+[6:35] * PuyoZwei is now known as PuyoDead
+[6:35] * ChanServ sets mode +o PuyoDead
+[6:37] * Kodaichi (silentj43@bas6-hamilton14-1176002995.dsl.bell.ca) Quit (Ping timeout: 180 seconds)
+[6:38] * kinkos8 (Mibbit@ip98-165-238-213.ph.ph.cox.net) Quit (Quit: http://www.mibbit.com ajax IRC Client)
+[6:39] * blaster (heliduels@78.145.63.237) Quit (Quit: Died)
+[6:40] * riverchen (Mibbit@c-98-231-138-186.hsd1.md.comcast.net) Quit (Quit: http://www.mibbit.com ajax IRC Client)
+[6:40] <Visiiri> Actually, I think that single player creative will remain the in-site demo
+[6:40] <Visiiri> But multiplayer and all other modes will be paid-only
+[6:41] <Malikat> who knows what will be in the demo
+[6:42] <GrammarNazi> Minecraft knows.
+[6:42] <Malikat> i don't think even notch knows
+[6:43] <Visiiri> Well, from what I've gathered, 'multiplayer' is going to be the first feature to become payed-only
+[6:43] <Visiiri> And I want him to patch fucking hacks
+[6:43] <Visiiri> I'm tired of hacks.
+[6:43] <Visiiri> awrawrawr
+[6:43] <eZek0> Private server play with friends.
+[6:44] <[JD]> Methinks that would be difficult
+[6:44] <[JD]> to patch hacks
+[6:44] <eZek0> Year-long minecon!
+[6:44] <Visiiri> That's vedes server
+[6:44] <Visiiri> :P
+[6:44] <eZek0> AndrewPH was doing the hosting, vede couldn't keep up with all the people joining.
+[6:44] <Visiiri> But vede's server
+[6:44] <AndrewPH> Visiiri, technically mine
+[6:45] <Visiiri> ...
+[6:45] <Visiiri> Talking about a different server here.
+[6:45] <[JD]> :o
+[6:45] <Visiiri> It's down now, however.
+[6:45] <AndrewPH> minecon?
+[6:45] * Merciless (Merciless@115-64-20-105.static.tpgi.com.au) has joined #minecraft
+[6:45] <Visiiri> > different != minecon
+[6:45] <Visiiri> "vede's LSD caves" is the last title
+[6:45] <wry> i miss minecon
+[6:45] <wry> it was my favorite
+[6:45] <eZek0> Hurr.
+[6:45] <AndrewPH> I see
+[6:45] <Visiiri> vede should put that back up
+[6:45] <[JD]> lol
+[6:46] <[JD]> sounds interesting
+[6:46] <Visiiri> And AndrewPH should host a vanilla server
+[6:46] <AndrewPH> I did
+[6:46] <AndrewPH> it sucked
+[6:46] <Visiiri> That's EXACTLY LIKE minecast, only not minecast
+[6:46] <eZek0> Why did it suck?
+[6:46] <Visiiri> Lots of us 'gold members' would really like a good vanilla server to play on.
+[6:46] <Visiiri> Eagle doesn't even play anymore.
+[6:46] <[JD]> I made a map once, completely filled with glass blocks. It was kinda fun to just tunnel around
+[6:46] <eZek0> Gold members?
+[6:46] <Visiiri> Because of hacks and stuff.
+[6:47] <Visiiri> eZek0: The people that are within 2 weeks of playing minecraft for a year?
+[6:47] <eZek0> Oh.
+[6:47] <Visiiri> That title doesn't actually exist
+[6:47] <Visiiri> I just made it up.
+[6:48] <Visiiri> I miss Eagle alot
+[6:48] <Visiiri> Eagle was cool
+[6:48] <Visiiri> As was annihilator_beta
+[6:48] <eZek0> Go find them.
+[6:48] <Visiiri> we don't see him any longer either
+[6:48] <Visiiri> Aaaand... citricsquid
+[6:49] <Visiiri> TheOne doesn't hang out here too much anymore
+[6:49] <Visiiri> Darkebrz.. he's here still.
+[6:49] <Visiiri> I can't name all 28 people
+[6:49] <Darkebrz> What?
+[6:49] * Kodaichi (silentj43@bas6-hamilton14-1176141719.dsl.bell.ca) has joined #minecraft
+[6:49] <eZek0> Quit moping and go make a reunion thingy.
+[6:49] <Visiiri> We're talking about people I love
+[6:49] <Kodaichi> sup
+[6:49] <PuyoDead> TheOne kind of did a bit of social suicide.
+[6:49] <Visiiri> Yup
+[6:49] * Darkebrz hugs Visiiri
+[6:50] <eZek0> How?
+[6:50] <Visiiri> I remember those ages ago
+[6:50] <Visiiri> before he had his lava server coded
+[6:50] <Visiiri> and it was actually a vanilla server
+[6:50] <Darkebrz> TheOne's lava server is custom now?
+[6:50] <Visiiri> Hugely custom
+[6:50] <Darkebrz> D:
+[6:50] <Visiiri> it resets maps and stuff
+[6:50] <Darkebrz> I remember when there were like
+[6:50] <Darkebrz> 10 maps
+[6:50] <Visiiri> Yeah...
+[6:50] <Visiiri> And then there was that server that I can't remember the name of
+[6:50] <LuciferZ> HEY DUDES AND LADIES
+[6:51] <Visiiri> where Eagle invited us
+[6:51] <AndrewPH> Visiiri, it's just cmss I believe
+[6:51] <Visiiri> cmss? no sir.
+[6:51] <Visiiri> Well, I guess it's possible.
+[6:51] <Visiiri> Doubt it though.
+[6:51] <Visiiri> No no no, it's python.
+[6:51] * Aexis_Rai (aexis.rai@pool-96-253-221-158.sctnpa.east.verizon.net) has left #minecraft
+[6:51] <Visiiri> I was there when he was coding it
+[6:52] <Visiiri> mail2345 too, he was doin the same thing
+[6:52] <Visiiri> My best ever minecraft moment
+[6:52] <Visiiri> was when Eagle invited me to his server
+[6:52] * Varriount (Varriount@pool-96-255-204-117.washdc.fios.verizon.net) has left #minecraft
+[6:53] <Visiiri> and we were walking on an amazingly well built path out of the spawn area
+[6:53] <Visiiri> looking at the surroundings
+[6:53] <Visiiri> ...and he dug a pit to the bottom of the map in front of us.
+[6:53] <Visiiri> ....I fell in it twice because of how epic his server was.
+[6:53] <PuyoDead> I started on the facepunch servers, before they went to shit.
+[6:54] <Iguana> TheOne kinda uses me as a messenger now.
+[6:54] <Iguana> To get messages across to #minecraft. :P
+[6:55] * Moocman (Moocman@145.a.001.gld.iprimus.net.au) has joined #minecraft
+[6:56] * revenant (dlukes@pool-74-111-168-109.pitbpa.fios.verizon.net) Quit (Quit: Segmentation fault)
+[6:57] * chariot (charitoPL@cpe-065-188-062-039.sc.res.rr.com) has joined #minecraft
+[6:58] <Moocman> Omargawd.
+[6:59] * MisterX (MisterX@p5DDE7A8A.dip.t-dialin.net) Quit (Quit: MisterX)
+[7:02] * spawn-lizard (chatzilla@209-42-180-207.wispnet.net) has joined #minecraft
+[7:04] * spawn-lizard is now known as Cial
+[7:09] * ClassiestMedic (Kevjohnson@pool-141-154-115-122.bstnma.btas.verizon.net) Quit (Ping timeout: 180 seconds)
+[7:10] * Cial (chatzilla@209-42-180-207.wispnet.net) Quit (Quit: Do you nottice that i am gone?)
+[7:10] <Visiiri> http://answers.yahoo.com/question/index?qid=20100530182301AAZkNnA
+[7:10] * ClassiestMedic (Kevjohnson@static-108-1-133-243.bstnma.east.verizon.net) has joined #minecraft
+[7:11] * Cial (chatzilla@209-42-180-207.wispnet.net) has joined #minecraft
+[7:11] <Calhoun> Ah, Trolling Yahoo answers is so easy.
+[7:13] <Visiiri> I've been downloading Alpha Protocol for five days without realizing it.
+[7:13] <Visiiri> at 1 kb/s
+[7:14] <Calhoun> It's taking you that long?
+[7:16] * Earfolds (ookami@host86-152-212-212.range86-152.btcentralplus.com) has joined #minecraft
+[7:16] <Cial> lol Visiiri welcome to my world
+[7:17] <Visiiri> http://www.wolframalpha.com/input/?i=79920000000+seconds+in+days
+[7:17] <Visiiri> wait...
+[7:17] <Calhoun> http://www.wolframalpha.com/input/?i=79920000000+seconds+in+days
+[7:17] <Calhoun> Whoops
+[7:17] <Visiiri> hahaha
+[7:17] * TkTech is now known as TkTech|Busy
+[7:17] <Calhoun> I always do that
+[7:17] <Visiiri> How many kb in a gig?
+[7:18] <DDRJake> 1024^2
+[7:18] <Cial> a thousand?
+[7:18] <Calhoun> 1048576
+[7:19] <Visiiri> So, 1048576 x 9.99
+[7:19] <Visiiri> = number of seconds required to download
+[7:19] <Visiiri> not quite the URL I posted.
+[7:19] <Visiiri> Hrm
+[7:19] <Visiiri> mathfail.
+[7:19] <vede> Visiiri, the LSD caves weren't the last map.
+[7:19] <Visiiri> k
+[7:20] <vede> The last map was a flat stone map.
+[7:20] <vede> (It sucked.)
+[7:20] <Visiiri> I'd have been downloading for 121 days
+[7:20] <vede> I think I might put the server back up, and do an underwater city build.
+[7:20] <Visiiri> had I not noticed
+[7:20] <Visiiri> Yeah, vede, do that
+[7:20] <vede> Or maybe just a plain old ocean build.
+[7:21] * Kodaichi (silentj43@bas6-hamilton14-1176141719.dsl.bell.ca) Quit (Ping timeout: 180 seconds)
+[7:22] <Visiiri> Can you put it up tonight?
+[7:22] <vede> Yeah.
+[7:22] <vede> Workin' on it now.
+[7:22] <Visiiri> sweet
+[7:25] * Earfolds (ookami@host86-152-212-212.range86-152.btcentralplus.com) Quit (Remote host closed the connection)
+[7:27] * Varriount (Varriount@pool-96-255-204-117.washdc.fios.verizon.net) has joined #minecraft
+[7:28] * Earfolds (ookami@host86-152-212-212.range86-152.btcentralplus.com) has joined #minecraft
+[7:28] <Visiiri> hurreh
+[7:28] * Merciless (Merciless@115-64-20-105.static.tpgi.com.au) Quit (Quit: ChatZilla 0.9.86 [Firefox 3.5.9/20100315083431])
+[7:29] * rob` looks up, grumbles at metric bastardizations.
+[7:29] <rob`> 1000000 kilobytes in a gigabyte, dammit
+[7:29] <vede> http://cz.archive.ubuntu.com/ubuntu
+[7:29] <vede> ...
+[7:29] <vede> Dammit.
+[7:29] <vede> http://minecraft.net/play.jsp?server=eb17adf9763fd7c722ccad4a8ac5b80f
+[7:29] <vede> There.
+[7:31] <Calhoun> Hah, The metric measurments of data are just their so that hard-drive manufacturers can short-change you.
+[7:31] <rob`> sure, but they're also more accurate
+[7:32] <rob`> and more consistent
+[7:32] <Calhoun> Not more acurate, just easier to work with.
+[7:33] * TheSkeep (the@c211-30-120-238.rivrw2.nsw.optusnet.com.au) has joined #minecraft
+[7:34] <vurtual> Man, I had DF open all day, then I had my sound on, so when I exited it from the adventure mode creation, it played menu music.
+[7:34] <vurtual> It's like a siren song.
+[7:35] <vurtual> Easier to work with for maggots, Calhoun.
+[7:35] <Varriount> DF?
+[7:35] <vurtual> You're in #minecraft and you don't know?
+[7:35] <vurtual> Dwarf Fortress!
+[7:36] <Varriount> (facepalm)
+[7:36] * Tommerry11 (chatzilla@180.181.107.135) has joined #minecraft
+[7:36] <Varriount> I really need to get that game
+[7:37] * Kurimus (stabbity@dsl-tkubrasgw1-fe32dc00-253.dhcp.inet.fi) has joined #minecraft
+[7:39] <Azathoth> Malikat, halp D:
+[7:40] <Azathoth> i've got like 3 aliens trapped in a multi-story UFO. what do the purple tiles with red circles on them mean?
+[7:40] <rob`> the teleporters?
+[7:40] <rob`> press the person-up button on the toolbar
+[7:40] <rob`> if it's what I think, it's an elevator
+[7:40] <Azathoth> the teleporters are the ones iwth vertical lines right?
+[7:41] <rob`> yar, you move stuff onto them and press the little person-up button
+[7:41] <Azathoth> there are other purple ones though. i don't know if they're decoration or something i need to worry about
+[7:41] <rob`> or down
+[7:41] <Malikat> purple tiles with red circles?
+[7:41] <Malikat> uh
+[7:41] <rob`> without a screenshot, i dunno :)
+[7:41] <Malikat> probably grav lifts
+[7:41] <Azathoth> also what is it when my my dudes have magical stuff appear over them and then they panick?
+[7:41] <Azathoth> panic*
+[7:41] <Malikat> try using the up one level or down one level button
+[7:42] <Malikat> probably a psi attack
+[7:42] <Malikat> if you're fighting sectoids
+[7:42] <Malikat> they're being mentally attacked
+[7:42] <Azathoth> do they need line of sight for that?
+[7:42] <Malikat> yeah
+[7:42] <Malikat> but they tend to remember the location of panicked or mind controlled units
+[7:42] <Azathoth> how are they doing it then... my guys are in a room :\
+[7:42] <rob`> only the high-ranking ones can attack you like that, they're usually up in the control room, and they can do it from anywhere, they just need ONE of their guys to spot you
+[7:42] <Malikat> if the unit doesn't move
+[7:43] <Malikat> ^
+[7:43] <Azathoth> ooh
+[7:43] <Azathoth> that makes sense
+[7:43] <Malikat> not really line of sight, just location
+[7:43] <rob`> you can do some pretty crazy stuff when you get your own MC units
+[7:43] <Azathoth> i've got 5 guys in the elevator room. one of them came down and got zapped by like 3 reaction shots
+[7:43] <Malikat> haha nice
+[7:43] <Malikat> i think
+[7:43] <Azathoth> then two of my guys got the psi attack and they panicked
+[7:43] <Malikat> >:
+[7:43] <Malikat> yeah, he saw your guys when it came down
+[7:44] <rob`> man, now I want to play again
+[7:44] <vurtual> If I ever see a cop doing something violent, I'll set my camera to livestream, then just be there.
+[7:44] <Malikat> fortunately he didn't get mind controlled
+[7:44] <Azathoth> argh. he keeps fucking with those guys
+[7:44] <Azathoth> so i can't move them off that spot
+[7:44] <Malikat> if you get a chance, make them drop their weapons
+[7:45] <vurtual> The first moment he notices me, I'll go "If you strike me down now, I shall become more powerful than you can possibly imagine.", then the moment he orders me to turn it off, I'll say "It's live, the whole world is watching this."
+[7:45] <vurtual> then of course run away like mad if he charges at me, because kevlar is hard to stab through.
+[7:45] <Malikat> i thought kevlar isn't very stab resistant
+[7:46] <vurtual> it is when a cop is trying to beat you up.
+[7:46] <Varriount> Are you guys still playing dwarf fortess?
+[7:46] <vurtual> no, real life.
+[7:46] <wry> vurtual: guild time?
+[7:46] <Azathoth> it isn't mali
+[7:46] * DimJim (chatzilla@cpe-24-242-36-94.hot.res.rr.com) Quit (Quit: no)
+[7:47] <vurtual> aaaa the voice of the red m&m on TV is from futurama I knooow iiiiit.
+[7:47] <Azathoth> also can you open doors without moving through them?
+[7:47] * vLK (vLK@c83-254-232-198.bredband.comhem.se) Quit (Quit: Client Exited)
+[7:47] <wry> vurtual: also, where is vestrii's arms?
+[7:48] <Azathoth> argh. they're using 4 of those attacks per turn. are tehre two of them?
+[7:48] <Azathoth> because after the first two attacks, it shows "hidden movement" for a second and then two more happen
+[7:48] <Malikat> i WISH
+[7:48] <Malikat> i WISH you could open doors
+[7:48] <Azathoth> it would be nice
+[7:49] <Azathoth> so you don't need to run in there and waste a ton of TU and also get shot up
+[7:49] <Tommerry11> what game are you talking about?
+[7:49] <Malikat> X-COM
+[7:49] <Azathoth> can they pick up weapons if they've gone berserk?
+[7:49] <Tommerry11> ahh, cool.
+[7:50] <Malikat> no,
+[7:50] <Malikat> the AI doesn't know how to pick up weapons
+[7:50] <Azathoth> good
+[7:50] * Varriount (Varriount@pool-96-255-204-117.washdc.fios.verizon.net) Quit (Quit: Colloquy for iPod touch - http://colloquy.mobi)
+[7:50] <Azathoth> they managed to drop their weapons after 50 panics
+[7:50] <Malikat> don't leave them with a grenade
+[7:51] <vurtual> wry just scan around on the map opened in [m] and try to find it in each of the enclaves.
+[7:51] <vurtual> I think it was phiarlan
+[7:51] <Azathoth> they have grenades, but they're unequipped
+[7:51] <wry> hm
+[7:51] <Azathoth> also i haven't been able to do anything with them for several turns do to panic
+[7:51] * vurtual goes insane when tvtropes has no entry on M&Ms, and thusly no way to find out the voice of the red M&M guy in the M&M commercial
+[7:52] <Azathoth> can i escape from their attack if i move?
+[7:52] <Malikat> pretty much
+[7:52] <Azathoth> oh god, everyone is going berserk
+[7:52] <Azathoth> what do
+[7:53] <Malikat> they just remember that you're still in that spot
+[7:53] <Malikat> what
+[7:53] <Malikat> even the non-psi'd?
+[7:53] <vurtual> I hear steam bleeps in the distance.
+[7:53] * Tommerry11 (chatzilla@180.181.107.135) Quit (Quit: bye peoples.)
+[7:53] <Azathoth> no, they just seem to be attacking random people now
+[7:53] <Azathoth> i don't know how they see them
+[7:54] <Malikat> the UFO is interesting like that
+[7:54] <Azathoth> alright. i at least got 3 dudes to the third floor
+[7:54] <Azathoth> are those guys hard to kill?
+[7:54] <Malikat> they might have a spotter running up to see you and then hiding
+[7:54] <Azathoth> 2 dudes*
+[7:54] <Malikat> no
+[7:54] * Varriount (Varriount@pool-96-255-204-117.washdc.fios.verizon.net) has joined #minecraft
+[7:54] <Malikat> generally not
+[7:54] <Azathoth> also, there's no movement
+[7:54] <Azathoth> i have motion scanners
+[7:54] <Malikat> are you in the supply ship or the battleship?
+[7:54] <Azathoth> i don't know what it is
+[7:54] <Azathoth> it's just 3 layers of a large circle
+[7:54] * Cial (chatzilla@209-42-180-207.wispnet.net) Quit (Ping timeout: 180 seconds)
+[7:55] <Malikat> it's three floors right?
+[7:55] <Azathoth> and it has a bunch of animals in tubes and some big thing with a deer or something
+[7:55] * Varriount is now known as google
+[7:55] <Malikat> is it circular or more like a stretched oval
+[7:55] <Azathoth> circular
+[7:55] * Cial (chatzilla@209-42-180-207.wispnet.net) has joined #minecraft
+[7:55] * google is now known as Varriount
+[7:55] <Azathoth> oh god. one of my guys is under alien control
+[7:55] <Malikat> D:
+[7:56] <Azathoth> at least he doesn't have a weapon :\
+[7:56] <Malikat> did he have a weapon?!
+[7:56] <Azathoth> do they have unarmed attacks?
+[7:56] <vurtual> who?
+[7:56] <Malikat> oh okay you're good
+[7:56] <Malikat> don't finish the mission with him under alein cuntroll
+[7:56] <Malikat> or he is lost
+[7:56] <Azathoth> alright. about to breach the command room i think
+[7:56] * Varriount (Varriount@pool-96-255-204-117.washdc.fios.verizon.net) Quit (Quit: Client Exited)
+[7:56] <setveen> moo
+[7:56] * Varriount (Varriount@pool-96-255-204-117.washdc.fios.verizon.net) has joined #minecraft
+[7:56] * Varriount (Varriount@pool-96-255-204-117.washdc.fios.verizon.net) Quit (Quit: Client Exited)
+[7:57] * Varriount (Varriount@pool-96-255-204-117.washdc.fios.verizon.net) has joined #minecraft
+[7:58] <Azathoth> argh. they keep getting my guys under alien control so i can't finish the mission D:
+[7:59] <Visiiri> vede
+[7:59] <Visiiri> Can you create a grass block on the server via omen?
+[7:59] <setveen> hey, anyone want to help me with something
+[7:59] <Visiiri> setveen: Sure, watcha need?
+[7:59] <setveen> can you see if this server works
+[7:59] <setveen> wait, let me get the link
+[8:00] * Dysgalt (Dysgalt@70.114.168.148) Quit (Quit: Leaving)
+[8:01] <Malikat> azzy! D:
+[8:01] <Azathoth> yea?
+[8:01] <setveen> vissiiri: http://minecraft.net/play.jsp?server=cc2bff30f7bd4f95c0350f52a6a1b5da
+[8:01] <Malikat> i don't know.
+[8:01] <Malikat> do you have a stun rod?
+[8:01] <Azathoth> no
+[8:01] <Azathoth> um
+[8:01] <Malikat> do you have medipacks?
+[8:01] <Azathoth> no
+[8:01] <Azathoth> what the hell is this
+[8:02] <Malikat> do you have personal armour?
+[8:02] <Azathoth> ther'es a metric shit ton of smoke stuff on the top floor
+[8:02] <setveen> visiiri, are you able?
+[8:03] <wry> vurtual: i started anew, if it matters, my new alignment is chaotic neutral
+[8:03] <Azathoth> and this smoke is killing the game's performance
+[8:03] * Roadcrosser (1305339@120.140.94.193) Quit (Read error: Connection reset by peer)
+[8:03] <Azathoth> and my accuracy :\
+[8:03] <wry> also, apparently i can't afford a new bow... =]
+[8:03] <Azathoth> i dont' know where it's coming from
+[8:04] <Azathoth> alright! i got em
+[8:04] <Azathoth> only lost two operatives on that mission
+[8:04] <Malikat> yay azzy. :D
+[8:04] <vurtual> setveen, doesn't work.
+[8:04] <Malikat> was there one central elevator or two side elevators?
+[8:04] <setveen> damn
+[8:04] <vurtual> and I also just spent most of my moneys, down to 300 plat.
+[8:04] <Azathoth> uh
+[8:04] <Azathoth> both
+[8:04] <vurtual> no, 190 plat.
+[8:04] <Azathoth> one central elevator on the ground floor and two on the 2nd floor
+[8:05] <setveen> well, it works for my friend, who is running it, vurtual, yould you know the problem?
+[8:05] <Malikat> huh
+[8:05] <Malikat> that.. uh
+[8:05] <wry> ha, i've never seen that much yet
+[8:05] <Malikat> sounds like a battleship
+[8:05] <Azathoth> are they going to be pissed now? :\
+[8:05] <vurtual> setveen port forwarding
+[8:05] <Malikat> was the bottom floor just four rooms in a + shape with a fifth elevator room in the center?
+[8:05] <vurtual> by the way, beeehiiiind you, wry.
+[8:05] <Azathoth> no, the bottom floor was laid out kinda strangely
+[8:06] <setveen> i did port forward
+[8:06] * PandaBear (lukeashby@cpc2-stav2-0-0-cust1390.aztw.cable.virginmedia.com) has joined #minecraft
+[8:06] <Azathoth> there was another elevator down to it on the second floor
+[8:06] <wry> vurtual: freaky
+[8:06] <setveen> ehh, ill try again
+[8:06] <PandaBear> I accidently the sleep
+[8:06] <Azathoth> to a central part that was inaccessible from the first floor
+[8:06] <PandaBear> ;_;
+[8:06] * F3ar (F3ar@c-174-59-1-180.hsd1.pa.comcast.net) Quit (Ping timeout: 180 seconds)
+[8:06] <Malikat> azzy, go to the directory you installed X-COM in
+[8:06] * UltimateBudgie (IceChat7@c122-107-229-26.mckinn3.vic.optusnet.com.au) Quit (Ping timeout: 180 seconds)
+[8:07] <Malikat> er...
+[8:07] * Sparky20 (IceChat7@C-59-101-170-66.mel.connect.net.au) has joined #minecraft
+[8:07] <Malikat> fuck i guess i can't find it
+[8:07] * ClassiestMedic (Kevjohnson@static-108-1-133-243.bstnma.east.verizon.net) Quit (Ping timeout: 180 seconds)
+[8:08] <Sparky20> Hey.
+[8:08] <Malikat> hiya sparky
+[8:08] * Varriount (Varriount@pool-96-255-204-117.washdc.fios.verizon.net) Quit (Quit: Colloquy for iPod touch - http://colloquy.mobi)
+[8:08] <Azathoth> -_-
+[8:08] * Varriount (Varriount@pool-96-255-204-117.washdc.fios.verizon.net) has joined #minecraft
+[8:09] <Azathoth> about what strength should i give people rifles at?
+[8:09] <Azathoth> (laser rifles)
+[8:10] <Azathoth> and wtf is a Small Launcher?
+[8:10] <Sparky20> How is everyone.
+[8:10] <Sparky20> Long time no see.
+[8:10] <Malikat> laser rifles... 32
+[8:11] <Malikat> if you give them only maybe a grenade and a medikit
+[8:11] <Azathoth> hmm
+[8:11] <Azathoth> what alien stuff should i NOT sell?
+[8:12] <Malikat> elerium
+[8:12] <Malikat> power sources
+[8:12] <Malikat> navigation
+[8:12] <Malikat> alloy
+[8:12] * combo_express (stopitmist@fl-71-49-238-183.dhcp.embarqhsd.net) Quit (Quit: Client Exited)
+[8:12] <Malikat> keep heavy plasma
+[8:12] * F3ar (F3ar@c-174-59-1-180.hsd1.pa.comcast.net) has joined #minecraft
+[8:12] <Azathoth> i keep all of the power sources and navigation?
+[8:12] <Malikat> never sell ammo
+[8:12] <Malikat> keep one of everything until you have it researched
+[8:12] <Azathoth> well, obviously
+[8:12] <Malikat> keep power sources because they cost elerium to manufacture
+[8:12] <Azathoth> but i've got extras of a lot of stuff
+[8:13] <Malikat> same with navigation and ammo
+[8:13] <Malikat> elerium is the most precious thing in the game
+[8:13] <Malikat> you can only get it from UFOs
+[8:13] <Azathoth> oops. just sold it all
+[8:13] <Azathoth> jk :P
+[8:13] * ClassiestMedic (Kevjohnson@static-108-1-135-158.bstnma.east.verizon.net) has joined #minecraft
+[8:13] <Malikat> so was the ship
+[8:13] <Malikat> http://www.ufopaedia.org/index.php?title=Supply_ship
+[8:13] <Malikat> http://www.ufopaedia.org/index.php?title=Terror_ship
+[8:14] <Malikat> or http://www.ufopaedia.org/index.php?title=Battleship
+[8:14] <Malikat> scroll down to the bottom
+[8:14] <Malikat> to see the ships
+[8:14] <eZek0> Eep.
+[8:14] <eZek0> I lost connection.
+[8:14] <Azathoth> it wasn't any of those...
+[8:15] <Azathoth> it was a harvester
+[8:16] <Azathoth> but it was crewed by sectoids
+[8:17] <Malikat> oh, i see
+[8:17] * F3ar (F3ar@c-174-59-1-180.hsd1.pa.comcast.net) Quit (Read error: Connection reset by peer)
+[8:17] <Malikat> oh yeah, harvester is three stories too
+[8:17] * F3ar (F3ar@c-174-59-1-180.hsd1.pa.comcast.net) has joined #minecraft
+[8:18] <Azathoth> ogod
+[8:18] <Azathoth> i just shot down a medium ufo
+[8:18] <Azathoth> i'm scared
+[8:18] <Malikat> you'll be okay
+[8:19] <Azathoth> at least it's not intact this time
+[8:19] <Malikat> did you look at its profile first?
+[8:19] <Azathoth> no, i forgot
+[8:19] <Malikat> you forgot to look at the profile
+[8:19] <Malikat> faggot!!!!!!!
+[8:19] <Azathoth> i was too worried about my interceptor getting raped by it
+[8:19] <Azathoth> the thing got real close and fired a bunch of shots
+[8:19] <Azathoth> ok, i've got one unit of armor
+[8:20] <Azathoth> ><
+[8:20] * Smashing (Smashing@c-98-231-91-139.hsd1.fl.comcast.net) Quit (Quit: Leaving)
+[8:21] * F3ar (F3ar@c-174-59-1-180.hsd1.pa.comcast.net) Quit (Read error: Connection reset by peer)
+[8:21] * ClassiestMedic (Kevjohnson@static-108-1-135-158.bstnma.east.verizon.net) Quit (Ping timeout: 180 seconds)
+[8:21] * andrio (andrio@220-253-179-234.NSW.netspace.net.au) has joined #minecraft
+[8:22] <rob`> "If the power sources have exploded due to a crash, there will be little left of the inner walls on this floor, and often holes in the ceiling exposing the middle floor. You shouldn't have shot it down, really."
+[8:22] <rob`> hee
+[8:22] * F3ar (F3ar@c-174-59-1-180.hsd1.pa.comcast.net) has joined #minecraft
+[8:22] <Azathoth> oh cool
+[8:22] <Azathoth> i'm in the desert
+[8:23] <Azathoth> it landed right before i shot it down
+[8:23] <Azathoth> but it was night so i waited
+[8:23] * liq3 (liquidman3@ppp118-209-213-239.lns20.mel6.internode.on.net) Quit (Ping timeout: 180 seconds)
+[8:23] * ClassiestMedic (Kevjohnson@pool-141-154-114-183.bstnma.btas.verizon.net) has joined #minecraft
+[8:23] <rob`> yeah, i hate night missions >_<
+[8:23] <rob`> I always went through like 40 flares
+[8:24] <Azathoth> ugh. there's 3 aliens right outside my ship
+[8:24] <Azathoth> at least my tank absorbed most of their reaction fire
+[8:25] * andrio (andrio@220-253-179-234.NSW.netspace.net.au) Quit (Ping timeout: 180 seconds)
+[8:25] * F3ar_ (F3ar@c-174-59-1-180.hsd1.pa.comcast.net) has joined #minecraft
+[8:25] <Sparky20> Do we really need doors?
+[8:26] <outsomnia> Yes
+[8:26] * F3ar (F3ar@c-174-59-1-180.hsd1.pa.comcast.net) Quit (Ping timeout: 180 seconds)
+[8:28] <Sparky20> Why?
+[8:28] * Varriount (Varriount@pool-96-255-204-117.washdc.fios.verizon.net) Quit (Quit: Colloquy for iPod touch - http://colloquy.mobi)
+[8:29] * F3ar__ (F3ar@c-174-59-1-180.hsd1.pa.comcast.net) has joined #minecraft
+[8:30] <Azathoth> oh great
+[8:30] <Azathoth> now the psi shennanigans star
+[8:30] <Azathoth> start*
+[8:31] * F3ar_ (F3ar@c-174-59-1-180.hsd1.pa.comcast.net) Quit (Ping timeout: 180 seconds)
+[8:31] <rob`> do you have the psi evaluation lab?
+[8:31] <rob`> until then, you can just automatically fire or kill anyone who gets taken over more than a couple times
+[8:32] * Visiiri (Visiiri@96.18.163.231) Quit (Ping timeout: 180 seconds)
+[8:32] * Varriount (Varriount@pool-96-255-204-117.washdc.fios.verizon.net) has joined #minecraft
+[8:33] <Parthon> are you playing multiplayer or single player? :o
+[8:33] * UncleBibby (Mibbit@S01060016b621dc49.cg.shawcable.net) has joined #minecraft
+[8:34] * Visiiri (Visiiri@96.18.163.231) has joined #minecraft
+[8:34] <Visiiri> Anyone want to ocean build with me ?
+[8:34] <UncleBibby> You know how Notch claimed that there's gonna be a dungeon mode, and he wants people to make dungeons for it?
+[8:34] <Visiiri> That's ages off now
+[8:34] <UncleBibby> How are we supposed to do that, besides using Omen?
+[8:35] <Visiiri> AGES off
+[8:35] <Jat> ok i need an explanation
+[8:35] <eZek0> So like, what happens now
+[8:35] <rob`> a dungeon mode will probably have to disable block creation and destruction entirely
+[8:35] <Jat> why do the newer version of opengl basically remove everything useful?
+[8:35] <Visiiri> From my understanding, he's optimizing now. Then he's finishing 'infdev'
+[8:35] * F3ar__ (F3ar@c-174-59-1-180.hsd1.pa.comcast.net) Quit (Read error: Connection reset by peer)
+[8:35] <UncleBibby> Is he gonna supply us with a dungeon making program?
+[8:35] <Visiiri> After that is FINISHED, or what he's satisfied with it?
+[8:35] <eZek0> Visiiri: he said he was going to add a few things and then work on SMP last I heard..
+[8:35] <Azathoth> when did he say he wanted people to make dungeons?
+[8:35] <Visiiri> Yeah
+[8:36] <Azathoth> notch gets boners for procedural generation you know
+[8:36] <UncleBibby> I thought he said that...
+[8:36] * F3ar__ (F3ar@c-174-59-1-180.hsd1.pa.comcast.net) has joined #minecraft
+[8:36] <rob`> the next update will probably have doors, signs, and maybe ladders
+[8:36] <Visiiri> Then he's going for "Zombie Survival"
+[8:36] <eZek0> Everyone gets boners from procedural generation, don't they?
+[8:36] <Visiiri> Where the zombies can destroy
+[8:36] <Visiiri> and they come during the night
+[8:36] * Dudebro (Boschuh@99-6-225-96.lightspeed.rcsntx.sbcglobal.net) has joined #minecraft
+[8:36] <eZek0> Duuuuuuude, broooooo.
+[8:36] <Visiiri> So you would hide out in a base
+[8:36] <Visiiri> stock up on arrows during the day
+[8:36] <Visiiri> shoot off zombies at night
+[8:36] <eZek0> +swords
+[8:36] <UncleBibby> I think Notch should scrap the dungeon mode idea and make a platforming mode (with special blocks designed solely for platforming
+[8:36] <Visiiri> platforming mode?
+[8:36] <Visiiri> what
+[8:37] <rob`> what's platforming?
+[8:37] <eZek0> How would you have special platforming blocks?
+[8:37] <eZek0> We have platforming already...
+[8:37] <UncleBibby> spring blocks, moving platforms
+[8:37] <eZek0> Go to any obstacle/race server
+[8:37] <Aeomin> rob`, think of super mario...
+[8:37] <UncleBibby> mario style jumpin and runnin blocks
+[8:37] <rob`> ahh
+[8:37] <Visiiri> ah
+[8:37] <eZek0> He said he wasn't going to add spring blocks though.
+[8:37] <UncleBibby> ya okay
+[8:37] <LuciferZ> Vis, I like how your ghost just pinged out of #minecast
+[8:37] <UncleBibby> but moving platform blocks would be SWEEEEET!!!!!
+[8:37] <eZek0> They'd need to be an entity, not a block
+[8:38] <UncleBibby> whatev, dude
+[8:38] <UncleBibby> I just think that a platforming mode would be easier to program than a dungeon mode
+[8:38] <Malikat> azzy
+[8:38] * F3ar__ (F3ar@c-174-59-1-180.hsd1.pa.comcast.net) Quit (Read error: Connection reset by peer)
+[8:38] <Malikat> http://www.ufopaedia.org/index.php?title=Item_Weight
+[8:38] * ChanServ sets mode +v Visiiri
+[8:38] * Roadcrosser (1305339@120.140.20.115) has joined #minecraft
+[8:38] <eZek0> Right.
+[8:39] <vede> Why did no one rejoin the server?
+[8:39] * F3ar__ (F3ar@c-174-59-1-180.hsd1.pa.comcast.net) has joined #minecraft
+[8:39] <eZek0> Oh, it's up?
+[8:39] <vede> Yeah.
+[8:39] <UncleBibby> I also think that maybe there should be a cave in every procedurally generated level that leads down a staircase to an optional boss fight
+[8:39] <eZek0> Connection lost, the name wasn't verified by minecraft.net!
+[8:39] <eZek0> New link please?
+[8:39] <Visiiri> refresh
+[8:39] <Visiiri> it works
+[8:40] <eZek0> Minecon + 10000 years, hurr
+[8:40] <eZek0> loads slow as fsck
+[8:40] <UncleBibby> Sort of like the 100 trials level of super paper mario
+[8:41] <Roadcrosser> sigh
+[8:41] <UncleBibby> if he makes giants roam the levels, they should be optional
+[8:41] <Roadcrosser> I put my sig bottle in the freezer
+[8:41] <UncleBibby> you should be able to turn them off
+[8:41] <Roadcrosser> and-and-and
+[8:41] <Roadcrosser> the water froze and busted a hole
+[8:41] <Roadcrosser> :(
+[8:41] <UncleBibby> signature bottle? Signaling bottle?
+[8:41] <UncleBibby> whats a sig bottle
+[8:41] <Roadcrosser> just like they said on TV
+[8:41] <Roadcrosser> sigg
+[8:42] <UncleBibby> is that a brand
+[8:42] <Azathoth> shit.... power supply did blow up D:
+[8:42] <Roadcrosser> how do I fix that verticle hole busted on the surface
+[8:42] <Roadcrosser> sigg is a brand yes
+[8:42] <Roadcrosser> but now a sigg bottle is used to identify a type
+[8:42] <UncleBibby> I rented super mario galaxy 2 today. If I like it, I'll buy it
+[8:42] <UncleBibby> but I think its too simple for me
+[8:43] * F3ar_ (F3ar@c-174-59-1-180.hsd1.pa.comcast.net) has joined #minecraft
+[8:43] <UncleBibby> I did have fun with it when I played it at EBGAMES
+[8:44] <Roadcrosser> so how do I patch it
+[8:44] <UncleBibby> IGN recently said in an article that the 3DS has been said by developers to be more powerful than the wii in processing power!
+[8:44] <vurtual> I just signed up for a 7th level quest. :|
+[8:44] <Roadcrosser> its a metal surface
+[8:44] <Sparky20> Hey Visiiri why are you voiced?
+[8:44] <UncleBibby> If its true, I'll get it on day 1
+[8:44] <Sparky20> Did you find the secret word?
+[8:44] * F3ar__ (F3ar@c-174-59-1-180.hsd1.pa.comcast.net) Quit (Ping timeout: 180 seconds)
+[8:45] * Varriount (Varriount@pool-96-255-204-117.washdc.fios.verizon.net) Quit (Quit: Colloquy for iPod touch - http://colloquy.mobi)
+[8:45] <UncleBibby> Which scientific class in high school did you guys like best?
+[8:45] * Varriount (Varriount@pool-96-255-204-117.washdc.fios.verizon.net) has joined #minecraft
+[8:45] <Sparky20> Does IT count?
+[8:45] <UncleBibby> Id unno, does it?
+[8:46] <UncleBibby> *dunno
+[8:46] <vurtual> yeah I really can't solo a 7th level quest when 4th level.
+[8:46] <vurtual> That was not smart.
+[8:46] <UncleBibby> I just finished Bio 30 today, and after I do the exam I'll never have to think about biology again
+[8:46] <UncleBibby> although its an interesting field
+[8:47] <UncleBibby> Do you guys like chiptune music?
+[8:47] <Varriount> I do
+[8:47] <Roadcrosser> someone tell me
+[8:48] <Azathoth> it's not possible to finish an xcom mission without losing at least two soldiers, is it? :\
+[8:48] <Varriount> Know any good sites to get some from, UncleBibby?
+[8:48] <UncleBibby> I downloaded a 8bit composing app on my iPod touch, and it's toatally awesome
+[8:48] * Amatsu is now known as Amatsu-Sleep
+[8:48] * F3ar__ (F3ar@c-174-59-1-180.hsd1.pa.comcast.net) has joined #minecraft
+[8:48] <UncleBibby> uhh, 8bit collective has tons of free chiptune music
+[8:48] <Varriount> Thanks
+[8:48] <UncleBibby> I actually have an account there
+[8:49] * setveen (setveen@d24-57-103-82.home.cgocable.net) Quit (Quit: Client Exited)
+[8:49] <UncleBibby> so obviously not all the music is great
+[8:49] <UncleBibby> but some is as good as anywhere else
+[8:49] <Azathoth> oh god
+[8:49] <Azathoth> my armored autocannon guy is under alien control :|
+[8:49] <Roadcrosser> someone tell me
+[8:49] * F3ar_ (F3ar@c-174-59-1-180.hsd1.pa.comcast.net) Quit (Ping timeout: 180 seconds)
+[8:49] <UncleBibby> tell you....?
+[8:50] <UncleBibby> maybe you could tape it over and then harden the tape with a heat source and then summon the dark lord Axkonog
+[8:51] <UncleBibby> do you guys like fighting games?
+[8:51] <UncleBibby> I like street fighter and smash bros
+[8:51] <UncleBibby> also theres this one Naruto fighting game that is deceptively good
+[8:52] * F3ar__ (F3ar@c-174-59-1-180.hsd1.pa.comcast.net) Quit (Quit: Client Exited)
+[8:53] <UncleBibby> Geez, I must be the only person here who's actually devoting their full attention to chatting on the channel
+[8:53] <Malikat> azzy
+[8:53] <Azathoth> yea?
+[8:53] <Malikat> "things the alien AI does abnormally"
+[8:53] <Malikat> Is updated with the position of all your troops on turn 0, turn 20, and if down to one or two surviving aliens. This "free peek at the board" is especially noticeable when being attacked by Psionics on turn 21.
+[8:53] <vurtual> I have partial attention.
+[8:53] <Azathoth> ah
+[8:54] <UncleBibby> I read an article in the new yorker about a soccer goalie with severe tourettes syndrome today
+[8:54] <UncleBibby> it was a good article (although I only read 2/3 of it)
+[8:54] <Azathoth> oh well. they're just going after my autocannon guy now who is two floors beneath everyone else and finally dropped his gun
+[8:54] <vurtual> S AS IN SANDWICH, O AS IN ORANGE, C AS IN CAT, C AS IN CAR, E AS IN ELEPHANT
+[8:55] <UncleBibby> R as in rodent?
+[8:55] <vurtual> r as in rrrrgh I just spilled ketchup and mostly mustard on my shirt
+[8:55] <UncleBibby> I watched some of the new show about Dr. Steve Brule the other day
+[8:56] * PleasingFungus (chatzilla@128.54.153.111) has joined #minecraft
+[8:56] * Bucashi (bacu.chan@adsl-065-080-182-193.sip.bna.bellsouth.net) has joined #minecraft
+[8:56] <UncleBibby> its pretyy good for a new comedy
+[8:56] * Jougi (asd.asd@a91-155-83-247.elisa-laajakaista.fi) has joined #minecraft
+[8:56] <wry> fun
+[8:56] <UncleBibby> not as laugh out loud funny as TAEASGJ
+[8:57] * Bacu (bacu.chan@adsl-065-080-182-193.sip.bna.bellsouth.net) Quit (Ping timeout: 180 seconds)
+[8:57] <UncleBibby> Does anyone here have advice being a street busker?
+[8:57] <UncleBibby> I'm thinking that if my tech support job falls through I'll become a busker
+[8:58] <Azathoth> wtf is a busker
+[8:58] <wry> be extroverted
+[8:58] <UncleBibby> I heard that you can make $500 a day in a busy street
+[8:58] <wry> and whorish
+[8:58] <UncleBibby> Not all buskers are self-centered performence artists
+[8:59] <wry> yeah, one of my friends quit their job and did that and lived comforably
+[8:59] <UncleBibby> I saw a cool marimba and bongo guy at my local farmers market who didn't say a word to anybody
+[8:59] <UncleBibby> he reminded me of DeeJay from Super Street fighter 2
+[8:59] <wry> well, if you're good, you're good
+[8:59] <Moocman> Visiiri: " I've been downloading Alpha Protocol for five days without realizing it." Lol, I was downloading Global Agenda for 3 days and I used up my allowance
+[9:00] <vurtual> You reach 10th level!
+[9:00] <vurtual> You find yourself followed by 2d6 bears.
+[9:00] <Moocman> ....
+[9:00] <UncleBibby> I'd have to get a hook, you know, something to make people remember me
+[9:00] <UncleBibby> maybe I'd play the bongos while using a kaoo
+[9:00] <Moocman> OOIES
+[9:00] <UncleBibby> *kazoo
+[9:00] <Moocman> Need for speed world....
+[9:01] * ClassiestMedic (Kevjohnson@pool-141-154-114-183.bstnma.btas.verizon.net) Quit (Ping timeout: 180 seconds)
+[9:01] * Sade (Sade@97-113-192-163.tukw.qwest.net) Quit (Quit: Unf unf?)
+[9:01] <UncleBibby> Or maybe I'd just hook my theremin up to the wall and freak people the hell out
+[9:01] <wry> vurtual: bugbears?
+[9:01] <UncleBibby> bugabears
+[9:02] <Azathoth> aahhh terror site
+[9:02] * Jougi (asd.asd@a91-155-83-247.elisa-laajakaista.fi) Quit (Remote host closed the connection)
+[9:02] <UncleBibby> Should I go see Splice with Adrien Brody and Sarah Polly?
+[9:02] <Azathoth> no
+[9:03] <UncleBibby> my local paper gave it 4 out of 5
+[9:03] <UncleBibby> http://www.metacritic.com/film/titles/splice
+[9:03] * Cial is now known as FBI
+[9:03] <UncleBibby> here's what the average is
+[9:03] <wry> minecraft world generator is being dissapointing
+[9:03] * tyteen4a03 (tyteen4a03@183.178.201.219) Quit (Quit: Client Exited)
+[9:04] <wry> ah, that's much better
+[9:04] <UncleBibby> maybe you should haxor the mainframe, and include a super laser squid in the ocean
+[9:04] <UncleBibby> or maybe just stick a picture of a laser squid to your computer screen when you play
+[9:05] * ClassiestMedic (Kevjohnson@pool-141-154-114-90.bstnma.btas.verizon.net) has joined #minecraft
+[9:05] <Azathoth> malikat, is there a big penalty for missing terror missions?
+[9:05] <wry> or sharks with lasers attached to their heads?
+[9:05] <vurtual> no, bears, wry.
+[9:05] <wry> vurtual: bug bears are creepier
+[9:05] <UncleBibby> Okay, of all the austin powers references u could have done thats prob the best
+[9:05] <UncleBibby> but that doens't make up for it being a silly and stupid franchise
+[9:05] <wry> heh, it's the only part i truly enjoyed
+[9:06] <UncleBibby> I laughed at it but its stupid
+[9:06] <vurtual> http://static.tvtropes.org/pmwiki/pub/images/ToMeMyBears!.jpg consult this
+[9:07] <vurtual> You get no points for "the bearpostles"
+[9:07] <UncleBibby> You sound like you're insulting him "Consult THIS, you mudder fuggin therapist!
+[9:07] <UncleBibby> I want to play a Nintendo VS Capcom crossover game
+[9:08] <UncleBibby> I'd pair Donkey Kong with eHonda
+[9:08] <UncleBibby> theyed be the best team up ever
+[9:08] <vurtual> link vs ryu?
+[9:08] <UncleBibby> link ryu? too obvious
+[9:08] <vurtual> meanwhile, dark link vs ken.
+[9:08] * malcon2 (malcon2@S0106001d7e6f611c.ed.shawcable.net) has joined #minecraft
+[9:08] * corvair (Mibbit@ppp-70-253-130-207.dsl.rcsntx.swbell.net) has joined #minecraft
+[9:08] <vurtual> man, I'm getting bad at the whole "realizing I'm playing a different character" thing in ddo.
+[9:08] <vurtual> I keep trying to do things as my wizard that only my fighter can.
+[9:09] <UncleBibby> Maybe Wario and Balrog could fight over whos greedier
+[9:09] <Azathoth> ogod MALIKAT
+[9:09] <vurtual> M Bison vs Mario.
+[9:09] <Azathoth> maliiiiiiii
+[9:09] <UncleBibby> King Dedede vs Sakura
+[9:09] <Azathoth> i spotted a very large ufo... do i intercept or will it just kill my interceptors?
+[9:09] <UncleBibby> Star Wolf vs Adon
+[9:09] * ClassiestMedic (Kevjohnson@pool-141-154-114-90.bstnma.btas.verizon.net) Quit (Ping timeout: 180 seconds)
+[9:10] <vurtual> wolf is a lame character any time he is friendly to you whatsoever.
+[9:10] <vurtual> including you being him
+[9:10] <rob`> Azathoth: best to leave large ufos alone in the early game
+[9:10] <rob`> but it's been a long time since i played
+[9:10] * ClassiestMedic (Kevjohnson@static-108-1-133-239.bstnma.east.verizon.net) has joined #minecraft
+[9:10] <UncleBibby> ya, thats why it would be sweet to see Adon jaguar kick him in the shins
+[9:11] <vurtual> once he's your enemy though, he immediately becomes awesome
+[9:11] <vurtual> incl him in brawl, when fighting against you
+[9:11] <UncleBibby> Ganon vs Roll would be creepy
+[9:11] <vurtual> also LAANDMAASTER.
+[9:11] * vurtual falls off the stage
+[9:11] <Azathoth> are alien grenades any good?
+[9:11] <UncleBibby> I wouldn't let that happen when I was playing
+[9:12] <corvair> ello'
+[9:12] <rob`> Azathoth: the alien grenades are fantastic, but like with all grenades, be careful how you use it, they're very powerful
+[9:12] <vurtual> now I gotta find some good first level quests for a wizard, hmmm.
+[9:12] <UncleBibby> I'm goin' ta bed, nut butts
+[9:12] * UncleBibby (Mibbit@S01060016b621dc49.cg.shawcable.net) Quit (Quit: http://www.mibbit.com ajax IRC Client)
+[9:13] * FBI is now known as Cial
+[9:13] <corvair> have any of yall seen a dude named dendron on here lateley?
+[9:13] <corvair> hi cial
+[9:13] <Cial> hey corvair
+[9:13] * ClassiestMedic (Kevjohnson@static-108-1-133-239.bstnma.east.verizon.net) Quit (Ping timeout: 180 seconds)
+[9:13] * PandaBear facepalm
+[9:13] <corvair> ur the cial i know right?
+[9:14] <Cial> yes
+[9:14] <corvair> mmk
+[9:14] <Cial> check out the MCM channel to make sure
+[9:14] <corvair> lol
+[9:14] <corvair> hey if u see a dude on here named dendron tell me
+[9:14] <Cial> ok
+[9:15] <corvair> hes a old friend on here that disappeared like a year ago and appeared on my server today when i was afk and left
+[9:15] <corvair> like 30 seconds before i got back
+[9:16] <corvair> it pissed me off
+[9:16] <corvair> afk
+[9:16] * PandaBear (lukeashby@cpc2-stav2-0-0-cust1390.aztw.cable.virginmedia.com) has left #minecraft
+[9:16] <Azathoth> what about heavy lasers? are they useful?
+[9:17] * Cial is now known as FCC
+[9:17] <rob`> I think i usually skip those in favour of plasma rifles and heavy plasma
+[9:17] <Sparky20> Who knows the map arena_offblast
+[9:17] <Sparky20> in tf2
+[9:18] <Azathoth> oh well... :\ i already researched and produced one so i guess i'm using it :P
+[9:18] * FCC is now known as Cial
+[9:18] <rob`> the heavy laser "generally fails to impress due to its weight and lack of an auto-shot feature"
+[9:19] <rob`> hm, ufopedia has a really high opinion of the laser rifle
+[9:21] <vurtual> trippy thing about talking for the first time: My name is not "vurtual" anymore.
+[9:22] <Sparky20> bye all
+[9:22] <Sparky20> brb
+[9:22] * Sparky20 (IceChat7@C-59-101-170-66.mel.connect.net.au) Quit (Quit: iDied)
+[9:22] <Azathoth> ah dammit. something just one-shotted my tank
+[9:22] <vurtual> natural 20s can be your friend, or your enemy, you know.
+[9:22] * dendron (IceChat7@C-59-101-170-66.mel.connect.net.au) has joined #minecraft
+[9:23] <dendron> Hi
+[9:23] <dendron> Oh wait.
+[9:23] <dendron> Got to go.
+[9:23] <dendron> Bye all.
+[9:23] * dendron (IceChat7@C-59-101-170-66.mel.connect.net.au) Quit (Quit: Client Exited)
+[9:23] <DDRJake> ciao
+[9:23] * Rooster (stormon@pool-108-13-142-201.lsanca.fios.verizon.net) has joined #minecraft
+[9:24] * Sparky20 (IceChat7@C-59-101-170-66.mel.connect.net.au) has joined #minecraft
+[9:24] <Rooster> Hey bitches
+[9:24] <Sparky20> Hey
+[9:24] * LuciferZ (mrzillyhoo@108-17.125-70.tampabay.res.rr.com) Quit (Ping timeout: 180 seconds)
+[9:25] * Animator (theysayima@adsl-11-207-24.mia.bellsouth.net) Quit (Quit: Client Exited)
+[9:28] <Rooster> Slow da
+[9:28] <Rooster> u
+[9:28] <Rooster> *day
+[9:29] <vurtual> I'm a wizard!
+[9:29] <vurtual> I can cast first level spells!
+[9:29] <vurtual> Summon monster, burning hands, and magic misssiilllllle
+[9:29] <Malikat> sup cunts
+[9:29] <Malikat> vurtual should i get DDO?
+[9:30] <Azathoth> noooooo!
+[9:30] <eZek0> DDO is freee
+[9:30] <vurtual> yes Malikat
+[9:30] <Azathoth> i just lost my favorite soldier to a random reaction shot that wasn't even meant for him D:
+[9:30] <vurtual> for a bit
+[9:30] <vurtual> I suggest not ranger under the pretense of: Everyone who comes from here always becomes a ranger.
+[9:30] <Malikat> azzy nooo
+[9:30] <Malikat> was it malikat?
+[9:30] <vurtual> Fighter is good if you figure it out.
+[9:30] <Azathoth> no. i don't give them fag names
+[9:30] <Malikat> >`:
+[9:30] <Malikat> what names?
+[9:31] <Azathoth> he was my most experienced veteran. he was a captain had like 70 accuracy and 50 strength
+[9:31] <Rooster> :????
+[9:31] <Azathoth> and high reaction too
+[9:31] <Azathoth> i use the names they're given
+[9:31] <Rooster> Did Notch name rana after frogs?
+[9:31] <Azathoth> i just cut off the first name so i can write their stats
+[9:31] <vurtual> also Malikat, if you hurry along the MASSIVELY LONG LONGER THAN AZATHOTH'S BONER tutorial, you might be first/second level along with me
+[9:31] <vurtual> infact, I haven't even done the tutorial as my wizard
+[9:31] <vurtual> so we can do the first quests together :D
+[9:31] * TkTech|Busy is now known as TkTech|Away
+[9:31] <vurtual> Rooster, dock's name, dock's character, and so on.
+[9:31] * Curt` (DorkeyDear@76.241.95.16) Quit (Quit: Leaving)
+[9:32] <vurtual> real men name their soldiers based off their skills, as nicknames, so you end up with a ragtag bunch of heroes.
+[9:32] <Rooster> Las Ranas means the frogs in Spanish
+[9:32] * Jougi (asd.asd@a91-155-83-247.elisa-laajakaista.fi) has joined #minecraft
+[9:33] <Rooster> Is Dock Spanish?
+[9:33] <vurtual> no he's docklish
+[9:33] <vurtual> rana is a species of frog you know
+[9:33] <Rooster> Ah
+[9:33] <Rooster> Is it spanish?
+[9:33] <vurtual> Hehehe, this starter staff does 1d6 + -1 bludgeon
+[9:33] <vurtual> I've never seen a weapon with a negative bonus.
+[9:34] <Rooster> Everyone Ctrl + V and post it!
+[9:34] <vurtual> http://en.wikipedia.org/wiki/Rana
+[9:34] <vurtual> technically just did, but otherwise: a
+[9:34] <Malikat> cocks
+[9:34] <wry> indeed
+[9:35] <Moocman> I agree..
+[9:35] <vurtual> The midget battle oprah raindance of summoning never stops being funny.
+[9:35] <wry> wut?
+[9:35] <vurtual> http://img63.imageshack.us/img63/493/midgetbattleoprah.png
+[9:35] <Rooster> ^
+[9:35] <Rooster> win
+[9:36] <vurtual> Summon Monster I has you throwing your hands up in the air after some glowing, while moving slowly, which if you're running around to avoid things, looks absolutely hillarious.
+[9:36] <wry> vurtual: fucking shit
+[9:36] <wry> that's awesome
+[9:36] <Rooster> vurtual: Summon Monster I has you throwing
+[9:36] <Rooster> GRAMMAR NAZI RAAAAAWR
+[9:36] * GrammarNazi (chatzilla@pool-96-233-125-227.bstnma.fios.verizon.net) Quit (Quit: ChatZilla 0.9.86 [Firefox 3.6.3/20100401080539])
+[9:37] <Rooster> O_o
+[9:37] <wry> ?
+[9:37] <vurtual> :golfclap:
+[9:37] <vurtual> anwyays I'm pretty sure I used it like "THE EVENT HAS YOU BLAH BLAH BLAH"
+[9:37] <vurtual> This event has competitors tying their shoelaces while on fire.
+[9:37] * sLayed (nya@men75-13-88-183-203-26.fbx.proxad.net) Quit (Quit: Client Exited)
+[9:38] <vurtual> I think that man just passed out from his injuries! No, wait, he stabilized his bleeding, he's fine.
+[9:38] * Rooster teh bored
+[9:38] <vurtual> come join meee
+[9:38] <Rooster> Doing what
+[9:39] * corvair (Mibbit@ppp-70-253-130-207.dsl.rcsntx.swbell.net) Quit (Quit: http://www.mibbit.com ajax IRC Client)
+[9:39] <vurtual> play ddo
+[9:40] <wry> i would..
+[9:41] <vurtual> I just need to get as many minecrafters playing as possible, so there's always someone on.
+[9:41] <Malikat> HOLD ON I'M FORMATTING MY HARD DRIVE
+[9:41] <vurtual> I'm not even bribing people with the referral either.
+[9:41] <Malikat> fgsfg-
+[9:41] <wry> no one wanted to party, so i left
+[9:42] * Malikat has quit IRC: Connection reset by peer
+[9:42] <wry> lies
+[9:42] * vurtual has joined #minecraft (ping timein)
+[9:44] <Malikat> i wonder how long formatting this drive will take
+[9:45] <Visiiri> 2 days
+[9:45] <Malikat> feels like it
+[9:45] * Visiiri has quit IRC (Ping timeout: 180 seconds)
+[9:46] * Malikat has quit IRC: Quit: Followin' visiiri
+[9:46] <wry> stalker
+[9:47] * Bored_ (Bored@CPE002129684fe2-CM0017ee5515e0.cpe.net.cable.rogers.com) has joined #minecraft
+[9:47] <Azathoth> well i only lost one soldier and a tank.. not bad for a terror site i guess
+[9:48] <Malikat> yay azzy!
+[9:48] <Malikat> i did a night mission terror site
+[9:48] <Malikat> against snakemen / chysalids
+[9:48] <Azathoth> still kinda pissed about losing my best soldier from a random shit
+[9:48] <Malikat> chrysalids*
+[9:48] <Azathoth> out
+[9:48] <Azathoth> ouch*
+[9:48] <Azathoth> sounds fun
+[9:48] <Malikat> actually it was awesome
+[9:48] <Malikat> lost my tank, but otherwise 0 casualties
+[9:49] <Malikat> except for uh
+[9:49] <Malikat> all the civilians. >:
+[9:49] * Bored (Bored@CPE002129684fe2-CM0017ee5515e0.cpe.net.cable.rogers.com) Quit (Ping timeout: 184 seconds)
+[9:49] <Azathoth> what do i need to research to get laser tanks?
+[9:49] <Malikat> laser cannon
+[9:49] * Jat (Jat@ool-4a58d43f.dyn.optonline.net) Quit (Quit: ChatZilla 0.9.86 [Firefox 3.6.3/20100401080539])
+[9:49] <Malikat> laser rifle -> heavy laser -> laser cannon
+[9:49] <Azathoth> cool. i'm researching laser cannons right now
+[9:50] <Malikat> laser cannons are also more profitable per engineer than motion sensor
+[9:51] <Malikat> although apparently there's an exploit where you can manufacture things with no cost or material usage if you manufacture a certain way one at a time
+[9:51] <Azathoth> i currently have $17519500
+[9:51] <Azathoth> should i build a new base or something
+[9:52] <Malikat> 17 million?
+[9:52] <Azathoth> yep
+[9:52] <Malikat> jesus
+[9:52] <Malikat> yeah probably
+[9:52] <Malikat> cover another continent
+[9:52] <Malikat> allow you to do the engineer/scientist exploit
+[9:53] <Azathoth> i'm not going to use exploits
+[9:53] <vurtual> aaa soemone tried to trade me
+[9:53] <vurtual> so I just ran away and jumped into water.
+[9:59] <Rooster> piece of fuck idiots
+[9:59] <Rooster> Fucking banning me
+[9:59] <Rooster> Jackasses
+[9:59] * Rooster bullshit
+[9:59] <Malikat> banned you from where
+[9:59] <Azathoth> piece of fuck idiots
+[9:59] <Azathoth> that's a good one
+[9:59] <Rooster> You know it
+[9:59] <Rooster> From some server
+[10:00] <Azathoth> he's just being a cock, malikat
+[10:00] <Rooster> It was a lava flood server
+[10:00] <Malikat> link
+[10:00] <Malikat> link
+[10:00] <Rooster> Apparently I "clicked a block"
+[10:00] <Malikat> link
+[10:00] <Rooster> And deleted
+[10:00] <Rooster> it
+[10:00] <Rooster> http://www.minecraft.net/play.jsp?server=5e815f9f898f950c007c41b75681f582
+[10:00] <Rooster> Ask them to unban me Malikat
+[10:00] <Rooster> You owe me
+[10:00] <Rooster> Punk
+[10:00] * chariot (charitoPL@cpe-065-188-062-039.sc.res.rr.com) Quit (Ping timeout: 180 seconds)
+[10:01] <Rooster> ...
+[10:01] <Malikat> hold on it's opening
+[10:01] <Rooster> Such jackasses
+[10:02] <Rooster> Occasionally my mouse clicks by itself
+[10:02] <Rooster> so they probably 12 year old op bans me
+[10:02] <Rooster> without an explanation
+[10:02] <Malikat> :D
+[10:02] <Malikat> i helped
+[10:03] <wry> oh dear...
+[10:03] <Rooster> Still banned
+[10:03] <Malikat> C:
+[10:03] <Rooster> whores
+[10:03] <Malikat> yep
+[10:03] <Malikat> i went in and said
+[10:03] <Rooster> ....
+[10:03] <Malikat> "you guys banned ninjarooster?"
+[10:03] <Malikat> "he flooded"
+[10:03] <Rooster> What
+[10:03] <Malikat> "fuck you guys don't ban me assholes"
+[10:03] <Malikat> "that was bullshit don't ban me"
+[10:03] <Malikat> You were kicked!
+[10:04] <Rooster> ...
+[10:04] <Rooster> Fucking Malikat
+[10:04] <Malikat> er, actually it was "fuck you guys, i didn't flood"
+[10:04] <Malikat> "don't ban me assholes"
+[10:04] * Aeomin (q365_3@adsl-75-37-20-145.dsl.pltn13.sbcglobal.net) Quit (Ping timeout: 180 seconds)
+[10:04] <Malikat> I HELPED. :D
+[10:05] <Rooster> This is what Minecraft is turning into
+[10:05] <Rooster> Children having power
+[10:05] <Rooster> mostly gay custom servers
+[10:05] <Rooster> It's turning into fucking Garrys Mod
+[10:05] <Rooster> NOTCH SAVE US
+[10:05] <Malikat> i helped.
+[10:06] <Rooster> No
+[10:06] <Rooster> No you didn't
+[10:07] <Rooster> Malikat = fucker
+[10:07] <wry> we should give children more power
+[10:07] <Rooster> fucking 12 year olds
+[10:07] <Rooster> Ruining EVERY SINGLE GOD DAMN SERVER
+[10:08] <Rooster> WITH THEIR RAP MUSIC
+[10:08] <wry> AND THEIR G.I. JOE FIGURINES
+[10:08] * PleasingFungus (chatzilla@128.54.153.111) Quit (Quit: ChatZilla 0.9.86 [Firefox 3.6.3/20100401080539])
+[10:09] * Eric (eric@pool-71-165-136-107.lsanca.fios.verizon.net) Quit (Ping timeout: 180 seconds)
+[10:09] * Darkebrz (Darkebrz@71-13-57-154.dhcp.bycy.mi.charter.com) Quit (Ping timeout: 180 seconds)
+[10:09] <Sparky20> lol
+[10:09] * chibifsk (chibifs@c-98-250-193-117.hsd1.mi.comcast.net) Quit (Ping timeout: 180 seconds)
+[10:10] <Rooster> STFU SPARKY
+[10:10] <Rooster> I'm bitching here
+[10:10] * Eric (eric@pool-71-165-136-107.lsanca.fios.verizon.net) has joined #minecraft
+[10:10] <wry> he's helping
+[10:11] <wry> just like mali
+[10:14] * laCour is now known as Chris_Hansen
+[10:15] * Earfolds (ookami@host86-152-212-212.range86-152.btcentralplus.com) Quit (Quit: i gon, buy)
+[10:15] <vurtual> Being a 1st level oprah has very little benefits :(
+[10:16] <wry> vurtual: i'll join you
+[10:16] <vurtual> I can't even use my class ability that adds "read books I've put a label on" to greater command.
+[10:17] * Chris_Hansen is now known as laCour
+[10:19] <wry> loading new game data?
+[10:19] <wry> craziness
+[10:20] <vurtual> durrr
+[10:20] <vurtual> I incapacitated myself hopping down onto a ship
+[10:20] <vurtual> I underestimate my tumble skill as fighter.
+[10:20] <vurtual> Fighter=can fall off a steep cliff and often land unhurt, even while well-equipped
+[10:20] * Cial (chatzilla@209-42-180-207.wispnet.net) Quit (Quit: Do you nottice that i am gone?)
+[10:21] <vurtual> Wizard=appaernt fall of own dwarven height is already dangerous, happening to drop almost twice that will deal heavy damage.
+[10:22] * gurph (gurph@c-98-224-211-210.hsd1.mi.comcast.net) has joined #minecraft
+[10:23] * gurph (gurph@c-98-224-211-210.hsd1.mi.comcast.net) has left #minecraft
+[10:24] <vurtual> People have "DPS" in DDO now? What class is DPS, then?
+[10:24] <vurtual> barbarian?
+[10:28] <wry> damage per second
+[10:28] <vurtual> I know
+[10:28] <vurtual> but what class is this so called DPS?
+[10:28] <wry> it's for any weapon
+[10:29] <vurtual> as in
+[10:29] <wry> it's the amount of damage any weapon does per second
+[10:29] <vurtual> having a healer, and a DPS.
+[10:29] <wry> oh
+[10:29] <vurtual> not the literal damage per second, durrr.
+[10:29] <wry> heh
+[10:29] <wry> no idea
+[10:29] <wry> it's crazy talk
+[10:29] <Malikat> dps is bullshit talk
+[10:29] * Evicous (chatzilla@c-69-244-48-242.hsd1.az.comcast.net) has joined #minecraft
+[10:30] * Malikat (Malikat@pool-71-185-2-132.phlapa.east.verizon.net) Quit (Quit: ~ Trillian Astra - www.trillian.im ~)
+[10:30] <wry> did you delete oprah?
+[10:31] * Visiiri (Visiiri@96.18.163.231) Quit (Ping timeout: 180 seconds)
+[10:31] * NotLotShot (Alex@99-195-38-34.dyn.centurytel.net) has joined #minecraft
+[10:32] * NotLotShot (Alex@99-195-38-34.dyn.centurytel.net) has left #minecraft
+[10:32] * Bored_ (Bored@CPE002129684fe2-CM0017ee5515e0.cpe.net.cable.rogers.com) Quit (Read error: Connection reset by peer)
+[10:33] <wry> vurtual: 01:33 < wry> did you delete oprah?
+[10:33] <vurtual> no
+[10:34] <vurtual> Also, this is probably the only time I'll ever get asked "did you delete oprah?"
+[10:34] <wry> heh, yeah
+[10:34] <wry> what's the name then?
+[10:34] <wry> or, invite me
+[10:34] <vurtual> I'm tracking you
+[10:34] <vurtual> You'll notice soon.
+[10:35] * Kodaichi (silentj43@bas6-hamilton14-1176215641.dsl.bell.ca) has joined #minecraft
+[10:35] <wry> oh man
+[10:35] <Kodaichi> anything going on here?
+[10:35] <Kodaichi> reports from notch that are not on his blog?
+[10:36] <vurtual> I am Oprah the Evoker.
+[10:36] <vurtual> or, midget battel oprah.
+[10:37] <Kodaichi> naw, you're vurtual
+[10:37] <vurtual> http://img63.imageshack.us/img63/493/midgetbattleoprah.png temble
+[10:37] <vurtual> tremble*
+[10:38] <vurtual> or treble, one of the two.
+[10:42] * Visiiri (Visiiri@96.18.163.231) has joined #minecraft
+[10:42] <Visiiri> Guys...
+[10:42] <Visiiri> I am Legend alternate endings.
+[10:43] * Evicous (chatzilla@c-69-244-48-242.hsd1.az.comcast.net) Quit (Quit: ChatZilla 0.9.86 [Firefox 3.6.3/20100401080539])
+[10:44] * vurtual uses burning hands on Visiiri
+[10:44] <Visiiri> I hate it.
+[10:44] <Masshuu> i am such an artist: http://www.minecraft.net/skin/skin.jsp?user=masshuu
+[10:44] <Visiiri> Poor endings in both cases.
+[10:45] <Visiiri> Although the second one makes more sense
+[10:45] <Kodaichi> i am such a heartless bastard: http://www.minecraft.net/skin/skin.jsp?user=KodaichiZero
+[10:46] <Kodaichi> I wonder if Notch ever had nightmares about Ranas
+[10:46] <Kodaichi> I bet he easily could.
+[10:47] <vurtual> All. Senior. Midget. Battle. Oprahs. Should. Have. Life Alert.
+[10:47] <Kodaichi> hundreds of them swarming around him, with their man-grunts, slowly pushing him into a pit full of creepers
+[10:47] <vurtual> with their testosterone-flowing flat breasts, Kodaichi?
+[10:48] <Kodaichi> yep.
+[10:48] <Kodaichi> and most of them are burning, too
+[10:48] <Kodaichi> the ones that aren't are drowning
+[10:48] <vurtual> now the real psycholgoical problem to address: Why is Notch so scared of having a mildly complex system?
+[10:49] <vurtual> as in, beyond "make wepon maybe, hit enemy"
+[10:49] <Kodaichi> he hates having to explain things?
+[10:49] <Kodaichi> i bet he wants the game to be intuitive
+[10:49] <vurtual> little text popup menus
+[10:49] <vurtual> w/ translation files you can switch around
+[10:50] * Malikat (Malikat@pool-71-185-2-132.phlapa.east.verizon.net) has joined #minecraft
+[10:50] <Rooster> http://www.facepunch.com/showpost.php?p=16962325&postcount=19
+[10:50] <Kodaichi> little boxes of text describing certain terrain types
+[10:50] <Rooster> FUCKING WIN
+[10:50] <Malikat> okay, the DDO plan is out the window
+[10:50] <Malikat> i tried to format the spare drive i have
+[10:50] <Malikat> and uh it started shrieking
+[10:51] <Malikat> like
+[10:51] <Malikat> metal on metal shrief
+[10:51] <Malikat> shriek
+[10:51] <Kodaichi> Rooster: that's old copypasta
+[10:51] * x000000 (n7@cpe-70-112-179-199.austin.res.rr.com) has joined #minecraft
+[10:52] * Azathoth (n7@cpe-70-112-179-199.austin.res.rr.com) Quit (Ping timeout: 180 seconds)
+[10:53] <Rooster> It's still epic
+[10:53] <Rooster> Wait
+[10:53] <Rooster> Don't tell me it's fake?
+[10:54] <vurtual> :|
+[10:54] <wry> don
+[10:55] <wry> e
+[10:55] <vurtual> done, really?
+[10:55] <wry> i'm not gonna argue with you about a stone...
+[10:55] <vurtual> okay, whatever.
+[10:55] <Masshuu> http://www.minecraft.net/skin/skin.jsp?user=masshuu
+[10:55] <Masshuu> am i the blue spy, or the red spy
+[10:55] <Visiiri> Hahaha
+[10:55] <Visiiri> I just got an email
+[10:56] <Visiiri> WHen you google search "Child porn"
+[10:56] <Visiiri> then go to page 48
+[10:56] <Visiiri> (Images)
+[10:56] <Visiiri> You get the "Geek Squad" logo
+[10:56] <vurtual> Dreaded actual porn?
+[10:56] <Roadcrosser> ew
+[10:56] <Masshuu> LOL
+[10:56] * fenixfurion (Fenix@74-140-206-154.dhcp.insightbb.com) has joined #minecraft
+[10:56] <vurtual> how is that funny
+[10:56] * fenixfurion is now known as fenixfurion|AFK
+[10:56] <Roadcrosser> did it work?
+[10:56] <vurtual> by page 48 you'll not get anything relevant
+[10:57] <Visiiri> :\
+[10:57] <Roadcrosser> also has anyone made a tring mod for portal
+[10:57] <Roadcrosser> string*
+[10:57] <Kodaichi> umm
+[10:57] <Kodaichi> I do not typically search for things like that. :/
+[10:57] <wry> did you keep dying just cuz you're out of potions?
+[10:57] <Roadcrosser> has anyone made a string mod for portal yet?
+[10:58] <vurtual> Yes.
+[10:58] <wry> sad day
+[10:58] <Roadcrosser> how did it go?
+[10:58] <vurtual> Because, similarly, "poorness", because I was first level, third rank.
+[10:58] <Roadcrosser> meh
+[10:58] <vurtual> by the time I'm second level I should be able to buy plenty, though.
+[10:58] <Roadcrosser> someone make a string mod for portal
+[10:58] * fenixfurion|AFK is now known as fenixfurion
+[10:59] <wry> well, find us a quest you won't die on and i'll rejoin
+[10:59] <wry> i don't know much about that area
+[10:59] <vurtual> That'll be any quest, if you can use intimidation. Is that a ranger skill?
+[10:59] <vurtual> I'm just a few ranks away from second level though.
+[10:59] <wry> no, it's not
+[11:00] <vurtual> we could buy cheap hirelings.
+[11:00] <wry> my hirelings are dumb
+[11:00] <vurtual> acid guard outfit whee
+[11:00] <wry> they just sit there
+[11:00] <vurtual> Did you try clicking the swordy-icon?
+[11:00] <wry> yes
+[11:00] <wry> i have
+[11:00] <vurtual> and then make sure they are set to follow you
+[11:01] <wry> i'm not an idiot...
+[11:01] <Roadcrosser> lol
+[11:01] <Roadcrosser> I searched google images for penguin
+[11:01] <vurtual> well would you rather hireling a fighter, or a cleric?
+[11:01] <wry> cleric, i guess
+[11:01] <Roadcrosser> on the 48th page the page is still swarming with penguins
+[11:01] <wry> at least she heals me
+[11:01] <Kodaichi> search google images for Lopunny: suddenly become furry
+[11:02] <vurtual> anyone would go furry for lopunny.
+[11:02] <Roadcrosser> even page 49
+[11:02] <wry> heh, boomer just exploded the bottom of my tower
+[11:02] <Roadcrosser> but breaks on page 50
+[11:02] * Kodaichi hi fives
+[11:02] <vurtual> http://archives.bulbagarden.net/media/upload/c/c9/428Lopunny.png
+[11:02] * Kodaichi also leaves
+[11:02] <Kodaichi> bye
+[11:02] <vurtual> you mean a creeper, wry?
+[11:03] <vurtual> four legged green guy who goes sssssss
+[11:03] <wry> vurtual: is that a floating poodle?
+[11:03] <Malikat> BOOOMER
+[11:03] <vurtual> what is going on floating poodles where is this happening
+[11:03] <vurtual> I am scared.
+[11:03] <vurtual> oprah does not like poodles.
+[11:03] <wry> i call them catuars, actually
+[11:03] <wry> cuz they look like them
+[11:03] <wry> but, yes, i mean creepers
+[11:04] <vurtual> I'm gonna do another solo quest so I can get the next rank.
+[11:05] * Fgw (Mibbit@ip68-230-129-139.ri.ri.cox.net) has joined #minecraft
+[11:05] <wry> i'm gonna buy some healer's kits
+[11:05] <Rooster> http://www.facepunch.com/showpost.php?p=16975166&postcount=87
+[11:05] <Rooster> Even better
+[11:06] <vurtual> got pwned in seconds
+[11:06] <wry> ha
+[11:06] <wry> i failed the quest cuz i was breaking things
+[11:06] <Roadcrosser> whats SMP
+[11:07] <Roadcrosser> oh right
+[11:07] <Roadcrosser> "/
+[11:07] <Roadcrosser> :/
+[11:07] * Fgw (Mibbit@ip68-230-129-139.ri.ri.cox.net) Quit (Quit: Client Exited)
+[11:07] <Roadcrosser> I feel dumb
+[11:07] <vurtual> ye newe robenne hoode.
+[11:07] <Roadcrosser> usually I find the answer just after asking
+[11:07] <vurtual> I found one that isn't too hard, wry, information is key
+[11:08] <vurtual> since it's not solo, I won't die painfully.
+[11:08] <wry> ah
+[11:08] <wry> i've done it, but i can do it again
+[11:08] * laCour (laCour@fire.worldofminecraft.com) Quit (Killed (TestDummy (You're gross.)))
+[11:08] <wry> i bought some kits too
+[11:08] <vurtual> I think I'm gonna get mage armor instead of like, burning hands.
+[11:09] * laCour (laCour@fire.worldofminecraft.com) has joined #minecraft
+[11:09] * laCour is now known as Guest999090102
+[11:09] <wry> i'll meet you at the entrance
+[11:11] <Roadcrosser> STRING MOD
+[11:11] <Roadcrosser> SOMEONE MAKE ONE
+[11:11] * Guest999090102 is now known as laCour
+[11:11] * mnjiman (Mibbit@d24-57-104-173.home.cgocable.net) has joined #minecraft
+[11:11] <Roadcrosser> NAO
+[11:12] <eZek0> String mod?
+[11:12] <Roadcrosser> and LIVESTREAM it!
+[11:12] <Roadcrosser> a portal mod
+[11:12] <Roadcrosser> to see what happens when some string is being tied in a loop between 2 portals
+[11:12] <eZek0> I just watched a speedrun of portal that took 13:26 :|
+[11:12] <Roadcrosser> |--------|
+[11:12] <Roadcrosser> like that
+[11:13] <Roadcrosser> and if you close a portal
+[11:13] <eZek0> snip
+[11:13] <Roadcrosser> it pushes whatever back the other side
+[11:13] <Roadcrosser> as says the comentary
+[11:13] <eZek0> Hm.
+[11:13] <Roadcrosser> since tehre isnt string in portal
+[11:13] <eZek0> World asplode, or just snip.
+[11:13] <Roadcrosser> we will never know
+[11:13] <Roadcrosser> so LIVESTREAM
+[11:13] <Roadcrosser> my guess is that since the game wasnt designed to do it
+[11:13] <eZek0> Birds are chirping, it's time to go to bed.
+[11:14] <Roadcrosser> the string would stick inside the wall
+[11:14] <eZek0> They normally only start around 5...
+[11:14] <Roadcrosser> so MAKE TEH MOD
+[11:14] <eZek0> NO U
+[11:14] <Roadcrosser> Im no GOOD AT MOSSING
+[11:14] * Serow (chatzilla@pool-71-101-233-120.tampfl.dsl-w.verizon.net) has joined #minecraft
+[11:14] <Roadcrosser> HAppy FAThers day!
+[11:14] <Roadcrosser> modding*
+[11:14] <eZek0> It isn't fathers day.
+[11:15] <Roadcrosser> i know
+[11:15] <Roadcrosser> JUST MAKE THE MOD
+[11:15] <eZek0> Or were you just trying to say HA FAT
+[11:15] <Roadcrosser> wait what
+[11:15] <eZek0> Exactly.
+[11:15] <Roadcrosser> I didn't mean to capitalize A in HAppy
+[11:15] <Roadcrosser> thug aim!
+[11:16] <eZek0> K, I'm out.
+[11:16] * eZek0 (nn@H2.C205.cci.switchworks.net) Quit (Quit: ( www.nnscript.com :: NoNameScript 4.22 :: www.esnation.com ))
+[11:17] * Marafk (Marach@188-93-163-103.home.aster.pl) has joined #minecraft
+[11:18] <Marafk> oh, shorter topic. finally
+[11:18] * lighthazard (lighthazar@ool-4a58b681.dyn.optonline.net) Quit (Quit: ERROR 404: Terminal not found.)
+[11:20] <Marafk> guys, i need something mindless
+[11:20] <Marafk> my brain still hurts from... what happened yetterday.
+[11:21] <Visiiri> Sorry
+[11:21] <Visiiri> Didn't mean to fuck your brains out
+[11:21] <Visiiri> D:
+[11:21] <Visiiri> Also, your brains don't hurt.
+[11:22] <Marafk> wait what
+[11:22] <Marafk> not you
+[11:22] <Marafk> >:/
+[11:22] <Visiiri> Your brain has no sensory neurons.
+[11:22] <Visiiri> Actually, headaches don't really exist
+[11:22] <Marafk> it hurts in a way it can
+[11:22] * Marafk is now known as Marach
+[11:23] <vurtual> I do not trust vis for medical information
+[11:23] <vurtual> like my mom
+[11:23] * Serow (chatzilla@pool-71-101-233-120.tampfl.dsl-w.verizon.net) Quit (Quit: ChatZilla 0.9.86 [Firefox 3.6.3/20100401080539])
+[11:23] <vurtual> does not know how to tell a broken arm.
+[11:23] <Marach> your mom doesn't trust vis for medical information?
+[11:23] <Visiiri> Well, many researches (at least when I researched this when I was twelve) pointed towards all pain being not really existing-> Just the brain interperating damaged neurons.
+[11:23] <vurtual> I don't trust vis like I don't trust my mom
+[11:23] <vurtual> but 100x over
+[11:24] <Visiiri> However, headaches came from sensory neurons firing wrong in the head and spinal cord.
+[11:24] <vurtual> because my mom at least has some experience.
+[11:24] <Visiiri> Trust me.
+[11:24] <Visiiri> I know everything.
+[11:24] <vurtual> really now
+[11:24] <Marach> ...maybe sharing what DID rape my brain would help the diagnosis
+[11:24] <vurtual> Can you treat shock?
+[11:24] <Marach> but that would be just cruel, wouldn't it
+[11:25] <Visiiri> I can treat everything.
+[11:25] <vurtual> How do you treat shock then?
+[11:25] <Visiiri> Coolllld water.
+[11:25] <Visiiri> A punch in the face.
+[11:25] <Visiiri> A "GET OVER IT" sticker.
+[11:25] <vurtual> no, those would all hurt it.
+[11:25] <Visiiri> Nah.
+[11:26] <Visiiri> Trust me.
+[11:26] <Visiiri> I know everything.
+[11:26] <Visiiri> Try it. I dare you.
+[11:26] <vurtual> So you know more than the US military field medic class?
+[11:26] <vurtual> People DO do that, but it just kills people
+[11:26] <Visiiri> Incorrect.
+[11:26] <Visiiri> That's just what they want you to think.
+[11:26] <vurtual> my field experience is all lies then ok
+[11:26] <Visiiri> A mental state cannot 'kill' someone.
+[11:27] <vurtual> shock is actual injury you know
+[11:27] * Cue (cueball61@cpc2-alde4-2-0-cust462.6-2.cable.virginmedia.com) has joined #minecraft
+[11:27] <vurtual> not "I'm scaahd"
+[11:27] <Visiiri> If you do not mean electric shock, it's not a physical injury.
+[11:27] <Visiiri> Akshully
+[11:28] <Visiiri> make them swallow a 9v battery.
+[11:28] <vurtual> no
+[11:28] <Visiiri> That will work better.
+[11:28] * Visiiri shoves a battery down Marach's throat
+[11:28] <vurtual> http://en.wikipedia.org/wiki/Shock_%28circulatory%29
+[11:28] * Visiiri with his dick
+[11:28] <wry> HAWT
+[11:29] * Marach deflates
+[11:29] * wry hides
+[11:29] <Visiiri> Clearly you're thinking of a completely different 'shock' medical refferance.
+[11:29] <Visiiri> Even though I spellfailed.
+[11:30] <vurtual> I think elevating legs was actually used in treating shock, but I should proabbly go back over that stuff.
+[11:30] <wry> it is
+[11:30] <Visiiri> No, you're actually correct.
+[11:30] <wry> i forget for heat or cold, however
+[11:31] * thegame (Mibbit@79.97.215.6) has joined #minecraft
+[11:31] <Visiiri> If you look beyond my assinine and sadistic pleasures, I took a class on this last year
+[11:31] <Visiiri> It's a "safety correction" program.
+[11:31] <Visiiri> Ugh.
+[11:31] <vurtual> I did too, in a videogame.
+[11:32] <wry> which vid?
+[11:32] <vurtual> AA2
+[11:32] <Marach> argh, i can have batteries in either mouse or wiimote
+[11:32] <vurtual> Granted, there are multiple occourances where that training literally saved many lives.
+[11:32] <wry> aa?
+[11:32] <vurtual> Marach, Wiimote, but use it as a mouse
+[11:32] <Marach> wait, i just pooped visiiri's
+[11:32] <vurtual> America's Army.
+[11:32] <wry> ah
+[11:32] <Marach> that's still not enough
+[11:32] <wry> makes sense
+[11:32] <Marach> :/
+[11:32] <vurtual> Medical training=simple, but actual medical raining for field medics.
+[11:32] <Marach> vurtual: lolhow
+[11:32] <vurtual> Application ingame: Hold use key
+[11:32] <vurtual> Application IRL: Actual use.
+[11:33] * Ten_Tacles (chatzilla@levk-4db49522.pool.mediaWays.net) has joined #minecraft
+[11:33] <Marach> hi tacled :3
+[11:33] <Ten_Tacles> Hey
+[11:33] <wry> there will be millions of twelve year olds screaming: WHERE IS MY USE KEY?
+[11:33] <Visiiri> I think there's a difference.
+[11:33] <vurtual> The training requires real life knowledge.
+[11:34] <DDRJake> is there -any- gravel in Infdev?
+[11:34] <wry> yes
+[11:34] <DDRJake> mkay
+[11:34] <vurtual> also, lots of rl blood and gore pictures
+[11:34] * DDRJake continues hunting
+[11:34] <wry> there is some under my exploded tower
+[11:34] <Visiiri> If you can heal your friends in L4D2 after they get stepped on by a man that weighs as much as a bus, you can heal your friends in real life!
+[11:34] * Marach hands vis a medkit
+[11:35] <vurtual> so in order to gain the power to use key someone
+[11:35] <vurtual> you have to be properly trained to treat people.
+[11:37] <wry> by the game?
+[11:37] <wry> or do you need to know in real life?
+[11:37] <Visiiri> I just got 2 gigs of Ozzy
+[11:37] <Visiiri> :D
+[11:38] * thegame (Mibbit@79.97.215.6) has left #minecraft
+[11:38] <Visiiri> Baaaa-aaaaack oooon eerrrrrrth
+[11:38] <vurtual> irl
+[11:39] <vurtual> well
+[11:39] <vurtual> it teaches you
+[11:39] <Visiiri> In theory, you can learn the methods, but I feel that it's alot safer to simply have the action stored in your cerebellum, as doing something and seeing someone do it (in this case an ANIMATED person) are completely different.
+[11:39] <vurtual> I gained two ranks in one go.
+[11:40] <Visiiri> that's what he said.
+[11:40] <Visiiri> err, she
+[11:40] <vurtual> you learn it like a real test.
+[11:40] <vurtual> You just never get to field hand-apply. But apparently, people still can use it to administer first aid irl.
+[11:40] <Visiiri> First aide isn't that difficult though.
+[11:40] <Ten_Tacles> Meh
+[11:41] <Visiiri> HEER. DRANK THES HYDROXIDE
+[11:41] <vurtual> treating shock, applying tourniquets if it's important.
+[11:41] <vurtual> including bullet wounds
+[11:41] <vurtual> good for car crashes, too.
+[11:41] <Visiiri> What's a bullet
+[11:41] <Visiiri> Oh, you mean those little metal things humans try to shoot at eachother?
+[11:42] <Visiiri> Those don't work on me.
+[11:42] <Visiiri> *cough*
+[11:42] <vurtual> yyyes they do
+[11:42] <vurtual> they work on even superman, to a miniscule degree.
+[11:42] <vurtual> just not batman
+[11:42] <Visiiri> They work on me alot :(
+[11:42] <Visiiri> I'm alergic to pennicylin
+[11:43] <Visiiri> so if I get blood poisoning from it, I die
+[11:43] <Rooster> Grrr
+[11:43] <vurtual> pennecilin is bad for everyone, man
+[11:43] <Marach> good old grooveshark :D
+[11:43] <vurtual> by default, DDO will have an optional censor turned on
+[11:43] <Rooster> What the heck is this
+[11:43] <vurtual> including: penetration
+[11:43] <Marach> damn, my VIP is over
+[11:43] <vurtual> which is also the name of an item.
+[11:43] * Rooster (stormon@pool-108-13-142-201.lsanca.fios.verizon.net) has left #minecraft
+[11:43] <Visiiri> Marach: did you download the moble app?
+[11:43] <Marach> yeah
+[11:43] <Visiiri> Can I have it?
+[11:43] <Marach> what
+[11:43] <Visiiri> . . . upload it on mediafire
+[11:43] <Marach> o_O
+[11:44] <Visiiri> . . . give me the link
+[11:44] <Visiiri> . . . can I have it?
+[11:44] <Marach> mobile means?
+[11:44] <Marach> iphone, blackberry, android?
+[11:44] <Visiiri> spellfail
+[11:44] <Visiiri> but iPhone
+[11:44] <Marach> it's on cydia
+[11:44] <Visiiri> (I was thinking about shouting at someone who spelled moble like that just today, I'm sorry.0
+[11:44] <Visiiri> Is it?
+[11:45] <Marach> you still need VIP to access it for longer than 14 days.
+[11:45] <Visiiri> hrm
+[11:45] <Visiiri> No re-download?
+[11:46] <Marach> i don't think so
+[11:46] <Marach> hm, i wonder how long will it let me use grooveshark desktop after vip has expired
+[11:46] <Visiiri> hax it
+[11:46] <Visiiri> disconnect from the internet
+[11:46] <Visiiri> IF THEY CAN'T VERIFY
+[11:46] <Visiiri> THEY SELF DESTRUCT
+[11:47] <Marach> lol
+[11:48] <Sparky20> Hey, anyone know a graphics pack that works withj the latest df?
+[11:48] <DDRJake> someone was showing off a program that mapped their Infdev world in an ariel shot
+[11:48] <DDRJake> anybody know more about it?
+[11:48] <Marach> what else is there to know
+[11:48] <DDRJake> where to get it and how to use it
+[11:48] <vurtual> zombuster made it
+[11:48] <vurtual> blaster knows it
+[11:49] <Marach> forums
+[11:50] <Visiiri> I made one too
+[11:50] <Visiiri> Why does nobody like mine?
+[11:50] <DDRJake> I'll like whatever I'm linked to
+[11:51] * Willy_Weaver (chatzilla@74.85.40.250) has joined #minecraft
+[11:51] * Willy_Weaver (chatzilla@74.85.40.250) Quit (Quit: Client Exited)
+[11:52] <Visiiri> http://www.abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijk.com
+[11:52] <Visiiri> WARNING: THIS WEBSITE ACTUALLY EXISTS
+[11:53] <Visiiri> ...HEY HEY TO THE ZOMBIE STAR (Is it star? zombies dog?)
+[11:53] <DDRJake> wunderbar!
+[11:53] * Willy_Weaver (chatzilla@74.85.40.250) has joined #minecraft
+[11:53] * Joey (Amouro@173.217.102.70) has joined #minecraft
+[11:53] * Willy_Weaver is now known as Darkblaze
+[11:54] * Joey (Amouro@173.217.102.70) has left #minecraft
+[11:55] <vurtual> what does it do Visiiri
+[11:55] <Visiiri> Email service!
+[11:55] * Cue (cueball61@cpc2-alde4-2-0-cust462.6-2.cable.virginmedia.com) Quit (Quit: Client Exited)
+[11:55] <Visiiri> visiiri@abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijk.com
+[11:56] <Visiiri> that's my new email address
+[11:56] <vurtual> what's the site do
+[11:56] <vurtual> is it your site?
+[11:56] <Visiiri> No.
+[11:56] <Visiiri> Why would it be my site.
+[11:57] <Visiiri> It's an email client.
+[11:57] <vurtual> because you might do that
+[11:57] <Visiiri> No different than gmail
+[11:57] <Visiiri> Well, quite different
+[11:57] <vurtual> legendary idea really
+[11:58] <Visiiri> so...
+[11:59] * Darkblaze (chatzilla@74.85.40.250) Quit (Quit: ChatZilla 0.9.86 [Firefox 3.6.3/20100401080539])
+[11:59] <Visiiri> I've determined that my iPod has a better sound (card) than my computer.
+[12:00] * DDRJake has no sound card
+[12:00] * Visiiri is a sound card
+[12:00] <DDRJake> I don't appreciate music, I can't really tell much between high quality and VERY high quality
+[12:00] * ChanServ sets mode +v Visiiri
+[12:00] <DDRJake> that said, my Z5500 speakrs rock the block
+[12:01] <Ten_Tacles> Uh
+[12:01] <Visiiri> Listen to a taping of a live concert
+[12:01] <Visiiri> VERY high quality allows you to hear the fingers sliding on the strings of the guitar
+[12:01] <Visiiri> high quality does not.
+[12:01] <Visiiri> REAL MINECRAFTERS PLAY MINECRAFT SURROUND SOUND
+[12:01] <Visiiri> Like me.
+[12:02] * KrimZon (krimzon@188-221-214-2.zone12.bethere.co.uk) has joined #minecraft
+[12:02] <DDRJake> perhaps I should elaborate that I don't diferenciate between them mostly because I just don't care
+[12:02] <Visiiri> die
+[12:02] <DDRJake> the extent of my musical love is my desire to play the harmonia
+[12:02] <DDRJake> *harmonica
+[12:03] <DDRJake> My music collection is mostly unlistened to and I prefer to do most of my tasks in silence
+[12:05] <Shadaez> REAL pc gamers use headphones
+[12:05] <DDRJake> If I'm playing a game where I need my mic, it's headphone time
+[12:05] <DDRJake> otherwise, Dead Space Surround Sound baby
+[12:06] <Marach> i just mute game music and play grooveshark
+[12:06] <Marach> even though it's a resourcerape
+[12:07] <Ten_Tacles> Lol
+[12:08] <Marach> not that i play on pc much.
+[12:08] <Marach> recently i reduced myself to tvtropes and webcomics
+[12:09] <Visiiri> I am sooooahooooo tired and I can't wait arouund for youuuuuu
+[12:10] <DDRJake> I slept from 5:30pm -> 4am after my last exam
+[12:10] <DDRJake> felt good man
+[12:10] <Ten_Tacles> Meh, we neeed a MC update.
+[12:11] <vurtual> metallica on the harmonica
+[12:11] <Visiiri> *an
+[12:11] <vurtual> actually
+[12:11] <vurtual> I want to see someone play TTFAF on a harmonica
+[12:11] <Ten_Tacles> What?
+[12:11] <Ten_Tacles> TTFAF
+[12:11] <vurtual> through the fire and flames
+[12:11] <Visiiri> DUH
+[12:11] <Ten_Tacles> Lol
+[12:11] <Ten_Tacles> And that is?
+[12:11] <Visiiri> I can play it on the computer keyboard...
+[12:11] <Visiiri> wtf man
+[12:11] <Visiiri> by Dragonforce?
+[12:12] <vurtual> due to the frustration on guitar hero, it's become that one legendary song that is intensely hard to play supposedly
+[12:12] <vurtual> seeing someone play it is generally cool
+[12:12] <Visiiri> It's not actually that hard to play on the guitar
+[12:12] * x000000 is now known as Azathoth
+[12:12] <vurtual> on guitar hero though?
+[12:12] <vurtual> aka DDR for your hands
+[12:12] <Visiiri> Hella hard
+[12:12] <wry> i can't do that shit
+[12:12] <vurtual> porn use training should make it easier though
+[12:12] <wry> but i can play a real one
+[12:12] <Visiiri> ^
+[12:12] <DDRJake> yes vurtual
+[12:13] <DDRJake> ....oh
+[12:13] * DDRJake sink back away
+[12:13] * Visiiri fail at /me
+[12:13] * Visiiri Would I get banned for only talking in /me?
+[12:13] <Azathoth> unatco?
+[12:13] * Visiiri maybe I should try.
+[12:14] <vurtual> Remember kids: A cockatrice corpse is garunteed to be untainted.
+[12:14] * vurtual shall join you
+[12:14] * Visiiri wait, you don't DO things in me
+[12:14] * vurtual should've thought of the implications of not picking an alignment
+[12:14] * Visiiri you do things in normal
+[12:14] <Visiiri> wonders what you don't get
+[12:14] * Visiiri could you tell me?
+[12:14] <Visiiri> Meh
+[12:14] <Visiiri> too lazy
+[12:14] <vurtual> wants a celestial fire beetle for a summon
+[12:14] <Visiiri> :\
+[12:15] <Visiiri> typing /me messes up my grammar
+[12:15] <vede> Reading articles about Marilyn Manson. It's really funny how they seem to make the band sound.
+[12:15] * vurtual oh well, doesn't matter that much, they probably changed it anyways
+[12:15] <Visiiri> and OH MY GOD IT'S FUCKING COLD
+[12:15] <vede> "Mayor Larry E. Chavis of Richmond offered the band money to stay away from his city"
+[12:15] <Visiiri> lemme get my rat skin robe
+[12:15] * vurtual who was it that had accidentaly showed their nipples via twitter again?
+[12:15] <vede> "protesters outside arenas have been praying for the souls of those inside"
+[12:15] <vurtual> welp I burned the funny up
+[12:15] <wry> Visiiri: welcome to rpg chat where everyone does /me
+[12:16] * Roadcrosser (1305339@120.140.20.115) Quit (Read error: Connection reset by peer)
+[12:16] * Azathoth doesn't use /me
+[12:16] * wry says, "might i purchase an ale, good sir?"
+[12:16] <Visiiri> Rammstein = Banned in several european countries
+[12:16] <Visiiri> Rammstein > Marilyn Manson
+[12:16] <vurtual> random religious people doth protest too much, methinks.
+[12:16] <Visiiri> Shit > Visiiri
+[12:17] <vurtual> Okay, I have magic missile, summon monster, and mage armor
+[12:17] <Azathoth> rammstein = gay
+[12:17] <Azathoth> you can have my magic missile
+[12:17] <vede> I like both Rammstein and Marilyn Manson.
+[12:17] <vurtual> okay, dropped summon, already have one
+[12:17] * wry prepares magic missile
+[12:17] <Visiiri> Rammstein IS gay
+[12:17] <Visiiri> that's the motherfucking POINT
+[12:18] <Azathoth> du... du hast... du hast rammstein
+[12:18] <Visiiri> You're spelling hasst wrong.
+[12:18] <DDRJake> So I need a long list of attractive / hilariously unattractive famous men
+[12:18] <Visiiri> "hast" is have
+[12:18] <Visiiri> whereas "hasst" is hate
+[12:18] <DDRJake> fictionsl or non fictional
+[12:18] <DDRJake> help a bro out
+[12:18] <Visiiri> Will Smith
+[12:18] <Visiiri> I'd suck that cock any day
+[12:18] <Azathoth> oh yeah
+[12:18] <Azathoth> it's that weird B looking letter
+[12:19] <DDRJake> I need about 20
+[12:19] <Azathoth> which translates to ss
+[12:19] <Visiiri> write Will Smither 20 times
+[12:19] * Furyhunter (Furyhunter@cpe-70-112-108-97.austin.res.rr.com) Quit (Read error: Connection reset by peer)
+[12:19] <Visiiri> even though he's worth about 3000 people
+[12:20] <vede> ?
+[12:20] <Visiiri> Break down, break down, break down and cryyyyyyayayayyyy
+[12:20] <Marach> woah, wiimote is so light without batts.
+[12:20] <Azathoth> yea, what vede said
+[12:20] <vede> And Visiiri, it really is Hast
+[12:20] <Visiiri> nowai
+[12:20] <vede> Yeah.
+[12:20] <Visiiri> hast is have
+[12:20] <Visiiri> and their english translation is "hate"
+[12:20] <Visiiri> "You have me?
+[12:21] <Azathoth> yes
+[12:21] <vede> Look dat shit up, yo.
+[12:21] <Visiiri> Well screw culture
+[12:22] <Visiiri> http://translate.google.com/?js=y&prev=_t&hl=en&ie=UTF-8&layout=1&eotf=1&text=Du+hast+mich%0D%0A&sl=de&tl=en#
+[12:22] <Visiiri> got is NEVER hate
+[12:22] <Chemo> hi #minecraft
+[12:22] <Visiiri> Clearly this is a perfect example of someone that doesn't actually speak German translating the song.
+[12:22] * Cue (cueball61@cpc4-alde1-0-0-cust997.glfd.cable.ntl.com) has joined #minecraft
+[12:22] <Visiiri> As was cinderella, but that's irrelevant.
+[12:23] <DDRJake> http://www.liveleak.com/view?i=242_1275629190 A wild Snorlax appeared
+[12:23] <vede> Yeah, it's "You have me" Visiiri.
+[12:23] <Visiiri> But the song lyrics are "you HATE me"
+[12:24] <vede> Nope.
+[12:24] <Visiiri> :\
+[12:26] <vurtual> of all things a wizard could have, cure light wounds would be a nice one.
+[12:26] <Visiiri> http://www.sing365.com/music/lyric.nsf/du-hast-english-lyrics-lyrics-rammstein/fdfa3ccc2ba8b0cf48256caf000abdf1
+[12:26] <Visiiri> Not only that, but listen to their SONG
+[12:26] <Visiiri> they sang it in ENGLISH
+[12:26] <Visiiri> and in ENGLISH, they say HATE
+[12:26] <Ten_Tacles> Lol
+[12:26] <Azathoth> and?
+[12:26] <Ten_Tacles> I like Rammstein
+[12:26] <Visiiri> vede disagreed.
+[12:27] <Visiiri> Vede was wrong.
+[12:27] <vede> http://en.wikipedia.org/wiki/Du_Hast
+[12:27] <Azathoth> weird
+[12:28] <Azathoth> hasse is hate
+[12:28] <Visiiri> That's still not correct
+[12:28] <Visiiri> Compare it in context to the rest of the words.
+[12:28] <Visiiri> It just doesn't work
+[12:28] <Azathoth> it's the same word
+[12:28] <vede> Vis, just deal with it.
+[12:28] <vede> ur rong
+[12:28] <Azathoth> just a different conjugation
+[12:29] <vede> Azathoth, no they're not.
+[12:29] <Visiiri> You link to wikipedia
+[12:29] <Visiiri> And yet, you've not listened to the english song.
+[12:29] <Visiiri> It clearly says 'hate' and that's "hasst"
+[12:29] <Azathoth> visiiri, no one disagrees that it says hate
+[12:29] <Visiiri> <Visiiri> But the song lyrics are "you HATE me"
+[12:29] <Visiiri> <vede> Nope.
+[12:29] <Visiiri> Those are letters, no?
+[12:29] <Azathoth> i think it's a problem of someone misspelling the german word
+[12:30] <vede> Haben and hassen are different words. But their second-person conjugations are impossible to differentiate in speech.
+[12:30] <Azathoth> but they're possible to differentiate in spelling vede
+[12:30] <vede> Indeed they are.
+[12:30] <Azathoth> and the translation says hate
+[12:30] <Azathoth> but the spelling is hast
+[12:30] <vede> Azathoth, the translation says hate, but the original is not.
+[12:30] <Azathoth> it's inconsistent
+[12:30] <Visiiri> Original?
+[12:30] <vede> The original is "Du Hast."
+[12:30] <Azathoth> so the question is..... who fucked up?
+[12:31] <Visiiri> English.
+[12:31] <Azathoth> why the huge difference in the lyrics
+[12:31] * Parthon (cheeeese@godsta.arach.net.au) Quit (Ping timeout: 180 seconds)
+[12:31] <vede> It's possible that no one fucked up.
+[12:31] <Azathoth> they just changed it completely for no apparent reason?
+[12:31] <vede> I think the song was meant to have a sort of double meaning in the first place.
+[12:31] <Visiiri> Double meaning?
+[12:31] <vede> But in all the lyrics and stuff, it's "hast" and not "hasst"
+[12:31] <Visiiri> "in all the lyrics and stuff"
+[12:32] <Azathoth> so it's a play on words based on the lack of audible difference in the words?
+[12:32] * Parthon (cheeeese@godsta.arach.net.au) has joined #minecraft
+[12:32] <Azathoth> like you have me but you hate me
+[12:32] * chac (chatzilla@ip56582c0f.direct-adsl.nl) has joined #minecraft
+[12:32] <vurtual> English has lots of them, but they're all dirty.
+[12:32] <Visiiri> I believe that it's obvious that it was a mistranslation.
+[12:33] <Azathoth> i don't know
+[12:33] <Azathoth> vede could be onto something
+[12:33] <vede> They can't really do the homophone trick in the English translation.
+[12:33] <vede> (Which is one of the reasons you really just shouldn't try to translate lyrics anyway.)
+[12:33] <Visiiri> It's German, good sir
+[12:33] <Visiiri> ^this logi
+[12:33] <Visiiri> *logic
+[12:33] <Azathoth> i think vede's right
+[12:34] <Visiiri> Because Rammstein translated the lyrics, Rammstein probably knows what the words are.
+[12:34] <Visiiri> "hate" isn't "have"
+[12:34] <vurtual> why is it that wizards hve no apparent good things to train in
+[12:34] <Azathoth> but visiiri, they couldn't use both words at the same time
+[12:34] <Azathoth> durr
+[12:34] <vurtual> but every time I level up, I get fighter stuff.
+[12:34] <Visiiri> That's probably a mistranslation.
+[12:34] <Azathoth> in the german version it's probably supposed to be ambiguous
+[12:34] <Visiiri> :\
+[12:34] <Azathoth> in the english, they had to choose the one that made the most sense
+[12:35] <Visiiri> I don't think that rammstein has enough mental power to make songs with meanings
+[12:35] <Azathoth> they probably don't even write their own filth
+[12:35] <Visiiri> when they have gay sex on stage at their concerts.
+[12:35] <Visiiri> (Not REAL, mind you.)
+[12:35] <vede> Visiiri, they had to pick ONE of the possible meanings because they couldn't pull off the clever language trick in the translation, and seeing how in the original it's clearly "hast" from *everything on the internet and elsewhere about it*, it could easily be for a few reasons.
+[12:36] <Azathoth> saying "you have me" a bunch in english just doesn't have the same effect
+[12:36] <Visiiri> And what makes you think that it IS a clever language trick?
+[12:36] <Visiiri> The meaning isn't really that clever either way.
+[12:36] <vede> They might not have thought that "You have me" wouldn't be as successful to English-speaking (primarily American) audiences.
+[12:36] <Visiiri> Not only that, but it's still rammstein.
+[12:36] <Azathoth> they probably do not write their own lyrics
+[12:36] <vurtual> You know, I almost want to play D&D with you guys irl
+[12:36] <Azathoth> LETS DO IT VURTUAL
+[12:36] <vurtual> see how long before someone suggests a "sundering meat" feat
+[12:36] <Azathoth> you're in illinois right?
+[12:37] <vede> Azathoth, according to da wiki, they do.
+[12:37] <vurtual> that reduces the AC of a female's panties or something.
+[12:37] <Azathoth> well
+[12:37] <Visiiri> Those silly germans
+[12:37] <Azathoth> it's really not that clever anyway
+[12:37] <vurtual> It's like saying "coming" and then having an alternate meaning
+[12:37] <vurtual> okay a bit clever
+[12:37] <Azathoth> having gay stage sex doesn't mean someone doesn't think
+[12:37] <Visiiri> Let's pretend that "hasst" actually says "raped my mother and made me watch and it hurt"
+[12:38] <vede> And Visiiri, I think it's weird how you like Rammstein, but you seem so averse to them being anything other than a bunch of mentally deficient angry shirtless guys.
+[12:38] * Dommys (Dommys@c-71-61-204-138.hsd1.pa.comcast.net) has joined #minecraft
+[12:38] <vurtual> Visiiri likes mentally deficient angry shirtless guys.
+[12:38] <Visiiri> Maybe I think that's hot.
+[12:38] <vede> Who the fuck doesn't, vurtual?
+[12:38] <vurtual> "mentally deficient angry shirtless guys" would be a good band name
+[12:38] <Visiiri> You don't know me.
+[12:38] <Visiiri> shit man
+[12:38] <Visiiri> vurtual, do you know how much I love you
+[12:38] <vurtual> about to here: -
+[12:38] <Visiiri> I just choked on my sobe
+[12:39] <Dommys> <3's
+[12:39] <Visiiri> Dommys, you too
+[12:39] <Visiiri> But vurtual more.
+[12:39] <Dommys> Anyone into hackintoshing?
+[12:39] <vede> Everyone loves vurtual more than Dommys.
+[12:39] <vede> :S
+[12:39] <Dommys> Dommys only requires a minimal amount of love to function
+[12:39] <Visiiri> *o.o* <-- clown.
+[12:40] <vurtual> It's another reason why charisma isn't a dump stat. Easier haggling, free videogames, being loved and adored.
+[12:40] * Visiiri reconfigures statistics
+[12:40] <Azathoth> i hate vurtual
+[12:41] <Visiiri> I'm really excited for MineCast
+[12:41] <Visiiri> It'll be funny as shit
+[12:41] <Visiiri> and beyond
+[12:41] * vurtual uses suggestion on Azathoth
+[12:41] <Visiiri> the type of funny where you choke on your sobe
+[12:41] <vede> Visiiri, in the vein of heavy metal lacking intelligence or cleverness, I'm just gonna point you in the direction of Anal Cunt. I think that's the sort of stuff you're looking for. :)
+[12:41] <Visiiri> I thought that Rammstein had one clever song.
+[12:41] <Azathoth> i mean..... i love vurtual
+[12:41] <Visiiri> So I think that Anal Cunt is a little below.
+[12:42] <vede> Anal Cunt is a little below EVERYTHING.
+[12:42] <Visiiri> vurtual, you've got a pusseh! I've got a dick-ah! So what's the probliim, let's do it quick!
+[12:42] <Visiiri> I just love that
+[12:42] <Visiiri> because I always played Combat Arms CTF while I listened to that
+[12:42] <Azathoth> anal cunt?
+[12:42] <Azathoth> is that a band?
+[12:42] <vede> Yes, Azathoth.
+[12:42] <Visiiri> Yeah.
+[12:42] <vurtual> always a band
+[12:42] <Azathoth> wow.....
+[12:43] <vede> You should read their Wikipedia article, Azathoth.
+[12:43] <vede> Funny stuff.
+[12:43] <Visiiri> Gayniggers from space is a movie, too.
+[12:43] <Visiiri> That really hurt me.
+[12:44] <vede> Most of their songs are just a few seconds long and consist primarily of incoherent screaming and people randomly slapping on guitars.
+[12:44] <vede> One of their songs' titles is "You were pregnant so I punched you in the stomach."
+[12:44] <vurtual> just a few second longs?
+[12:44] * mnjiman (Mibbit@d24-57-104-173.home.cgocable.net) Quit (Quit: http://www.mibbit.com ajax IRC Client)
+[12:44] <vurtual> seconds long*
+[12:44] <Visiiri> Lol, vede, that one is my ringtone!
+[12:44] <vurtual> did budda ever make that guild? Nobody knooows
+[12:44] <vede> They had an EP with like 3000-something songs on it.
+[12:45] <Visiiri> However, I don't listen to them.
+[12:45] <Visiiri> I just thought it was fun.
+[12:46] <vede> "I lit your baby on fire" has some interesting lyrics.
+[12:47] <vurtual> this is a silly item name
+[12:47] <vurtual> Minor Sonic Lore Club
+[12:47] <vurtual> would be a good band name though
+[12:48] <Visiiri> I perfer Pedoclown.
+[12:53] * Disconnected.
+[12:53] -eldridge.esper.net- *** Looking up your hostname...
+[12:53] -eldridge.esper.net- *** Couldn't look up your hostname
+[22:32] -canis.esper.net- *** Looking up your hostname...
+[22:32] -canis.esper.net- *** Couldn't look up your hostname
+[22:32] * BananaBot (PircBot@99.198.122.47) has joined #minecraft
+[22:32] * Topic is 'Rules are renewed, read them now if you haven't already done so: http://www.minecraft.net/ircrules.jsp | Logs for conversations: http://minecraftlogs.tk/ | Notch's Blog: http://notch.tumblr.com/'
+[22:32] * Set by Animator!theysayima@adsl-11-207-24.mia.bellsouth.net on Sat Jun 05 01:01:13 MSD 2010
+[22:32] -ChanServ- (#minecraft) This channel is moderated. For general chatter, please go to #mcchatter. Ops: please be strict.
+[22:33] * waffle (Mibbit@174-26-11-220.phnx.qwest.net) has joined #minecraft
+[22:33] <blaster> Once Finite multiplayer survival is out I will set up a server for my map
+[22:34] <waffle> any body have any ideas of how soon soon is?
+[22:34] <Aeomin> no
+[22:34] <blaster> no
+[22:34] <Animator> Oh shit guys.
+[22:34] <Animator> Guys guys guys. I found something. The very first thing I ever made in Minecraft.
+[22:34] <Aeomin> ?
+[22:34] <vurtual> gimme
+[22:34] <Animator> http://i42.tinypic.com/2ni8mdd.png
+[22:34] <vurtual> I'l lgive you m second
+[22:35] <Animator> That is the first thing I ever made in Minecraft, ever.
+[22:35] <Aeomin> XD
+[22:35] <Animator> I'm very serious.
+[22:35] <blaster> Well...
+[22:35] <Aeomin> I never made anything yet
+[22:35] <vurtual> http://www.minecraft.net/play.jsp?user=VurtualRuler98&id=0 my second
+[22:35] <blaster> You joined a long time after me
+[22:35] <blaster> I joined before there was even saving
+[22:36] <vurtual> it ended with me leaving the world behind by jumping into a solid dirt helicopter, while the tree tore down the castle wall with its roots so I could escape
+[22:37] <vurtual> my firstest thing was a house
+[22:37] <vurtual> but I never got to save that
+[22:37] <Fractal> I made a glass house so I could see enemies
+[22:38] * liq4 (liquidman3@ppp118-209-213-239.lns20.mel6.internode.on.net) has joined #minecraft
+[22:38] <Fractal> then a creeper appeared behind me and exploded
+[22:38] * Undeceived (Mibbit@c-24-8-165-200.hsd1.co.comcast.net) Quit (Quit: http://www.mibbit.com ajax IRC Client)
+[22:38] <Perry> Fractal
+[22:38] * Undeceived (Mibbit@c-24-8-165-200.hsd1.co.comcast.net) has joined #minecraft
+[22:38] <Perry> where's the inventory under world1
+[22:39] <Fractal> "Level.dat"
+[22:39] * rcfighter (rcfighter@c-69-138-73-173.hsd1.md.comcast.net) has joined #minecraft
+[22:39] * MindCrafty (Weaver@adsl-178-227-182.jax.bellsouth.net) Quit (Ping timeout: 180 seconds)
+[22:39] * liq3 (liquidman3@ppp118-209-213-239.lns20.mel6.internode.on.net) Quit (Ping timeout: 180 seconds)
+[22:39] * T-k (Mibbit@153.101.broadband3.iol.cz) has joined #minecraft
+[22:39] <Perry> GOT IT :D
+[22:40] <Fractal> ayyye
+[22:40] * T-k (Mibbit@153.101.broadband3.iol.cz) has left #minecraft
+[22:40] * combo_express (stopitmist@fl-71-49-233-240.dhcp.embarqhsd.net) has joined #minecraft
+[22:40] <blaster> Dammmit why will nobody play my indev map
+[22:40] <vurtual> Because I am too busy imagining all my words in the voice of the DDO narrator.
+[22:40] <Fractal> where, blaster?
+[22:40] <vurtual> You are assaulted by a foul new stench. Many times. You are now on fire.
+[22:41] * MindCrafty (Weaver@adsl-178-227-227.jax.bellsouth.net) has joined #minecraft
+[22:41] * Chris220 (Chris@cpc3-farn7-2-0-cust104.know.cable.virginmedia.com) Quit (Quit: \m/(>_<)\m/)
+[22:41] <vurtual> Morgan Freeman should've done it.
+[22:41] <blaster> http://www.minecraftforum.net/viewtopic.php?f=23&t=13796
+[22:41] <blaster> Yes... at low levels you seem to be some sewer worker
+[22:42] <Fractal> playing it now in creative
+[22:42] * liq4 (liquidman3@ppp118-209-213-239.lns20.mel6.internode.on.net) Quit (Quit: Client Exited)
+[22:42] <Fractal> host a servor?
+[22:42] <blaster> Why creative
+[22:42] <blaster> When you can play indev
+[22:43] <Fractal> happy now
+[22:43] <Fractal> but if you load it in mp
+[22:44] <vurtual> Actually the concept of a dungeon submerged in magical acid would be cool, I guess.
+[22:45] * SnowmanHTC (androirc@sd51100a0.adsl.wanadoo.nl) has joined #minecraft
+[22:45] <SnowmanHTC> Ahh, IRC from the can
+[22:45] * SSC (ssc@i5387CF51.versanet.de) has joined #minecraft
+[22:46] <SnowmanHTC> If you know what I mean with the can
+[22:46] <Fractal> blaster, impressive
+[22:46] <AndrewPH> vede, are you going to release the minecon server_level.dat?
+[22:46] <Fractal> in turn, observe an infdev LAVA trap:
+[22:47] * Mive (Mive@x1-6-00-18-f8-6b-6e-71.k574.webspeed.dk) Quit (Quit: Leaving)
+[22:47] <Fractal> http://www.youtube.com/watch?v=YV9dunURGjA
+[22:47] <Fractal> also, blaster, the glass trees are a nice touch
+[22:48] * F3ar_ (F3ar@c-174-59-1-180.hsd1.pa.comcast.net) has joined #minecraft
+[22:48] * Eythor (eia234@157-157-78-216.static.simnet.is) has joined #minecraft
+[22:48] <SnowmanHTC> Oh wow, nice trap
+[22:48] <blaster> Well... Yeh they are odd
+[22:49] <SnowmanHTC> The glass trees are a remainder of turning all leaves into glass
+[22:49] <blaster> Its because the map it is based on is so old it had glass windows
+[22:49] <Fractal> SnowmanHTC: if you want to see the workings :http://www.mediafire.com/?r2uowjmgjzx
+[22:49] * F3ar (F3ar@c-174-59-1-180.hsd1.pa.comcast.net) Quit (Ping timeout: 180 seconds)
+[22:49] <SnowmanHTC> Because the map was made before mc had glass
+[22:49] <SnowmanHTC> and leaves were the only transparent block
+[22:49] <Fractal> anyway, g2g eat
+[22:49] * Fractal is now known as Fractal_AFK
+[22:50] <SnowmanHTC> I don't have winzip on my phone
+[22:50] <Fractal_AFK> you need 7zip anyway, and access to your infdev saves
+[22:51] <Fractal_AFK> after all, infdev saves in a messy bundle of folders
+[22:51] <SnowmanHTC> Winzip can open 7z just finr
+[22:51] * laCour is now known as Jon|AFK
+[22:51] * Kimd41 (chatzilla@212.183.196.16.dyn.user.ono.com) Quit (Max SendQ exceeded)
+[22:52] <Snowman> That was a good dump
+[22:53] * Kimd41 (chatzilla@212.183.196.16.dyn.user.ono.com) has joined #minecraft
+[22:55] * Knuk (EquinoxTec@bas1-quebec14-1128686801.dsl.bell.ca) Quit (Quit: uh... bye I guess)
+[22:55] <Snowman> I think hotmail is designed to run shit in browsers that aren't IE
+[22:55] * Icereed (icereed@mnch-5d857608.pool.mediaWays.net) Quit (Ping timeout: 180 seconds)
+[22:56] <Perry> hey
+[22:56] * Amatsu (amatsudark@204.237.65.192) Quit (Ping timeout: 180 seconds)
+[22:56] * Cat (PyroPyro@178.223.72.228) Quit (Quit: PyroPyro Gone! Roger, over and out!)
+[22:56] <Perry> I'm going to livestream a huge TNT explosion
+[22:56] <Perry> the pit is 2x2x256 and entirely filled with TNT
+[22:57] <Perry> http://www.livestream.com/perrycraft
+[22:58] <Perry> noone wants to see it?
+[22:58] * Amatsu (amatsudark@204.237.65.192) has joined #minecraft
+[22:58] <Perry> :l
+[22:58] <Perry> amatsu
+[22:58] <Perry> do you want to see a 2x2x256 pit filled with tnt
+[22:58] <Perry> exploding
+[22:58] <Perry> http://www.livestream.com/perrycraft
+[23:01] * Marky (M_Coxy@host86-158-163-192.range86-158.btcentralplus.com) has joined #minecraft
+[23:04] * Snowmanot (Snowman@sd51100a0.adsl.wanadoo.nl) has joined #minecraft
+[23:04] * Snowmanot (Snowman@sd51100a0.adsl.wanadoo.nl) Quit (Quit: Client Exited)
+[23:07] * causticLagomorph_ (chatzilla@client-86-31-163-52.oxfd.adsl.virginmedia.com) has joined #minecraft
+[23:08] * causticLagomorph (chatzilla@client-86-25-7-70.oxfd.adsl.virginmedia.com) Quit (Ping timeout: 180 seconds)
+[23:08] * PickYerPoison (PYP@adsl-70-253-160-236.dsl.stlsmo.swbell.net) has joined #minecraft
+[23:08] * causticLagomorph_ is now known as causticLagomorph
+[23:09] * combo_express (stopitmist@fl-71-49-233-240.dhcp.embarqhsd.net) Quit (Ping timeout: 180 seconds)
+[23:09] * rcfighter (rcfighter@c-69-138-73-173.hsd1.md.comcast.net) Quit (Ping timeout: 180 seconds)
+[23:09] <slowriot> has he updated yet?
+[23:09] <Marach> ...
+[23:09] * Kimd41 (chatzilla@212.183.196.16.dyn.user.ono.com) Quit (Max SendQ exceeded)
+[23:09] <blaster> You can check yourself
+[23:10] <Marach> stop asking every hour and get rss!
+[23:10] <slowriot> i like asking
+[23:10] <slowriot> it makes me feel part of the community ;)
+[23:10] <slowriot> besides, i <3 the human touch that i get from all of you getting angry at me
+[23:10] <Marach> from now on, i'll just link you to the blog
+[23:10] <Marach> happy?
+[23:10] <slowriot> not very
+[23:11] <Marach> ha
+[23:11] <slowriot> !blog
+[23:11] <slowriot> hey, did that bot fall off?
+[23:11] <Marach> !blag
+[23:11] <slowriot> !slag
+[23:11] <Marach> !slaw
+[23:12] <Perry> here for euphoria
+[23:12] <Perry> http://www.minecraftforum.net/viewtopic.php?f=35&t=9942
+[23:13] * SpyLevels (Mibbit@88.85.44.75) has joined #minecraft
+[23:14] <vurtual> You know those people who say your rights can just be taken away?
+[23:14] <vurtual> I wonder how you actually physically do that.
+[23:14] * Kimd41 (chatzilla@212.183.196.16.dyn.user.ono.com) has joined #minecraft
+[23:14] <vurtual> Because some people certainly won't just go into the system like that. You'll probably bump into one or two of those people. Then that causes trouble.
+[23:16] <vurtual> It's not like you can use military force against people, soldiers won't always obey, computers aren't invincible, force won't always work. You can't exactly just go poof, no more ability.
+[23:16] * Undeceived (Mibbit@c-24-8-165-200.hsd1.co.comcast.net) Quit (Quit: http://www.mibbit.com ajax IRC Client)
+[23:17] * Nyghtshade (Kevin@68-114-200-249.dhcp.prvl.mo.charter.com) has joined #minecraft
+[23:18] <SnowmanHTC> Supression field
+[23:18] * Visiiri (Visiiri@96.18.163.231) has joined #minecraft
+[23:18] * ChanServ sets mode +v Visiiri
+[23:18] <vurtual> those don't work
+[23:18] <vurtual> look what happened to combines.
+[23:18] <Visiiri> fuckshits
+[23:18] <vurtual> they got killed.
+[23:18] <vurtual> It took one ordinary man to blow them up.
+[23:19] <fenixfurion> he was a physicist
+[23:19] <vurtual> we have plenty.
+[23:19] <SnowmanHTC> That's because of Gordon Freeman
+[23:19] <vurtual> If all else fails, throw string theorist at it
+[23:19] <vurtual> All it takes is enough will to do so, and you can probably cause a revolution yourself.
+[23:19] <SnowmanHTC> And he's a mean badass
+[23:19] <vurtual> and live, if you're willing to go beyond everyone else's ability to deal with it.
+[23:20] <waffle> north china
+[23:20] <Nyghtshade> Anyone play D&D?
+[23:20] <blaster> Me
+[23:20] <waffle> thats how you supress and remove rights
+[23:20] <Nyghtshade> I know you blaster
+[23:20] <Nyghtshade> =P
+[23:20] <Nyghtshade> I know many things
+[23:20] <blaster> I also play a minecraft version of fallout in indev
+[23:21] <Miclee> blaster #WoMDnD
+[23:21] <Perry> http://www.minecraftforum.net/viewtopic.php?f=35&t=13584 traps
+[23:21] * Takos360 (Mibbit@h-167-202.A170.priv.bahnhof.se) has joined #minecraft
+[23:21] * Evicous (chatzilla@c-69-244-48-242.hsd1.az.comcast.net) has joined #minecraft
+[23:21] <waffle> am i the only one that wants to play minecraft in fallout 3 now?
+[23:22] <Takos360> Um...
+[23:22] <Takos360> Yes?
+[23:22] <Calhoun> waffle: Try the Real Time Settler Mod. It's not the same, but it's similar.
+[23:22] <blaster> Sorry Miclee I dont have time to play right now
+[23:22] <waffle> i love that mod <3
+[23:22] <Takos360> O.o
+[23:22] <waffle> though i dont think theve updated for a while.....
+[23:22] <Takos360> is it for fallout 3?
+[23:22] <waffle> yes
+[23:22] <Perry> http://www.minecraftforum.net/viewtopic.php?f=35&t=13584
+[23:22] <Takos360> awesome :D
+[23:22] * Varriount is now known as Meh
+[23:23] <blaster> Oh my god, thats the best mod I have ever seen
+[23:23] * Meh (Clay@pool-96-255-204-117.washdc.fios.verizon.net) Quit (Killed (NickServ (GHOST command used by iKJames)))
+[23:23] * blaster wishes I had this game for pc, despite my pc most likely not running it
+[23:23] <waffle> i still think garry's mod is better :D
+[23:23] * davidhirschuser (davidhirsc@99-172-17-115.lightspeed.tukrga.sbcglobal.net) has joined #minecraft
+[23:23] <waffle> best 10 dollars ever.....
+[23:23] * Varriount (Clay@pool-96-255-204-117.washdc.fios.verizon.net) has joined #minecraft
+[23:23] <vurtual> then another 99, at best, for the content to go with it?
+[23:23] * davidhirschuser (davidhirsc@99-172-17-115.lightspeed.tukrga.sbcglobal.net) Quit (Quit: Client Exited)
+[23:24] <waffle> you dont remmy need any of the games onther then one to mod.....
+[23:24] <waffle> relly*
+[23:25] <waffle> there is enough user made content to fill up a tb drive with ease :3
+[23:25] <blaster> What the fuck, the first screenshot of that mod on the nexus is... the oblivion waterfront house
+[23:25] <blaster> WHAT THE FUCK
+[23:26] * Fractal_AFK is now known as Fractal
+[23:26] * Mive (Mive@x1-6-00-18-f8-6b-6e-71.k574.webspeed.dk) has joined #minecraft
+[23:26] * rcfighter (rcfighter@c-69-138-73-173.hsd1.md.comcast.net) has joined #minecraft
+[23:29] * Kimd41 (chatzilla@212.183.196.16.dyn.user.ono.com) Quit (Max SendQ exceeded)
+[23:30] * Eythor (eia234@157-157-78-216.static.simnet.is) Quit (Ping timeout: 180 seconds)
+[23:30] * Takos360 (Mibbit@h-167-202.A170.priv.bahnhof.se) Quit (Quit: http://www.mibbit.com ajax IRC Client)
+[23:31] * Cat (PyroPyro@178.223.72.228) has joined #minecraft
+[23:31] * Icereed (icereed@mnch-5d857608.pool.mediaWays.net) has joined #minecraft
+[23:32] * Kimd41 (chatzilla@212.183.196.16.dyn.user.ono.com) has joined #minecraft
+[23:32] * formlesstree4|afk is now known as formlesstree4
+[23:36] * Fractal (FractalCZ@cpc1-ware1-0-0-cust94.lutn.cable.ntl.com) Quit (Quit: ChatZilla 0.9.86 [Firefox 3.6.3/20100401080539])
+[23:38] * gdude2002 (colesgaret@109.76.23.242) has joined #minecraft
+[23:38] <gdude2002> Slow day?
+[23:38] <gdude2002> !blog
+[23:39] <Ten_Tacles> Lol
+[23:39] <gdude2002> :P
+[23:40] <Nyghtshade> Anyone play DnD?
+[23:40] <gdude2002> Ohnoes.
+[23:40] <vurtual> What have I done
+[23:40] <vurtual> I momentarily joke abuot playing DDO
+[23:40] <vurtual> suddenly, D&D discussion is rampant.
+[23:41] <gdude2002> Damny ou vurtual
+[23:41] <gdude2002> damn you
+[23:41] <vurtual> MINECRAFT FAILED ITS SAVING ROLL
+[23:41] <gdude2002> you had to start talking to yourself about DnD
+[23:41] <gdude2002> xD
+[23:41] <vurtual> Even now, I have fallen to trying to play D&D over the internet with my friend on dial-up
+[23:41] <gdude2002> Lol.
+[23:41] <vurtual> coming up with various creative dungeons that will thusly be entertaining.
+[23:42] <Nyghtshade> We are trying to setup a D&D game
+[23:42] <Nyghtshade> Need some more people though
+[23:42] <vurtual> on where?
+[23:42] <Nyghtshade> #WoMDnD
+[23:42] <vurtual> wom? No way man
+[23:42] <vurtual> they're evil cultists.
+[23:42] <vurtual> it's always evil cultists, man.
+[23:42] <jonnyabc> i know right
+[23:42] <vurtual> How likely would someone without knowledge of the game be able to play over the internet anyways
+[23:45] * Pwnly (pwnly@pool-173-77-157-244.nycmny.fios.verizon.net) has joined #minecraft
+[23:47] * Pwnly (pwnly@pool-173-77-157-244.nycmny.fios.verizon.net) Quit (Quit: Client Exited)
+[23:47] * blaster continues repairing a bombed out building while listening to GNR
+[23:47] * Pwnly (pwnly@pool-173-77-157-244.nycmny.fios.verizon.net) has joined #minecraft
+[23:47] <blaster> Vurtual if you avoid combat you can more or less use a d20 + Ability modifier to do everything
+[23:48] * Nyghtshade is now known as Nyght
+[23:49] * Kimd41 (chatzilla@212.183.196.16.dyn.user.ono.com) Quit (Max SendQ exceeded)
+[23:52] * Kimd41 (chatzilla@212.183.196.16.dyn.user.ono.com) has joined #minecraft
+[23:52] <Nyght> WoM Evil cultists
+[23:52] <Nyght> lOlolol
+[23:54] <vurtual> yeah and
+[23:54] <vurtual> but what if combat occours
+[23:55] <Chocolatey_Syrup> 10 PM Notch's time
+[23:55] <Ten_Tacles> Ye
+[23:55] <Chocolatey_Syrup> chances the update is coming tonight grow slimmer every minute :Ic
+[23:56] * Jat is now known as Jat-afk
+[23:56] * Slash-Caps (Slash-caps@94-195-154-156.zone9.bethere.co.uk) Quit (Read error: Connection reset by peer)
+[23:58] <blaster> Can we just ask for him to add the crafting recipie and give a tiny update for us?
+[23:58] <vurtual> nooo it must be debugged
+[23:59] * Bomb_Spammer (chatzilla@S010600262d6df833.ss.shawcable.net) has joined #minecraft
+
+These logs were painfully created by BananaBot on irc.esper.net using an advanced network of pigeons to figure out what colors go where.
